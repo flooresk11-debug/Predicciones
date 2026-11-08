@@ -1,0 +1,682 @@
+{
+  "partido": {
+    "local": "Elche CF",
+    "visitante": "Real Betis",
+    "competicion": "LaLiga EA Sports 2026/27 - Jornada 12",
+    "fecha": "2026-11-08",
+    "hora_cet": "14:00",
+    "estadio": "Martínez Valero",
+    "arbitro": {
+      "valor": "César Soto Grado",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "mundobetis.com",
+        "copeelche.com",
+        "diariofranjiverde.com"
+      ],
+      "VAR": "Carlos del Cerro Grande",
+      "temporada_2026_27": {
+        "partidos": 3,
+        "amarillas": 14,
+        "amarillas_por_partido": 4.67,
+        "estado": "CONFLICTO_MENOR",
+        "fuentes": [
+          "livefutbol.com (13 en 3)",
+          "estadisticaslaliga.es (15 en 3)"
+        ],
+        "nota": "se usa el punto medio 14; muestra mínima"
+      },
+      "historico": {
+        "amarillas_por_partido": 4.67,
+        "rojas_por_partido": 0.3,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "statsbet.es (27 PJ)"
+        ],
+        "apoyo": "betfair.es: 4.3 amarillas/p"
+      },
+      "con_betis": {
+        "valor": "3G 8E 6P en 17 partidos; solo 1 victoria en los últimos 10",
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "mundobetis.com"
+        ]
+      },
+      "con_elche": {
+        "valor": "4G 1E 4P en 9 partidos",
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "mundobetis.com"
+        ]
+      }
+    },
+    "entrenador_local": {
+      "valor": "Martín Anselmi",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "teleelx.es / actualidadvalencia.com"
+      ]
+    },
+    "entrenador_visitante": {
+      "valor": "Manuel Pellegrini",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "cooperativa.cl",
+        "emol.com",
+        "soccerway.es"
+      ]
+    }
+  },
+  "resultados_liga": {
+    "Elche CF": [
+      {
+        "j": 1,
+        "rival": "RC Deportivo",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es"
+        ]
+      },
+      {
+        "j": 2,
+        "rival": "FC Barcelona",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 5,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es"
+        ]
+      },
+      {
+        "j": 3,
+        "rival": "Racing Santander",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es"
+        ]
+      },
+      {
+        "j": 4,
+        "rival": "Real Sociedad",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es"
+        ]
+      },
+      {
+        "j": 5,
+        "rival": "Athletic Club",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es"
+        ]
+      },
+      {
+        "j": 6,
+        "rival": "Real Madrid",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es"
+        ]
+      },
+      {
+        "j": 7,
+        "rival": "RCD Espanyol",
+        "condicion": "V",
+        "gf": 3,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es"
+        ]
+      },
+      {
+        "j": 8,
+        "rival": "Celta",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es"
+        ]
+      },
+      {
+        "j": 9,
+        "rival": "Villarreal",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es"
+        ]
+      },
+      {
+        "j": 10,
+        "rival": "Rayo Vallecano",
+        "condicion": "V",
+        "gf": 3,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es"
+        ]
+      },
+      {
+        "j": 11,
+        "rival": "Valencia",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "elchecf.es",
+          "teleelx.es"
+        ]
+      }
+    ],
+    "Real Betis": [
+      {
+        "j": 1,
+        "rival": "Valencia",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "es.wikipedia.org",
+          "espn.com"
+        ]
+      },
+      {
+        "j": 2,
+        "rival": "Real Sociedad",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "espn.com",
+          "goal.com"
+        ],
+        "nota": "La Cartuja"
+      },
+      {
+        "j": 3,
+        "rival": "Levante",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 5,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "espn.com",
+          "verdeando.es"
+        ]
+      },
+      {
+        "j": 4,
+        "rival": "Real Madrid",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "espn.com"
+        ],
+        "nota": "Parrott 81'"
+      },
+      {
+        "j": 5,
+        "rival": "Villarreal",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 1,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "espn.com"
+        ]
+      },
+      {
+        "j": 6,
+        "rival": "Getafe",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 0,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "es.wikipedia.org"
+        ],
+        "nota": "condición deducida: visita a Getafe en J33"
+      },
+      {
+        "j": 7,
+        "rival": "RC Deportivo",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 1,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "es.wikipedia.org"
+        ]
+      },
+      {
+        "j": 8,
+        "rival": "Osasuna",
+        "condicion": "L",
+        "gf": 5,
+        "gc": 2,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "espn.com"
+        ],
+        "nota": "jornada y condición deducidas (visita a Osasuna en J36)"
+      },
+      {
+        "j": 9,
+        "rival": "FC Barcelona",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 5,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com"
+        ]
+      },
+      {
+        "j": 10,
+        "rival": "Celta",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "espn.com",
+          "verdeando.es"
+        ]
+      },
+      {
+        "j": 11,
+        "rival": "Málaga CF",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "besoccer.com",
+          "espn.com"
+        ]
+      }
+    ]
+  },
+  "otros_partidos": {
+    "Real Betis": [
+      {
+        "fecha": "2026-11-04",
+        "competicion": "UEFA Champions League",
+        "rival": "Borussia Dortmund",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "espn.com",
+          "emol.com",
+          "vavel.com",
+          "cooperativa.cl"
+        ],
+        "nota": "Ruibal 67'. Primera derrota en UCL (3 de 4 ganados). Rotaciones: Bartra, Bellerín, Fran García, Roca, Fornals e Isco suplentes"
+      }
+    ]
+  },
+  "tabla_oficial_declarada": {
+    "Elche CF": {
+      "pos": 17,
+      "pj": 11,
+      "g": 2,
+      "e": 4,
+      "p": 5,
+      "gf": 14,
+      "gc": 18,
+      "pts": 10,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "AFP vía unitel.bo",
+        "espn.com",
+        "nnc.mx"
+      ]
+    },
+    "Real Betis": {
+      "pos": 4,
+      "pj": 11,
+      "g": 7,
+      "e": 2,
+      "p": 2,
+      "gf": 18,
+      "gc": 15,
+      "pts": 23,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "AFP vía unitel.bo",
+        "nnc.mx",
+        "teleelx.es"
+      ]
+    }
+  },
+  "tiros": {
+    "Elche CF": {
+      "tiros": 105,
+      "a_puerta": 50,
+      "partidos": 11,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "elchecf.es (datos LaLiga, ficha J12)"
+      ],
+      "nota": "9.5 tiros y 4.5 a puerta por partido"
+    },
+    "Real Betis": {
+      "tiros": 139,
+      "a_puerta": 65,
+      "partidos": 11,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "elchecf.es (datos LaLiga, ficha J12)"
+      ],
+      "nota": "12.6 tiros y 5.9 a puerta por partido"
+    },
+    "corners": "NO_DISPONIBLE"
+  },
+  "tarjetas": {
+    "Real Betis": {
+      "amarillas": 18,
+      "amarillas_por_partido": 1.64,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "fichajes.com (18 en 11)",
+        "elchecf.es (cifra 18)"
+      ]
+    },
+    "Elche CF": {
+      "amarillas": 28,
+      "amarillas_por_partido": 2.55,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "elchecf.es"
+      ],
+      "nota": "la ficha muestra 28 y 18 sin etiqueta clara; 18 es del Betis (fichajes.com), por eliminación 28 es del Elche"
+    }
+  },
+  "h2h": [
+    {
+      "fecha": "2026-05-12",
+      "competicion": "LaLiga 2025/26",
+      "local": "Real Betis",
+      "visitante": "Elche CF",
+      "gl": 2,
+      "gv": 1,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "teleelx.es"
+      ]
+    }
+  ],
+  "h2h_resumen": {
+    "elche_sin_ganar": {
+      "valor": "El Elche no ha ganado al Betis en los 4 duelos de liga desde 2020",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "eurosport.es"
+      ]
+    }
+  },
+  "jugadores": {
+    "Troy Parrott (BET)": {
+      "dato": "Gol de la victoria ante el Real Madrid (J4)",
+      "estado": "VERIFICADO",
+      "goles_liga": "NO_DISPONIBLE"
+    },
+    "Aitor Ruibal (BET)": {
+      "dato": "Gol en Dortmund",
+      "estado": "VERIFICADO"
+    },
+    "_nota": "Máximos goleadores y asistentes: NO_DISPONIBLE"
+  },
+  "bajas": {
+    "Elche CF": {
+      "fuera": [
+        "Thomas Lemar (aductor, varias semanas)",
+        "Marc Aguado (tobillo)"
+      ],
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "jornadaperfecta.com",
+        "teleelx.es"
+      ]
+    },
+    "Real Betis": {
+      "vuelven": [
+        "Bartra",
+        "Bellerín",
+        "Fran García",
+        "Marc Roca",
+        "Fornals",
+        "Isco"
+      ],
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "teleelx.es / actualidadvalencia.com"
+      ]
+    },
+    "sancion_ambigua": {
+      "valor": "Bernal sancionado (roja directa, J11-J12)",
+      "estado": "UNA_FUENTE",
+      "nota": "no se pudo confirmar el equipo; no se usa"
+    }
+  },
+  "cuotas_publicadas": {
+    "_nota": "legalbet.es / oddschecker.es; verifica las actuales",
+    "Gana Elche": {
+      "mercado": "1",
+      "cuota": 3.25,
+      "fuente": "legalbet.es"
+    },
+    "Empate": {
+      "mercado": "X",
+      "cuota": 3.8,
+      "fuente": "legalbet.es"
+    },
+    "Gana Betis": {
+      "mercado": "2",
+      "cuota": 2.1,
+      "fuente": "legalbet.es (oddschecker 2.15 Interwetten)"
+    },
+    "Ambos anotan: sí": {
+      "mercado": "BTTS sí",
+      "cuota": 1.6,
+      "fuente": "oddschecker.es (Betway)"
+    }
+  },
+  "mercados_conteo": {
+    "_nota": "No hay datos verificables de lo que concede cada equipo; se proyecta con lo que produce cada uno (fuente: datos LaLiga en elchecf.es).",
+    "Remates Elche": {
+      "estimadores": [
+        {
+          "nombre": "Elche remata por partido",
+          "valor": 9.55,
+          "estado": "UNA_FUENTE",
+          "fuente": "elchecf.es"
+        }
+      ],
+      "lineas": [
+        7.5,
+        8.5,
+        9.5,
+        10.5,
+        11.5
+      ]
+    },
+    "Remates Betis": {
+      "estimadores": [
+        {
+          "nombre": "Betis remata por partido",
+          "valor": 12.64,
+          "estado": "UNA_FUENTE",
+          "fuente": "elchecf.es"
+        }
+      ],
+      "lineas": [
+        9.5,
+        10.5,
+        11.5,
+        12.5,
+        13.5
+      ]
+    },
+    "Remates totales": {
+      "suma_de": [
+        "Remates Elche",
+        "Remates Betis"
+      ],
+      "lineas": [
+        18.5,
+        19.5,
+        20.5,
+        21.5,
+        22.5,
+        23.5
+      ]
+    },
+    "Remates a puerta Elche": {
+      "estimadores": [
+        {
+          "nombre": "Elche a puerta por partido",
+          "valor": 4.55,
+          "estado": "UNA_FUENTE",
+          "fuente": "elchecf.es"
+        }
+      ],
+      "lineas": [
+        2.5,
+        3.5,
+        4.5,
+        5.5
+      ]
+    },
+    "Remates a puerta Betis": {
+      "estimadores": [
+        {
+          "nombre": "Betis a puerta por partido",
+          "valor": 5.91,
+          "estado": "UNA_FUENTE",
+          "fuente": "elchecf.es"
+        }
+      ],
+      "lineas": [
+        3.5,
+        4.5,
+        5.5,
+        6.5
+      ]
+    },
+    "Remates a puerta totales": {
+      "suma_de": [
+        "Remates a puerta Elche",
+        "Remates a puerta Betis"
+      ],
+      "lineas": [
+        7.5,
+        8.5,
+        9.5,
+        10.5,
+        11.5
+      ]
+    },
+    "Amarillas Elche": {
+      "estimadores": [
+        {
+          "nombre": "Elche recibe por partido",
+          "valor": 2.55,
+          "estado": "UNA_FUENTE",
+          "fuente": "elchecf.es (inferido)"
+        }
+      ],
+      "lineas": [
+        0.5,
+        1.5,
+        2.5,
+        3.5
+      ]
+    },
+    "Amarillas Betis": {
+      "estimadores": [
+        {
+          "nombre": "Betis recibe por partido",
+          "valor": 1.64,
+          "estado": "VERIFICADO",
+          "fuente": "fichajes.com + elchecf.es"
+        }
+      ],
+      "lineas": [
+        0.5,
+        1.5,
+        2.5
+      ]
+    },
+    "Amarillas totales": {
+      "estimadores": [
+        {
+          "nombre": "Equipos (2.55 + 1.64)",
+          "valor": 4.19,
+          "estado": "UNA_FUENTE",
+          "fuente": "suma de los anteriores"
+        },
+        {
+          "nombre": "Soto Grado 2026/27 (14 en 3)",
+          "valor": 4.67,
+          "estado": "UNA_FUENTE",
+          "fuente": "livefutbol + estadisticaslaliga (13-15)"
+        },
+        {
+          "nombre": "Soto Grado histórico",
+          "valor": 4.67,
+          "estado": "UNA_FUENTE",
+          "fuente": "statsbet.es (27 PJ); betfair 4.3"
+        }
+      ],
+      "lineas": [
+        3.5,
+        4.5,
+        5.5,
+        6.5
+      ]
+    }
+  }
+}
