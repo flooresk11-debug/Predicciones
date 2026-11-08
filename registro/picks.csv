@@ -32,3 +32,6 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-08,Villarreal-Getafe,Menos de 3.5 goles,riesgo-medio,medio,0.692,,G,prob. de mercado; cuota justa 1.45; H2H 10/10; Final 1-0 (captura bet365 del usuario)
 2026-11-08,Villarreal-Getafe + Freiburg-Union Berlin,Combinada: Villarreal 1.53 + Friburgo 1.61 (aumento de parlay),usuario,medio,0.411,2.46,G,apostada por el usuario en bet365; cuotas tomadas por encima del precio justo (1.52 y 1.59)
 2026-11-08,Atlético-Barcelona,Bet builder: ambos marcan + Julián Álvarez 1+ a puerta + Raphinha 1+ a puerta (superaumento 3.00),analista,alto,0.33,3.00,pendiente,"CONDICIONAL: solo si Raphinha es titular; prob. 28-37% según minutos; 0.5 unidades"
+2026-11-08,Tolima-Millonarios,Menos de 3.5 goles,riesgo-bajo,bajo,0.842,,pendiente,consenso de cuotas sin margen; cuota justa 1.19; sin referencia afilada (Colombia no está en football-data)
+2026-11-08,Tolima-Millonarios,Menos de 2.5 goles,riesgo-medio,medio,0.655,,pendiente,cuota justa 1.53
+2026-11-08,Tolima-Millonarios,Empate,riesgo-alto,alto,0.298,3.25,pendiente,cuota justa 3.36; bet365 3.25 (sportytrader) por debajo; Millonarios 9 empates en 17
