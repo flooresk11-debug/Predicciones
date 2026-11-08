@@ -1,0 +1,728 @@
+{
+  "partido": {
+    "local": "FC Twente",
+    "visitante": "Ajax",
+    "competicion": "Eredivisie 2026/27 - Jornada 12",
+    "fecha": "2026-11-08",
+    "hora_cet": "14:30",
+    "estadio": "De Grolsch Veste (lleno)",
+    "arbitro": {
+      "valor": "Joey Kooij",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "voetbalprimeur.nl",
+        "twenteinsite.nl",
+        "feyenoord.headliner.nl"
+      ],
+      "temporada_2026_27": {
+        "partidos": 7,
+        "amarillas": 21,
+        "rojas": 1,
+        "penaltis": 7,
+        "amarillas_por_partido": 3.0,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "voetbalprimeur.nl (este es su 8.º partido)"
+        ]
+      }
+    },
+    "entrenador_local": {
+      "valor": "John van den Brom",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "twenteinsite.nl"
+      ]
+    },
+    "entrenador_visitante": {
+      "valor": "Míchel",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "en.wikipedia.org (nombrado 2/6/2026)",
+        "fcupdate.nl"
+      ]
+    }
+  },
+  "resultados_liga": {
+    "FC Twente": [
+      {
+        "j": 1,
+        "rival": "SC Heerenveen",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 2,
+        "rival": "PEC Zwolle",
+        "condicion": "L",
+        "gf": 3,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 3,
+        "rival": "Telstar",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 4,
+        "rival": "SC Cambuur",
+        "condicion": "V",
+        "gf": 4,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 5,
+        "rival": "FC Groningen",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 6,
+        "rival": "ADO Den Haag",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 7,
+        "rival": "PSV",
+        "condicion": "L",
+        "gf": 3,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 8,
+        "rival": "Fortuna Sittard",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 9,
+        "rival": "FC Utrecht",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 10,
+        "rival": "AZ",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 11,
+        "rival": "Excelsior",
+        "condicion": "V",
+        "gf": 9,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "doelpunten.nl",
+          "voetbal.com"
+        ],
+        "nota": "Hat-trick de Weghorst"
+      }
+    ],
+    "Ajax": [
+      {
+        "j": 1,
+        "rival": "PEC Zwolle",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "ajaxclub.nl",
+          "opstellingvandaag.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 2,
+        "rival": "SC Heerenveen",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "ajaxclub.nl",
+          "opstellingvandaag.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 3,
+        "rival": "Willem II",
+        "condicion": "L",
+        "gf": 5,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "ajaxclub.nl",
+          "opstellingvandaag.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 4,
+        "rival": "Telstar",
+        "condicion": "V",
+        "gf": 4,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "ajaxclub.nl",
+          "opstellingvandaag.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 5,
+        "rival": "PSV",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "ajaxclub.nl",
+          "opstellingvandaag.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 6,
+        "rival": "Fortuna Sittard",
+        "condicion": "V",
+        "gf": 5,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "ajaxclub.nl",
+          "opstellingvandaag.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 7,
+        "rival": "Excelsior",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "ajaxclub.nl",
+          "opstellingvandaag.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 8,
+        "rival": "NEC",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "ajaxclub.nl",
+          "opstellingvandaag.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 9,
+        "rival": "FC Groningen",
+        "condicion": "V",
+        "gf": 5,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "ajaxclub.nl",
+          "opstellingvandaag.nl",
+          "voetbal.com"
+        ]
+      },
+      {
+        "j": 10,
+        "rival": "Sparta Rotterdam",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 1,
+        "estado": "CONFLICTO_RESUELTO",
+        "fuentes": [
+          "opstellingvandaag.nl",
+          "ziggo.nl"
+        ],
+        "nota": "Una fuente da 2-1 para Sparta; solo 1-2 (victoria Ajax) cuadra con la tabla 7-3-1, 30:13"
+      },
+      {
+        "j": 11,
+        "rival": "AZ",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "ajaxclub.nl",
+          "opstellingvandaag.nl",
+          "voetbal.com"
+        ]
+      }
+    ]
+  },
+  "otros_partidos": {
+    "Ajax": [
+      {
+        "fecha": "2026-11-05",
+        "competicion": "UEFA Conference League",
+        "rival": "FC Midtjylland",
+        "condicion": "V",
+        "gf": 6,
+        "gc": 1,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "fcupdate.nl",
+          "skysports.com"
+        ]
+      }
+    ],
+    "FC Twente": [
+      {
+        "fecha": "2026-11-05",
+        "competicion": "UEFA Conference League",
+        "rival": "Pafos",
+        "condicion": "L",
+        "gf": 3,
+        "gc": 1,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "skysports.com"
+        ]
+      }
+    ]
+  },
+  "tabla_oficial_declarada": {
+    "FC Twente": {
+      "pos": 4,
+      "pj": 11,
+      "g": 7,
+      "e": 2,
+      "p": 2,
+      "gf": 28,
+      "gc": 10,
+      "pts": 23,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "soccernews.nl",
+        "vi.nl",
+        "fcupdate.nl"
+      ],
+      "nota": "Empatado a 23 con PSV (3.º)"
+    },
+    "Ajax": {
+      "pos": 2,
+      "pj": 11,
+      "g": 7,
+      "e": 3,
+      "p": 1,
+      "gf": 30,
+      "gc": 13,
+      "pts": 24,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "soccernews.nl",
+        "twenteinsite.nl"
+      ]
+    }
+  },
+  "tabla_parcial_otros": {
+    "Feyenoord": {
+      "pos": 1,
+      "pts": 25,
+      "gf": 33,
+      "gc": 12
+    },
+    "PSV": {
+      "pos": 3,
+      "pts": 23,
+      "gf": 35
+    },
+    "AZ": {
+      "pos": 5,
+      "pts": 20
+    },
+    "Fortuna Sittard": {
+      "pos": 6,
+      "pts": 19
+    },
+    "Willem II": {
+      "pos": 18,
+      "pts": 2
+    }
+  },
+  "tiros": {
+    "FC Twente": {
+      "tiros": 230,
+      "a_puerta": 88,
+      "partidos": 11,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "tracker de liga (20.91/p)",
+        "footystats (20.44)",
+        "otra fuente 23.6"
+      ],
+      "nota": "a puerta 8.0/p (footystats H2H, una fuente)"
+    },
+    "Ajax": {
+      "tiros": 231,
+      "a_puerta": 78,
+      "partidos": 11,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "tracker de liga (21.0/p)",
+        "otra fuente 19.2",
+        "statz.ai (7.1 a puerta/p; media liga 5.3)"
+      ]
+    },
+    "corners": "NO_DISPONIBLE"
+  },
+  "tarjetas": {
+    "FC Twente": {
+      "tarjetas": 11,
+      "por_partido": 1.0,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "flashscore.nl"
+      ],
+      "conflicto": "pouletips.nl: 4 amarillas (desactualizado)"
+    },
+    "Ajax": {
+      "tarjetas": 20,
+      "por_partido": 1.82,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "flashscore.nl"
+      ],
+      "conflicto": "pouletips.nl: 7 (desactualizado)"
+    },
+    "media_liga": {
+      "valor": 3.04,
+      "detalle": "301 tarjetas en 99 partidos",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "footystats.org"
+      ]
+    }
+  },
+  "h2h": [
+    {
+      "fecha": "2026-04-04",
+      "local": "Ajax",
+      "visitante": "FC Twente",
+      "gl": 1,
+      "gv": 2,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "espn.com",
+        "nltimes.nl",
+        "ajax.nl",
+        "fcupdate.nl"
+      ]
+    },
+    {
+      "fecha": "2025-10-26",
+      "local": "FC Twente",
+      "visitante": "Ajax",
+      "gl": 2,
+      "gv": 3,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "voetbalnieuws.nl"
+      ]
+    },
+    {
+      "fecha": "2025-05-18",
+      "local": "Ajax",
+      "visitante": "FC Twente",
+      "gl": 2,
+      "gv": 0,
+      "estado": "UNA_FUENTE"
+    },
+    {
+      "fecha": "2024-11-10",
+      "local": "FC Twente",
+      "visitante": "Ajax",
+      "gl": 2,
+      "gv": 2,
+      "estado": "UNA_FUENTE"
+    },
+    {
+      "fecha": "2024-04-14",
+      "local": "Ajax",
+      "visitante": "FC Twente",
+      "gl": 2,
+      "gv": 1,
+      "estado": "UNA_FUENTE"
+    }
+  ],
+  "h2h_resumen": {
+    "ultimos_5": {
+      "valor": "Ajax 3G, 1E, Twente 1G; media 3.4 goles; ambos anotan en 4 de 5",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "voetbalnieuws.nl"
+      ]
+    }
+  },
+  "jugadores": {
+    "Wout Weghorst (TWE)": {
+      "dato": "Líder de Twente en tiros a puerta (25); hat-trick vs Excelsior",
+      "estado": "UNA_FUENTE",
+      "goles_liga": "NO_DISPONIBLE"
+    },
+    "Oscar Gloukh (AJA)": {
+      "dato": "Líder de Ajax en tiros a puerta (21)",
+      "estado": "UNA_FUENTE"
+    }
+  },
+  "bajas": {
+    "FC Twente": {
+      "fuera": [
+        "Lars Unnerstall (espalda)",
+        "Max Bruns",
+        "Stav Lemkin",
+        "Filip Thorvaldsen (rodilla)"
+      ],
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "twenteinsite.nl",
+        "bet365 news"
+      ]
+    },
+    "Ajax": {
+      "fuera": [
+        "Kasper Dolberg",
+        "Simon Adingra",
+        "Viktor Tsygankov"
+      ],
+      "duda": [
+        "Sofyan Amrabat",
+        "Julian Brandt",
+        "Anton Gaaei"
+      ],
+      "conflicto": "Caio Henrique: disponible (bet365) vs baja (Sports Mole)",
+      "estado": "VERIFICADO"
+    }
+  },
+  "cuotas_publicadas": {
+    "_nota": "bet365 / twenteinsite (medias); verifica las actuales",
+    "Gana Twente": {
+      "mercado": "1",
+      "cuota": 2.25,
+      "fuente": "bet365"
+    },
+    "Empate": {
+      "mercado": "X",
+      "cuota": 3.8,
+      "fuente": "bet365 (media 3.95)"
+    },
+    "Gana Ajax": {
+      "mercado": "2",
+      "cuota": 2.9,
+      "fuente": "bet365"
+    }
+  },
+  "mercados_conteo": {
+    "_nota": "Volumen de remates de Eredivisie muy alto; datos de una sola fuente por cifra; no hay datos de lo que concede cada equipo.",
+    "Remates Twente": {
+      "estimadores": [
+        {
+          "nombre": "Twente remata por partido",
+          "valor": 20.91,
+          "estado": "UNA_FUENTE",
+          "fuente": "tracker de liga"
+        },
+        {
+          "nombre": "Twente (footystats)",
+          "valor": 20.44,
+          "estado": "UNA_FUENTE",
+          "fuente": "footystats.org"
+        }
+      ],
+      "lineas": [
+        16.5,
+        18.5,
+        20.5,
+        22.5
+      ]
+    },
+    "Remates Ajax": {
+      "estimadores": [
+        {
+          "nombre": "Ajax remata por partido",
+          "valor": 21.0,
+          "estado": "UNA_FUENTE",
+          "fuente": "tracker de liga"
+        },
+        {
+          "nombre": "Ajax (otra fuente)",
+          "valor": 19.2,
+          "estado": "UNA_FUENTE",
+          "fuente": "otra fuente"
+        }
+      ],
+      "lineas": [
+        16.5,
+        18.5,
+        20.5,
+        22.5
+      ]
+    },
+    "Remates totales": {
+      "suma_de": [
+        "Remates Twente",
+        "Remates Ajax"
+      ],
+      "lineas": [
+        34.5,
+        36.5,
+        38.5,
+        40.5,
+        42.5
+      ]
+    },
+    "Remates a puerta Twente": {
+      "estimadores": [
+        {
+          "nombre": "Twente a puerta por partido",
+          "valor": 8.0,
+          "estado": "UNA_FUENTE",
+          "fuente": "footystats.org"
+        }
+      ],
+      "lineas": [
+        5.5,
+        6.5,
+        7.5,
+        8.5
+      ]
+    },
+    "Remates a puerta Ajax": {
+      "estimadores": [
+        {
+          "nombre": "Ajax a puerta (statz)",
+          "valor": 7.1,
+          "estado": "UNA_FUENTE",
+          "fuente": "statz.ai"
+        },
+        {
+          "nombre": "Ajax a puerta (footystats)",
+          "valor": 8.0,
+          "estado": "UNA_FUENTE",
+          "fuente": "footystats.org"
+        }
+      ],
+      "lineas": [
+        5.5,
+        6.5,
+        7.5,
+        8.5
+      ]
+    },
+    "Remates a puerta totales": {
+      "suma_de": [
+        "Remates a puerta Twente",
+        "Remates a puerta Ajax"
+      ],
+      "lineas": [
+        12.5,
+        13.5,
+        14.5,
+        15.5,
+        16.5
+      ]
+    },
+    "Tarjetas totales": {
+      "estimadores": [
+        {
+          "nombre": "Equipos (1.00 + 1.82)",
+          "valor": 2.82,
+          "estado": "UNA_FUENTE",
+          "fuente": "flashscore.nl"
+        },
+        {
+          "nombre": "Árbitro Kooij 2026/27",
+          "valor": 3.0,
+          "estado": "UNA_FUENTE",
+          "fuente": "voetbalprimeur.nl (21 amarillas en 7)"
+        },
+        {
+          "nombre": "Media de la liga",
+          "valor": 3.04,
+          "estado": "UNA_FUENTE",
+          "fuente": "footystats.org (301/99)"
+        }
+      ],
+      "lineas": [
+        1.5,
+        2.5,
+        3.5,
+        4.5
+      ]
+    }
+  }
+}
