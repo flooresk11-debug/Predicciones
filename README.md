@@ -59,3 +59,13 @@ Nunca combinados. Todos van a `registro/picks.csv` para medir cada tipo por sepa
 
 Busca favoritos con cuota bet365 entre 1.40 y 1.75 que paguen al menos el 98% de su precio justo, y los
 combina de 2 en 2 en partidos distintos (como Villarreal 1.53 + Friburgo 1.61, ganada el 8/11/2026).
+
+## Regla tras el error de Getafe (8/11/2026)
+
+1. **Precio y análisis tienen que estar de acuerdo.** Una ventaja de precio solo es pick si el análisis no la
+   contradice (goles del equipo, historial, bajas). Getafe a 8.00 tenía ventaja de precio, pero marcaba
+   0.73 goles por partido y había ganado 1 de 10 duelos: el análisis lo descartaba y no se filtró.
+2. **Nunca picks contradictorios en el mismo partido** (no "Villarreal o empate" y "gana Getafe" a la vez).
+3. **Cuotas largas (> 3.5) fuera por defecto.** En el backtest, casi todo el valor de bet365 está en cuotas 4.0+:
+   267 apuestas, 15% de aciertos, ROI +3.2%, CLV +2.3%. Ventaja pequeña que exige cientos de apuestas y aguantar
+   rachas de 10-20 fallos: no encaja con el perfil de apuestas del usuario.

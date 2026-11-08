@@ -76,9 +76,18 @@ def main():
     ap.add_argument("--umbral", type=float, default=0.04)
     ap.add_argument("--ligas", nargs="*")
     ap.add_argument("--registrar", action="store_true")
+    ap.add_argument("--max-cuota", type=float, default=3.5,
+                    help="por defecto se excluyen cuotas altas: aciertan ~15%% y exigen cientos de apuestas")
+    ap.add_argument("--incluir-largas", action="store_true", help="incluir cuotas > --max-cuota")
     args = ap.parse_args()
     filas = descargar()
     ops = analizar(filas, args.umbral, set(args.ligas or []))
+    if not args.incluir_largas:
+        largas = [o for o in ops if o["cuota"] > args.max_cuota]
+        ops = [o for o in ops if o["cuota"] <= args.max_cuota]
+        if largas:
+            print(f"(Ocultas {len(largas)} cuotas largas > {args.max_cuota}: usa --incluir-largas para verlas. "
+                  "Además, toda oportunidad debe pasar el filtro de análisis antes de apostarse.)")
     print(f"Partidos con cuotas: {len(filas)} | oportunidades (bet365 >= {args.umbral:+.0%} sobre el precio justo): {len(ops)}\n")
     if not ops:
         print("Hoy no hay ventaja en bet365. No apostar también es ganar.")
