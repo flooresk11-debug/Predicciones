@@ -1,7 +1,7 @@
 fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
-2026-11-08,Köln-Leverkusen,Más de 1.5 goles,claude-v1,bajo,0.85,,pendiente,usuario reporta que los riesgos bajos se perdieron; falta marcador
-2026-11-08,Köln-Leverkusen,Leverkusen marca,claude-v1,bajo,0.82,,pendiente,
-2026-11-08,Bochum-Karlsruhe,Menos de 3.5 goles,claude-v1,bajo,0.75,1.59,pendiente,
+2026-11-08,Köln-Leverkusen,Más de 1.5 goles,claude-v1,bajo,0.85,,pendiente,OpenLigaDB: 0-1 y partido aún sin cerrar en la consulta
+2026-11-08,Köln-Leverkusen,Leverkusen marca,claude-v1,bajo,0.82,,G,OpenLigaDB: gol de A. Garcia (7'); 0-1 en la consulta
+2026-11-08,Bochum-Karlsruhe,Menos de 3.5 goles,claude-v1,bajo,0.75,1.59,P,OpenLigaDB final 3-2 (5 goles; Hofmann 92')
 2026-11-08,Palace-Liverpool,Liverpool marca,claude-v1,bajo,0.85,,pendiente,
 2026-11-08,Palace-Liverpool,Liverpool o empate,claude-v1,bajo,0.80,,pendiente,
 2026-11-08,Palace-Liverpool,Más de 21.5 remates,claude-v1,bajo,0.70,,pendiente,

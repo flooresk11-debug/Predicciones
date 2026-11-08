@@ -25,3 +25,14 @@ El script termina con código 1 si la auditoría encuentra inconsistencias.
 4. **Remates y tarjetas** solo son aptos para pick si hay datos del rival o del árbitro, no solo del propio equipo.
 5. **Registro obligatorio**: cada pick va a `registro/picks.csv`; `python3 evaluar.py` mide aciertos,
    calibración (Brier) y ROI.
+
+## Backtest con datos reales (8.390 partidos, 5 ligas, 2021/22-2025/26)
+
+`./descargar_historico.sh && python3 backtest.py` — sin mirar el futuro: cada partido se predice solo con los anteriores.
+
+Resultados clave:
+- Los picks de probabilidad ~80% (más de 1.5, "X marca") están bien calibrados: aciertan ~82%. Pierden 1 de cada 5;
+  combinarlos multiplica el riesgo.
+- Ningún modelo propio (goles, tiros a puerta, con o sin anclaje) gana al mercado: ROI -6% a -13% y CLV negativo.
+- La única señal de ventaja real es de precio: apostar cuando la mejor cuota disponible supera el precio justo
+  de Pinnacle (casa "afilada") da CLV positivo (+3.8% a +3.9%). Esa es la base del método v3.
