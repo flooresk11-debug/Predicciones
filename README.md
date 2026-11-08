@@ -54,3 +54,8 @@ Cada análisis termina con un pick concreto, con una de estas etiquetas:
 - 🟡 **Pick del ANALISTA**: la mejor apuesta según datos y contexto cuando no hay ventaja de precio.
   Se elige la opción con el valor esperado menos negativo que además respalden los datos. Stake: 0.5 unidades.
 Nunca combinados. Todos van a `registro/picks.csv` para medir cada tipo por separado.
+
+## Combinadas de 2 favoritos bien pagados (`combinadas.py`)
+
+Busca favoritos con cuota bet365 entre 1.40 y 1.75 que paguen al menos el 98% de su precio justo, y los
+combina de 2 en 2 en partidos distintos (como Villarreal 1.53 + Friburgo 1.61, ganada el 8/11/2026).
