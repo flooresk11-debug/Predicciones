@@ -1,6 +1,7 @@
 # Simulación auditada: 1. FC Köln vs Bayer 04 Leverkusen
 Bundesliga 2026/27 - Jornada 9 · 2026-11-08 15:30 CET
 
+
 ## 1. Auditoría de datos
 ```
 OK  1. FC Köln: 8 PJ, 2G 3E 3P, 9:12, 9 pts = coincide con la tabla publicada

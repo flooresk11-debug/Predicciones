@@ -316,8 +316,12 @@ def seccion_conteos(d, w):
 # ---------------------------------------------------------------- anclaje al mercado
 def prob_mercado_1x2(d):
     """Probabilidades 1X2 del mercado sin margen (si hay cuotas de los tres resultados)."""
-    cq = {q.get("mercado"): q["cuota"] for k, q in d.get("cuotas_publicadas", {}).items()
-          if not k.startswith("_") and isinstance(q, dict) and "cuota" in q}
+    pin = d.get("precio", {}).get("pinnacle")
+    if pin and all(k in pin for k in ("1", "X", "2")):
+        cq = pin   # el precio de referencia es la casa afilada, no la mejor cuota de cada casa
+    else:
+        cq = {q.get("mercado"): q["cuota"] for k, q in d.get("cuotas_publicadas", {}).items()
+              if not k.startswith("_") and isinstance(q, dict) and "cuota" in q}
     if not all(k in cq for k in ("1", "X", "2")):
         return None, None
     inv = {k: 1 / cq[k] for k in ("1", "X", "2")}
@@ -401,6 +405,39 @@ def seccion_picks(d, r, w, calidad, umbral, ancla=None):
     w("\nStake sugerido: 1 unidad (1-2% del bankroll) por pick; nunca más de 2 selecciones en una combinada.")
 
 
+def seccion_precio(d, w, umbral=0.02):
+    """Método v3 (validado en backtest.py): ventaja = mejor cuota disponible frente al precio justo de Pinnacle."""
+    pr = d.get("precio")
+    if not pr:
+        return
+    w("\n## 0. Ventaja de precio frente a Pinnacle (método v3, el único con CLV positivo en el backtest)")
+    pin = pr["pinnacle"]
+    grupos = pr.get("grupos", {"1X2": ["1", "X", "2"]})
+    justas = {}
+    for g, ks in grupos.items():
+        if not all(k in pin for k in ks):
+            continue
+        inv = [1 / pin[k] for k in ks]
+        for k, v in zip(ks, inv):
+            justas[k] = v / sum(inv)
+        w(f"- Pinnacle {g}: " + " · ".join(f"{k} {pin[k]}" for k in ks) +
+          f" (margen {pct(sum(inv) - 1)}) -> justo: " + " · ".join(f"{k} {pct(justas[k])}" for k in ks))
+    w(f"- Fuente Pinnacle: {pr.get('fuente_pinnacle', 'n/d')}")
+    w("\n| Mercado | Casa | Cuota | Prob. justa (Pinnacle) | Ventaja | ¿Pick? |")
+    w("|---|---|---|---|---|---|")
+    hay = False
+    for o in pr.get("ofertas", []):
+        pj = justas.get(o["mercado"])
+        if pj is None:
+            continue
+        ev = pj * o["cuota"] - 1
+        es = ev >= umbral
+        hay |= es
+        w(f"| {o['mercado']} | {o['casa']} | {o['cuota']} | {pct(pj)} | {ev:+.1%} | {'SÍ' if es else 'no'} |")
+    w(f"\nRegla: pick solo si ventaja >= {umbral:+.0%}. " + ("" if hay else "**Ninguna oferta supera el umbral: sin pick de precio.**"))
+    w("⚠️ Las cuotas cambian: confirma en el momento que Pinnacle y tu casa siguen en estos precios; si la ventaja desaparece, no hay apuesta.")
+
+
 # ---------------------------------------------------------------- informe
 def informe(d, args):
     loc, vis = d["partido"]["local"], d["partido"]["visitante"]
@@ -409,7 +446,8 @@ def informe(d, args):
     ok, hall = auditar(d)
     w(f"# Simulación auditada: {loc} vs {vis}")
     w(f"{d['partido']['competicion']} · {d['partido']['fecha']} {d['partido']['hora_cet']} CET\n")
-    w("## 1. Auditoría de datos")
+    seccion_precio(d, w)
+    w("\n## 1. Auditoría de datos")
     w("```")
     w("\n".join(hall))
     w("```")

@@ -1,6 +1,7 @@
 # Simulación auditada: VfL Bochum vs Karlsruher SC
 2. Bundesliga 2026/27 - Jornada 11 · 2026-11-08 13:30 CET
 
+
 ## 1. Auditoría de datos
 ```
 OK  VfL Bochum: 10 PJ, 3G 2E 5P, 8:11, 11 pts = coincide con la tabla publicada

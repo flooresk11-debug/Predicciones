@@ -1,6 +1,7 @@
 # Simulación auditada: Elche CF vs Real Betis
 LaLiga EA Sports 2026/27 - Jornada 12 · 2026-11-08 14:00 CET
 
+
 ## 1. Auditoría de datos
 ```
 OK  Elche CF: 11 PJ, 2G 4E 5P, 14:18, 10 pts = coincide con la tabla publicada

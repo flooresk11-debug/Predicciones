@@ -18,3 +18,4 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-08,Twente-Ajax,Ajax marca,claude-v1,bajo,0.86,,pendiente,
 2026-11-08,Palace-Liverpool,Ambos anotan: no,claude-v2,alto,0.452,2.33,pendiente,pick del filtro nuevo
 2026-11-08,Twente-Ajax,Gana Ajax,claude-v2,alto,0.392,2.90,pendiente,pick del filtro nuevo
+2026-11-08,Villarreal-Getafe,Gana Villarreal (Novibet),claude-v3,medio,0.666,1.58,pendiente,ventaja +5.2% vs Pinnacle 1.45 (rcdm.es); confirmar precios antes

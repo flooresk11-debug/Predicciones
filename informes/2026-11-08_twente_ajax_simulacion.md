@@ -1,6 +1,7 @@
 # Simulación auditada: FC Twente vs Ajax
 Eredivisie 2026/27 - Jornada 12 · 2026-11-08 14:30 CET
 
+
 ## 1. Auditoría de datos
 ```
 OK  FC Twente: 11 PJ, 7G 2E 2P, 28:10, 23 pts = coincide con la tabla publicada

@@ -1,6 +1,7 @@
 # Simulación auditada: AGF vs AC Horsens
 Superliga Dinamarca 2026/27 - Jornada 14 · 2026-11-08 14:00 CET
 
+
 ## 1. Auditoría de datos
 ```
 OK  AGF (agregados): 13 PJ, 2G 6E 5P, 17:21, 12 pts = 3x2+6 y coincide con la tabla

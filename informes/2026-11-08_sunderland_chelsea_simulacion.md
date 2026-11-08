@@ -1,6 +1,7 @@
 # Simulación auditada: Sunderland vs Chelsea
 Premier League 2026/27 - Jornada 10 · 2026-11-08 15:00 CET
 
+
 ## 1. Auditoría de datos
 ```
 OK  Sunderland: 9 PJ, 1G 2E 6P, 7:17, 5 pts = coincide con la tabla publicada

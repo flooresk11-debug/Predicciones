@@ -1,0 +1,372 @@
+{
+  "partido": {
+    "local": "Villarreal",
+    "visitante": "Getafe",
+    "competicion": "LaLiga EA Sports 2026/27 - Jornada 12",
+    "fecha": "2026-11-08",
+    "hora_cet": "18:30",
+    "estadio": "Estadio de la Cerámica",
+    "arbitro": {
+      "valor": "Carlos Muñiz Muñoz",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "dazn.com",
+        "futbolfantasy.com"
+      ],
+      "nota": "de los más noveles de Primera; sin estadísticas fiables"
+    },
+    "entrenador_local": {
+      "valor": "Íñigo Pérez",
+      "estado": "UNA_FUENTE"
+    },
+    "entrenador_visitante": {
+      "valor": "José Bordalás",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "futbolete.com",
+        "getafecf.com"
+      ]
+    }
+  },
+  "precio": {
+    "fuente_pinnacle": "rcdm.es (previa del 8/11; puede haber cambiado)",
+    "pinnacle": {
+      "1": 1.45,
+      "X": 4.74,
+      "2": 7.42
+    },
+    "ofertas": [
+      {
+        "mercado": "1",
+        "cuota": 1.58,
+        "casa": "Novibet",
+        "fuente": "sportytrader.com"
+      },
+      {
+        "mercado": "1",
+        "cuota": 1.53,
+        "casa": "n/d",
+        "fuente": "betmines.com / rcdm.es"
+      },
+      {
+        "mercado": "1",
+        "cuota": 1.43,
+        "casa": "JokerBet",
+        "fuente": "legalbet.es"
+      },
+      {
+        "mercado": "X",
+        "cuota": 4.6,
+        "casa": "JokerBet",
+        "fuente": "legalbet.es"
+      },
+      {
+        "mercado": "2",
+        "cuota": 7.6,
+        "casa": "JokerBet",
+        "fuente": "legalbet.es"
+      },
+      {
+        "mercado": "2",
+        "cuota": 7.1,
+        "casa": "Betwinner",
+        "fuente": "sportytrader.com"
+      }
+    ]
+  },
+  "resultados_liga": {
+    "Villarreal": [
+      {
+        "j": 1,
+        "rival": "Racing Santander",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com"
+        ]
+      },
+      {
+        "j": 2,
+        "rival": "Atlético de Madrid",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com"
+        ]
+      },
+      {
+        "j": 3,
+        "rival": "Alavés",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com"
+        ]
+      },
+      {
+        "j": 4,
+        "rival": "RC Deportivo",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com"
+        ]
+      },
+      {
+        "j": 5,
+        "rival": "Real Betis",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "espn.com (lista Betis)"
+        ]
+      },
+      {
+        "j": 6,
+        "rival": "Málaga",
+        "condicion": "V",
+        "gf": 3,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com"
+        ]
+      },
+      {
+        "j": 7,
+        "rival": "Levante",
+        "condicion": "L",
+        "gf": 3,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com"
+        ]
+      },
+      {
+        "j": 8,
+        "rival": "Real Madrid",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com"
+        ]
+      },
+      {
+        "j": 9,
+        "rival": "Elche",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "laliga.com (lista Elche)"
+        ]
+      },
+      {
+        "j": 10,
+        "rival": "Valencia",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com"
+        ]
+      },
+      {
+        "j": 11,
+        "rival": "RCD Espanyol",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "laliga.com",
+          "futbolfantasy.com"
+        ]
+      }
+    ]
+  },
+  "agregados": {
+    "Getafe": {
+      "total": {
+        "pj": 11,
+        "g": 3,
+        "e": 3,
+        "p": 5,
+        "gf": 8,
+        "gc": 16
+      },
+      "estado_total": "VERIFICADO",
+      "fuentes_total": [
+        "getafecf.com (tabla oficial)",
+        "laliga.com (10 de 11 resultados: suman 8:12, 3-3-4)"
+      ],
+      "nota": "Falta 1 resultado en las fuentes; por la tabla es una derrota 0-4 contra rival no identificado. No se inventa el rival."
+    }
+  },
+  "otros_partidos": {
+    "Villarreal": [
+      {
+        "fecha": "2026-11-03",
+        "competicion": "UEFA Champions League",
+        "rival": "PSG",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 6,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "espn.com",
+          "canal26.com",
+          "clarosports.com"
+        ],
+        "nota": "19.º de la fase de liga con 3 pts; antes 3-4 en Liverpool"
+      }
+    ],
+    "Getafe": [
+      {
+        "fecha": "2026-11-01",
+        "competicion": "LaLiga J11",
+        "rival": "Sevilla",
+        "condicion": "L",
+        "gf": 3,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "nota": "Remontada (Ünal, Satriano, Mangala); sale del descenso"
+      }
+    ]
+  },
+  "tabla_oficial_declarada": {
+    "Villarreal": {
+      "pj": 11,
+      "g": 3,
+      "e": 3,
+      "p": 5,
+      "gf": 15,
+      "gc": 15,
+      "pts": 12,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "espn.com",
+        "suma de resultados laliga.com"
+      ]
+    },
+    "Getafe": {
+      "pos": 12,
+      "pj": 11,
+      "g": 3,
+      "e": 3,
+      "p": 5,
+      "gf": 8,
+      "gc": 16,
+      "pts": 12,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "getafecf.com"
+      ]
+    }
+  },
+  "tiros": {
+    "tiros_totales": "NO_DISPONIBLE (2026/27)",
+    "corners": "NO_DISPONIBLE (2026/27)"
+  },
+  "historico_real_football_data": {
+    "_fuente": "football-data.co.uk (datos oficiales descargados, 5 temporadas)",
+    "h2h_10": "10 partidos: 0 con más de 3 goles; media 1.9 goles; +2.5 en 4/10; Villarreal 5G 4E 1P",
+    "getafe_2025_26": "38 PJ: 1.84 goles/partido, +2.5 en 26%; amarillas propias 2.92/p, del rival 2.32/p; tiros a puerta 2.76 a favor, 4.05 en contra",
+    "villarreal_2025_26": "38 PJ: 3.11 goles/partido, +2.5 en 58%; amarillas 2.05/p; tiros a puerta 4.53 a favor, 3.87 en contra"
+  },
+  "h2h": [],
+  "h2h_resumen": {},
+  "bajas": {
+    "Villarreal": {
+      "fuera": [
+        "Alassane Diatta (isquios, ~5 meses)",
+        "Gerard Moreno",
+        "Juan Foyth",
+        "Ilias Akhomach"
+      ],
+      "duda": [
+        "Nathan Saliba (fuentes en conflicto)"
+      ],
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "futbolfantasy.com",
+        "castellonplaza.com"
+      ]
+    },
+    "Getafe": {
+      "fuera": [
+        "Christantus Uche",
+        "Juanmi Jiménez"
+      ],
+      "duda": [
+        "Zaid Romero"
+      ],
+      "sancion": "Manu Bueno (roja vs Sevilla) - equipo a confirmar",
+      "estado": "VERIFICADO"
+    }
+  },
+  "cuotas_publicadas": {
+    "Gana Villarreal": {
+      "mercado": "1",
+      "cuota": 1.58,
+      "fuente": "Novibet vía sportytrader"
+    },
+    "Empate": {
+      "mercado": "X",
+      "cuota": 4.6,
+      "fuente": "JokerBet vía legalbet"
+    },
+    "Gana Getafe": {
+      "mercado": "2",
+      "cuota": 7.6,
+      "fuente": "JokerBet vía legalbet"
+    },
+    "Menos de 3.5 goles": {
+      "mercado": "Menos de 3.5",
+      "cuota": 1.33,
+      "fuente": "rcdm.es"
+    }
+  },
+  "mercados_conteo": {
+    "Amarillas totales": {
+      "estimadores": [
+        {
+          "nombre": "Getafe 25/26 propias + rival de Villarreal",
+          "valor": 5.0,
+          "estado": "VERIFICADO",
+          "fuente": "football-data.co.uk (temporada pasada)",
+          "nota": "referencia de la temporada pasada"
+        },
+        {
+          "nombre": "H2H 10 partidos",
+          "valor": 3.9,
+          "estado": "VERIFICADO",
+          "fuente": "football-data.co.uk"
+        }
+      ],
+      "lineas": [
+        2.5,
+        3.5,
+        4.5,
+        5.5
+      ]
+    }
+  }
+}

@@ -1,6 +1,7 @@
 # Simulación auditada: Crystal Palace vs Liverpool
 Premier League 2026/27 - Jornada 10 · 2026-11-08 15:00 CET
 
+
 ## 1. Auditoría de datos
 ```
 OK  Crystal Palace: 9 PJ, 2G 1E 6P, 9:21, 7 pts = coincide con la tabla publicada
