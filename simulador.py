@@ -39,7 +39,30 @@ def cuota_justa(p):
 # ---------------------------------------------------------------- auditoría
 def auditar(d):
     hallazgos, ok = [], True
-    for equipo, partidos in d["resultados_liga"].items():
+    for equipo, ag in d.get("agregados", {}).items():
+        t = d["tabla_oficial_declarada"][equipo]
+        tot = ag["total"]
+        dif = {k: (tot[k], t[k]) for k in ("pj", "g", "e", "p", "gf", "gc") if tot.get(k) != t[k]}
+        if 3 * t["g"] + t["e"] != t["pts"]:
+            dif["pts"] = (3 * t["g"] + t["e"], t["pts"])
+        if dif:
+            ok = False
+            hallazgos.append(f"FALLO {equipo} (agregados): {dif}")
+        else:
+            hallazgos.append(f"OK  {equipo} (agregados): {t['pj']} PJ, {t['g']}G {t['e']}E {t['p']}P, "
+                             f"{t['gf']}:{t['gc']}, {t['pts']} pts = 3x{t['g']}+{t['e']} y coincide con la tabla")
+        if "L" in ag and "V" in ag:
+            for k in ("pj", "g", "e", "p", "gf", "gc", "pts"):
+                a, b = ag["L"].get(k), ag["V"].get(k)
+                if a is None or b is None:
+                    continue
+                ref = tot.get(k, t.get(k))
+                if a + b != ref:
+                    ok = False
+                    hallazgos.append(f"FALLO {equipo}: casa+fuera {k} = {a}+{b} != {ref}")
+            hallazgos.append(f"OK  {equipo}: casa + fuera suman el total en todos los campos disponibles")
+        hallazgos.append(f"    nota: {equipo} sin lista partido a partido completa -> BTTS/porterías a cero n/d")
+    for equipo, partidos in d.get("resultados_liga", {}).items():
         g = sum(p["gf"] > p["gc"] for p in partidos)
         e = sum(p["gf"] == p["gc"] for p in partidos)
         pe = sum(p["gf"] < p["gc"] for p in partidos)
@@ -122,12 +145,35 @@ def splits(partidos, condicion=None):
     }
 
 
+def stats_equipo(d, equipo, condicion=None):
+    """Estadísticas por partido; usa la lista de partidos si existe, si no los totales agregados.
+    Con agregados, los porcentajes por partido (BTTS, etc.) quedan como None: no se inventan."""
+    lista = d.get("resultados_liga", {}).get(equipo)
+    if lista:
+        return splits(lista, condicion)
+    a = d.get("agregados", {}).get(equipo, {}).get(condicion or "total")
+    if not a:
+        return None
+    n = a["pj"]
+    r = dict(a)
+    r["gf_pp"] = a["gf"] / n if a.get("gf") is not None else None
+    r["gc_pp"] = a["gc"] / n if a.get("gc") is not None else None
+    r["total_pp"] = (a["gf"] + a["gc"]) / n if None not in (a.get("gf"), a.get("gc")) else None
+    for k in ("btts", "porteria_cero", "sin_marcar", "over15", "over25", "over35"):
+        r[k] = None
+    return r
+
+
 # ---------------------------------------------------------------- modelo
 def lambdas(d, peso_condicion):
     loc, vis = d["partido"]["local"], d["partido"]["visitante"]
-    L, V = d["resultados_liga"][loc], d["resultados_liga"][vis]
-    lt, vt = splits(L), splits(V)
-    lc, vc = splits(L, "L"), splits(V, "V")
+    lt, vt = stats_equipo(d, loc), stats_equipo(d, vis)
+    lc, vc = stats_equipo(d, loc, "L") or {}, stats_equipo(d, vis, "V") or {}
+    # Si falta un dato por condición, se usa el total de la temporada (nunca un valor inventado)
+    for c, t in ((lc, lt), (vc, vt)):
+        for k in ("gf_pp", "gc_pp"):
+            if c.get(k) is None:
+                c[k] = t[k]
     # Estimador global: ataque propio vs. defensa rival (temporada completa)
     lam_l_glob = (lt["gf_pp"] + vt["gc_pp"]) / 2
     lam_v_glob = (vt["gf_pp"] + lt["gc_pp"]) / 2
@@ -285,7 +331,17 @@ def informe(d, args):
     w("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     for eq, cond, etiqueta in [(loc, None, "Total"), (loc, "L", "Local"),
                                (vis, None, "Total"), (vis, "V", "Visitante")]:
-        s = splits(d["resultados_liga"][eq], cond)
+        s = stats_equipo(d, eq, cond)
+        if s is None:
+            continue
+        f2 = lambda x: "n/d" if x is None else f"{x:.2f}"
+        pc = lambda x: "n/d" if x is None else pct(x)
+        if any(s.get(k) is None for k in ("g", "gf", "gc", "btts")):
+            w(f"| {eq} | {etiqueta} | {s['pj']} | {s.get('g', '?')}-{s.get('e', '?')}-{s.get('p', '?')} | "
+              f"{s.get('gf') if s.get('gf') is not None else 'n/d'} | {s.get('gc') if s.get('gc') is not None else 'n/d'} | "
+              f"{f2(s['gf_pp'])} | {f2(s['gc_pp'])} | {f2(s['total_pp'])} | {pc(s['btts'])} | "
+              f"{pc(s['porteria_cero'])} | {pc(s['sin_marcar'])} | {pc(s['over25'])} |")
+            continue
         w(f"| {eq} | {etiqueta} | {s['pj']} | {s['g']}-{s['e']}-{s['p']} | {s['gf']} | {s['gc']} | "
           f"{s['gf_pp']:.2f} | {s['gc_pp']:.2f} | {s['total_pp']:.2f} | {pct(s['btts'])} | "
           f"{pct(s['porteria_cero'])} | {pct(s['sin_marcar'])} | {pct(s['over25'])} |")
@@ -339,7 +395,7 @@ def informe(d, args):
     seccion_conteos(d, w)
 
     w("\n## 7. Limitaciones")
-    n_min = min(len(v) for v in d["resultados_liga"].values())
+    n_min = min(v["pj"] for v in d["tabla_oficial_declarada"].values() if isinstance(v, dict))
     w(f"- Muestra pequeña ({n_min} partidos de liga por equipo): intervalos de confianza amplios.")
     w("- El modelo Poisson no incorpora bajas, H2H ni motivación; esos factores se tratan en el análisis cualitativo.")
     w("- Varios resultados tienen una sola fuente; la auditoría confirma que los totales cuadran con la tabla.")

@@ -1,0 +1,343 @@
+{
+  "partido": {
+    "local": "AGF",
+    "visitante": "AC Horsens",
+    "competicion": "Superliga Dinamarca 2026/27 - Jornada 14",
+    "fecha": "2026-11-08",
+    "hora_cet": "14:00",
+    "estadio": "Vejlby Stadion (Risskov)",
+    "arbitro": {
+      "valor": null,
+      "estado": "NO_DISPONIBLE"
+    },
+    "entrenador_local": {
+      "valor": null,
+      "estado": "NO_DISPONIBLE"
+    },
+    "entrenador_visitante": {
+      "valor": null,
+      "estado": "NO_DISPONIBLE"
+    }
+  },
+  "agregados": {
+    "AGF": {
+      "total": {
+        "pj": 13,
+        "g": 2,
+        "e": 6,
+        "p": 5,
+        "gf": 17,
+        "gc": 21
+      },
+      "L": {
+        "pj": 6,
+        "g": 2,
+        "e": 3,
+        "p": 1,
+        "gf": 10,
+        "gc": 8,
+        "pts": 9
+      },
+      "V": {
+        "pj": 7,
+        "g": 0,
+        "e": 3,
+        "p": 4,
+        "gf": 7,
+        "gc": 13,
+        "pts": 3
+      },
+      "estado_total": "VERIFICADO",
+      "fuentes_total": [
+        "fannews.dk",
+        "fodboldstilling.dk",
+        "fbref/espn (2-6-5, 12 pts)"
+      ],
+      "estado_casa_fuera": "UNA_FUENTE",
+      "fuentes_casa_fuera": [
+        "fodboldstilling.dk (tabla casa/fuera, 2/11/2026)"
+      ],
+      "conflicto": "La página de club de fodboldstilling.dk muestra otra división casa (desactualizada)"
+    },
+    "AC Horsens": {
+      "total": {
+        "pj": 13,
+        "g": 4,
+        "e": 4,
+        "p": 5,
+        "gf": 23,
+        "gc": 21
+      },
+      "L": {
+        "pj": 7,
+        "pts": 9
+      },
+      "V": {
+        "pj": 6,
+        "pts": 7
+      },
+      "estado_total": "VERIFICADO",
+      "fuentes_total": [
+        "skysports.com (2/11)",
+        "sportsmole.co.uk",
+        "bold.dk (3F Superliga)"
+      ],
+      "estado_casa_fuera": "UNA_FUENTE",
+      "fuentes_casa_fuera": [
+        "sportsmole.co.uk (solo puntos; goles por condición n/d)"
+      ],
+      "conflicto": "ESPN da 3-2-8, 13:21 (descartado: no cuadra con 3 fuentes); fodboldstilling club page y FWP desactualizadas (9 PJ)"
+    }
+  },
+  "resultados_conocidos": {
+    "AGF": [
+      {
+        "fecha": "2026-11-01",
+        "rival": "Brøndby IF",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 2,
+        "estado": "VERIFICADO"
+      },
+      {
+        "fecha": "2026-10-25",
+        "rival": "Viborg FF",
+        "gf": 2,
+        "gc": 1,
+        "estado": "UNA_FUENTE"
+      },
+      {
+        "fecha": "2026-10-18",
+        "rival": "FC København",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 1,
+        "estado": "UNA_FUENTE"
+      },
+      {
+        "fecha": "2026-09-20",
+        "rival": "AC Horsens",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO"
+      },
+      {
+        "j": 1,
+        "rival": "Brøndby IF",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 1,
+        "estado": "UNA_FUENTE"
+      },
+      {
+        "j": 2,
+        "rival": "Lyngby BK",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 2,
+        "estado": "UNA_FUENTE"
+      }
+    ],
+    "AC Horsens": [
+      {
+        "fecha": "2026-11-01",
+        "rival": "Viborg FF",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 1,
+        "estado": "UNA_FUENTE",
+        "nota": "jornada 13"
+      },
+      {
+        "fecha": "2026-10-25",
+        "rival": "Sønderjyske",
+        "condicion": "L",
+        "gf": 5,
+        "gc": 1,
+        "estado": "VERIFICADO"
+      },
+      {
+        "fecha": "2026-10-16",
+        "rival": "Randers FC",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 0,
+        "estado": "UNA_FUENTE"
+      },
+      {
+        "fecha": "2026-10-11",
+        "rival": "Silkeborg IF",
+        "condicion": "V",
+        "gf": 3,
+        "gc": 3,
+        "estado": "UNA_FUENTE"
+      },
+      {
+        "fecha": "2026-09-20",
+        "rival": "AGF",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO"
+      },
+      {
+        "fecha": "2026-08-16",
+        "rival": "Odense BK",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 2,
+        "estado": "VERIFICADO"
+      },
+      {
+        "rival": "Brøndby IF",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 2,
+        "estado": "VERIFICADO"
+      },
+      {
+        "fecha": "2026-08-02",
+        "rival": "FC Midtjylland",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 2,
+        "estado": "VERIFICADO"
+      },
+      {
+        "fecha": "2026-07-26",
+        "rival": "FC Nordsjælland",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 1,
+        "estado": "VERIFICADO"
+      }
+    ],
+    "_nota": "Lista incompleta (faltan partidos); NO se usa en el modelo, solo como contexto."
+  },
+  "otros_partidos": {
+    "AGF": [
+      {
+        "fecha": "2026-11-05",
+        "competicion": "UEFA Conference League",
+        "rival": "SC Braga",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "flashscore.com",
+          "bold.dk",
+          "tv2ostjylland.dk",
+          "forzafootball.com"
+        ],
+        "nota": "xG Braga 1.65 - AGF 0.60; AGF con once alternativo (tipsbladet); jugado en Randers"
+      },
+      {
+        "fecha": "2026-10-22",
+        "competicion": "UEFA Conference League",
+        "rival": "Egnatia",
+        "gf": 1,
+        "gc": 1,
+        "estado": "UNA_FUENTE"
+      },
+      {
+        "fecha": "2026-10-15",
+        "competicion": "UEFA Conference League",
+        "rival": "KAA Gent",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 1,
+        "estado": "UNA_FUENTE"
+      }
+    ],
+    "AC Horsens": [
+      {
+        "fecha": "2026-10-28",
+        "competicion": "Copa de Dinamarca",
+        "rival": "Brabrand IF",
+        "gf": 0,
+        "gc": 1,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "bold.dk"
+        ]
+      }
+    ]
+  },
+  "tabla_oficial_declarada": {
+    "AGF": {
+      "pos": 8,
+      "pj": 13,
+      "g": 2,
+      "e": 6,
+      "p": 5,
+      "gf": 17,
+      "gc": 21,
+      "pts": 12,
+      "estado": "VERIFICADO",
+      "conflicto": "fannews.dk lo pone 9.º (empate a 12 pts)"
+    },
+    "AC Horsens": {
+      "pos": 7,
+      "pj": 13,
+      "g": 4,
+      "e": 4,
+      "p": 5,
+      "gf": 23,
+      "gc": 21,
+      "pts": 16,
+      "estado": "VERIFICADO"
+    }
+  },
+  "tiros": {
+    "tiros_totales": "NO_DISPONIBLE",
+    "tiros_a_puerta": "NO_DISPONIBLE",
+    "corners": "NO_DISPONIBLE"
+  },
+  "h2h": [
+    {
+      "fecha": "2026-09-20",
+      "local": "AC Horsens",
+      "visitante": "AGF",
+      "gl": 2,
+      "gv": 2,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "bold.dk",
+        "espn.com",
+        "campo.dk",
+        "agf.dk"
+      ],
+      "nota": "AGF ganaba 2-0; Milicevic empató en el 90+4. Goles AGF: Knudsen, McCowatt"
+    }
+  ],
+  "h2h_resumen": {
+    "ultimos_9": {
+      "valor": "Horsens solo ganó 1 de los últimos 9 duelos",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "tipsbladet.dk"
+      ]
+    }
+  },
+  "jugadores": {
+    "_nota": "NO_DISPONIBLE: no se encontraron goleadores ni asistentes de la temporada en fuentes verificables"
+  },
+  "bajas": {
+    "_nota": "NO_DISPONIBLE: la previa menciona sanciones pero no se leen los nombres"
+  },
+  "cuotas_publicadas": {
+    "_nota": "statz.ai; verifica las actuales",
+    "Gana AGF": {
+      "mercado": "1",
+      "cuota": 1.55,
+      "fuente": "statz.ai (Ladbrokes)"
+    },
+    "Gana AC Horsens": {
+      "mercado": "2",
+      "cuota": 5.25,
+      "fuente": "statz.ai (bet365)"
+    }
+  }
+}
