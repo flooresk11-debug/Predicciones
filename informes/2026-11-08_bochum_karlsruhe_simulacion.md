@@ -53,6 +53,7 @@ Datos **no disponibles** (no se inventan): tiros_totales, tiros_a_puerta, corner
 | Visitante más de 0.5 | 66.3% | 1.51 |
 | Visitante más de 1.5 | 29.6% | 3.38 |
 | Visitante gana por 2+ | 10.9% | 9.17 |
+| Visitante gana a cero | 15.5% | 6.43 |
 
 Marcadores más probables: 1-1 (12.5%), 1-0 (11.5%), 2-1 (9.0%), 0-1 (8.6%), 2-0 (8.3%), 0-0 (7.9%), 1-2 (6.8%), 2-2 (4.9%)
 

@@ -140,6 +140,8 @@ def mercados(m):
         "Local pierde por 1": P(lambda i, j: j - i == 1),
         "Local pierde por 2+": P(lambda i, j: j - i >= 2),
         "Visitante gana por 2+": P(lambda i, j: j - i >= 2),
+        "Local gana a cero": P(lambda i, j: i > j and j == 0),
+        "Visitante gana a cero": P(lambda i, j: j > i and i == 0),
     }
     r["1X"] = r["1"] + r["X"]
     r["X2"] = r["X"] + r["2"]
@@ -223,7 +225,7 @@ def informe(d, args):
     for k in ["1", "X", "2", "1X", "X2", "12", "BTTS sí", "BTTS no", "Más de 1.5", "Más de 2.5",
               "Menos de 2.5", "Más de 3.5", "Menos de 3.5", "Local portería a cero",
               "Visitante portería a cero", "Local menos de 1.5", "Visitante más de 0.5",
-              "Visitante más de 1.5", "Visitante gana por 2+"]:
+              "Visitante más de 1.5", "Visitante gana por 2+", "Visitante gana a cero"]:
         w(f"| {k} | {pct(r[k])} | {cuota_justa(r[k]):.2f} |")
     w("\nMarcadores más probables: " + ", ".join(f"{s} ({pct(p)})" for p, s in marc))
 
