@@ -6,109 +6,511 @@
     "fecha": "2026-11-08",
     "hora_cet": "15:30",
     "estadio": "RheinEnergieStadion",
-    "arbitro": {"valor": "Felix Zwayer", "estado": "UNA_FUENTE"},
-    "entrenador_local": {"valor": "René Wagner", "estado": "VERIFICADO", "fuentes": ["fc.de", "sky.de", "t-online.de"]},
-    "entrenador_visitante": {"valor": "Carles Martínez", "estado": "UNA_FUENTE", "fuentes": ["bayer04.de (06.11.2026)"]}
+    "arbitro": {
+      "valor": "Felix Zwayer",
+      "estado": "UNA_FUENTE"
+    },
+    "entrenador_local": {
+      "valor": "René Wagner",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "fc.de",
+        "sky.de",
+        "t-online.de"
+      ]
+    },
+    "entrenador_visitante": {
+      "valor": "Carles Martínez",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "bayer04.de (06.11.2026)"
+      ]
+    }
   },
-
   "_estados": {
     "VERIFICADO": "Coincide en 2 o más fuentes independientes o es consistente con la suma de la tabla",
     "UNA_FUENTE": "Solo una fuente lo menciona; se usa con cautela",
     "CONFLICTO": "Las fuentes no coinciden; NO se usa en el modelo",
     "NO_DISPONIBLE": "No se encontró dato real; NO se rellena ni se inventa"
   },
-
   "resultados_liga": {
     "1. FC Köln": [
-      {"j": 1, "fecha": "2026-08-29", "rival": "TSG Hoffenheim",        "condicion": "L", "gf": 3, "gc": 2, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "bulibox.de", "de.wikipedia.org"], "ht": "0:1"},
-      {"j": 2, "fecha": null,         "rival": "VfB Stuttgart",         "condicion": "V", "gf": 1, "gc": 4, "estado": "UNA_FUENTE", "fuentes": ["fussballdaten.de"]},
-      {"j": 3, "fecha": "2026-09-12", "rival": "Werder Bremen",         "condicion": "L", "gf": 1, "gc": 1, "estado": "VERIFICADO", "fuentes": ["sport1.de", "de.wikipedia.org"], "ht": "1:0"},
-      {"j": 4, "fecha": null,         "rival": "Hamburger SV",          "condicion": "V", "gf": 1, "gc": 2, "estado": "UNA_FUENTE", "fuentes": ["sport1.de"]},
-      {"j": 5, "fecha": null,         "rival": "Borussia Mönchengladbach", "condicion": "L", "gf": 2, "gc": 1, "estado": "CONFLICTO_MARCADOR", "fuentes": ["bulibox.de"], "nota": "fussballdaten.de muestra otro marcador; el balance total 9:12 de la tabla sí cuadra con 2:1"},
-      {"j": 6, "fecha": null,         "rival": "Eintracht Frankfurt",   "condicion": "V", "gf": 0, "gc": 1, "estado": "UNA_FUENTE", "fuentes": ["hessenschau.de"]},
-      {"j": 7, "fecha": "2026-10-24", "rival": "FC Schalke 04",         "condicion": "L", "gf": 0, "gc": 0, "estado": "VERIFICADO", "fuentes": ["bulibox.de", "de.wikipedia.org", "t-online.de"]},
-      {"j": 8, "fecha": "2026-11-01", "rival": "1. FC Union Berlin",    "condicion": "V", "gf": 1, "gc": 1, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "fussballdaten.de", "sportschau.de"], "ht": "1:0 (Union)"}
+      {
+        "j": 1,
+        "fecha": "2026-08-29",
+        "rival": "TSG Hoffenheim",
+        "condicion": "L",
+        "gf": 3,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "hessenschau.de",
+          "bulibox.de",
+          "de.wikipedia.org"
+        ],
+        "ht": "0:1"
+      },
+      {
+        "j": 2,
+        "fecha": null,
+        "rival": "VfB Stuttgart",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 4,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "fussballdaten.de"
+        ]
+      },
+      {
+        "j": 3,
+        "fecha": "2026-09-12",
+        "rival": "Werder Bremen",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "sport1.de",
+          "de.wikipedia.org"
+        ],
+        "ht": "1:0"
+      },
+      {
+        "j": 4,
+        "fecha": null,
+        "rival": "Hamburger SV",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 2,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "sport1.de"
+        ]
+      },
+      {
+        "j": 5,
+        "fecha": null,
+        "rival": "Borussia Mönchengladbach",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 1,
+        "estado": "CONFLICTO_MARCADOR",
+        "fuentes": [
+          "bulibox.de"
+        ],
+        "nota": "fussballdaten.de muestra otro marcador; el balance total 9:12 de la tabla sí cuadra con 2:1"
+      },
+      {
+        "j": 6,
+        "fecha": null,
+        "rival": "Eintracht Frankfurt",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 1,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "hessenschau.de"
+        ]
+      },
+      {
+        "j": 7,
+        "fecha": "2026-10-24",
+        "rival": "FC Schalke 04",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "bulibox.de",
+          "de.wikipedia.org",
+          "t-online.de"
+        ]
+      },
+      {
+        "j": 8,
+        "fecha": "2026-11-01",
+        "rival": "1. FC Union Berlin",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "hessenschau.de",
+          "fussballdaten.de",
+          "sportschau.de"
+        ],
+        "ht": "1:0 (Union)"
+      }
     ],
     "Bayer 04 Leverkusen": [
-      {"j": 1, "fecha": "2026-08-29", "rival": "SV Elversberg",       "condicion": "V", "gf": 2, "gc": 3, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "bulibox.de"]},
-      {"j": 2, "fecha": "2026-09-05", "rival": "1. FC Union Berlin",  "condicion": "L", "gf": 4, "gc": 0, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "news.de"]},
-      {"j": 3, "fecha": "2026-09-12", "rival": "FC Augsburg",         "condicion": "V", "gf": 2, "gc": 2, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "news.de"]},
-      {"j": 4, "fecha": "2026-09-20", "rival": "RB Leipzig",          "condicion": "L", "gf": 2, "gc": 0, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "fussballdaten.de"]},
-      {"j": 5, "fecha": null,         "rival": "1. FSV Mainz 05",     "condicion": "V", "gf": 4, "gc": 3, "estado": "UNA_FUENTE", "fuentes": ["bulibox.de"]},
-      {"j": 6, "fecha": null,         "rival": "SC Freiburg",         "condicion": "L", "gf": 2, "gc": 1, "estado": "UNA_FUENTE", "fuentes": ["bulibox.de"]},
-      {"j": 7, "fecha": null,         "rival": "TSG Hoffenheim",      "condicion": "V", "gf": 0, "gc": 3, "estado": "UNA_FUENTE", "fuentes": ["bulibox.de"]},
-      {"j": 8, "fecha": "2026-10-31", "rival": "VfB Stuttgart",       "condicion": "L", "gf": 2, "gc": 4, "estado": "VERIFICADO", "fuentes": ["sportschau.de", "news.de", "skysportaustria.at"], "goleadores": ["Schick 28'", "Maza (tarde)"]}
+      {
+        "j": 1,
+        "fecha": "2026-08-29",
+        "rival": "SV Elversberg",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "hessenschau.de",
+          "bulibox.de"
+        ]
+      },
+      {
+        "j": 2,
+        "fecha": "2026-09-05",
+        "rival": "1. FC Union Berlin",
+        "condicion": "L",
+        "gf": 4,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "hessenschau.de",
+          "news.de"
+        ]
+      },
+      {
+        "j": 3,
+        "fecha": "2026-09-12",
+        "rival": "FC Augsburg",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "hessenschau.de",
+          "news.de"
+        ]
+      },
+      {
+        "j": 4,
+        "fecha": "2026-09-20",
+        "rival": "RB Leipzig",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "hessenschau.de",
+          "fussballdaten.de"
+        ]
+      },
+      {
+        "j": 5,
+        "fecha": null,
+        "rival": "1. FSV Mainz 05",
+        "condicion": "V",
+        "gf": 4,
+        "gc": 3,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "bulibox.de"
+        ]
+      },
+      {
+        "j": 6,
+        "fecha": null,
+        "rival": "SC Freiburg",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 1,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "bulibox.de"
+        ]
+      },
+      {
+        "j": 7,
+        "fecha": null,
+        "rival": "TSG Hoffenheim",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 3,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "bulibox.de"
+        ]
+      },
+      {
+        "j": 8,
+        "fecha": "2026-10-31",
+        "rival": "VfB Stuttgart",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 4,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "sportschau.de",
+          "news.de",
+          "skysportaustria.at"
+        ],
+        "goleadores": [
+          "Schick 28'",
+          "Maza (tarde)"
+        ]
+      }
     ]
   },
-
   "otros_partidos": {
     "Bayer 04 Leverkusen": [
-      {"fecha": "2026-11-05", "competicion": "UEFA Europa League", "rival": "Olympique de Marseille", "condicion": "L", "gf": 0, "gc": 1, "estado": "VERIFICADO", "fuentes": ["sportschau.de", "absolutfussball.com", "soccernews.com"], "nota": "Gol de Gouiri 79'. Primera derrota en EL; cortó racha de 10 partidos de EL en casa sin perder. Leverkusen 7.º en EL con 9 pts."}
+      {
+        "fecha": "2026-11-05",
+        "competicion": "UEFA Europa League",
+        "rival": "Olympique de Marseille",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "sportschau.de",
+          "absolutfussball.com",
+          "soccernews.com"
+        ],
+        "nota": "Gol de Gouiri 79'. Primera derrota en EL; cortó racha de 10 partidos de EL en casa sin perder. Leverkusen 7.º en EL con 9 pts."
+      }
     ]
   },
-
   "tabla_oficial_declarada": {
     "_nota": "Totales declarados por fuentes tras la jornada 8. Se usan para AUDITAR que los resultados sumen exactamente.",
-    "1. FC Köln":          {"pos": 13, "pj": 8, "g": 2, "e": 3, "p": 3, "gf": 9,  "gc": 12, "pts": 9,  "estado": "VERIFICADO", "fuentes": ["fussballdaten.de", "sport.de"], "conflicto": "Una fuente cita 15.º puesto"},
-    "Bayer 04 Leverkusen": {"pos": 6,  "pj": 8, "g": 4, "e": 1, "p": 3, "gf": 18, "gc": 16, "pts": 13, "estado": "VERIFICADO", "fuentes": ["sport.de", "fussballnationalmannschaft.net"], "conflicto": "Otras fuentes citan 7.º (empatado a 13 pts con Elversberg)"}
+    "1. FC Köln": {
+      "pos": 13,
+      "pj": 8,
+      "g": 2,
+      "e": 3,
+      "p": 3,
+      "gf": 9,
+      "gc": 12,
+      "pts": 9,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "fussballdaten.de",
+        "sport.de"
+      ],
+      "conflicto": "Una fuente cita 15.º puesto"
+    },
+    "Bayer 04 Leverkusen": {
+      "pos": 6,
+      "pj": 8,
+      "g": 4,
+      "e": 1,
+      "p": 3,
+      "gf": 18,
+      "gc": 16,
+      "pts": 13,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "sport.de",
+        "fussballnationalmannschaft.net"
+      ],
+      "conflicto": "Otras fuentes citan 7.º (empatado a 13 pts con Elversberg)"
+    }
   },
-
   "tabla_parcial_otros": {
     "_nota": "Solo puntos confirmados en búsquedas; las posiciones intermedias no se pudieron verificar completas.",
-    "FC Bayern München":   {"pts": 18, "estado": "VERIFICADO"},
-    "Borussia Dortmund":   {"pts": 18, "estado": "VERIFICADO"},
-    "SC Freiburg":         {"pts": 16, "estado": "UNA_FUENTE"},
-    "RB Leipzig":          {"pts": 15, "estado": "VERIFICADO"},
-    "SV Elversberg":       {"pts": 13, "estado": "VERIFICADO"},
-    "Hamburger SV":        {"pts": 12, "estado": "UNA_FUENTE"},
-    "1. FC Union Berlin":  {"pts": 7,  "pos": 16, "estado": "VERIFICADO"},
-    "FC Schalke 04":       {"pts": 6,  "pos": 17, "estado": "VERIFICADO"},
-    "Borussia Mönchengladbach": {"pts": 4, "pos": 18, "estado": "VERIFICADO"}
+    "FC Bayern München": {
+      "pts": 18,
+      "estado": "VERIFICADO"
+    },
+    "Borussia Dortmund": {
+      "pts": 18,
+      "estado": "VERIFICADO"
+    },
+    "SC Freiburg": {
+      "pts": 16,
+      "estado": "UNA_FUENTE"
+    },
+    "RB Leipzig": {
+      "pts": 15,
+      "estado": "VERIFICADO"
+    },
+    "SV Elversberg": {
+      "pts": 13,
+      "estado": "VERIFICADO"
+    },
+    "Hamburger SV": {
+      "pts": 12,
+      "estado": "UNA_FUENTE"
+    },
+    "1. FC Union Berlin": {
+      "pts": 7,
+      "pos": 16,
+      "estado": "VERIFICADO"
+    },
+    "FC Schalke 04": {
+      "pts": 6,
+      "pos": 17,
+      "estado": "VERIFICADO"
+    },
+    "Borussia Mönchengladbach": {
+      "pts": 4,
+      "pos": 18,
+      "estado": "VERIFICADO"
+    }
   },
-
   "tiros": {
-    "1. FC Köln":          {"tiros": 105, "partidos": 7, "goles": 8,  "estado": "VERIFICADO_INTERNO", "fuentes": ["sportschau.de (tras J7)"], "nota": "105/8 = 13,13 tiros por gol, igual al ratio publicado"},
-    "Bayer 04 Leverkusen": {"tiros": 146, "partidos": 8, "goles": 18, "estado": "VERIFICADO_INTERNO", "fuentes": ["sportschau.de (tras J8)"], "nota": "146/18 = 8,11 tiros por gol, igual al ratio publicado. 2.º de la liga en tiros"},
+    "1. FC Köln": {
+      "tiros": 105,
+      "partidos": 7,
+      "goles": 8,
+      "estado": "VERIFICADO_INTERNO",
+      "fuentes": [
+        "sportschau.de (tras J7)"
+      ],
+      "nota": "105/8 = 13,13 tiros por gol, igual al ratio publicado"
+    },
+    "Bayer 04 Leverkusen": {
+      "tiros": 146,
+      "partidos": 8,
+      "goles": 18,
+      "estado": "VERIFICADO_INTERNO",
+      "fuentes": [
+        "sportschau.de (tras J8)"
+      ],
+      "nota": "146/18 = 8,11 tiros por gol, igual al ratio publicado. 2.º de la liga en tiros"
+    },
     "tiros_a_puerta": "NO_DISPONIBLE",
     "corners": "NO_DISPONIBLE"
   },
-
   "posesion": {
-    "Bayer 04 Leverkusen": {"valor": 55, "unidad": "% promedio", "estado": "UNA_FUENTE", "fuentes": ["wettbasis.com"]}
+    "Bayer 04 Leverkusen": {
+      "valor": 55,
+      "unidad": "% promedio",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "wettbasis.com"
+      ]
+    }
   },
-
   "h2h": [
-    {"fecha": "2026-04-25", "competicion": "Bundesliga J31", "local": "1. FC Köln", "visitante": "Bayer 04 Leverkusen", "gl": 1, "gv": 2, "estado": "VERIFICADO", "fuentes": ["espn.com", "kicker.de", "news.de", "sky.de"], "goles": ["Schick 43' (pen)", "Schick 52'", "Waldschmidt 77'"]},
-    {"fecha": "2025-12-13", "competicion": "Bundesliga", "local": "Bayer 04 Leverkusen", "visitante": "1. FC Köln", "gl": 2, "gv": 0, "estado": "UNA_FUENTE", "fuentes": ["kicker.de (ticker)", "tipsterio.de"]}
+    {
+      "fecha": "2026-04-25",
+      "competicion": "Bundesliga J31",
+      "local": "1. FC Köln",
+      "visitante": "Bayer 04 Leverkusen",
+      "gl": 1,
+      "gv": 2,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "espn.com",
+        "kicker.de",
+        "news.de",
+        "sky.de"
+      ],
+      "goles": [
+        "Schick 43' (pen)",
+        "Schick 52'",
+        "Waldschmidt 77'"
+      ]
+    },
+    {
+      "fecha": "2025-12-13",
+      "competicion": "Bundesliga",
+      "local": "Bayer 04 Leverkusen",
+      "visitante": "1. FC Köln",
+      "gl": 2,
+      "gv": 0,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "kicker.de (ticker)",
+        "tipsterio.de"
+      ]
+    }
   ],
   "h2h_resumen": {
-    "ultimos_5": {"valor": "5 victorias de Leverkusen", "estado": "UNA_FUENTE", "fuentes": ["tipsterio.de"]},
-    "colonia_max_1_gol_ultimos_4": {"valor": true, "estado": "UNA_FUENTE", "fuentes": ["wettbasis.com"]},
-    "historico_total": {"valor": "Köln 21G 30E 39P (123:155)", "estado": "CONFLICTO", "fuentes": ["come-on-fc.com"], "nota": "wettbasis.com cuenta 94 duelos con 39 triunfos del Leverkusen"}
+    "ultimos_5": {
+      "valor": "5 victorias de Leverkusen",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "tipsterio.de"
+      ]
+    },
+    "colonia_max_1_gol_ultimos_4": {
+      "valor": true,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "wettbasis.com"
+      ]
+    },
+    "historico_total": {
+      "valor": "Köln 21G 30E 39P (123:155)",
+      "estado": "CONFLICTO",
+      "fuentes": [
+        "come-on-fc.com"
+      ],
+      "nota": "wettbasis.com cuenta 94 duelos con 39 triunfos del Leverkusen"
+    }
   },
-
   "jugadores": {
-    "Patrik Schick (LEV)": {"goles_liga": 6, "estado": "VERIFICADO", "fuentes": ["datencenter.dfb.de", "fussballdaten.de"], "conflicto": "fussballtransfers.com: 5 (probablemente desactualizado)", "asistencias": "NO_DISPONIBLE"},
-    "Said El Mala (KOE)":  {"goles_liga": 2, "estado": "UNA_FUENTE", "fuentes": ["datencenter.dfb.de"], "asistencias": "NO_DISPONIBLE"},
-    "Ibrahim Maza (LEV)":  {"goles_liga": ">=1 (marcó vs Stuttgart)", "estado": "VERIFICADO"}
+    "Patrik Schick (LEV)": {
+      "goles_liga": 6,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "datencenter.dfb.de",
+        "fussballdaten.de"
+      ],
+      "conflicto": "fussballtransfers.com: 5 (probablemente desactualizado)",
+      "asistencias": "NO_DISPONIBLE"
+    },
+    "Said El Mala (KOE)": {
+      "goles_liga": 2,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "datencenter.dfb.de"
+      ],
+      "asistencias": "NO_DISPONIBLE"
+    },
+    "Ibrahim Maza (LEV)": {
+      "goles_liga": ">=1 (marcó vs Stuttgart)",
+      "estado": "VERIFICADO"
+    }
   },
-
   "bajas": {
     "1. FC Köln": {
-      "fuera": ["Thijs Dallinga (ligamento cruzado)", "Timo Hübers (rodilla)", "Rav van den Berg (muscular)", "Ellyes Skhiri (sindesmosis)", "Imad Rondić (muscular)"],
-      "duda": ["Jan Thielmann (trabajo individual)", "Ragnar Ache (vuelve de lesión muscular, titularidad dudosa)"],
+      "fuera": [
+        "Thijs Dallinga (ligamento cruzado)",
+        "Timo Hübers (rodilla)",
+        "Rav van den Berg (muscular)",
+        "Ellyes Skhiri (sindesmosis)",
+        "Imad Rondić (muscular)"
+      ],
+      "duda": [
+        "Jan Thielmann (trabajo individual)",
+        "Ragnar Ache (vuelve de lesión muscular, titularidad dudosa)"
+      ],
       "estado": "UNA_FUENTE"
     },
     "Bayer 04 Leverkusen": {
-      "fuera": ["Martin Terrier (muslo, hasta diciembre)", "Moussa Diaby (fascia muslo, tras parón)", "Guéla Doué", "Eliesse Ben Seghir", "Kennet Eichhorn", "Nathan Tella (muscular)"],
+      "fuera": [
+        "Martin Terrier (muslo, hasta diciembre)",
+        "Moussa Diaby (fascia muslo, tras parón)",
+        "Guéla Doué",
+        "Eliesse Ben Seghir",
+        "Kennet Eichhorn",
+        "Nathan Tella (muscular)"
+      ],
       "estado": "UNA_FUENTE"
     }
   },
-
   "cuotas_publicadas": {
     "_nota": "Cuotas citadas en previas; cambian constantemente. Verifica en tu casa de apuestas.",
-    "Leverkusen gana":            {"cuota": 1.85,  "casa": "bet-at-home", "fuente": "wettbasis.com"},
-    "Köln menos de 1.5 goles":    {"cuota": 1.61,  "casa": "LetsBet",     "fuente": "wettbasis.com"},
-    "Köln handicap +1":           {"cuota": 1.609, "casa": "n/d",         "fuente": "tipsterio.de"}
+    "Leverkusen gana": {
+      "cuota": 1.85,
+      "casa": "bet-at-home",
+      "fuente": "wettbasis.com",
+      "mercado": "2"
+    },
+    "Köln menos de 1.5 goles": {
+      "cuota": 1.61,
+      "casa": "LetsBet",
+      "fuente": "wettbasis.com",
+      "mercado": "Local menos de 1.5"
+    },
+    "Köln handicap +1": {
+      "cuota": 1.609,
+      "casa": "n/d",
+      "fuente": "tipsterio.de",
+      "tipo": "ah_local_+1"
+    }
   }
 }

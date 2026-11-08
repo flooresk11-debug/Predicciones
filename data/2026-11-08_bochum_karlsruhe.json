@@ -1,0 +1,86 @@
+{
+  "partido": {
+    "local": "VfL Bochum",
+    "visitante": "Karlsruher SC",
+    "competicion": "2. Bundesliga 2026/27 - Jornada 11",
+    "fecha": "2026-11-08",
+    "hora_cet": "13:30",
+    "estadio": "Vonovia Ruhrstadion",
+    "arbitro": {"valor": null, "estado": "NO_DISPONIBLE"},
+    "entrenador_local": {"valor": "Uwe Rösler", "estado": "UNA_FUENTE", "fuentes": ["bulinews.com / Yahoo Sports"]},
+    "entrenador_visitante": {"valor": "Senft", "estado": "UNA_FUENTE", "fuentes": ["bulinews.com / Yahoo Sports"], "nota": "Christian Eichner dejó el KSC tras la J34 2025/26 (fussballdaten.de, sportschau.de)"}
+  },
+
+  "resultados_liga": {
+    "VfL Bochum": [
+      {"j": 1,  "fecha": "2026-08-07", "rival": "Hertha BSC",            "condicion": "L", "gf": 0, "gc": 1, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de", "weltfussball.de"]},
+      {"j": 2,  "fecha": "2026-08-14", "rival": "Eintracht Braunschweig", "condicion": "V", "gf": 1, "gc": 0, "estado": "VERIFICADO", "fuentes": ["liga-spielplan.de", "hessenschau.de"]},
+      {"j": 3,  "fecha": "2026-08-28", "rival": "VfL Osnabrück",         "condicion": "L", "gf": 0, "gc": 1, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 4,  "fecha": "2026-09-05", "rival": "Dynamo Dresden",        "condicion": "V", "gf": 2, "gc": 1, "estado": "VERIFICADO", "fuentes": ["sport.de", "hessenschau.de"]},
+      {"j": 5,  "fecha": "2026-09-12", "rival": "SpVgg Greuther Fürth",  "condicion": "L", "gf": 1, "gc": 1, "estado": "CONFLICTO_RESUELTO", "fuentes": ["hessenschau.de", "liga-spielplan.de"], "nota": "fussballdaten.de da 1:0; con 1:0 Bochum tendría 13 pts y 9:11, que NO cuadra con la tabla (11 pts, 8:11). Se acepta 1:1."},
+      {"j": 6,  "fecha": "2026-09-20", "rival": "Hannover 96",           "condicion": "V", "gf": 1, "gc": 2, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "sport.de"]},
+      {"j": 7,  "fecha": "2026-10-11", "rival": "Arminia Bielefeld",     "condicion": "L", "gf": 0, "gc": 1, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 8,  "fecha": "2026-10-17", "rival": "1. FC Kaiserslautern",  "condicion": "V", "gf": 0, "gc": 2, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 9,  "fecha": "2026-10-23", "rival": "VfL Wolfsburg",         "condicion": "L", "gf": 1, "gc": 1, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 10, "fecha": "2026-10-30", "rival": "Energie Cottbus",       "condicion": "V", "gf": 2, "gc": 1, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "bulinews.com"], "nota": "Gol de la victoria de Christian Rasmussen al final"}
+    ],
+    "Karlsruher SC": [
+      {"j": 1,  "fecha": "2026-08-08", "rival": "Arminia Bielefeld",     "condicion": "L", "gf": 2, "gc": 1, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 2,  "fecha": "2026-08-15", "rival": "1. FC Kaiserslautern",  "condicion": "V", "gf": 0, "gc": 0, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 3,  "fecha": "2026-08-29", "rival": "VfL Wolfsburg",         "condicion": "L", "gf": 2, "gc": 5, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "bulibox.de"]},
+      {"j": 4,  "fecha": "2026-09-04", "rival": "Hannover 96",           "condicion": "V", "gf": 2, "gc": 2, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 5,  "fecha": "2026-09-13", "rival": "Energie Cottbus",       "condicion": "L", "gf": 0, "gc": 3, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 6,  "fecha": "2026-09-19", "rival": "1. FC Nürnberg",        "condicion": "L", "gf": 0, "gc": 1, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "bulibox.de"]},
+      {"j": 7,  "fecha": "2026-10-11", "rival": "FC St. Pauli",          "condicion": "V", "gf": 0, "gc": 2, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 8,  "fecha": "2026-10-18", "rival": "SV Darmstadt 98",       "condicion": "L", "gf": 4, "gc": 0, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 9,  "fecha": "2026-10-24", "rival": "1. FC Magdeburg",       "condicion": "V", "gf": 1, "gc": 6, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "liga-spielplan.de"]},
+      {"j": 10, "fecha": "2026-10-31", "rival": "1. FC Heidenheim",      "condicion": "L", "gf": 2, "gc": 1, "estado": "VERIFICADO", "fuentes": ["hessenschau.de", "bulinews.com"]}
+    ]
+  },
+
+  "tabla_oficial_declarada": {
+    "VfL Bochum":    {"pos": 11, "pj": 10, "g": 3, "e": 2, "p": 5, "gf": 8,  "gc": 11, "pts": 11, "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org (1/11/2026)", "sport.de"], "nota": "Posición 11 deducida de 'KSC 13.º, dos puestos por debajo de Bochum' (bulinews)"},
+    "Karlsruher SC": {"pos": 13, "pj": 10, "g": 3, "e": 2, "p": 5, "gf": 13, "gc": 21, "pts": 11, "estado": "VERIFICADO", "fuentes": ["sport.de", "bulinews.com"]}
+  },
+
+  "tabla_parcial_otros": {
+    "Hertha BSC":     {"pts": 28, "pos": 1, "estado": "VERIFICADO", "fuentes": ["fussballnationalmannschaft.net", "en.wikipedia.org"]},
+    "1. FC Nürnberg": {"pts": 21, "pos": 2, "estado": "VERIFICADO"},
+    "VfL Wolfsburg":  {"pos": 3,  "estado": "UNA_FUENTE"},
+    "Holstein Kiel":  {"pos": "17-18", "estado": "UNA_FUENTE"},
+    "Dynamo Dresden": {"pos": "17-18", "estado": "UNA_FUENTE"}
+  },
+
+  "tiros": {
+    "tiros_totales": "NO_DISPONIBLE",
+    "tiros_a_puerta": "NO_DISPONIBLE",
+    "corners": "NO_DISPONIBLE"
+  },
+
+  "h2h": [
+    {"fecha": "2026-05-17", "competicion": "2. Bundesliga J34 2025/26", "local": "Karlsruher SC", "visitante": "VfL Bochum", "gl": 1, "gv": 2, "estado": "VERIFICADO", "fuentes": ["fussballdaten.de", "sportschau.de"], "nota": "Gol de la victoria: Kwarteng 70' (asist. Bero). Último partido de Eichner en el KSC"},
+    {"fecha": "2025-12-20", "competicion": "2. Bundesliga J17 2025/26", "local": "VfL Bochum", "visitante": "Karlsruher SC", "gl": 2, "gv": 2, "estado": "VERIFICADO", "fuentes": ["sportschau.de", "kicker.de"], "nota": "Doblete de Onyeka; empató Fukuda 86'"}
+  ],
+  "h2h_resumen": {
+    "historico_total": {"valor": "Bochum 22-23 V / 24-25 E / 15-16 KSC", "estado": "CONFLICTO", "fuentes": ["sportschau.de", "fussballdaten.de", "bulinews.com", "sport.de"], "nota": "62, 63 o 64 duelos según la fuente; no se usa en el modelo"}
+  },
+
+  "jugadores": {
+    "Christian Rasmussen (BOC)": {"dato": "Gol de la victoria en Cottbus (J10)", "estado": "VERIFICADO", "goles_temporada": "NO_DISPONIBLE"},
+    "Marvin Wanitzek (KSC)": {"dato": "Jugador más determinante y lanzador de penales según la previa de Rösler", "estado": "UNA_FUENTE", "goles_temporada": "NO_DISPONIBLE", "asistencias": "NO_DISPONIBLE"}
+  },
+
+  "bajas": {
+    "VfL Bochum":    {"fuera": ["Philipp Strompf", "Oliver Olsen"], "estado": "UNA_FUENTE", "fuentes": ["tipsterio.de"]},
+    "Karlsruher SC": {"fuera": ["Franke (defensa)", "Jung (defensa)"], "estado": "UNA_FUENTE", "fuentes": ["tipsterio.de"]}
+  },
+
+  "cuotas_publicadas": {
+    "_nota": "Cuotas citadas en previas; cambian constantemente.",
+    "Gana Bochum":          {"mercado": "1",            "cuota": 1.75, "fuente": "tipsterio.de (rango 1.72-1.84 en sportwetten24)"},
+    "Empate":               {"mercado": "X",            "cuota": 4.00, "fuente": "sportwetten24 (rango 3.80-4.20)"},
+    "Ambos anotan: sí":     {"mercado": "BTTS sí",      "cuota": 1.53, "fuente": "sport.de (bet365)"},
+    "Menos de 3.5 goles":   {"mercado": "Menos de 3.5", "cuota": 1.59, "fuente": "wettbasis.com (LetsBet)"},
+    "Menos de 2.5 goles":   {"mercado": "Menos de 2.5", "cuota": 2.40, "fuente": "sportwetten24 (una fuente, cuota atípica)"}
+  }
+}

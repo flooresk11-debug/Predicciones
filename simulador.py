@@ -192,9 +192,9 @@ def informe(d, args):
                                           if ok else "HAY INCONSISTENCIAS: no confiar en la simulación."))
     nd = [k for k, v in d["tiros"].items() if v == "NO_DISPONIBLE"]
     w(f"\nDatos **no disponibles** (no se inventan): {', '.join(nd)}, asistencias, "
-      "estadísticas de primer tiempo completas, tabla completa con posiciones 7-15.\n")
+      "estadísticas de primer tiempo completas, tabla completa.\n")
 
-    w("## 2. Estadísticas reales (temporada 2026/27, Bundesliga)")
+    w(f"## 2. Estadísticas reales ({d['partido']['competicion'].split(' - ')[0]})")
     w("| Equipo | Condición | PJ | G-E-P | GF | GC | GF/p | GC/p | Goles/p | BTTS | Port. cero | Sin marcar | +2.5 |")
     w("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
     for eq, cond, etiqueta in [(loc, None, "Total"), (loc, "L", "Local"),
@@ -212,7 +212,7 @@ def informe(d, args):
     w("\n## 3. Modelo")
     w(f"- Goles esperados (global): {loc} {det['lam_l_glob']:.2f} · {vis} {det['lam_v_glob']:.2f}")
     w(f"- Goles esperados (local en casa / visitante fuera): {loc} {det['lam_l_cond']:.2f} · {vis} {det['lam_v_cond']:.2f}")
-    w(f"- Peso de la condición local/visitante: {args.peso_condicion:.2f} (muestra de solo 4 partidos por condición)")
+    w(f"- Peso de la condición local/visitante: {args.peso_condicion:.2f} (muestra pequeña por condición)")
     w(f"- **λ final: {loc} {lam_l:.2f} · {vis} {lam_v:.2f}** (total esperado {lam_l + lam_v:.2f})")
     w(f"- Monte Carlo {args.sims:,} simulaciones (semilla 2026): 1 {pct(mc['1'])} · X {pct(mc['X'])} · "
       f"2 {pct(mc['2'])} · BTTS {pct(mc['btts'])} · +2.5 {pct(mc['o25'])}")
@@ -230,14 +230,16 @@ def informe(d, args):
     w("\n## 5. Comparación con cuotas publicadas")
     w("| Apuesta | Cuota | Prob. implícita | Prob. modelo | Valor esperado por 1 unidad |")
     w("|---|---|---|---|---|")
-    cq = d["cuotas_publicadas"]
-    filas = [("Leverkusen gana", r["2"]), ("Köln menos de 1.5 goles", r["Local menos de 1.5"])]
-    for nombre, p in filas:
-        c = cq[nombre]["cuota"]
-        w(f"| {nombre} | {c} | {pct(1 / c)} | {pct(p)} | {p * c - 1:+.3f} |")
-    c = cq["Köln handicap +1"]["cuota"]
-    w(f"| Köln hándicap asiático +1 | {c} | {pct(1 / c)} | gana {pct(r['1X'])} / push {pct(r['Local pierde por 1'])} | "
-      f"{ev_handicap_asiatico_local_mas1(r, c):+.3f} |")
+    for nombre, q in d["cuotas_publicadas"].items():
+        if nombre.startswith("_"):
+            continue
+        c = q["cuota"]
+        if q.get("tipo") == "ah_local_+1":
+            w(f"| {nombre} | {c} | {pct(1 / c)} | gana {pct(r['1X'])} / push {pct(r['Local pierde por 1'])} | "
+              f"{ev_handicap_asiatico_local_mas1(r, c):+.3f} |")
+        else:
+            p = r[q["mercado"]]
+            w(f"| {nombre} | {c} | {pct(1 / c)} | {pct(p)} | {p * c - 1:+.3f} |")
 
     w("\n## 6. Sensibilidad (¿cambia la conclusión si cambio supuestos?)")
     w("| Peso condición | λ local | λ visit. | 1 | X | 2 | +2.5 | BTTS |")
@@ -249,7 +251,8 @@ def informe(d, args):
           f"{pct(rr['Más de 2.5'])} | {pct(rr['BTTS sí'])} |")
 
     w("\n## 7. Limitaciones")
-    w("- Muestra pequeña (8 partidos de liga por equipo): intervalos de confianza amplios.")
+    n_min = min(len(v) for v in d["resultados_liga"].values())
+    w(f"- Muestra pequeña ({n_min} partidos de liga por equipo): intervalos de confianza amplios.")
     w("- El modelo Poisson no incorpora bajas, H2H ni motivación; esos factores se tratan en el análisis cualitativo.")
     w("- Varios resultados tienen una sola fuente; la auditoría confirma que los totales cuadran con la tabla.")
     return "\n".join(out), ok

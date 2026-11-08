@@ -15,9 +15,9 @@ EXCLUIDO (conflicto entre fuentes) h2h.historico_total: wettbasis.com cuenta 94 
 ```
 **Resultado de la auditoría:** todos los totales cuadran con la tabla publicada.
 
-Datos **no disponibles** (no se inventan): tiros_a_puerta, corners, asistencias, estadísticas de primer tiempo completas, tabla completa con posiciones 7-15.
+Datos **no disponibles** (no se inventan): tiros_a_puerta, corners, asistencias, estadísticas de primer tiempo completas, tabla completa.
 
-## 2. Estadísticas reales (temporada 2026/27, Bundesliga)
+## 2. Estadísticas reales (Bundesliga 2026/27)
 | Equipo | Condición | PJ | G-E-P | GF | GC | GF/p | GC/p | Goles/p | BTTS | Port. cero | Sin marcar | +2.5 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1. FC Köln | Total | 8 | 2-3-3 | 9 | 12 | 1.12 | 1.50 | 2.62 | 75.0% | 12.5% | 25.0% | 50.0% |
@@ -28,7 +28,7 @@ Datos **no disponibles** (no se inventan): tiros_a_puerta, corners, asistencias,
 ## 3. Modelo
 - Goles esperados (global): 1. FC Köln 1.56 · Bayer 04 Leverkusen 1.88
 - Goles esperados (local en casa / visitante fuera): 1. FC Köln 2.12 · Bayer 04 Leverkusen 1.50
-- Peso de la condición local/visitante: 0.35 (muestra de solo 4 partidos por condición)
+- Peso de la condición local/visitante: 0.35 (muestra pequeña por condición)
 - **λ final: 1. FC Köln 1.76 · Bayer 04 Leverkusen 1.74** (total esperado 3.50)
 - Monte Carlo 200,000 simulaciones (semilla 2026): 1 39.2% · X 22.3% · 2 38.4% · BTTS 68.3% · +2.5 68.0%
 
@@ -62,7 +62,7 @@ Marcadores más probables: 1-1 (9.2%), 2-1 (8.1%), 1-2 (8.1%), 2-2 (7.1%), 1-0 (
 |---|---|---|---|---|
 | Leverkusen gana | 1.85 | 54.1% | 38.5% | -0.287 |
 | Köln menos de 1.5 goles | 1.61 | 62.1% | 47.5% | -0.235 |
-| Köln hándicap asiático +1 | 1.609 | 62.2% | gana 61.5% / push 18.7% | +0.175 |
+| Köln handicap +1 | 1.609 | 62.2% | gana 61.5% / push 18.7% | +0.175 |
 
 ## 6. Sensibilidad (¿cambia la conclusión si cambio supuestos?)
 | Peso condición | λ local | λ visit. | 1 | X | 2 | +2.5 | BTTS |
