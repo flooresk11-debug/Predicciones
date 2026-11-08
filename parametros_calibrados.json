@@ -1,0 +1,34 @@
+{
+  "corners": {
+    "K": 30,
+    "alfa": 0.3,
+    "delta": 0.0,
+    "skill_entrenamiento": 0.0159,
+    "skill_prueba": 0.0034,
+    "skill_prueba_version_anterior": -0.0196
+  },
+  "amarillas": {
+    "K": 20,
+    "alfa": 0.5,
+    "delta": 0.0,
+    "skill_entrenamiento": 0.047,
+    "skill_prueba": 0.0513,
+    "skill_prueba_version_anterior": 0.0314
+  },
+  "tiros_puerta": {
+    "K": 6,
+    "alfa": 0.3,
+    "delta": 0.0,
+    "skill_entrenamiento": 0.0232,
+    "skill_prueba": -0.0037,
+    "skill_prueba_version_anterior": -0.0223
+  },
+  "goles": {
+    "K": 30,
+    "alfa": 0.3,
+    "delta": 0.0,
+    "skill_entrenamiento": 0.0151,
+    "skill_prueba": -0.0252,
+    "skill_prueba_version_anterior": -0.0364
+  }
+}

@@ -69,3 +69,14 @@ combina de 2 en 2 en partidos distintos (como Villarreal 1.53 + Friburgo 1.61, g
 3. **Cuotas largas (> 3.5) fuera por defecto.** En el backtest, casi todo el valor de bet365 está en cuotas 4.0+:
    267 apuestas, 15% de aciertos, ROI +3.2%, CLV +2.3%. Ventaja pequeña que exige cientos de apuestas y aguantar
    rachas de 10-20 fallos: no encaja con el perfil de apuestas del usuario.
+
+## Simulador con datos reales y calibrado (`simulador_real.py` + `calibrar.py`)
+
+- Descarga solo los datos oficiales de la temporada 2026/27 y la anterior (football-data.co.uk): goles,
+  tiros, tiros a puerta, corners, tarjetas y árbitro de cada partido. Nadie escribe datos a mano.
+- `python3 simulador_real.py --liga SP1 --local "Ath Madrid" --visitante "Barcelona"` simula y da probabilidad,
+  cuota justa y ventaja frente a bet365 para 1X2, goles, ambos marcan, tiros a puerta, corners y tarjetas.
+- `python3 calibrar.py` ajusta los parámetros en 2025/26 y los prueba en 2026/27 (1.236 partidos no vistos).
+  Resultado (mejora frente a usar la media de la liga): tarjetas +5.1%, corners +0.3%, tiros a puerta -0.4%,
+  goles -2.5% (para goles se usa el mercado). Parámetros en `parametros_calibrados.json`.
+- `python3 simulador_real.py --liga E0 --validar` muestra si lo prometido se cumple por tramos de probabilidad.
