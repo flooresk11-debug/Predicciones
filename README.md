@@ -45,3 +45,12 @@ martes y viernes) y lista solo las apuestas donde bet365 paga al menos un 4% má
 
 Validación (`python3 backtest_bet365.py`): media del mercado con umbral +4% → 275 apuestas, ROI +4.1%,
 CLV +2.2% en 1X2; Betfair Exchange como referencia NO funciona (CLV negativo).
+
+## Formato de picks (desde el 8/11/2026)
+
+Cada análisis termina con un pick concreto, con una de estas etiquetas:
+- 🟢 **Pick de VALOR**: bet365 paga por encima del precio justo (ventaja >= +4%). Es el único tipo con ventaja
+  demostrada en el backtest. Stake: 1 unidad.
+- 🟡 **Pick del ANALISTA**: la mejor apuesta según datos y contexto cuando no hay ventaja de precio.
+  Se elige la opción con el valor esperado menos negativo que además respalden los datos. Stake: 0.5 unidades.
+Nunca combinados. Todos van a `registro/picks.csv` para medir cada tipo por separado.

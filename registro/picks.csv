@@ -19,3 +19,6 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-08,Palace-Liverpool,Ambos anotan: no,claude-v2,alto,0.452,2.33,pendiente,pick del filtro nuevo
 2026-11-08,Twente-Ajax,Gana Ajax,claude-v2,alto,0.392,2.90,pendiente,pick del filtro nuevo
 2026-11-08,Villarreal-Getafe,Gana Villarreal (Novibet),claude-v3,medio,0.666,1.58,pendiente,ventaja +5.2% vs Pinnacle 1.45 (rcdm.es); confirmar precios antes
+2026-11-08,Villarreal-Getafe,Gana Getafe (bet365),valor-v3,alto,0.131,8.00,pendiente,ventaja +5.1% vs media de mercado; cuota mínima 7.91; 1 unidad
+2026-11-08,Freiburg-Union Berlin,Union +1.25 hándicap asiático (bet365),analista,medio,0.541,1.80,pendiente,sin ventaja de precio (-2.6%); H2H Freiburg 1G-4E-5P; 0.5 unidades
+2026-11-08,Inter-Como,Como +0.5 hándicap asiático (bet365),analista,medio,0.487,2.03,pendiente,sin ventaja de precio (-1.2%); Inter sin Lautaro; 0.5 unidades
