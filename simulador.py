@@ -65,9 +65,31 @@ def auditar(d):
         if not isinstance(t, dict):
             hallazgos.append(f"NO_DISPONIBLE {equipo}: no se usa")
             continue
-        hallazgos.append(
-            f"OK  tiros {equipo}: {t['tiros']} tiros / {t['goles']} goles = "
-            f"{t['tiros'] / t['goles']:.2f} tiros por gol ({t['tiros'] / t['partidos']:.1f} por partido)")
+        goles = t.get("goles", d["tabla_oficial_declarada"].get(equipo, {}).get("gf"))
+        linea = f"tiros {equipo}: {t['tiros']} en {t['partidos']} PJ ({t['tiros'] / t['partidos']:.2f} por partido)"
+        if goles:
+            linea += f", {t['tiros'] / goles:.2f} tiros por gol"
+        if "a_puerta" in t:
+            linea += f", a puerta {t['a_puerta']} ({t['a_puerta'] / t['partidos']:.2f}/p, precisión {pct(t['a_puerta'] / t['tiros'])})"
+            if not (goles or 0) <= t["a_puerta"] <= t["tiros"]:
+                ok = False
+                hallazgos.append(f"FALLO {linea}: debe cumplirse goles <= a puerta <= tiros")
+                continue
+            linea += f"; goles {goles} <= a puerta <= tiros: coherente"
+        hallazgos.append(("AVISO " if "CONFLICTO" in t.get("estado", "") else "OK  ") + linea)
+
+    for equipo, t in d.get("tarjetas", {}).items():
+        if "amarillas" in t:
+            pj = d["tabla_oficial_declarada"][equipo]["pj"]
+            calc = t["amarillas"] / pj
+            estado = "OK " if abs(calc - t["amarillas_por_partido"]) < 0.05 else "AVISO"
+            hallazgos.append(f"{estado} tarjetas {equipo}: {t['amarillas']} amarillas / {pj} PJ = {calc:.2f} "
+                             f"(publicado {t['amarillas_por_partido']})")
+    arb = d["partido"].get("arbitro", {})
+    t26 = arb.get("temporada_2026_27") if isinstance(arb, dict) else None
+    if t26:
+        calc = t26["amarillas"] / t26["partidos"]
+        hallazgos.append(f"OK  árbitro {arb['valor']}: {t26['amarillas']} amarillas / {t26['partidos']} PJ = {calc:.2f} por partido")
 
     for clave, v in d["h2h_resumen"].items():
         if v["estado"] == "CONFLICTO":
@@ -178,6 +200,68 @@ def ev_handicap_asiatico_local_mas1(r, cuota):
     return (r["1"] + r["X"]) * (cuota - 1) - r["Local pierde por 2+"]
 
 
+
+# ---------------------------------------------------------------- mercados de conteo
+USABLES = {"VERIFICADO", "VERIFICADO_INTERNO", "UNA_FUENTE"}
+
+
+def prob_mas_de(linea, lam):
+    """P(X > linea) con X ~ Poisson(lam); linea tipo 3.5."""
+    k = math.floor(linea)
+    return 1 - sum(poisson(i, lam) for i in range(k + 1))
+
+
+def lambda_conteo(mercado, todos):
+    """Media de los estimadores usables; los totales suman mercados ya calculados."""
+    if "suma_de" in mercado:
+        return sum(todos[n] for n in mercado["suma_de"]), "suma de " + " + ".join(mercado["suma_de"])
+    usados = [e for e in mercado["estimadores"] if e["estado"] in USABLES and e.get("valor") is not None]
+    if not usados:
+        return None, "sin datos usables"
+    lam = sum(e["valor"] for e in usados) / len(usados)
+    return lam, " | ".join(f"{e['nombre']}={e['valor']:.2f} ({e['estado']})" for e in usados)
+
+
+def seccion_conteos(d, w):
+    mc = d.get("mercados_conteo")
+    if not mc:
+        return
+    w("\n## 6b. Remates, remates a puerta y tarjetas (Poisson sobre promedios auditados)")
+    excluidos = []
+    for nombre, m in mc.items():
+        if nombre.startswith("_"):
+            continue
+        for e in m.get("estimadores", []):
+            if e["estado"] not in USABLES:
+                excluidos.append(f"{nombre} · {e['nombre']}: {e['estado']} ({e.get('nota', '')})")
+    todos = {}
+    for nombre, m in mc.items():
+        if nombre.startswith("_"):
+            continue
+        lam, detalle = lambda_conteo(m, todos)
+        if lam is None:
+            w(f"\n**{nombre}:** sin datos usables, no se proyecta.")
+            continue
+        todos[nombre] = lam
+        w(f"\n**{nombre}: media proyectada {lam:.2f}**  ")
+        w(f"Base: {detalle}")
+        w("\n| Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |")
+        w("|---|---|---|---|---|")
+        for linea in m["lineas"]:
+            p = prob_mas_de(linea, lam)
+            w(f"| {linea} | {pct(p)} | {pct(1 - p)} | {cuota_justa(p):.2f} | {cuota_justa(1 - p):.2f} |")
+        for c in m.get("cuotas", []):
+            p = prob_mas_de(c["linea"], lam)
+            p = p if c["lado"] == "mas" else 1 - p
+            w(f"\nCuota publicada: {c['lado']} de {c['linea']} a {c['cuota']} ({c['fuente']}) -> "
+              f"prob. modelo {pct(p)}, implícita {pct(1 / c['cuota'])}, valor esperado {p * c['cuota'] - 1:+.3f}")
+    if excluidos:
+        w("\nEstimadores **excluidos** por conflicto o falta de datos:")
+        for x in excluidos:
+            w(f"- {x}")
+    w("\n> Aviso: remates y tarjetas tienen más varianza que una Poisson; las probabilidades en líneas "
+      "alejadas de la media son optimistas. Usa sobre todo las líneas cercanas a la media.")
+
 # ---------------------------------------------------------------- informe
 def informe(d, args):
     loc, vis = d["partido"]["local"], d["partido"]["visitante"]
@@ -251,6 +335,8 @@ def informe(d, args):
         rr, _ = mercados(matriz(a, b))
         w(f"| {pw:.2f} | {a:.2f} | {b:.2f} | {pct(rr['1'])} | {pct(rr['X'])} | {pct(rr['2'])} | "
           f"{pct(rr['Más de 2.5'])} | {pct(rr['BTTS sí'])} |")
+
+    seccion_conteos(d, w)
 
     w("\n## 7. Limitaciones")
     n_min = min(len(v) for v in d["resultados_liga"].values())

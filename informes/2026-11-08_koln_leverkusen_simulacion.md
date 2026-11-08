@@ -7,8 +7,8 @@ OK  1. FC Köln: 8 PJ, 2G 3E 3P, 9:12, 9 pts = coincide con la tabla publicada
     estados de los resultados de 1. FC Köln: {'VERIFICADO': 4, 'UNA_FUENTE': 3, 'CONFLICTO_MARCADOR': 1}
 OK  Bayer 04 Leverkusen: 8 PJ, 4G 1E 3P, 18:16, 13 pts = coincide con la tabla publicada
     estados de los resultados de Bayer 04 Leverkusen: {'VERIFICADO': 5, 'UNA_FUENTE': 3}
-OK  tiros 1. FC Köln: 105 tiros / 8 goles = 13.12 tiros por gol (15.0 por partido)
-OK  tiros Bayer 04 Leverkusen: 146 tiros / 18 goles = 8.11 tiros por gol (18.2 por partido)
+OK  tiros 1. FC Köln: 105 en 7 PJ (15.00 por partido), 13.12 tiros por gol
+OK  tiros Bayer 04 Leverkusen: 146 en 8 PJ (18.25 por partido), 8.11 tiros por gol
 NO_DISPONIBLE tiros_a_puerta: no se usa
 NO_DISPONIBLE corners: no se usa
 EXCLUIDO (conflicto entre fuentes) h2h.historico_total: wettbasis.com cuenta 94 duelos con 39 triunfos del Leverkusen

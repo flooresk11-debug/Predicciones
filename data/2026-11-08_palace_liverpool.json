@@ -7,89 +7,801 @@
     "hora_cet": "15:00",
     "hora_uk": "14:00 GMT",
     "estadio": "Selhurst Park",
-    "arbitro": {"valor": null, "estado": "NO_DISPONIBLE"},
-    "entrenador_local": {"valor": "Pierre Sage", "estado": "VERIFICADO", "fuentes": ["sportsmole.co.uk", "thisisanfield.com"], "nota": "Puesto en riesgo según varias previas"},
-    "entrenador_visitante": {"valor": "Andoni Iraola", "estado": "VERIFICADO", "fuentes": ["skysports.com", "liverpoolfc.com", "sportsmole.co.uk"]}
+    "arbitro": {
+      "valor": "Tony Harrington",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "espn.com",
+        "liverpoolfc.com"
+      ],
+      "equipo_arbitral": {
+        "asistentes": [
+          "Mat Wilkes",
+          "Steve Meredith"
+        ],
+        "cuarto": "Tom Kirk",
+        "VAR": "Michael Salisbury"
+      },
+      "temporada_2026_27": {
+        "partidos": 4,
+        "amarillas": 14,
+        "rojas": 1,
+        "amarillas_por_partido": 3.5,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fotmob.com",
+          "soccerbase.com"
+        ],
+        "conflicto": "worldfootball.net: 3 PJ, 10 amarillas (desactualizado)"
+      },
+      "temporada_2025_26": {
+        "amarillas_por_partido": "3.08-3.17",
+        "media_liga": 3.83,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "statpair.com",
+          "squawka.com (38 amarillas, 2 rojas en 12 PJ)"
+        ],
+        "lectura": "Por debajo de la media de la liga (~20%)"
+      },
+      "faltas_por_partido": {
+        "valor": 20.8,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "fotmob.com"
+        ]
+      }
+    },
+    "entrenador_local": {
+      "valor": "Pierre Sage",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "sportsmole.co.uk",
+        "thisisanfield.com"
+      ],
+      "nota": "Puesto en riesgo según varias previas"
+    },
+    "entrenador_visitante": {
+      "valor": "Andoni Iraola",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "skysports.com",
+        "liverpoolfc.com",
+        "sportsmole.co.uk"
+      ]
+    }
   },
-
   "resultados_liga": {
     "Crystal Palace": [
-      {"j": 1, "rival": "Everton",            "condicion": "V", "gf": 0, "gc": 2, "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org", "espn.com", "goal.com"]},
-      {"j": 2, "rival": "Manchester City",    "condicion": "L", "gf": 1, "gc": 4, "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org", "espn.com", "goal.com"]},
-      {"j": 3, "rival": "Fulham",             "condicion": "V", "gf": 3, "gc": 2, "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org", "espn.com", "goal.com"]},
-      {"j": 4, "rival": "Ipswich Town",       "condicion": "L", "gf": 2, "gc": 3, "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org", "espn.com", "goal.com"]},
-      {"j": 5, "rival": "Leeds United",       "condicion": "V", "gf": 0, "gc": 0, "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org", "espn.com", "goal.com"]},
-      {"j": 6, "rival": "Nottingham Forest",  "condicion": "L", "gf": 3, "gc": 1, "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org", "espn.com", "goal.com"]},
-      {"j": 7, "rival": "Brighton",           "condicion": "V", "gf": 0, "gc": 5, "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org", "espn.com", "goal.com"]},
-      {"j": 8, "rival": "Newcastle United",   "condicion": "L", "gf": 0, "gc": 2, "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org", "espn.com", "goal.com"]},
-      {"j": 9, "rival": "Tottenham Hotspur",  "condicion": "V", "gf": 0, "gc": 2, "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org", "espn.com", "goal.com"], "nota": "Roja a Mateta"}
+      {
+        "j": 1,
+        "rival": "Everton",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "en.wikipedia.org",
+          "espn.com",
+          "goal.com"
+        ]
+      },
+      {
+        "j": 2,
+        "rival": "Manchester City",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 4,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "en.wikipedia.org",
+          "espn.com",
+          "goal.com"
+        ]
+      },
+      {
+        "j": 3,
+        "rival": "Fulham",
+        "condicion": "V",
+        "gf": 3,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "en.wikipedia.org",
+          "espn.com",
+          "goal.com"
+        ]
+      },
+      {
+        "j": 4,
+        "rival": "Ipswich Town",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "en.wikipedia.org",
+          "espn.com",
+          "goal.com"
+        ]
+      },
+      {
+        "j": 5,
+        "rival": "Leeds United",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "en.wikipedia.org",
+          "espn.com",
+          "goal.com"
+        ]
+      },
+      {
+        "j": 6,
+        "rival": "Nottingham Forest",
+        "condicion": "L",
+        "gf": 3,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "en.wikipedia.org",
+          "espn.com",
+          "goal.com"
+        ]
+      },
+      {
+        "j": 7,
+        "rival": "Brighton",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 5,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "en.wikipedia.org",
+          "espn.com",
+          "goal.com"
+        ]
+      },
+      {
+        "j": 8,
+        "rival": "Newcastle United",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "en.wikipedia.org",
+          "espn.com",
+          "goal.com"
+        ]
+      },
+      {
+        "j": 9,
+        "rival": "Tottenham Hotspur",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "en.wikipedia.org",
+          "espn.com",
+          "goal.com"
+        ],
+        "nota": "Roja a Mateta"
+      }
     ],
     "Liverpool": [
-      {"j": 1, "fecha": "2026-08-23", "rival": "Newcastle United",  "condicion": "V", "gf": 2, "gc": 2, "estado": "VERIFICADO", "fuentes": ["fbref.com", "footballwebpages.co.uk"]},
-      {"j": 2, "fecha": "2026-08-29", "rival": "Nottingham Forest", "condicion": "L", "gf": 2, "gc": 2, "estado": "VERIFICADO", "fuentes": ["fbref.com", "footballwebpages.co.uk"]},
-      {"j": 3, "fecha": "2026-09-04", "rival": "Ipswich Town",      "condicion": "V", "gf": 2, "gc": 0, "estado": "VERIFICADO", "fuentes": ["fbref.com", "footballwebpages.co.uk"]},
-      {"j": 4, "fecha": "2026-09-12", "rival": "Fulham",            "condicion": "L", "gf": 0, "gc": 0, "estado": "VERIFICADO", "fuentes": ["fbref.com", "footballwebpages.co.uk"]},
-      {"j": 5, "fecha": "2026-09-20", "rival": "AFC Bournemouth",   "condicion": "V", "gf": 1, "gc": 0, "estado": "VERIFICADO", "fuentes": ["fbref.com", "footballwebpages.co.uk"]},
-      {"j": 6, "fecha": "2026-10-11", "rival": "Manchester City",   "condicion": "L", "gf": 0, "gc": 3, "estado": "VERIFICADO", "fuentes": ["fbref.com", "footballwebpages.co.uk"]},
-      {"j": 7, "fecha": "2026-10-17", "rival": "Brentford",         "condicion": "V", "gf": 2, "gc": 1, "estado": "VERIFICADO", "fuentes": ["fbref.com", "footballwebpages.co.uk"]},
-      {"j": 8, "fecha": "2026-10-25", "rival": "Brighton",          "condicion": "L", "gf": 2, "gc": 0, "estado": "VERIFICADO", "fuentes": ["fbref.com", "footballwebpages.co.uk"]},
-      {"j": 9, "fecha": "2026-11-01", "rival": "Arsenal",           "condicion": "L", "gf": 0, "gc": 1, "estado": "VERIFICADO", "fuentes": ["fbref.com", "sportsmole.co.uk"]}
+      {
+        "j": 1,
+        "fecha": "2026-08-23",
+        "rival": "Newcastle United",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "footballwebpages.co.uk"
+        ]
+      },
+      {
+        "j": 2,
+        "fecha": "2026-08-29",
+        "rival": "Nottingham Forest",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "footballwebpages.co.uk"
+        ]
+      },
+      {
+        "j": 3,
+        "fecha": "2026-09-04",
+        "rival": "Ipswich Town",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "footballwebpages.co.uk"
+        ]
+      },
+      {
+        "j": 4,
+        "fecha": "2026-09-12",
+        "rival": "Fulham",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "footballwebpages.co.uk"
+        ]
+      },
+      {
+        "j": 5,
+        "fecha": "2026-09-20",
+        "rival": "AFC Bournemouth",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "footballwebpages.co.uk"
+        ]
+      },
+      {
+        "j": 6,
+        "fecha": "2026-10-11",
+        "rival": "Manchester City",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "footballwebpages.co.uk"
+        ]
+      },
+      {
+        "j": 7,
+        "fecha": "2026-10-17",
+        "rival": "Brentford",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "footballwebpages.co.uk"
+        ]
+      },
+      {
+        "j": 8,
+        "fecha": "2026-10-25",
+        "rival": "Brighton",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "footballwebpages.co.uk"
+        ]
+      },
+      {
+        "j": 9,
+        "fecha": "2026-11-01",
+        "rival": "Arsenal",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "sportsmole.co.uk"
+        ]
+      }
     ]
   },
-
   "otros_partidos": {
     "Liverpool": [
-      {"fecha": "2026-11-04", "competicion": "UEFA Champions League", "rival": "Fenerbahçe", "condicion": "V", "gf": 2, "gc": 3, "estado": "VERIFICADO", "fuentes": ["skysports.com", "espn.com", "aljazeera.com", "liverpoolfc.com"], "nota": "Goles de Nyoni e Isak; Muriqi 79'. Fin del pleno en UCL (9 pts en 4)."}
+      {
+        "fecha": "2026-11-04",
+        "competicion": "UEFA Champions League",
+        "rival": "Fenerbahçe",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "skysports.com",
+          "espn.com",
+          "aljazeera.com",
+          "liverpoolfc.com"
+        ],
+        "nota": "Goles de Nyoni e Isak; Muriqi 79'. Fin del pleno en UCL (9 pts en 4)."
+      }
     ]
   },
-
   "tabla_oficial_declarada": {
-    "Crystal Palace": {"pos": 18, "pj": 9, "g": 2, "e": 1, "p": 6, "gf": 9,  "gc": 21, "pts": 7,  "estado": "VERIFICADO", "fuentes": ["en.wikipedia.org", "nbcsports.com", "squawka.com (DG -12)"], "conflicto": "Wikipedia lo sitúa 19.º"},
-    "Liverpool":      {"pos": 6,  "pj": 9, "g": 4, "e": 3, "p": 2, "gf": 11, "gc": 9,  "pts": 15, "estado": "VERIFICADO", "fuentes": ["goal.com", "squawka.com", "sportnewsafrica.com"]}
+    "Crystal Palace": {
+      "pos": 18,
+      "pj": 9,
+      "g": 2,
+      "e": 1,
+      "p": 6,
+      "gf": 9,
+      "gc": 21,
+      "pts": 7,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "en.wikipedia.org",
+        "nbcsports.com",
+        "squawka.com (DG -12)"
+      ],
+      "conflicto": "Wikipedia lo sitúa 19.º"
+    },
+    "Liverpool": {
+      "pos": 6,
+      "pj": 9,
+      "g": 4,
+      "e": 3,
+      "p": 2,
+      "gf": 11,
+      "gc": 9,
+      "pts": 15,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "goal.com",
+        "squawka.com",
+        "sportnewsafrica.com"
+      ]
+    }
   },
-
   "tiros": {
-    "tiros_totales": "NO_DISPONIBLE",
-    "tiros_a_puerta": "NO_DISPONIBLE",
+    "Liverpool": {
+      "tiros": 140,
+      "a_puerta": 39,
+      "partidos": 9,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "fbref.com (15.56 tiros/90, 4.33 a puerta/90)",
+        "playerstats.football (39 a puerta)"
+      ]
+    },
+    "Crystal Palace": {
+      "tiros": 90,
+      "a_puerta": 31,
+      "partidos": 9,
+      "estado": "CONFLICTO_EN_TIROS",
+      "fuentes": [
+        "fbref.com (10.00/90)",
+        "statz.ai (10.4)",
+        "premierleague.com (31 a puerta; 62 tiros)"
+      ],
+      "nota": "A puerta=31 coincide en 3 fuentes; tiros totales 90 (fbref, statz) vs 62 (premierleague.com)"
+    },
     "corners": "NO_DISPONIBLE"
   },
   "corners_parciales": {
-    "Crystal Palace a favor": {"valor": "29 en 9 partidos (3.2 por partido); solo Ipswich tiene menos", "estado": "UNA_FUENTE", "fuentes": ["squawka.com"]},
-    "Crystal Palace en contra": {"valor": "más de 5 por partido", "estado": "UNA_FUENTE", "fuentes": ["mybettingsites.co.uk"]},
-    "Liverpool fuera a favor": {"valor": "más de 5 por partido", "estado": "UNA_FUENTE", "fuentes": ["mybettingsites.co.uk"]}
+    "Crystal Palace a favor": {
+      "valor": "29 en 9 partidos (3.2 por partido); solo Ipswich tiene menos",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "squawka.com"
+      ]
+    },
+    "Crystal Palace en contra": {
+      "valor": "más de 5 por partido",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "mybettingsites.co.uk"
+      ]
+    },
+    "Liverpool fuera a favor": {
+      "valor": "más de 5 por partido",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "mybettingsites.co.uk"
+      ]
+    }
   },
-
   "h2h": [
-    {"fecha": "2026-04-25", "competicion": "Premier League", "local": "Liverpool", "visitante": "Crystal Palace", "gl": 3, "gv": 1, "estado": "CONFLICTO_MARCADOR", "nota": "Otra fuente da 2-1; ganó Liverpool en ambos casos"},
-    {"fecha": "2025-10-29", "competicion": "EFL Cup", "local": "Liverpool", "visitante": "Crystal Palace", "gl": 0, "gv": 3, "estado": "UNA_FUENTE"},
-    {"fecha": "2025-09-27", "competicion": "Premier League", "local": "Crystal Palace", "visitante": "Liverpool", "gl": 2, "gv": 1, "estado": "UNA_FUENTE"},
-    {"fecha": "2025-08-10", "competicion": "Community Shield", "local": "Crystal Palace", "visitante": "Liverpool", "gl": 2, "gv": 2, "estado": "UNA_FUENTE", "nota": "Palace ganó 3-2 en penales"},
-    {"fecha": "2025-05-25", "competicion": "Premier League", "local": "Liverpool", "visitante": "Crystal Palace", "gl": 1, "gv": 1, "estado": "UNA_FUENTE"}
+    {
+      "fecha": "2026-04-25",
+      "competicion": "Premier League",
+      "local": "Liverpool",
+      "visitante": "Crystal Palace",
+      "gl": 3,
+      "gv": 1,
+      "estado": "CONFLICTO_MARCADOR",
+      "nota": "Otra fuente da 2-1; ganó Liverpool en ambos casos"
+    },
+    {
+      "fecha": "2025-10-29",
+      "competicion": "EFL Cup",
+      "local": "Liverpool",
+      "visitante": "Crystal Palace",
+      "gl": 0,
+      "gv": 3,
+      "estado": "UNA_FUENTE"
+    },
+    {
+      "fecha": "2025-09-27",
+      "competicion": "Premier League",
+      "local": "Crystal Palace",
+      "visitante": "Liverpool",
+      "gl": 2,
+      "gv": 1,
+      "estado": "UNA_FUENTE"
+    },
+    {
+      "fecha": "2025-08-10",
+      "competicion": "Community Shield",
+      "local": "Crystal Palace",
+      "visitante": "Liverpool",
+      "gl": 2,
+      "gv": 2,
+      "estado": "UNA_FUENTE",
+      "nota": "Palace ganó 3-2 en penales"
+    },
+    {
+      "fecha": "2025-05-25",
+      "competicion": "Premier League",
+      "local": "Liverpool",
+      "visitante": "Crystal Palace",
+      "gl": 1,
+      "gv": 1,
+      "estado": "UNA_FUENTE"
+    }
   ],
   "h2h_resumen": {
-    "iraola_vs_palace": {"valor": "6 partidos sin perder como entrenador (incluye etapa en Bournemouth)", "estado": "UNA_FUENTE", "fuentes": ["sportsmole.co.uk"]},
-    "historico_total": {"valor": "Liverpool 17-18 V / Palace 7 V", "estado": "CONFLICTO", "nota": "28 o 30 duelos según la ventana; no se usa"}
+    "iraola_vs_palace": {
+      "valor": "6 partidos sin perder como entrenador (incluye etapa en Bournemouth)",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "sportsmole.co.uk"
+      ]
+    },
+    "historico_total": {
+      "valor": "Liverpool 17-18 V / Palace 7 V",
+      "estado": "CONFLICTO",
+      "nota": "28 o 30 duelos según la ventana; no se usa"
+    }
   },
-
   "jugadores": {
-    "Alexander Isak (LIV)": {"goles_liga": 6, "estado": "VERIFICADO", "fuentes": ["espn.com", "en.wikipedia.org"], "nota": "2.º goleador de la liga; marcó también ante Fenerbahçe", "asistencias": "NO_DISPONIBLE"},
-    "Florian Wirtz (LIV)": {"goles_liga": "NO_DISPONIBLE"},
-    "Jean-Philippe Mateta (CRY)": {"goles_liga": "NO_DISPONIBLE", "nota": "SANCIONADO"},
-    "Eddie Nketiah (CRY)": {"goles_liga": "NO_DISPONIBLE", "nota": "Titular previsto"}
+    "Alexander Isak (LIV)": {
+      "goles_liga": 6,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "espn.com",
+        "en.wikipedia.org"
+      ],
+      "nota": "2.º goleador de la liga; marcó también ante Fenerbahçe",
+      "asistencias": "NO_DISPONIBLE"
+    },
+    "Florian Wirtz (LIV)": {
+      "goles_liga": "NO_DISPONIBLE"
+    },
+    "Jean-Philippe Mateta (CRY)": {
+      "goles_liga": "NO_DISPONIBLE",
+      "nota": "SANCIONADO"
+    },
+    "Eddie Nketiah (CRY)": {
+      "goles_liga": "NO_DISPONIBLE",
+      "nota": "Titular previsto"
+    }
   },
-
   "bajas": {
-    "Crystal Palace": {"fuera": ["Jean-Philippe Mateta (sancionado)", "Ismaïla Sarr", "Chadi Riad", "Takehiro Tomiyasu"], "duda": ["Jørgen Strand Larsen"], "estado": "VERIFICADO", "fuentes": ["sportsmole.co.uk", "thisisanfield.com"]},
-    "Liverpool": {"fuera": ["Giovanni Leoni", "Conor Bradley", "Hugo Ekitike", "Jeremie Frimpong"], "duda": ["Ryan Gravenberch"], "vuelven": ["Isak", "Wirtz", "Kerkez", "Araujo", "Gakpo"], "estado": "VERIFICADO", "fuentes": ["sportsmole.co.uk", "thisisanfield.com"]}
+    "Crystal Palace": {
+      "fuera": [
+        "Jean-Philippe Mateta (sancionado)",
+        "Ismaïla Sarr",
+        "Chadi Riad",
+        "Takehiro Tomiyasu"
+      ],
+      "duda": [
+        "Jørgen Strand Larsen"
+      ],
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "sportsmole.co.uk",
+        "thisisanfield.com"
+      ]
+    },
+    "Liverpool": {
+      "fuera": [
+        "Giovanni Leoni",
+        "Conor Bradley",
+        "Hugo Ekitike",
+        "Jeremie Frimpong"
+      ],
+      "duda": [
+        "Ryan Gravenberch"
+      ],
+      "vuelven": [
+        "Isak",
+        "Wirtz",
+        "Kerkez",
+        "Araujo",
+        "Gakpo"
+      ],
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "sportsmole.co.uk",
+        "thisisanfield.com"
+      ]
+    }
   },
-
   "cuotas_publicadas": {
     "_nota": "Cuotas de odds1x2.com actualizadas el 1/11 (antes de las dos derrotas de Liverpool); verifica las actuales.",
-    "Gana Liverpool":        {"mercado": "2",       "cuota": 1.66, "fuente": "odds1x2.com"},
-    "Empate":                {"mercado": "X",       "cuota": 4.20, "fuente": "odds1x2.com"},
-    "Gana Crystal Palace":   {"mercado": "1",       "cuota": 4.75, "fuente": "odds1x2.com"},
-    "Ambos anotan: sí":      {"mercado": "BTTS sí", "cuota": 1.62, "fuente": "odds1x2.com"},
-    "Ambos anotan: no":      {"mercado": "BTTS no", "cuota": 2.33, "fuente": "odds1x2.com"},
-    "Liverpool gana a cero": {"mercado": "Visitante gana a cero", "cuota": 3.25, "fuente": "squawka.com (9/4, bet365)"}
+    "Gana Liverpool": {
+      "mercado": "2",
+      "cuota": 1.66,
+      "fuente": "odds1x2.com"
+    },
+    "Empate": {
+      "mercado": "X",
+      "cuota": 4.2,
+      "fuente": "odds1x2.com"
+    },
+    "Gana Crystal Palace": {
+      "mercado": "1",
+      "cuota": 4.75,
+      "fuente": "odds1x2.com"
+    },
+    "Ambos anotan: sí": {
+      "mercado": "BTTS sí",
+      "cuota": 1.62,
+      "fuente": "odds1x2.com"
+    },
+    "Ambos anotan: no": {
+      "mercado": "BTTS no",
+      "cuota": 2.33,
+      "fuente": "odds1x2.com"
+    },
+    "Liverpool gana a cero": {
+      "mercado": "Visitante gana a cero",
+      "cuota": 3.25,
+      "fuente": "squawka.com (9/4, bet365)"
+    }
+  },
+  "tarjetas": {
+    "Liverpool": {
+      "amarillas": 21,
+      "rojas": 1,
+      "amarillas_por_partido": 2.33,
+      "rival_recibe_por_partido": 2.33,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "squawka.com (21 amarillas, 1 roja; más faltas de la liga)",
+        "betaminic.com (2.33/partido)"
+      ],
+      "conflicto": "myfootballfacts.com: 17 (desactualizado)"
+    },
+    "Crystal Palace": {
+      "amarillas_por_partido": 1.44,
+      "rival_recibe_por_partido": 1.67,
+      "rojas": 1,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "betaminic.com"
+      ],
+      "nota": "statz.ai da ~1.2 tarjetas por partido"
+    }
+  },
+  "mercados_conteo": {
+    "_nota": "Cada media es el promedio de: lo que el equipo produce y lo que el rival concede. Si falta un lado, se usa solo el otro.",
+    "Remates Liverpool": {
+      "estimadores": [
+        {
+          "nombre": "Liverpool remata por partido",
+          "valor": 15.56,
+          "estado": "VERIFICADO",
+          "fuente": "fbref.com"
+        },
+        {
+          "nombre": "Palace concede por partido",
+          "valor": 12.7,
+          "estado": "UNA_FUENTE",
+          "fuente": "statz.ai"
+        }
+      ],
+      "lineas": [
+        11.5,
+        12.5,
+        13.5,
+        14.5,
+        15.5
+      ]
+    },
+    "Remates Crystal Palace": {
+      "estimadores": [
+        {
+          "nombre": "Palace remata por partido",
+          "valor": 10.0,
+          "estado": "VERIFICADO",
+          "fuente": "fbref.com + statz.ai (10.4)"
+        },
+        {
+          "nombre": "Palace remata (premierleague.com)",
+          "valor": 6.89,
+          "estado": "CONFLICTO",
+          "fuente": "premierleague.com",
+          "nota": "62 tiros en 9 PJ, no cuadra con fbref/statz"
+        },
+        {
+          "nombre": "Liverpool concede por partido",
+          "estado": "NO_DISPONIBLE",
+          "fuente": "-",
+          "nota": "no encontrado"
+        }
+      ],
+      "lineas": [
+        7.5,
+        8.5,
+        9.5,
+        10.5,
+        11.5
+      ]
+    },
+    "Remates totales": {
+      "suma_de": [
+        "Remates Liverpool",
+        "Remates Crystal Palace"
+      ],
+      "lineas": [
+        20.5,
+        21.5,
+        22.5,
+        23.5,
+        24.5,
+        25.5
+      ]
+    },
+    "Remates a puerta Liverpool": {
+      "estimadores": [
+        {
+          "nombre": "Liverpool a puerta por partido",
+          "valor": 4.33,
+          "estado": "VERIFICADO",
+          "fuente": "fbref.com + playerstats (39/9)"
+        },
+        {
+          "nombre": "Palace concede a puerta",
+          "estado": "NO_DISPONIBLE",
+          "fuente": "-",
+          "nota": "no encontrado"
+        }
+      ],
+      "lineas": [
+        2.5,
+        3.5,
+        4.5,
+        5.5
+      ]
+    },
+    "Remates a puerta Crystal Palace": {
+      "estimadores": [
+        {
+          "nombre": "Palace a puerta por partido",
+          "valor": 3.44,
+          "estado": "VERIFICADO",
+          "fuente": "fbref + playerstats + premierleague.com (31/9)"
+        },
+        {
+          "nombre": "Liverpool concede a puerta",
+          "valor": 3.8,
+          "estado": "UNA_FUENTE",
+          "fuente": "statz.ai"
+        }
+      ],
+      "lineas": [
+        1.5,
+        2.5,
+        3.5,
+        4.5
+      ]
+    },
+    "Remates a puerta totales": {
+      "suma_de": [
+        "Remates a puerta Liverpool",
+        "Remates a puerta Crystal Palace"
+      ],
+      "lineas": [
+        5.5,
+        6.5,
+        7.5,
+        8.5,
+        9.5
+      ]
+    },
+    "Amarillas Liverpool": {
+      "estimadores": [
+        {
+          "nombre": "Liverpool recibe por partido",
+          "valor": 2.33,
+          "estado": "VERIFICADO",
+          "fuente": "squawka + betaminic"
+        },
+        {
+          "nombre": "Rivales de Palace reciben por partido",
+          "valor": 1.67,
+          "estado": "UNA_FUENTE",
+          "fuente": "betaminic.com"
+        }
+      ],
+      "lineas": [
+        0.5,
+        1.5,
+        2.5
+      ]
+    },
+    "Amarillas Crystal Palace": {
+      "estimadores": [
+        {
+          "nombre": "Palace recibe por partido",
+          "valor": 1.44,
+          "estado": "UNA_FUENTE",
+          "fuente": "betaminic.com"
+        },
+        {
+          "nombre": "Rivales de Liverpool reciben por partido",
+          "valor": 2.33,
+          "estado": "UNA_FUENTE",
+          "fuente": "betaminic.com"
+        }
+      ],
+      "lineas": [
+        0.5,
+        1.5,
+        2.5
+      ]
+    },
+    "Amarillas totales": {
+      "estimadores": [
+        {
+          "nombre": "Equipos (2.00 + 1.89)",
+          "valor": 3.89,
+          "estado": "UNA_FUENTE",
+          "fuente": "suma de los dos mercados anteriores"
+        },
+        {
+          "nombre": "Árbitro Harrington 2026/27",
+          "valor": 3.5,
+          "estado": "VERIFICADO",
+          "fuente": "fotmob + soccerbase (14 en 4 PJ)"
+        },
+        {
+          "nombre": "Árbitro Harrington 2025/26",
+          "valor": 3.17,
+          "estado": "UNA_FUENTE",
+          "fuente": "squawka (38 en 12 PJ)"
+        }
+      ],
+      "lineas": [
+        2.5,
+        3.5,
+        4.5,
+        5.5
+      ],
+      "cuotas": [
+        {
+          "linea": 3.5,
+          "lado": "mas",
+          "cuota": 1.8,
+          "fuente": "squawka.com (4/5, bet365; 'más de 3.5 tarjetas')"
+        }
+      ]
+    }
   }
 }
