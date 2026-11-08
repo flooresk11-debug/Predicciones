@@ -36,3 +36,12 @@ Resultados clave:
 - Ningún modelo propio (goles, tiros a puerta, con o sin anclaje) gana al mercado: ROI -6% a -13% y CLV negativo.
 - La única señal de ventaja real es de precio: apostar cuando la mejor cuota disponible supera el precio justo
   de Pinnacle (casa "afilada") da CLV positivo (+3.8% a +3.9%). Esa es la base del método v3.
+
+## Oportunidades en bet365 sin capturas (`oportunidades.py`)
+
+`python3 oportunidades.py` descarga las cuotas de los próximos partidos (football-data.co.uk, se actualizan
+martes y viernes) y lista solo las apuestas donde bet365 paga al menos un 4% más que el precio justo
+(media del mercado sin margen). Da la **cuota mínima**: abres bet365, y si paga eso o más, hay apuesta.
+
+Validación (`python3 backtest_bet365.py`): media del mercado con umbral +4% → 275 apuestas, ROI +4.1%,
+CLV +2.2% en 1X2; Betfair Exchange como referencia NO funciona (CLV negativo).
