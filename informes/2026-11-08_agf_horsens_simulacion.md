@@ -29,6 +29,8 @@ Datos **no disponibles** (no se inventan): tiros_totales, tiros_a_puerta, corner
 - Goles esperados (global): AGF 1.46 · AC Horsens 1.69
 - Goles esperados (local en casa / visitante fuera): AGF 1.64 · AC Horsens 1.55
 - Peso de la condición local/visitante: 0.35 (muestra pequeña por condición)
+- λ solo con datos: AGF 1.52 · AC Horsens 1.64
+- Sin cuotas 1X2 completas: el modelo NO está anclado al mercado (más incertidumbre).
 - **λ final: AGF 1.52 · AC Horsens 1.64** (total esperado 3.17)
 - Monte Carlo 200,000 simulaciones (semilla 2026): 1 35.7% · X 23.6% · 2 40.7% · BTTS 63.2% · +2.5 61.3%
 
@@ -73,7 +75,19 @@ Marcadores más probables: 1-1 (10.5%), 1-2 (8.7%), 2-1 (8.0%), 0-1 (6.9%), 2-2 
 | 0.50 | 1.55 | 1.62 | 36.7% | 23.5% | 39.7% | 61.4% | 63.2% |
 | 0.70 | 1.59 | 1.59 | 38.1% | 23.5% | 38.4% | 61.6% | 63.4% |
 
-## 7. Limitaciones
+## 8. Selección de picks (filtro estricto)
+Calidad de datos: **baja** (sin lista completa partido a partido). Regla: solo es pick si hay cuota publicada, el valor esperado es >= +5% con la probabilidad ya anclada al mercado, y como máximo 2 picks por partido. Sin cuota no hay pick: una probabilidad sin precio no dice si la apuesta vale la pena.
+
+| Apuesta | Cuota | Prob. anclada | Valor esperado | Riesgo | ¿Pick? |
+|---|---|---|---|---|---|
+| Gana AC Horsens | 5.25 | 40.8% | +1.141 | Alto | no |
+| Gana AGF | 1.55 | 35.7% | -0.447 | Alto | no |
+
+**Sin pick (bloqueado):** calidad de datos baja. Los valores esperados de arriba son solo informativos.
+
+Stake sugerido: 1 unidad (1-2% del bankroll) por pick; nunca más de 2 selecciones en una combinada.
+
+## 9. Limitaciones
 - Muestra pequeña (13 partidos de liga por equipo): intervalos de confianza amplios.
 - El modelo Poisson no incorpora bajas, H2H ni motivación; esos factores se tratan en el análisis cualitativo.
 - Varios resultados tienen una sola fuente; la auditoría confirma que los totales cuadran con la tabla.

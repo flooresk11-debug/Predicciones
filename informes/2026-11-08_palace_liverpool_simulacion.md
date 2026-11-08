@@ -30,44 +30,48 @@ Datos **no disponibles** (no se inventan): corners, asistencias, estadísticas d
 - Goles esperados (global): Crystal Palace 1.00 · Liverpool 1.78
 - Goles esperados (local en casa / visitante fuera): Crystal Palace 1.12 · Liverpool 2.12
 - Peso de la condición local/visitante: 0.35 (muestra pequeña por condición)
-- **λ final: Crystal Palace 1.04 · Liverpool 1.90** (total esperado 2.94)
-- Monte Carlo 200,000 simulaciones (semilla 2026): 1 20.6% · X 22.3% · 2 57.1% · BTTS 55.0% · +2.5 56.2%
+- λ solo con datos: Crystal Palace 1.04 · Liverpool 1.90
+- Mercado sin margen (5.1% de margen quitado): 1 20.0% · X 22.7% · 2 57.3%
+- Modelo puro: 1 20.5% · X 22.2% · 2 57.3%
+- Mezcla (peso mercado 60%): 1 20.2% · X 22.5% · 2 57.3%
+- **λ final: Crystal Palace 1.03 · Liverpool 1.91** (total esperado 2.94)
+- Monte Carlo 200,000 simulaciones (semilla 2026): 1 20.0% · X 22.2% · 2 57.8% · BTTS 54.8% · +2.5 56.2%
 
 ## 4. Probabilidades (cálculo exacto Poisson)
 | Mercado | Probabilidad | Cuota justa |
 |---|---|---|
-| 1 | 20.5% | 4.89 |
-| X | 22.2% | 4.51 |
-| 2 | 57.3% | 1.74 |
-| 1X | 42.7% | 2.34 |
-| X2 | 79.5% | 1.26 |
-| 12 | 77.8% | 1.29 |
-| BTTS sí | 55.1% | 1.82 |
-| BTTS no | 44.9% | 2.23 |
+| 1 | 20.0% | 5.00 |
+| X | 22.0% | 4.54 |
+| 2 | 58.0% | 1.72 |
+| 1X | 42.0% | 2.38 |
+| X2 | 80.0% | 1.25 |
+| 12 | 78.0% | 1.28 |
+| BTTS sí | 54.8% | 1.82 |
+| BTTS no | 45.2% | 2.21 |
 | Más de 1.5 | 79.2% | 1.26 |
 | Más de 2.5 | 56.4% | 1.77 |
 | Menos de 2.5 | 43.6% | 2.29 |
 | Más de 3.5 | 34.0% | 2.94 |
 | Menos de 3.5 | 66.0% | 1.52 |
-| Local portería a cero | 15.0% | 6.68 |
-| Visitante portería a cero | 35.2% | 2.84 |
-| Local menos de 1.5 | 72.0% | 1.39 |
-| Visitante más de 0.5 | 85.0% | 1.18 |
-| Visitante más de 1.5 | 56.6% | 1.77 |
-| Visitante gana por 2+ | 33.5% | 2.98 |
-| Visitante gana a cero | 29.9% | 3.34 |
+| Local portería a cero | 14.8% | 6.77 |
+| Visitante portería a cero | 35.7% | 2.80 |
+| Local menos de 1.5 | 72.5% | 1.38 |
+| Visitante más de 0.5 | 85.2% | 1.17 |
+| Visitante más de 1.5 | 57.0% | 1.75 |
+| Visitante gana por 2+ | 34.1% | 2.93 |
+| Visitante gana a cero | 30.4% | 3.29 |
 
-Marcadores más probables: 1-1 (10.4%), 0-1 (10.0%), 1-2 (9.9%), 0-2 (9.5%), 1-3 (6.3%), 0-3 (6.0%), 1-0 (5.5%), 2-1 (5.5%)
+Marcadores más probables: 1-1 (10.4%), 0-1 (10.1%), 1-2 (9.9%), 0-2 (9.6%), 1-3 (6.3%), 0-3 (6.1%), 1-0 (5.4%), 2-1 (5.3%)
 
 ## 5. Comparación con cuotas publicadas
 | Apuesta | Cuota | Prob. implícita | Prob. modelo | Valor esperado por 1 unidad |
 |---|---|---|---|---|
-| Gana Liverpool | 1.66 | 60.2% | 57.3% | -0.048 |
-| Empate | 4.2 | 23.8% | 22.2% | -0.068 |
-| Gana Crystal Palace | 4.75 | 21.1% | 20.5% | -0.028 |
-| Ambos anotan: sí | 1.62 | 61.7% | 55.1% | -0.108 |
-| Ambos anotan: no | 2.33 | 42.9% | 44.9% | +0.046 |
-| Liverpool gana a cero | 3.25 | 30.8% | 29.9% | -0.027 |
+| Gana Liverpool | 1.66 | 60.2% | 58.0% | -0.038 |
+| Empate | 4.2 | 23.8% | 22.0% | -0.074 |
+| Gana Crystal Palace | 4.75 | 21.1% | 20.0% | -0.051 |
+| Ambos anotan: sí | 1.62 | 61.7% | 54.8% | -0.112 |
+| Ambos anotan: no | 2.33 | 42.9% | 45.2% | +0.053 |
+| Liverpool gana a cero | 3.25 | 30.8% | 30.4% | -0.011 |
 
 ## 6. Sensibilidad (¿cambia la conclusión si cambio supuestos?)
 | Peso condición | λ local | λ visit. | 1 | X | 2 | +2.5 | BTTS |
@@ -92,6 +96,7 @@ Base: Liverpool remata por partido=15.56 (VERIFICADO) | Palace concede por parti
 | 15.5 | 34.4% | 65.6% | 2.91 | 1.52 |
 
 **Remates Crystal Palace: media proyectada 10.00**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Palace remata por partido=10.00 (VERIFICADO)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -115,6 +120,7 @@ Base: suma de Remates Liverpool + Remates Crystal Palace
 | 25.5 | 37.8% | 62.2% | 2.64 | 1.61 |
 
 **Remates a puerta Liverpool: media proyectada 4.33**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Liverpool a puerta por partido=4.33 (VERIFICADO)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -182,7 +188,21 @@ Estimadores **excluidos** por conflicto o falta de datos:
 
 > Aviso: remates y tarjetas tienen más varianza que una Poisson; las probabilidades en líneas alejadas de la media son optimistas. Usa sobre todo las líneas cercanas a la media.
 
-## 7. Limitaciones
+## 8. Selección de picks (filtro estricto)
+Calidad de datos: **alta** (100.0% de resultados con 2+ fuentes o resueltos por la tabla). Regla: solo es pick si hay cuota publicada, el valor esperado es >= +5% con la probabilidad ya anclada al mercado, y como máximo 2 picks por partido. Sin cuota no hay pick: una probabilidad sin precio no dice si la apuesta vale la pena.
+
+| Apuesta | Cuota | Prob. anclada | Valor esperado | Riesgo | ¿Pick? |
+|---|---|---|---|---|---|
+| Ambos anotan: no | 2.33 | 45.2% | +0.053 | Alto | SÍ |
+| Liverpool gana a cero | 3.25 | 30.4% | -0.011 | Alto | no |
+| Gana Liverpool | 1.66 | 58.0% | -0.038 | Medio | no |
+| Gana Crystal Palace | 4.75 | 20.0% | -0.051 | Alto | no |
+| Empate | 4.2 | 22.0% | -0.074 | Alto | no |
+| Ambos anotan: sí | 1.62 | 54.8% | -0.112 | Alto | no |
+
+Stake sugerido: 1 unidad (1-2% del bankroll) por pick; nunca más de 2 selecciones en una combinada.
+
+## 9. Limitaciones
 - Muestra pequeña (9 partidos de liga por equipo): intervalos de confianza amplios.
 - El modelo Poisson no incorpora bajas, H2H ni motivación; esos factores se tratan en el análisis cualitativo.
 - Varios resultados tienen una sola fuente; la auditoría confirma que los totales cuadran con la tabla.

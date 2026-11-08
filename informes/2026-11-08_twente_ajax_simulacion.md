@@ -28,41 +28,45 @@ Datos **no disponibles** (no se inventan): corners, asistencias, estadísticas d
 - Goles esperados (global): FC Twente 1.86 · Ajax 1.82
 - Goles esperados (local en casa / visitante fuera): FC Twente 1.40 · Ajax 2.30
 - Peso de la condición local/visitante: 0.35 (muestra pequeña por condición)
-- **λ final: FC Twente 1.70 · Ajax 1.99** (total esperado 3.69)
-- Monte Carlo 200,000 simulaciones (semilla 2026): 1 33.6% · X 21.6% · 2 44.8% · BTTS 70.6% · +2.5 71.2%
+- λ solo con datos: FC Twente 1.70 · Ajax 1.99
+- Mercado sin margen (5.2% de margen quitado): 1 42.2% · X 25.0% · 2 32.8%
+- Modelo puro: 1 33.6% · X 21.4% · 2 45.0%
+- Mezcla (peso mercado 60%): 1 38.8% · X 23.6% · 2 37.7%
+- **λ final: FC Twente 1.84 · Ajax 1.84** (total esperado 3.69)
+- Monte Carlo 200,000 simulaciones (semilla 2026): 1 39.2% · X 21.7% · 2 39.1% · BTTS 70.9% · +2.5 71.2%
 
 ## 4. Probabilidades (cálculo exacto Poisson)
 | Mercado | Probabilidad | Cuota justa |
 |---|---|---|
-| 1 | 33.6% | 2.98 |
-| X | 21.4% | 4.66 |
-| 2 | 45.0% | 2.22 |
-| 1X | 55.0% | 1.82 |
-| X2 | 66.4% | 1.51 |
-| 12 | 78.6% | 1.27 |
-| BTTS sí | 70.5% | 1.42 |
-| BTTS no | 29.5% | 3.39 |
+| 1 | 39.2% | 2.55 |
+| X | 21.6% | 4.62 |
+| 2 | 39.2% | 2.55 |
+| 1X | 60.8% | 1.64 |
+| X2 | 60.8% | 1.64 |
+| 12 | 78.4% | 1.28 |
+| BTTS sí | 70.9% | 1.41 |
+| BTTS no | 29.1% | 3.43 |
 | Más de 1.5 | 88.3% | 1.13 |
 | Más de 2.5 | 71.3% | 1.40 |
 | Menos de 2.5 | 28.7% | 3.48 |
 | Más de 3.5 | 50.3% | 1.99 |
 | Menos de 3.5 | 49.7% | 2.01 |
-| Local portería a cero | 13.7% | 7.29 |
-| Visitante portería a cero | 18.2% | 5.48 |
-| Local menos de 1.5 | 49.3% | 2.03 |
-| Visitante más de 0.5 | 86.3% | 1.16 |
-| Visitante más de 1.5 | 59.0% | 1.69 |
-| Visitante gana por 2+ | 25.3% | 3.95 |
-| Visitante gana a cero | 15.7% | 6.35 |
+| Local portería a cero | 15.8% | 6.32 |
+| Visitante portería a cero | 15.8% | 6.32 |
+| Local menos de 1.5 | 45.0% | 2.22 |
+| Visitante más de 0.5 | 84.2% | 1.19 |
+| Visitante más de 1.5 | 55.0% | 1.82 |
+| Visitante gana por 2+ | 20.8% | 4.81 |
+| Visitante gana a cero | 13.3% | 7.51 |
 
-Marcadores más probables: 1-1 (8.5%), 1-2 (8.4%), 2-1 (7.2%), 2-2 (7.1%), 1-3 (5.6%), 0-1 (5.0%), 0-2 (4.9%), 2-3 (4.7%)
+Marcadores más probables: 1-1 (8.5%), 2-1 (7.8%), 1-2 (7.8%), 2-2 (7.2%), 3-1 (4.8%), 1-3 (4.8%), 1-0 (4.6%), 0-1 (4.6%)
 
 ## 5. Comparación con cuotas publicadas
 | Apuesta | Cuota | Prob. implícita | Prob. modelo | Valor esperado por 1 unidad |
 |---|---|---|---|---|
-| Gana Twente | 2.25 | 44.4% | 33.6% | -0.244 |
-| Empate | 3.8 | 26.3% | 21.4% | -0.185 |
-| Gana Ajax | 2.9 | 34.5% | 45.0% | +0.304 |
+| Gana Twente | 2.25 | 44.4% | 39.2% | -0.118 |
+| Empate | 3.8 | 26.3% | 21.6% | -0.178 |
+| Gana Ajax | 2.9 | 34.5% | 39.2% | +0.136 |
 
 ## 6. Sensibilidad (¿cambia la conclusión si cambio supuestos?)
 | Peso condición | λ local | λ visit. | 1 | X | 2 | +2.5 | BTTS |
@@ -76,6 +80,7 @@ Marcadores más probables: 1-1 (8.5%), 1-2 (8.4%), 2-1 (7.2%), 2-2 (7.1%), 1-3 (
 ## 6b. Remates, remates a puerta y tarjetas (Poisson sobre promedios auditados)
 
 **Remates Twente: media proyectada 20.68**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Twente remata por partido=20.91 (UNA_FUENTE) | Twente (footystats)=20.44 (UNA_FUENTE)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -86,6 +91,7 @@ Base: Twente remata por partido=20.91 (UNA_FUENTE) | Twente (footystats)=20.44 (
 | 22.5 | 33.3% | 66.7% | 3.00 | 1.50 |
 
 **Remates Ajax: media proyectada 20.10**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Ajax remata por partido=21.00 (UNA_FUENTE) | Ajax (otra fuente)=19.20 (UNA_FUENTE)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -107,6 +113,7 @@ Base: suma de Remates Twente + Remates Ajax
 | 42.5 | 38.4% | 61.6% | 2.60 | 1.62 |
 
 **Remates a puerta Twente: media proyectada 8.00**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Twente a puerta por partido=8.00 (UNA_FUENTE)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -117,6 +124,7 @@ Base: Twente a puerta por partido=8.00 (UNA_FUENTE)
 | 8.5 | 40.7% | 59.3% | 2.45 | 1.69 |
 
 **Remates a puerta Ajax: media proyectada 7.55**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Ajax a puerta (statz)=7.10 (UNA_FUENTE) | Ajax a puerta (footystats)=8.00 (UNA_FUENTE)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -149,7 +157,18 @@ Base: Equipos (1.00 + 1.82)=2.82 (UNA_FUENTE) | Árbitro Kooij 2026/27=3.00 (UNA
 
 > Aviso: remates y tarjetas tienen más varianza que una Poisson; las probabilidades en líneas alejadas de la media son optimistas. Usa sobre todo las líneas cercanas a la media.
 
-## 7. Limitaciones
+## 8. Selección de picks (filtro estricto)
+Calidad de datos: **alta** (100.0% de resultados con 2+ fuentes o resueltos por la tabla). Regla: solo es pick si hay cuota publicada, el valor esperado es >= +5% con la probabilidad ya anclada al mercado, y como máximo 2 picks por partido. Sin cuota no hay pick: una probabilidad sin precio no dice si la apuesta vale la pena.
+
+| Apuesta | Cuota | Prob. anclada | Valor esperado | Riesgo | ¿Pick? |
+|---|---|---|---|---|---|
+| Gana Ajax | 2.9 | 39.2% | +0.136 | Alto | SÍ |
+| Gana Twente | 2.25 | 39.2% | -0.118 | Alto | no |
+| Empate | 3.8 | 21.6% | -0.178 | Alto | no |
+
+Stake sugerido: 1 unidad (1-2% del bankroll) por pick; nunca más de 2 selecciones en una combinada.
+
+## 9. Limitaciones
 - Muestra pequeña (11 partidos de liga por equipo): intervalos de confianza amplios.
 - El modelo Poisson no incorpora bajas, H2H ni motivación; esos factores se tratan en el análisis cualitativo.
 - Varios resultados tienen una sola fuente; la auditoría confirma que los totales cuadran con la tabla.

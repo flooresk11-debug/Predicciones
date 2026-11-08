@@ -1,0 +1,20 @@
+fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
+2026-11-08,Köln-Leverkusen,Más de 1.5 goles,claude-v1,bajo,0.85,,pendiente,usuario reporta que los riesgos bajos se perdieron; falta marcador
+2026-11-08,Köln-Leverkusen,Leverkusen marca,claude-v1,bajo,0.82,,pendiente,
+2026-11-08,Bochum-Karlsruhe,Menos de 3.5 goles,claude-v1,bajo,0.75,1.59,pendiente,
+2026-11-08,Palace-Liverpool,Liverpool marca,claude-v1,bajo,0.85,,pendiente,
+2026-11-08,Palace-Liverpool,Liverpool o empate,claude-v1,bajo,0.80,,pendiente,
+2026-11-08,Palace-Liverpool,Más de 21.5 remates,claude-v1,bajo,0.70,,pendiente,
+2026-11-08,Palace-Liverpool,Más de 2.5 amarillas,claude-v1,bajo,0.68,,pendiente,
+2026-11-08,Sunderland-Chelsea,Chelsea marca,claude-v1,bajo,0.82,,pendiente,usuario: 1-0 al descanso y 0 tiros a puerta de Chelsea
+2026-11-08,Sunderland-Chelsea,Chelsea o empate,claude-v1,bajo,0.75,,pendiente,
+2026-11-08,Sunderland-Chelsea,Más de 2.5 amarillas,claude-v1,bajo,0.76,,pendiente,
+2026-11-08,AGF-Horsens,Más de 1.5 goles,claude-v1,bajo,0.80,,pendiente,
+2026-11-08,AGF-Horsens,Horsens marca,claude-v1,bajo,0.78,,pendiente,usuario: minuto 80 sin gol y 2 tiros de Horsens
+2026-11-08,Elche-Betis,Betis marca,claude-v1,bajo,0.82,,G,usuario reporta que ganó Betis (no verificado por mí)
+2026-11-08,Elche-Betis,Betis o empate,claude-v1,bajo,0.72,,G,usuario reporta que ganó Betis (no verificado por mí)
+2026-11-08,Elche-Betis,Más de 3.5 amarillas,claude-v1,bajo-medio,0.66,,pendiente,
+2026-11-08,Twente-Ajax,Más de 1.5 goles,claude-v1,bajo,0.88,,pendiente,
+2026-11-08,Twente-Ajax,Ajax marca,claude-v1,bajo,0.86,,pendiente,
+2026-11-08,Palace-Liverpool,Ambos anotan: no,claude-v2,alto,0.452,2.33,pendiente,pick del filtro nuevo
+2026-11-08,Twente-Ajax,Gana Ajax,claude-v2,alto,0.392,2.90,pendiente,pick del filtro nuevo

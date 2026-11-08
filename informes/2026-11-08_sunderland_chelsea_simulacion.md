@@ -29,41 +29,45 @@ Datos **no disponibles** (no se inventan): corners, asistencias, estadísticas d
 - Goles esperados (global): Sunderland 1.22 · Chelsea 2.00
 - Goles esperados (local en casa / visitante fuera): Sunderland 1.00 · Chelsea 1.25
 - Peso de la condición local/visitante: 0.35 (muestra pequeña por condición)
-- **λ final: Sunderland 1.14 · Chelsea 1.74** (total esperado 2.88)
-- Monte Carlo 200,000 simulaciones (semilla 2026): 1 25.2% · X 23.9% · 2 51.0% · BTTS 56.3% · +2.5 55.0%
+- λ solo con datos: Sunderland 1.14 · Chelsea 1.74
+- Mercado sin margen (5.7% de margen quitado): 1 25.2% · X 26.3% · 2 48.5%
+- Modelo puro: 1 25.1% · X 23.7% · 2 51.3%
+- Mezcla (peso mercado 60%): 1 25.2% · X 25.2% · 2 49.6%
+- **λ final: Sunderland 1.18 · Chelsea 1.70** (total esperado 2.88)
+- Monte Carlo 200,000 simulaciones (semilla 2026): 1 26.6% · X 24.0% · 2 49.3% · BTTS 56.8% · +2.5 55.0%
 
 ## 4. Probabilidades (cálculo exacto Poisson)
 | Mercado | Probabilidad | Cuota justa |
 |---|---|---|
-| 1 | 25.1% | 3.99 |
-| X | 23.7% | 4.22 |
-| 2 | 51.3% | 1.95 |
-| 1X | 48.7% | 2.05 |
-| X2 | 74.9% | 1.33 |
-| 12 | 76.3% | 1.31 |
-| BTTS sí | 56.2% | 1.78 |
-| BTTS no | 43.8% | 2.28 |
+| 1 | 26.5% | 3.77 |
+| X | 23.9% | 4.18 |
+| 2 | 49.5% | 2.02 |
+| 1X | 50.5% | 1.98 |
+| X2 | 73.5% | 1.36 |
+| 12 | 76.1% | 1.31 |
+| BTTS sí | 56.7% | 1.76 |
+| BTTS no | 43.3% | 2.31 |
 | Más de 1.5 | 78.3% | 1.28 |
 | Más de 2.5 | 55.0% | 1.82 |
 | Menos de 2.5 | 45.0% | 2.22 |
 | Más de 3.5 | 32.6% | 3.06 |
 | Menos de 3.5 | 67.4% | 1.48 |
-| Local portería a cero | 17.6% | 5.68 |
-| Visitante portería a cero | 31.8% | 3.14 |
-| Local menos de 1.5 | 68.3% | 1.46 |
-| Visitante más de 0.5 | 82.4% | 1.21 |
-| Visitante más de 1.5 | 51.8% | 1.93 |
-| Visitante gana por 2+ | 28.0% | 3.57 |
-| Visitante gana a cero | 26.2% | 3.81 |
+| Local portería a cero | 18.3% | 5.48 |
+| Visitante portería a cero | 30.7% | 3.26 |
+| Local menos de 1.5 | 66.9% | 1.49 |
+| Visitante más de 0.5 | 81.7% | 1.22 |
+| Visitante más de 1.5 | 50.7% | 1.97 |
+| Visitante gana por 2+ | 26.6% | 3.76 |
+| Visitante gana a cero | 25.1% | 3.99 |
 
-Marcadores más probables: 1-1 (11.1%), 0-1 (9.7%), 1-2 (9.7%), 0-2 (8.5%), 1-0 (6.4%), 2-1 (6.4%), 1-3 (5.6%), 0-0 (5.6%)
+Marcadores más probables: 1-1 (11.3%), 1-2 (9.6%), 0-1 (9.5%), 0-2 (8.1%), 2-1 (6.7%), 1-0 (6.6%), 2-2 (5.7%), 0-0 (5.6%)
 
 ## 5. Comparación con cuotas publicadas
 | Apuesta | Cuota | Prob. implícita | Prob. modelo | Valor esperado por 1 unidad |
 |---|---|---|---|---|
-| Gana Sunderland | 3.75 | 26.7% | 25.1% | -0.060 |
-| Empate | 3.6 | 27.8% | 23.7% | -0.148 |
-| Gana Chelsea | 1.95 | 51.3% | 51.3% | -0.000 |
+| Gana Sunderland | 3.75 | 26.7% | 26.5% | -0.005 |
+| Empate | 3.6 | 27.8% | 23.9% | -0.138 |
+| Gana Chelsea | 1.95 | 51.3% | 49.5% | -0.034 |
 
 ## 6. Sensibilidad (¿cambia la conclusión si cambio supuestos?)
 | Peso condición | λ local | λ visit. | 1 | X | 2 | +2.5 | BTTS |
@@ -77,6 +81,7 @@ Marcadores más probables: 1-1 (11.1%), 0-1 (9.7%), 1-2 (9.7%), 0-2 (8.5%), 1-0 
 ## 6b. Remates, remates a puerta y tarjetas (Poisson sobre promedios auditados)
 
 **Remates Sunderland: media proyectada 12.56**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Sunderland remata por partido=12.56 (VERIFICADO)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -88,6 +93,7 @@ Base: Sunderland remata por partido=12.56 (VERIFICADO)
 | 13.5 | 37.9% | 62.1% | 2.64 | 1.61 |
 
 **Remates Chelsea: media proyectada 14.00**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Chelsea remata por partido=14.00 (VERIFICADO)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -111,6 +117,7 @@ Base: suma de Remates Sunderland + Remates Chelsea
 | 27.5 | 41.5% | 58.5% | 2.41 | 1.71 |
 
 **Remates a puerta Sunderland: media proyectada 4.00**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Sunderland a puerta por partido=4.00 (VERIFICADO)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -121,6 +128,7 @@ Base: Sunderland a puerta por partido=4.00 (VERIFICADO)
 | 5.5 | 21.5% | 78.5% | 4.65 | 1.27 |
 
 **Remates a puerta Chelsea: media proyectada 5.89**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Chelsea a puerta por partido=5.89 (VERIFICADO)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -143,6 +151,7 @@ Base: suma de Remates a puerta Sunderland + Remates a puerta Chelsea
 | 11.5 | 29.1% | 70.9% | 3.44 | 1.41 |
 
 **Amarillas Sunderland: media proyectada 1.93**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Sunderland recibe por partido=1.93 (VERIFICADO)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -152,6 +161,7 @@ Base: Sunderland recibe por partido=1.93 (VERIFICADO)
 | 2.5 | 30.4% | 69.6% | 3.29 | 1.44 |
 
 **Amarillas Chelsea: media proyectada 1.75**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Chelsea recibe por partido=1.75 (UNA_FUENTE)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -161,6 +171,7 @@ Base: Chelsea recibe por partido=1.75 (UNA_FUENTE)
 | 2.5 | 25.6% | 74.4% | 3.91 | 1.34 |
 
 **Amarillas totales: media proyectada 3.98**  
+⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro.
 Base: Equipos (1.93 + 1.75)=3.68 (UNA_FUENTE) | Gillett 2026/27=4.67 (VERIFICADO) | Gillett 2025/26 + 2026/27=3.58 (UNA_FUENTE)
 
 | Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |
@@ -176,7 +187,20 @@ Estimadores **excluidos** por conflicto o falta de datos:
 
 > Aviso: remates y tarjetas tienen más varianza que una Poisson; las probabilidades en líneas alejadas de la media son optimistas. Usa sobre todo las líneas cercanas a la media.
 
-## 7. Limitaciones
+## 8. Selección de picks (filtro estricto)
+Calidad de datos: **alta** (100.0% de resultados con 2+ fuentes o resueltos por la tabla). Regla: solo es pick si hay cuota publicada, el valor esperado es >= +5% con la probabilidad ya anclada al mercado, y como máximo 2 picks por partido. Sin cuota no hay pick: una probabilidad sin precio no dice si la apuesta vale la pena.
+
+| Apuesta | Cuota | Prob. anclada | Valor esperado | Riesgo | ¿Pick? |
+|---|---|---|---|---|---|
+| Gana Sunderland | 3.75 | 26.5% | -0.005 | Alto | no |
+| Gana Chelsea | 1.95 | 49.5% | -0.034 | Alto | no |
+| Empate | 3.6 | 23.9% | -0.138 | Alto | no |
+
+**Sin pick:** ninguna cuota publicada tiene valor suficiente. No apostar también es una decisión.
+
+Stake sugerido: 1 unidad (1-2% del bankroll) por pick; nunca más de 2 selecciones en una combinada.
+
+## 9. Limitaciones
 - Muestra pequeña (9 partidos de liga por equipo): intervalos de confianza amplios.
 - El modelo Poisson no incorpora bajas, H2H ni motivación; esos factores se tratan en el análisis cualitativo.
 - Varios resultados tienen una sola fuente; la auditoría confirma que los totales cuadran con la tabla.

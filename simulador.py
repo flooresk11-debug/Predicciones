@@ -289,7 +289,12 @@ def seccion_conteos(d, w):
             w(f"\n**{nombre}:** sin datos usables, no se proyecta.")
             continue
         todos[nombre] = lam
-        w(f"\n**{nombre}: media proyectada {lam:.2f}**  ")
+        concede = any(("conced" in e["nombre"].lower() or "rival" in e["nombre"].lower() or "árbitro" in e["nombre"].lower()
+                       or "liga" in e["nombre"].lower()) and e["estado"] in USABLES and e.get("valor") is not None
+                      for e in m.get("estimadores", []))
+        apto = "suma_de" not in m and concede
+        w(f"\n**{nombre}: media proyectada {lam:.2f}**  " + ("" if apto or "suma_de" in m else
+          "\n⚠️ NO APTO PARA PICK: solo usa lo que produce el equipo, sin datos del rival/árbitro."))
         w(f"Base: {detalle}")
         w("\n| Línea | Más de | Menos de | Cuota justa más | Cuota justa menos |")
         w("|---|---|---|---|---|")
@@ -307,6 +312,94 @@ def seccion_conteos(d, w):
             w(f"- {x}")
     w("\n> Aviso: remates y tarjetas tienen más varianza que una Poisson; las probabilidades en líneas "
       "alejadas de la media son optimistas. Usa sobre todo las líneas cercanas a la media.")
+
+# ---------------------------------------------------------------- anclaje al mercado
+def prob_mercado_1x2(d):
+    """Probabilidades 1X2 del mercado sin margen (si hay cuotas de los tres resultados)."""
+    cq = {q.get("mercado"): q["cuota"] for k, q in d.get("cuotas_publicadas", {}).items()
+          if not k.startswith("_") and isinstance(q, dict) and "cuota" in q}
+    if not all(k in cq for k in ("1", "X", "2")):
+        return None, None
+    inv = {k: 1 / cq[k] for k in ("1", "X", "2")}
+    margen = sum(inv.values()) - 1
+    return {k: v / sum(inv.values()) for k, v in inv.items()}, margen
+
+
+def anclar_al_mercado(d, lam_l, lam_v, peso):
+    """Mezcla 1X2 del modelo con el mercado (sin margen) y busca los goles esperados que la reproducen,
+    manteniendo el total de goles del modelo. El mercado resume información que el modelo no ve
+    (plantillas, bajas, dinero informado); con muestras de 8-13 partidos debe pesar más que el modelo."""
+    pm, margen = prob_mercado_1x2(d)
+    if pm is None or peso <= 0:
+        return lam_l, lam_v, None
+    r, _ = mercados(matriz(lam_l, lam_v))
+    objetivo = {k: peso * pm[k] + (1 - peso) * r[k] for k in ("1", "X", "2")}
+    total = lam_l + lam_v
+    mejor = None
+    for i in range(5, 96):
+        a = total * i / 100
+        b = total - a
+        rr, _ = mercados(matriz(a, b))
+        err = sum((rr[k] - objetivo[k]) ** 2 for k in ("1", "X", "2"))
+        if mejor is None or err < mejor[0]:
+            mejor = (err, a, b)
+    return mejor[1], mejor[2], dict(mercado=pm, margen=margen, modelo={k: r[k] for k in ("1", "X", "2")},
+                                    objetivo=objetivo)
+
+
+def calidad_datos(d):
+    """alta: lista completa partido a partido y >=70% de resultados con 2+ fuentes. Si no, baja."""
+    if d.get("agregados") or not d.get("resultados_liga"):
+        return "baja", "sin lista completa partido a partido"
+    todos = [p for ps in d["resultados_liga"].values() for p in ps]
+    ver = sum(p["estado"] in ("VERIFICADO", "CONFLICTO_RESUELTO") for p in todos) / len(todos)
+    return ("alta" if ver >= 0.7 else "baja"), f"{pct(ver)} de resultados con 2+ fuentes o resueltos por la tabla"
+
+
+def riesgo(p, calidad):
+    if p >= 0.75 and calidad == "alta":
+        return "Bajo-medio"   # nunca 'bajo' puro: con 8-13 partidos no hay certeza
+    if p >= 0.55:
+        return "Medio"
+    return "Alto"
+
+
+def seccion_picks(d, r, w, calidad, umbral, ancla=None):
+    w("\n## 8. Selección de picks (filtro estricto)")
+    w(f"Calidad de datos: **{calidad[0]}** ({calidad[1]}). Regla: solo es pick si hay cuota publicada, "
+      f"el valor esperado es >= {umbral:+.0%} con la probabilidad ya anclada al mercado, y como máximo 2 picks por partido. "
+      "Sin cuota no hay pick: una probabilidad sin precio no dice si la apuesta vale la pena.")
+    cand = []
+    for nombre, q in d.get("cuotas_publicadas", {}).items():
+        if nombre.startswith("_") or q.get("tipo") or q.get("mercado") not in r:
+            continue
+        p = r[q["mercado"]]
+        ev = p * q["cuota"] - 1
+        cand.append((ev, nombre, q["cuota"], p))
+    cand.sort(reverse=True)
+    bloqueo = None
+    if calidad[0] != "alta":
+        bloqueo = "calidad de datos baja"
+    elif ancla is None:
+        bloqueo = "sin cuotas 1X2 completas para anclar el modelo al mercado"
+    elif max(abs(ancla["modelo"][k] - ancla["mercado"][k]) for k in ("1", "X", "2")) > 0.15:
+        bloqueo = ("el modelo discrepa más de 15 puntos del mercado: con tan pocos partidos es más probable "
+                   "que el error sea del modelo que del mercado")
+    picks = [] if bloqueo else [c for c in cand if c[0] >= umbral][:2]
+    w("\n| Apuesta | Cuota | Prob. anclada | Valor esperado | Riesgo | ¿Pick? |")
+    w("|---|---|---|---|---|---|")
+    for ev, nombre, c, p in cand:
+        w(f"| {nombre} | {c} | {pct(p)} | {ev:+.3f} | {riesgo(p, calidad[0])} | {'SÍ' if (ev, nombre, c, p) in picks else 'no'} |")
+    if bloqueo:
+        w(f"\n**Sin pick (bloqueado):** {bloqueo}. Los valores esperados de arriba son solo informativos.")
+    elif not picks:
+        w("\n**Sin pick:** ninguna cuota publicada tiene valor suficiente. No apostar también es una decisión.")
+    if len(picks) == 2:
+        goles = ("BTTS", "Más de", "Menos de", "Ambos")
+        if all(any(g in x[1] for g in goles) for x in picks):
+            w("\n⚠️ Los dos picks dependen de los goles: están correlacionados, no los combines.")
+    w("\nStake sugerido: 1 unidad (1-2% del bankroll) por pick; nunca más de 2 selecciones en una combinada.")
+
 
 # ---------------------------------------------------------------- informe
 def informe(d, args):
@@ -347,6 +440,8 @@ def informe(d, args):
           f"{pct(s['porteria_cero'])} | {pct(s['sin_marcar'])} | {pct(s['over25'])} |")
 
     lam_l, lam_v, det = lambdas(d, args.peso_condicion)
+    lam_l0, lam_v0 = lam_l, lam_v
+    lam_l, lam_v, ancla = anclar_al_mercado(d, lam_l, lam_v, args.peso_mercado)
     m = matriz(lam_l, lam_v)
     r, marc = mercados(m)
     mc = monte_carlo(lam_l, lam_v, args.sims)
@@ -355,6 +450,14 @@ def informe(d, args):
     w(f"- Goles esperados (global): {loc} {det['lam_l_glob']:.2f} · {vis} {det['lam_v_glob']:.2f}")
     w(f"- Goles esperados (local en casa / visitante fuera): {loc} {det['lam_l_cond']:.2f} · {vis} {det['lam_v_cond']:.2f}")
     w(f"- Peso de la condición local/visitante: {args.peso_condicion:.2f} (muestra pequeña por condición)")
+    w(f"- λ solo con datos: {loc} {lam_l0:.2f} · {vis} {lam_v0:.2f}")
+    if ancla:
+        pm, mo, ob = ancla["mercado"], ancla["modelo"], ancla["objetivo"]
+        w(f"- Mercado sin margen ({pct(ancla['margen'])} de margen quitado): 1 {pct(pm['1'])} · X {pct(pm['X'])} · 2 {pct(pm['2'])}")
+        w(f"- Modelo puro: 1 {pct(mo['1'])} · X {pct(mo['X'])} · 2 {pct(mo['2'])}")
+        w(f"- Mezcla (peso mercado {args.peso_mercado:.0%}): 1 {pct(ob['1'])} · X {pct(ob['X'])} · 2 {pct(ob['2'])}")
+    else:
+        w("- Sin cuotas 1X2 completas: el modelo NO está anclado al mercado (más incertidumbre).")
     w(f"- **λ final: {loc} {lam_l:.2f} · {vis} {lam_v:.2f}** (total esperado {lam_l + lam_v:.2f})")
     w(f"- Monte Carlo {args.sims:,} simulaciones (semilla 2026): 1 {pct(mc['1'])} · X {pct(mc['X'])} · "
       f"2 {pct(mc['2'])} · BTTS {pct(mc['btts'])} · +2.5 {pct(mc['o25'])}")
@@ -393,8 +496,9 @@ def informe(d, args):
           f"{pct(rr['Más de 2.5'])} | {pct(rr['BTTS sí'])} |")
 
     seccion_conteos(d, w)
+    seccion_picks(d, r, w, calidad_datos(d), args.umbral_valor, ancla)
 
-    w("\n## 7. Limitaciones")
+    w("\n## 9. Limitaciones")
     n_min = min(v["pj"] for v in d["tabla_oficial_declarada"].values() if isinstance(v, dict))
     w(f"- Muestra pequeña ({n_min} partidos de liga por equipo): intervalos de confianza amplios.")
     w("- El modelo Poisson no incorpora bajas, H2H ni motivación; esos factores se tratan en el análisis cualitativo.")
@@ -408,6 +512,10 @@ def main():
     ap.add_argument("--peso-condicion", type=float, default=0.35)
     ap.add_argument("--sims", type=int, default=200_000)
     ap.add_argument("--salida", default=None)
+    ap.add_argument("--peso-mercado", type=float, default=0.6,
+                    help="peso del mercado (sin margen) en el 1X2; 0 = solo datos")
+    ap.add_argument("--umbral-valor", type=float, default=0.05,
+                    help="valor esperado mínimo para considerar una apuesta como pick")
     args = ap.parse_args()
     d = json.loads(Path(args.datos).read_text(encoding="utf-8"))
     texto, ok = informe(d, args)

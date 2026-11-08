@@ -29,6 +29,8 @@ Datos **no disponibles** (no se inventan): tiros_a_puerta, corners, asistencias,
 - Goles esperados (global): 1. FC Köln 1.56 · Bayer 04 Leverkusen 1.88
 - Goles esperados (local en casa / visitante fuera): 1. FC Köln 2.12 · Bayer 04 Leverkusen 1.50
 - Peso de la condición local/visitante: 0.35 (muestra pequeña por condición)
+- λ solo con datos: 1. FC Köln 1.76 · Bayer 04 Leverkusen 1.74
+- Sin cuotas 1X2 completas: el modelo NO está anclado al mercado (más incertidumbre).
 - **λ final: 1. FC Köln 1.76 · Bayer 04 Leverkusen 1.74** (total esperado 3.50)
 - Monte Carlo 200,000 simulaciones (semilla 2026): 1 39.2% · X 22.3% · 2 38.4% · BTTS 68.3% · +2.5 68.0%
 
@@ -74,7 +76,19 @@ Marcadores más probables: 1-1 (9.2%), 2-1 (8.1%), 1-2 (8.1%), 2-2 (7.1%), 1-0 (
 | 0.50 | 1.84 | 1.69 | 42.1% | 22.1% | 35.8% | 68.5% | 68.6% |
 | 0.70 | 1.96 | 1.61 | 46.1% | 21.7% | 32.2% | 69.2% | 68.7% |
 
-## 7. Limitaciones
+## 8. Selección de picks (filtro estricto)
+Calidad de datos: **baja** (56.2% de resultados con 2+ fuentes o resueltos por la tabla). Regla: solo es pick si hay cuota publicada, el valor esperado es >= +5% con la probabilidad ya anclada al mercado, y como máximo 2 picks por partido. Sin cuota no hay pick: una probabilidad sin precio no dice si la apuesta vale la pena.
+
+| Apuesta | Cuota | Prob. anclada | Valor esperado | Riesgo | ¿Pick? |
+|---|---|---|---|---|---|
+| Köln menos de 1.5 goles | 1.61 | 47.5% | -0.235 | Alto | no |
+| Leverkusen gana | 1.85 | 38.5% | -0.287 | Alto | no |
+
+**Sin pick (bloqueado):** calidad de datos baja. Los valores esperados de arriba son solo informativos.
+
+Stake sugerido: 1 unidad (1-2% del bankroll) por pick; nunca más de 2 selecciones en una combinada.
+
+## 9. Limitaciones
 - Muestra pequeña (8 partidos de liga por equipo): intervalos de confianza amplios.
 - El modelo Poisson no incorpora bajas, H2H ni motivación; esos factores se tratan en el análisis cualitativo.
 - Varios resultados tienen una sola fuente; la auditoría confirma que los totales cuadran con la tabla.
