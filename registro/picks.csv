@@ -35,3 +35,6 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-08,Tolima-Millonarios,Menos de 3.5 goles,riesgo-bajo,bajo,0.842,,pendiente,consenso de cuotas sin margen; cuota justa 1.19; sin referencia afilada (Colombia no está en football-data)
 2026-11-08,Tolima-Millonarios,Menos de 2.5 goles,riesgo-medio,medio,0.655,,pendiente,cuota justa 1.53
 2026-11-08,Tolima-Millonarios,Empate,riesgo-alto,alto,0.298,3.25,pendiente,cuota justa 3.36; bet365 3.25 (sportytrader) por debajo; Millonarios 9 empates en 17
+2026-11-08,FAS-Fuerte San Francisco,FAS marca,riesgo-bajo,bajo,0.879,,pendiente,consenso 1X2 sin margen (gainblers 1.31/4.75/7.50); cuota justa 1.14; datos escasos
+2026-11-08,FAS-Fuerte San Francisco,Ambos marcan: no,riesgo-medio,medio,0.536,,pendiente,cuota justa 1.86
+2026-11-08,FAS-Fuerte San Francisco,FAS gana por 2+ (hándicap -1.5),riesgo-alto,alto,0.443,,pendiente,cuota justa 2.26
