@@ -22,3 +22,11 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-08,Villarreal-Getafe,Gana Getafe (bet365),valor-v3,alto,0.131,8.00,pendiente,ventaja +5.1% vs media de mercado; cuota mínima 7.91; 1 unidad
 2026-11-08,Freiburg-Union Berlin,Union +1.25 hándicap asiático (bet365),analista,medio,0.541,1.80,pendiente,sin ventaja de precio (-2.6%); H2H Freiburg 1G-4E-5P; 0.5 unidades
 2026-11-08,Inter-Como,Como +0.5 hándicap asiático (bet365),analista,medio,0.487,2.03,pendiente,sin ventaja de precio (-1.2%); Inter sin Lautaro; 0.5 unidades
+2026-11-08,Freiburg-Union Berlin,Friburgo marca,riesgo-bajo,bajo,0.871,,pendiente,prob. de mercado; cuota justa 1.15
+2026-11-08,Freiburg-Union Berlin,Menos de 3.5 goles,riesgo-medio,medio,0.647,,pendiente,prob. de mercado; cuota justa 1.55; H2H 7/10
+2026-11-08,Freiburg-Union Berlin,Menos de 2.5 goles,riesgo-alto,alto,0.423,2.30,pendiente,prob. de mercado; cuota justa 2.36; H2H 6/10
+2026-11-08,Inter-Como,Más de 1.5 goles,riesgo-bajo,bajo,0.841,,pendiente,prob. de mercado; cuota justa 1.19; H2H 4/4
+2026-11-08,Inter-Como,Gana Inter,riesgo-medio,medio,0.515,1.91,pendiente,prob. de mercado; cuota justa 1.94; H2H 4/4
+2026-11-08,Inter-Como,Inter gana por 2+,riesgo-alto,alto,0.296,,pendiente,prob. de mercado; cuota justa 3.38; H2H 3/4
+2026-11-08,Villarreal-Getafe,Villarreal o empate,riesgo-bajo,bajo,0.859,,pendiente,prob. de mercado; cuota justa 1.16; H2H 9/10
+2026-11-08,Villarreal-Getafe,Menos de 3.5 goles,riesgo-medio,medio,0.692,,pendiente,prob. de mercado; cuota justa 1.45; H2H 10/10
