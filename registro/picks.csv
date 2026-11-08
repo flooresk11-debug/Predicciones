@@ -38,3 +38,6 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-08,FAS-Fuerte San Francisco,FAS marca,riesgo-bajo,bajo,0.879,,pendiente,consenso 1X2 sin margen (gainblers 1.31/4.75/7.50); cuota justa 1.14; datos escasos
 2026-11-08,FAS-Fuerte San Francisco,Ambos marcan: no,riesgo-medio,medio,0.536,,pendiente,cuota justa 1.86
 2026-11-08,FAS-Fuerte San Francisco,FAS gana por 2+ (hándicap -1.5),riesgo-alto,alto,0.443,,pendiente,cuota justa 2.26
+2026-11-08,Municipal Limeño-Atlético Balboa,Municipal Limeño o empate,riesgo-bajo,bajo,0.773,,pendiente,consenso 1X2 sin margen (1.75/3.45/3.97); cuota justa 1.29; datos escasos
+2026-11-08,Municipal Limeño-Atlético Balboa,Ambos marcan: no,riesgo-medio,medio,0.535,,pendiente,cuota justa 1.87
+2026-11-08,Municipal Limeño-Atlético Balboa,Municipal Limeño gana por 2+ (hándicap -1.5),riesgo-alto,alto,0.262,,pendiente,cuota justa 3.81; último duelo 0-2
