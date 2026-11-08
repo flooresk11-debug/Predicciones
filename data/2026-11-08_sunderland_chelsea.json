@@ -1,0 +1,704 @@
+{
+  "partido": {
+    "local": "Sunderland",
+    "visitante": "Chelsea",
+    "competicion": "Premier League 2026/27 - Jornada 10",
+    "fecha": "2026-11-08",
+    "hora_cet": "15:00",
+    "hora_uk": "14:00 GMT",
+    "estadio": "Stadium of Light",
+    "arbitro": {
+      "valor": "Jarred Gillett",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "espn.com",
+        "sunderlandecho.com",
+        "racingpost.com"
+      ],
+      "VAR": "Nick Hopton",
+      "temporada_2026_27": {
+        "partidos": 6,
+        "amarillas": 28,
+        "amarillas_por_partido": 4.67,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "soccerbase.com (vía Yahoo, J10)",
+          "racingpost.com (4.67)"
+        ],
+        "conflicto": "fotmob.com: 4 PJ, 15 amarillas (desactualizado)"
+      },
+      "dos_temporadas": {
+        "partidos": 26,
+        "amarillas_por_partido": 3.58,
+        "faltas_por_partido": 19.77,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "statz.ai (2025/26 + 2026/27)"
+        ]
+      },
+      "media_liga_2026_27": {
+        "valor": 3.82,
+        "estado": "UNA_FUENTE",
+        "fuentes": [
+          "statpair.com"
+        ]
+      }
+    },
+    "entrenador_local": {
+      "valor": "Régis Le Bris",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "chelseafc.com",
+        "yahoo sports",
+        "football.co.uk"
+      ],
+      "nota": "Bajo presión; la directiva lo respalda por ahora"
+    },
+    "entrenador_visitante": {
+      "valor": "Xabi Alonso",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "chelseafc.com",
+        "yahoo sports"
+      ]
+    }
+  },
+  "resultados_liga": {
+    "Sunderland": [
+      {
+        "j": 1,
+        "rival": "Ipswich Town",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "footballwebpages.co.uk",
+          "espn.com",
+          "goal.com",
+          "yorkshire.com"
+        ]
+      },
+      {
+        "j": 2,
+        "rival": "Fulham",
+        "condicion": "L",
+        "gf": 1,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "footballwebpages.co.uk",
+          "espn.com",
+          "goal.com",
+          "yorkshire.com"
+        ]
+      },
+      {
+        "j": 3,
+        "rival": "Brentford",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "footballwebpages.co.uk",
+          "espn.com",
+          "goal.com",
+          "yorkshire.com"
+        ]
+      },
+      {
+        "j": 4,
+        "rival": "Arsenal",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "footballwebpages.co.uk",
+          "espn.com",
+          "goal.com",
+          "yorkshire.com"
+        ]
+      },
+      {
+        "j": 5,
+        "rival": "Manchester City",
+        "condicion": "V",
+        "gf": 3,
+        "gc": 5,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "footballwebpages.co.uk",
+          "espn.com",
+          "goal.com",
+          "yorkshire.com"
+        ]
+      },
+      {
+        "j": 6,
+        "rival": "Brighton",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "footballwebpages.co.uk",
+          "espn.com",
+          "goal.com",
+          "yorkshire.com"
+        ]
+      },
+      {
+        "j": 7,
+        "rival": "AFC Bournemouth",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "footballwebpages.co.uk",
+          "espn.com",
+          "goal.com",
+          "yorkshire.com"
+        ]
+      },
+      {
+        "j": 8,
+        "rival": "Leeds United",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "footballwebpages.co.uk",
+          "espn.com",
+          "goal.com",
+          "yorkshire.com"
+        ]
+      },
+      {
+        "j": 9,
+        "rival": "Coventry City",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "footballwebpages.co.uk",
+          "yorkshire.com",
+          "yahoo sports"
+        ],
+        "nota": "Expulsión (doble amarilla) de Alderete"
+      }
+    ],
+    "Chelsea": [
+      {
+        "j": 1,
+        "rival": "Fulham",
+        "condicion": "V",
+        "gf": 3,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "goal.com",
+          "nbcsports.com",
+          "en.wikipedia.org"
+        ]
+      },
+      {
+        "j": 2,
+        "rival": "Brighton",
+        "condicion": "L",
+        "gf": 4,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "goal.com",
+          "nbcsports.com",
+          "en.wikipedia.org"
+        ]
+      },
+      {
+        "j": 3,
+        "rival": "Arsenal",
+        "condicion": "V",
+        "gf": 1,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "goal.com",
+          "nbcsports.com",
+          "en.wikipedia.org"
+        ]
+      },
+      {
+        "j": 4,
+        "rival": "Hull City",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "goal.com",
+          "nbcsports.com",
+          "en.wikipedia.org"
+        ]
+      },
+      {
+        "j": 5,
+        "rival": "Brentford",
+        "condicion": "V",
+        "gf": 0,
+        "gc": 3,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "goal.com",
+          "nbcsports.com",
+          "en.wikipedia.org"
+        ]
+      },
+      {
+        "j": 6,
+        "rival": "AFC Bournemouth",
+        "condicion": "L",
+        "gf": 5,
+        "gc": 1,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "goal.com",
+          "nbcsports.com",
+          "en.wikipedia.org"
+        ]
+      },
+      {
+        "j": 7,
+        "rival": "Everton",
+        "condicion": "V",
+        "gf": 2,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "goal.com",
+          "nbcsports.com",
+          "en.wikipedia.org"
+        ]
+      },
+      {
+        "j": 8,
+        "rival": "Tottenham Hotspur",
+        "condicion": "L",
+        "gf": 0,
+        "gc": 2,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "fbref.com",
+          "goal.com",
+          "nbcsports.com",
+          "en.wikipedia.org"
+        ]
+      },
+      {
+        "j": 9,
+        "rival": "Manchester United",
+        "condicion": "L",
+        "gf": 2,
+        "gc": 0,
+        "estado": "VERIFICADO",
+        "fuentes": [
+          "en.wikipedia.org",
+          "goal.com",
+          "sportsmole.co.uk"
+        ]
+      }
+    ]
+  },
+  "tabla_oficial_declarada": {
+    "Sunderland": {
+      "pos": 20,
+      "pj": 9,
+      "g": 1,
+      "e": 2,
+      "p": 6,
+      "gf": 7,
+      "gc": 17,
+      "pts": 5,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "yorkshire.com",
+        "whoscored.com",
+        "soccerway.com"
+      ]
+    },
+    "Chelsea": {
+      "pos": 4,
+      "pj": 9,
+      "g": 5,
+      "e": 1,
+      "p": 3,
+      "gf": 19,
+      "gc": 15,
+      "pts": 16,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "en.wikipedia.org",
+        "whoscored.com",
+        "soccerway.com"
+      ]
+    }
+  },
+  "tiros": {
+    "Sunderland": {
+      "tiros": 113,
+      "a_puerta": 36,
+      "partidos": 9,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "fbref.com (12.56/90)",
+        "statz.ai (11.6; 4 a puerta)",
+        "footystats.org (12.25; 4.00 a puerta)"
+      ],
+      "nota": "a puerta = 4.0/p x 9"
+    },
+    "Chelsea": {
+      "tiros": 126,
+      "a_puerta": 53,
+      "partidos": 9,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "fbref.com (14.00/90; 5.89 a puerta/90)",
+        "footystats.org (15; 6.00)"
+      ]
+    },
+    "corners": "NO_DISPONIBLE"
+  },
+  "tarjetas": {
+    "Sunderland": {
+      "amarillas_por_partido": 1.93,
+      "faltas_por_partido": 11.2,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "forebet.com (1.93)",
+        "statz.ai (2.0; 11.4 faltas)"
+      ]
+    },
+    "Chelsea": {
+      "amarillas_por_partido": 1.75,
+      "faltas_por_partido": 9.42,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "forebet.com"
+      ]
+    }
+  },
+  "h2h": [
+    {
+      "fecha": "2026-05-24",
+      "competicion": "Premier League",
+      "local": "Sunderland",
+      "visitante": "Chelsea",
+      "gl": 2,
+      "gv": 1,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "livescore.com",
+        "goal.com ('doblete' de Sunderland)"
+      ],
+      "nota": "Gol de Palmer 56'. 8 amarillas y roja a Fofana (racingpost)"
+    },
+    {
+      "fecha": "2025-10-25",
+      "competicion": "Premier League",
+      "local": "Chelsea",
+      "visitante": "Sunderland",
+      "gl": 1,
+      "gv": 2,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "goal.com (Sunderland ganó los dos de 2025/26)"
+      ],
+      "nota": "marcador exacto no confirmado en las búsquedas"
+    }
+  ],
+  "h2h_resumen": {
+    "historico_total": {
+      "valor": "127 PJ: Chelsea 61, Sunderland 44, 22 E",
+      "estado": "CONFLICTO",
+      "nota": "otras fuentes dan muestras distintas; no se usa"
+    }
+  },
+  "jugadores": {
+    "João Pedro (CHE)": {
+      "goles_liga": 5,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "soccerway.com"
+      ],
+      "nota": "BAJA (isquiotibiales) según una previa; contradicción entre fuentes"
+    },
+    "Morgan Rogers (CHE)": {
+      "goles_liga": 5,
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "soccerway.com",
+        "espn.com (lista de goleadores)"
+      ]
+    },
+    "Cole Palmer (CHE)": {
+      "goles_liga": "NO_DISPONIBLE"
+    },
+    "Brian Brobbey (SUN)": {
+      "goles_liga": 3,
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "soccerway.com"
+      ],
+      "nota": "máximo goleador de Sunderland"
+    }
+  },
+  "bajas": {
+    "Sunderland": {
+      "fuera": [
+        "Habib Diarra",
+        "Daniel Ballard",
+        "Omar Alderete (sancionado)",
+        "Romaine Mundle"
+      ],
+      "duda": [
+        "Nordi Mukiele (protocolo de conmoción, debería llegar)"
+      ],
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "sportsmole.co.uk",
+        "espn.com"
+      ]
+    },
+    "Chelsea": {
+      "fuera": [
+        "Maxence Lacroix (isquiotibiales)",
+        "João Pedro (isquiotibiales)"
+      ],
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "racingpost.com / lastwordonsports.com"
+      ],
+      "nota": "Otra previa incluye a João Pedro... se trata como baja probable"
+    }
+  },
+  "contexto": {
+    "descanso": {
+      "valor": "Chelsea 8 días de descanso; Sunderland 4.º partido seguido entre semana",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "yahoo sports"
+      ]
+    },
+    "sunderland_encaja_primero": {
+      "valor": "7 de 9 partidos",
+      "estado": "UNA_FUENTE",
+      "fuentes": [
+        "chelseafc.com"
+      ]
+    },
+    "sunderland_sin_ganar": {
+      "valor": "7 partidos",
+      "estado": "VERIFICADO",
+      "fuentes": [
+        "football.co.uk",
+        "resultados auditados"
+      ]
+    }
+  },
+  "cuotas_publicadas": {
+    "_nota": "lastwordonsports.com (bet365); verifica las actuales",
+    "Gana Sunderland": {
+      "mercado": "1",
+      "cuota": 3.75,
+      "fuente": "lastwordonsports.com (11/4)"
+    },
+    "Empate": {
+      "mercado": "X",
+      "cuota": 3.6,
+      "fuente": "lastwordonsports.com (13/5)"
+    },
+    "Gana Chelsea": {
+      "mercado": "2",
+      "cuota": 1.95,
+      "fuente": "lastwordonsports.com / bet365 (19/20)"
+    }
+  },
+  "mercados_conteo": {
+    "_nota": "No hay datos verificables de remates ni tarjetas que concede cada equipo; se proyecta con lo que produce cada uno.",
+    "Remates Sunderland": {
+      "estimadores": [
+        {
+          "nombre": "Sunderland remata por partido",
+          "valor": 12.56,
+          "estado": "VERIFICADO",
+          "fuente": "fbref.com (statz 11.6, footystats 12.25)"
+        },
+        {
+          "nombre": "Chelsea concede",
+          "estado": "NO_DISPONIBLE",
+          "fuente": "-",
+          "nota": "no encontrado"
+        }
+      ],
+      "lineas": [
+        9.5,
+        10.5,
+        11.5,
+        12.5,
+        13.5
+      ]
+    },
+    "Remates Chelsea": {
+      "estimadores": [
+        {
+          "nombre": "Chelsea remata por partido",
+          "valor": 14.0,
+          "estado": "VERIFICADO",
+          "fuente": "fbref.com (footystats 15)"
+        },
+        {
+          "nombre": "Sunderland concede",
+          "estado": "NO_DISPONIBLE",
+          "fuente": "-",
+          "nota": "no encontrado"
+        }
+      ],
+      "lineas": [
+        11.5,
+        12.5,
+        13.5,
+        14.5,
+        15.5
+      ]
+    },
+    "Remates totales": {
+      "suma_de": [
+        "Remates Sunderland",
+        "Remates Chelsea"
+      ],
+      "lineas": [
+        22.5,
+        23.5,
+        24.5,
+        25.5,
+        26.5,
+        27.5
+      ]
+    },
+    "Remates a puerta Sunderland": {
+      "estimadores": [
+        {
+          "nombre": "Sunderland a puerta por partido",
+          "valor": 4.0,
+          "estado": "VERIFICADO",
+          "fuente": "statz.ai + footystats.org"
+        }
+      ],
+      "lineas": [
+        2.5,
+        3.5,
+        4.5,
+        5.5
+      ]
+    },
+    "Remates a puerta Chelsea": {
+      "estimadores": [
+        {
+          "nombre": "Chelsea a puerta por partido",
+          "valor": 5.89,
+          "estado": "VERIFICADO",
+          "fuente": "fbref.com (footystats 6.00)"
+        }
+      ],
+      "lineas": [
+        3.5,
+        4.5,
+        5.5,
+        6.5,
+        7.5
+      ]
+    },
+    "Remates a puerta totales": {
+      "suma_de": [
+        "Remates a puerta Sunderland",
+        "Remates a puerta Chelsea"
+      ],
+      "lineas": [
+        7.5,
+        8.5,
+        9.5,
+        10.5,
+        11.5
+      ]
+    },
+    "Amarillas Sunderland": {
+      "estimadores": [
+        {
+          "nombre": "Sunderland recibe por partido",
+          "valor": 1.93,
+          "estado": "VERIFICADO",
+          "fuente": "forebet + statz (2.0)"
+        }
+      ],
+      "lineas": [
+        0.5,
+        1.5,
+        2.5
+      ]
+    },
+    "Amarillas Chelsea": {
+      "estimadores": [
+        {
+          "nombre": "Chelsea recibe por partido",
+          "valor": 1.75,
+          "estado": "UNA_FUENTE",
+          "fuente": "forebet.com"
+        }
+      ],
+      "lineas": [
+        0.5,
+        1.5,
+        2.5
+      ]
+    },
+    "Amarillas totales": {
+      "estimadores": [
+        {
+          "nombre": "Equipos (1.93 + 1.75)",
+          "valor": 3.68,
+          "estado": "UNA_FUENTE",
+          "fuente": "forebet/statz"
+        },
+        {
+          "nombre": "Gillett 2026/27",
+          "valor": 4.67,
+          "estado": "VERIFICADO",
+          "fuente": "soccerbase + racingpost (28 en 6 PJ)"
+        },
+        {
+          "nombre": "Gillett 2025/26 + 2026/27",
+          "valor": 3.58,
+          "estado": "UNA_FUENTE",
+          "fuente": "statz.ai (26 PJ)"
+        }
+      ],
+      "lineas": [
+        2.5,
+        3.5,
+        4.5,
+        5.5
+      ]
+    }
+  }
+}
