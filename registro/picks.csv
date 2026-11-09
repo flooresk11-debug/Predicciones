@@ -90,3 +90,9 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Luqueño-2 de Mayo,Empate o 2 de Mayo,riesgo-medio,medio,0.638,1.50,pendiente,0.25u; justa 1.57; habría ganado en 5 de los 6 partidos de Luqueño en casa encontrados
 2026-11-09,Luqueño-2 de Mayo,Menos de 4.5 goles,filtro-analista,bajo,0.904,1.071,pendiente,DESCARTADO: partidos de Luqueño con 5 goles en 3 de 7 (1-4, 3-2, 5-0)
 2026-11-09,Luqueño-2 de Mayo,Gana 2 de Mayo,filtro-analista,alto,0.343,2.62,pendiente,DESCARTADO por precio: justa 2.92
+2026-11-09,Lakers@Hawks (NBA),Luka Doncic 30+ puntos,simulador-nba,bajo,0.912,1.27,pendiente,1u; justa 1.10; 5/5 últimos; riesgo espalda
+2026-11-09,Lakers@Hawks (NBA),Dyson Daniels 3+ asistencias,simulador-nba,bajo,0.909,1.13,pendiente,alternativa sin Doncic; justa 1.10; 5/5
+2026-11-09,Lakers@Hawks (NBA),Nickeil Alexander-Walker 20+ puntos,simulador-nba,medio,0.667,1.95,pendiente,0.75u; justa 1.50; 4/5; prom 22.1
+2026-11-09,Lakers@Hawks (NBA),Luka Doncic 5+ triples,simulador-nba,medio,0.707,1.90,pendiente,0.75u; justa 1.42; 5/5; no combinar con Doncic 30+
+2026-11-09,Lakers@Hawks (NBA),Nickeil Alexander-Walker 4+ triples,simulador-nba,alto,0.488,2.25,pendiente,0.5u; justa 2.05; 3/5
+2026-11-09,Lakers@Hawks (NBA),Gana Lakers,filtro-analista,medio,0.504,2.07,pendiente,DESCARTADO: modelo sin cancha ni back-to-back; Reaves en duda

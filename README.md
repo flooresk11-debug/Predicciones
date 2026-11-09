@@ -1,6 +1,6 @@
 # Predicciones
 
-Análisis de partidos de fútbol con datos reales y auditados.
+Análisis de partidos de fútbol y NBA con datos reales y auditados. NBA: `python3 simulador_nba.py data/<partido>.json` (mercado bet365 sin margen + ratings + props de jugador).
 
 - `data/*.json`: datos de cada partido. Cada dato lleva su fuente y un estado
   (`VERIFICADO`, `UNA_FUENTE`, `CONFLICTO`, `NO_DISPONIBLE`). Lo que no se pudo verificar no se rellena.
