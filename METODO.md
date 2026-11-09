@@ -58,3 +58,8 @@ Un pick solo es "riesgo bajo" si cumple TODO esto:
 5. **Cuotas actuales**: si la cuota se movió en contra del pick desde el análisis, se revisa.
 6. **Precio**: no hace falta que tenga valor, pero se descarta si bet365 paga más de un 8% por debajo de lo justo.
 Aun así, un 80-85% se pierde 1 de cada 6-7 veces: nunca es seguro, y nunca más de 2 en una combinada.
+
+## 8. Tarjetas: no descartar por precio cuando todo apunta a muchas (lección Las Palmas-Eldense, 9/11/2026)
+El modelo esperaba 5 amarillas; bet365 ~6; hubo 9. Los datos de la temporada ya decían 4+ en 20/24.
+Si el mercado Y los datos de la temporada (>= 80% de los partidos) coinciden en una línea de tarjetas,
+el pick NO se descarta aunque bet365 pague por debajo de la cuota justa del modelo: el modelo se queda corto.
