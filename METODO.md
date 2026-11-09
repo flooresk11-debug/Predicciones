@@ -44,3 +44,17 @@ Primer balance real por nivel de datos:
 
 Desde ahora, en ligas sin datos completos: **solo picks de riesgo bajo, con la mitad de stake, o sin pick**.
 Los picks de riesgo medio y alto quedan reservados a ligas con datos completos.
+
+## 7. Protocolo del pick de RIESGO BAJO (petición del usuario, 9/11/2026)
+Objetivo: que el pick de riesgo bajo sea el que MÁS probabilidad tiene de ganar, no el mejor pagado.
+Un pick solo es "riesgo bajo" si cumple TODO esto:
+1. **Mercado y datos coinciden**: probabilidad >= 78% según las cuotas actuales (sin margen) Y según los datos
+   del equipo (se cumplió en >= 80% de sus partidos de la temporada y en sus últimos 5-10).
+2. **Mercados amplios**, que no dependen de un solo gol: equipo marca, más de 1.5, menos de 4.5,
+   doble oportunidad del favorito claro, ambos reciben tarjeta. Nunca menos de 2.5, ambos marcan o resultado exacto.
+3. **Alineaciones y bajas**: se revisan; si falta un jugador clave para ese mercado (goleador, central,
+   portero), el pick se cambia o se elimina. Si no se encuentran, se avisa.
+4. **Contexto**: motivación, partido europeo entre semana, rotaciones, clima, movimiento fuerte de cuotas.
+5. **Cuotas actuales**: si la cuota se movió en contra del pick desde el análisis, se revisa.
+6. **Precio**: no hace falta que tenga valor, pero se descarta si bet365 paga más de un 8% por debajo de lo justo.
+Aun así, un 80-85% se pierde 1 de cada 6-7 veces: nunca es seguro, y nunca más de 2 en una combinada.
