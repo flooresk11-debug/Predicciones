@@ -63,8 +63,8 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Kristiansund-Vålerenga,Ambos marcan: sí,riesgo-medio,medio,0.592,,pendiente,cuota justa 1.69; 2026: KBK 64% y VIF 56% de sus partidos
 2026-11-09,Kristiansund-Vålerenga,Vålerenga más de 1.5 goles,riesgo-alto,alto,0.482,,pendiente,cuota justa 2.08
 2026-11-09,Atlético F-Badalona F,Atlético F marca,riesgo-bajo,bajo,0.85,,pendiente,"liga con pocos datos: sin cuotas fiables; estimación con promedio de goles del Atlético (19 en 9, Poisson); medio stake"
-2026-11-09,Hvidovre-Aarhus Fremad,Hvidovre o empate,riesgo-bajo,bajo,0.744,,pendiente,"liga con pocos datos: cuotas Marathonbet 1.89/3.58/3.60 (fannews); Hvidovre líder invicto; medio stake"
-2026-11-09,Köln F-RB Leipzig F,Más de 1.5 goles,riesgo-bajo,bajo,0.80,,pendiente,"sin cuotas: estimación con resultados oficiales OpenLigaDB (Köln 13:12, Leipzig 14:14 en 8); medio stake"
+2026-11-09,Hvidovre-Aarhus Fremad,Hvidovre o empate,riesgo-bajo,bajo,0.744,,pendiente,liga con pocos datos: cuotas Marathonbet 1.89/3.58/3.60 (fannews); Hvidovre líder invicto; medio stake
+2026-11-09,Köln F-RB Leipzig F,Más de 1.5 goles,riesgo-bajo,bajo,0.80,,G,"sin cuotas: estimación con resultados oficiales OpenLigaDB (Köln 13:12, Leipzig 14:14 en 8); medio stake; 2-1 en juego (captura del usuario): ya cumplido"
 2026-11-09,Hvidovre-Aarhus Fremad,Hvidovre o empate (revisado con cuotas bet365 actuales),riesgo-bajo,bajo,0.794,1.18,pendiente,protocolo bajo: mercado 79% + temporada 13/13 sin perder; alineaciones no encontradas
 2026-11-09,Kristiansund-Vålerenga,Vålerenga +1.5 hándicap asiático (revisado con bet365),riesgo-bajo,bajo,0.84,1.16,pendiente,protocolo bajo: mercado ~83%; KBK ganó por 2+ solo 3/25 (2 de sus últimos 10)
 2026-11-09,Kristiansund-Vålerenga,Más de 2.5 goles (fila 'Más de 2'),riesgo-medio,medio,0.72,1.28,pendiente,mercado 72.7%; últimos 10: KBK 8/10 y VIF 7/10 con 3+ goles
@@ -72,3 +72,4 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Botosani-Otelul Galati,Otelul +1.5 hándicap asiático,riesgo-bajo,bajo,0.792,1.22,pendiente,protocolo bajo: mercado 79%; Botosani ganó por 2+ 2/14; Otelul perdió por 2+ 1/14
 2026-11-09,Botosani-Otelul Galati,Menos de 2.5 goles (fila 'Menos de 3'),riesgo-medio,medio,0.55,1.85,pendiente,mercado 53%; H2H 5 de 6 con menos de 2.5
 2026-11-09,Botosani-Otelul Galati,Ambos marcan: no,riesgo-alto,alto,0.48,2.00,pendiente,mercado 48%; H2H 4 de 6
+2026-11-09,Köln F-RB Leipzig F,"Ambos marcan: sí (opcional, fuera de regla)",analista,medio,0.58,1.66,G,2-1 en juego: ya cumplido
