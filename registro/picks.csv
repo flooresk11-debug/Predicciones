@@ -102,3 +102,9 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Cavaliers@Hornets (NBA),Donovan Mitchell 5+ asistencias,simulador-nba,medio,0.635,1.80,pendiente,0.75u; justa 1.58; 3/5
 2026-11-09,Cavaliers@Hornets (NBA),Evan Mobley 20+ puntos,simulador-nba,alto,0.447,2.60,pendiente,0.5u; justa 2.24; no combinar con Mobley 15+
 2026-11-09,Cavaliers@Hornets (NBA),Más de 215.5,filtro-analista,medio,0.521,1.92,pendiente,DESCARTADO: ratings CHA incluyen a Miller y Knueppel (baja)
+2026-11-09,Wizards@Pistons (NBA),Kyshawn George 3+ asistencias,simulador-nba,bajo,0.880,1.23,pendiente,1u; justa 1.14; 5/5; prom 5.2
+2026-11-09,Wizards@Pistons (NBA),Duncan Robinson 2+ triples,simulador-nba,bajo,0.890,1.12,pendiente,alternativa; justa 1.12; 5/5
+2026-11-09,Wizards@Pistons (NBA),Kyshawn George 2+ triples,simulador-nba,medio,0.836,1.55,pendiente,0.75u; justa 1.20; 5/5; rebajado a medio por defensa nº1 de DET
+2026-11-09,Wizards@Pistons (NBA),Wizards +10.5,simulador-nba,medio,0.543,1.86,pendiente,0.75u; justa 1.84; DET en back-to-back sin Duren ni Joe
+2026-11-09,Wizards@Pistons (NBA),Duncan Robinson 5+ triples,simulador-nba,alto,0.403,3.35,pendiente,0.5u; justa 2.48; 2/5
+2026-11-09,Wizards@Pistons (NBA),Anthony Davis 20+ puntos,filtro-analista,medio,0.753,1.74,pendiente,DESCARTADO: vuelve de lesión de tobillo y sus últimos 5 son anteriores
