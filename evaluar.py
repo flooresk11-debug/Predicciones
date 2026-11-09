@@ -11,7 +11,7 @@ from collections import defaultdict
 
 def main(ruta="registro/picks.csv"):
     filas = list(csv.DictReader(open(ruta, encoding="utf-8")))
-    resueltas = [f for f in filas if f["resultado"] in ("G", "P", "MG", "MP")]
+    resueltas = [f for f in filas if f["resultado"] in ("G", "P", "MG", "MP") and f["prob_dada"]]
     pend = sum(f["resultado"] == "pendiente" for f in filas)
     print(f"Picks: {len(filas)} | resueltos: {len(resueltas)} | pendientes: {pend}\n")
     if not resueltas:
