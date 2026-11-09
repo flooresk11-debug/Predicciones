@@ -36,3 +36,11 @@ mitad · Gana ambas mitades · Marca en ambas mitades.
 
 Cada bloque muestra su **fiabilidad medida con partidos reales** (`validar_mercados.py`, `calibrar.py`).
 Los remates totales son NO FIABLES (peor que la media de la liga) y no se usan para picks de riesgo bajo.
+
+## 6. Regla por calidad de liga (tras los resultados del 8/11/2026)
+Primer balance real por nivel de datos:
+- Ligas con datos completos o mercado líquido (Bundesliga, LaLiga, Serie A, Liga MX): 10/12 picks ganados (esperados 7.6).
+- Colombia y El Salvador (sin estadísticas partido a partido, margen de las casas ~11%): 2/9 (esperados 5.2).
+
+Desde ahora, en ligas sin datos completos: **solo picks de riesgo bajo, con la mitad de stake, o sin pick**.
+Los picks de riesgo medio y alto quedan reservados a ligas con datos completos.
