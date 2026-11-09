@@ -108,3 +108,9 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Wizards@Pistons (NBA),Wizards +10.5,simulador-nba,medio,0.543,1.86,pendiente,0.75u; justa 1.84; DET en back-to-back sin Duren ni Joe
 2026-11-09,Wizards@Pistons (NBA),Duncan Robinson 5+ triples,simulador-nba,alto,0.403,3.35,pendiente,0.5u; justa 2.48; 2/5
 2026-11-09,Wizards@Pistons (NBA),Anthony Davis 20+ puntos,filtro-analista,medio,0.753,1.74,pendiente,DESCARTADO: vuelve de lesión de tobillo y sus últimos 5 son anteriores
+2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 1+ triples,simulador-nba,bajo,0.897,1.14,pendiente,1u; justa 1.12; 5/5; 61.9% en triples
+2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 10+ puntos,simulador-nba,bajo,0.766,1.28,pendiente,alternativa; justa 1.31; 5/5
+2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 2+ triples,simulador-nba,medio,0.690,1.71,pendiente,0.75u; justa 1.45; 5/5; no combinar con otros de Coward
+2026-11-09,Grizzlies@Raptors (NBA),Grizzlies +2.5,simulador-nba,medio,0.527,1.87,pendiente,CONDICIONAL: solo si Barnes o Quickley son baja
+2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 3+ triples,simulador-nba,alto,0.461,3.10,pendiente,0.5u; justa 2.17; 2/5
+2026-11-09,Grizzlies@Raptors (NBA),Cam Spencer 5+ asistencias,filtro-analista,medio,0.698,1.71,pendiente,DESCARTADO: sin promedio de temporada y un 0 en sus últimos 5

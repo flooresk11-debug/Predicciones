@@ -1,0 +1,1125 @@
+{
+ "partido": "Memphis Grizzlies @ Toronto Raptors",
+ "liga": "NBA 2026-27",
+ "fecha": "2026-11-09",
+ "visitante": "MEM",
+ "local": "TOR",
+ "nombres": {
+  "MEM": "Grizzlies",
+  "TOR": "Raptors"
+ },
+ "sede": "Scotiabank Arena (Toronto), 19:30 ET",
+ "notas_fuentes": "Búsquedas web del 9/11/2026 (Basketball-Reference, StatMuse, Covers, Wikipedia, ESPN UK, Statz.ai, CBS, RealGM, parte oficial NBA 9/11, Yahoo/ClutchPoints, Heavy, Basketnews, SI, Dimers, Yahoo odds). Cuotas: bet365, capturas de las 4:02 p. m.",
+ "contexto": {
+  "grizzlies_record": {
+   "valor": "6-3",
+   "fuente": "Basketball-Reference + Covers + Wikipedia",
+   "estado": "VERIFICADO",
+   "nota": "último partido: derrota 97-128 en OKC el 6/11; Morant y Jaren Jackson ya no están en Memphis (Portland y Utah según Fantasy Alarm/NBC)"
+  },
+  "raptors_record": {
+   "valor": "5-4",
+   "fuente": "Basketball-Reference",
+   "estado": "UNA_FUENTE",
+   "nota": "Barnes y Quickley se perdieron el último partido (Milwaukee)"
+  }
+ },
+ "equipos": {
+  "MEM": {
+   "ritmo": {
+    "valor": 100.4,
+    "fuente": "Basketball-Reference (8.º)",
+    "estado": "UNA_FUENTE"
+   },
+   "ortg": {
+    "valor": 116.1,
+    "fuente": "Basketball-Reference (10.º)",
+    "estado": "UNA_FUENTE"
+   },
+   "drtg": {
+    "valor": 110.0,
+    "fuente": "Basketball-Reference (8.º)",
+    "estado": "UNA_FUENTE"
+   },
+   "puntos_anotados": {
+    "valor": 117.9,
+    "fuente": "Basketball-Reference",
+    "estado": "UNA_FUENTE"
+   },
+   "puntos_recibidos": {
+    "valor": 111.8,
+    "fuente": "Basketball-Reference",
+    "estado": "UNA_FUENTE"
+   }
+  },
+  "TOR": {
+   "ritmo": {
+    "valor": 101.0,
+    "fuente": "Basketball-Reference (6.º); CraftedNBA 101.6",
+    "estado": "VERIFICADO"
+   },
+   "ortg": {
+    "valor": 117.0,
+    "fuente": "Basketball-Reference + StatMuse (9.º)",
+    "estado": "VERIFICADO"
+   },
+   "drtg": {
+    "valor": 111.6,
+    "fuente": "Basketball-Reference + StatMuse (10.º)",
+    "estado": "VERIFICADO"
+   },
+   "puntos_anotados": {
+    "valor": 118.2,
+    "fuente": "Basketball-Reference",
+    "estado": "UNA_FUENTE"
+   },
+   "puntos_recibidos": {
+    "valor": 112.8,
+    "fuente": "Basketball-Reference",
+    "estado": "UNA_FUENTE"
+   }
+  }
+ },
+ "bajas": {
+  "TOR": [
+   {
+    "jugador": "Scottie Barnes",
+    "estado": "DUDA",
+    "motivo": "distensión en la ingle/aductor izquierdo; no jugó el último partido",
+    "fuente": "parte oficial NBA 9/11, Yahoo, Basketnews"
+   },
+   {
+    "jugador": "Immanuel Quickley",
+    "estado": "DUDA",
+    "motivo": "isquiotibial derecho / enfermedad; no jugó el último partido",
+    "fuente": "parte oficial NBA 9/11, Heavy"
+   },
+   {
+    "jugador": "Kawhi Leonard",
+    "estado": "BAJA",
+    "motivo": "gestión de la rodilla izquierda",
+    "fuente": "parte oficial NBA"
+   },
+   {
+    "jugador": "Nate Bittle",
+    "estado": "BAJA",
+    "motivo": "fractura por avulsión",
+    "fuente": "parte oficial NBA"
+   }
+  ],
+  "MEM": [
+   {
+    "jugador": "(sin bajas relevantes encontradas)",
+    "estado": "NO_DISPONIBLE",
+    "fuente": "no se encontró parte específico de Memphis"
+   }
+  ]
+ },
+ "promedios_temporada": {
+  "Scottie Barnes": {
+   "pts": 23.5,
+   "reb": 7.6,
+   "ast": 5.1,
+   "fuente": "ESPN UK (Statz.ai: 24.4/7.9/5.0)",
+   "estado": "VERIFICADO"
+  },
+  "RJ Barrett": {
+   "pts": 21.6,
+   "reb": 6.1,
+   "ast": 3.9,
+   "fuente": "ESPN UK (CBS: 20.7)",
+   "estado": "VERIFICADO"
+  },
+  "Immanuel Quickley": {
+   "pts": 17.4,
+   "ast": 5.8,
+   "fuente": "ESPN UK (Statz.ai: 18.0/5.6)",
+   "estado": "VERIFICADO"
+  },
+  "Ty Jerome": {
+   "pts": 25.8,
+   "ast": 5.8,
+   "fuente": "RealGM, 5 PJ (CBS: 27.4/5.3)",
+   "estado": "CONFLICTO_LEVE"
+  },
+  "Cameron Boozer": {
+   "pts": 17.3,
+   "reb": 10.5,
+   "ast": 5.7,
+   "fuente": "RealGM, 6 PJ",
+   "estado": "UNA_FUENTE"
+  },
+  "Cedric Coward": {
+   "pts": 13.4,
+   "reb": 8.6,
+   "ast": 2.4,
+   "fuente": "RealGM, 5 PJ",
+   "estado": "UNA_FUENTE"
+  },
+  "Jerami Grant": {
+   "pts": 9.2,
+   "ast": 2.2,
+   "fuente": "RealGM",
+   "estado": "UNA_FUENTE"
+  },
+  "Zach Edey": {
+   "pts": 7.4,
+   "reb": 8.1,
+   "fuente": "CBS",
+   "estado": "UNA_FUENTE"
+  }
+ },
+ "bet365": {
+  "ganador": {
+   "MEM": 2.18,
+   "TOR": 1.72
+  },
+  "spread_visitante": [
+   [
+    -5.5,
+    3.05,
+    1.34
+   ],
+   [
+    -4.5,
+    2.75,
+    1.4
+   ],
+   [
+    -3.5,
+    2.6,
+    1.45
+   ],
+   [
+    -2.5,
+    2.4,
+    1.52
+   ],
+   [
+    -1.5,
+    2.2,
+    1.6
+   ],
+   [
+    1.5,
+    1.95,
+    1.74
+   ],
+   [
+    2.5,
+    1.87,
+    1.94
+   ],
+   [
+    3.5,
+    1.71,
+    2.0
+   ],
+   [
+    4.5,
+    1.64,
+    2.12
+   ],
+   [
+    5.5,
+    1.55,
+    2.3
+   ],
+   [
+    6.5,
+    1.5,
+    2.5
+   ],
+   [
+    7.5,
+    1.43,
+    2.65
+   ],
+   [
+    8.5,
+    1.37,
+    2.85
+   ],
+   [
+    9.5,
+    1.33,
+    3.1
+   ],
+   [
+    10.5,
+    1.28,
+    3.35
+   ]
+  ],
+  "total": [
+   [
+    220.5,
+    1.38,
+    2.8
+   ],
+   [
+    221.5,
+    1.43,
+    2.65
+   ],
+   [
+    222.5,
+    1.47,
+    2.55
+   ],
+   [
+    223.5,
+    1.52,
+    2.4
+   ],
+   [
+    224.5,
+    1.58,
+    2.22
+   ],
+   [
+    225.5,
+    1.64,
+    2.12
+   ],
+   [
+    226.5,
+    1.71,
+    2.09
+   ],
+   [
+    227.5,
+    1.76,
+    1.99
+   ],
+   [
+    228.5,
+    1.91,
+    1.9
+   ],
+   [
+    229.5,
+    2.01,
+    1.74
+   ],
+   [
+    230.5,
+    2.11,
+    1.68
+   ],
+   [
+    231.5,
+    2.21,
+    1.62
+   ],
+   [
+    232.5,
+    2.31,
+    1.57
+   ],
+   [
+    233.5,
+    2.4,
+    1.52
+   ],
+   [
+    234.5,
+    2.55,
+    1.47
+   ],
+   [
+    235.5,
+    2.7,
+    1.41
+   ],
+   [
+    236.5,
+    2.8,
+    1.38
+   ]
+  ],
+  "total_visitante": [
+   [
+    92.5,
+    1.015,
+    12.0
+   ],
+   [
+    94.5,
+    1.028,
+    10.0
+   ],
+   [
+    96.5,
+    1.045,
+    8.75
+   ],
+   [
+    98.5,
+    1.071,
+    7.5
+   ],
+   [
+    100.5,
+    1.11,
+    6.0
+   ],
+   [
+    102.5,
+    1.15,
+    4.75
+   ],
+   [
+    104.5,
+    1.22,
+    3.9
+   ],
+   [
+    106.5,
+    1.31,
+    3.2
+   ],
+   [
+    108.5,
+    1.43,
+    2.65
+   ],
+   [
+    110.5,
+    1.57,
+    2.25
+   ],
+   [
+    113.5,
+    1.86,
+    1.86
+   ],
+   [
+    116.5,
+    2.35,
+    1.54
+   ],
+   [
+    118.5,
+    2.75,
+    1.4
+   ],
+   [
+    120.5,
+    3.3,
+    1.29
+   ]
+  ],
+  "total_local": [
+   [
+    94.5,
+    1.02,
+    11.0
+   ],
+   [
+    96.5,
+    1.028,
+    10.0
+   ],
+   [
+    98.5,
+    1.05,
+    8.5
+   ],
+   [
+    100.5,
+    1.076,
+    7.25
+   ],
+   [
+    102.5,
+    1.11,
+    6.0
+   ],
+   [
+    104.5,
+    1.16,
+    4.5
+   ],
+   [
+    106.5,
+    1.22,
+    3.9
+   ],
+   [
+    108.5,
+    1.31,
+    3.2
+   ],
+   [
+    110.5,
+    1.43,
+    2.65
+   ],
+   [
+    112.5,
+    1.57,
+    2.25
+   ],
+   [
+    115.5,
+    1.86,
+    1.86
+   ],
+   [
+    118.5,
+    2.35,
+    1.54
+   ],
+   [
+    120.5,
+    2.75,
+    1.4
+   ],
+   [
+    122.5,
+    3.3,
+    1.29
+   ],
+   [
+    124.5,
+    3.9,
+    1.22
+   ],
+   [
+    126.5,
+    4.75,
+    1.15
+   ],
+   [
+    128.5,
+    6.25,
+    1.1
+   ],
+   [
+    130.5,
+    7.5,
+    1.071
+   ],
+   [
+    132.5,
+    8.5,
+    1.05
+   ],
+   [
+    134.5,
+    9.75,
+    1.033
+   ],
+   [
+    136.5,
+    11.0,
+    1.02
+   ]
+  ],
+  "nota_jugadores": "Formato bet365 'X o más'. Barnes y Quickley en duda: sus props suelen anularse si no juegan.",
+  "puntos": {
+   "RJ Barrett": [
+    "TOR",
+    [
+     9,
+     22,
+     26,
+     22,
+     27
+    ],
+    {
+     "15": 1.066,
+     "20": 1.29,
+     "25": 1.86,
+     "30": 3.2
+    }
+   ],
+   "Scottie Barnes": [
+    "TOR",
+    [
+     28,
+     41,
+     29,
+     22,
+     17
+    ],
+    {
+     "10": 1.012,
+     "15": 1.1,
+     "20": 1.4,
+     "25": 2.2,
+     "30": 4.2
+    }
+   ],
+   "Ty Jerome": [
+    "MEM",
+    [
+     15,
+     10,
+     40,
+     23,
+     21
+    ],
+    {
+     "10": 1.025,
+     "15": 1.15,
+     "20": 1.52,
+     "25": 2.45,
+     "30": 4.75
+    }
+   ],
+   "Immanuel Quickley": [
+    "TOR",
+    [
+     16,
+     17,
+     12,
+     27,
+     13
+    ],
+    {
+     "10": 1.055,
+     "15": 1.32,
+     "20": 2.0,
+     "25": 4.0,
+     "30": 9.0
+    }
+   ],
+   "Cameron Boozer": [
+    "MEM",
+    [
+     18,
+     27,
+     18,
+     10,
+     8
+    ],
+    {
+     "10": 1.1,
+     "15": 1.47,
+     "20": 2.55,
+     "25": 5.75,
+     "30": 12.0
+    }
+   ],
+   "Cedric Coward": [
+    "MEM",
+    [
+     17,
+     10,
+     10,
+     23,
+     10
+    ],
+    {
+     "5": 1.028,
+     "10": 1.28,
+     "15": 2.15,
+     "20": 5.0,
+     "25": 11.0,
+     "30": 23.0
+    }
+   ],
+   "Collin Murray-Boyles": [
+    "TOR",
+    [
+     15,
+     4,
+     18,
+     13,
+     19
+    ],
+    {
+     "5": 1.04,
+     "10": 1.32,
+     "15": 2.35,
+     "20": 5.5,
+     "25": 12.0,
+     "30": 23.0
+    }
+   ],
+   "Ja'Kobe Walter": [
+    "TOR",
+    [
+     9,
+     11,
+     10,
+     8,
+     7
+    ],
+    {
+     "5": 1.05,
+     "10": 1.42,
+     "15": 2.6,
+     "20": 6.25,
+     "25": 14.0,
+     "30": 29.0
+    }
+   ],
+   "Jerami Grant": [
+    "MEM",
+    [
+     2,
+     14,
+     11,
+     11,
+     10
+    ],
+    {
+     "5": 1.09,
+     "10": 1.66,
+     "15": 3.55,
+     "20": 9.5,
+     "25": 19.0,
+     "30": 36.0
+    }
+   ],
+   "Jakob Poeltl": [
+    "TOR",
+    [
+     0,
+     2,
+     12,
+     8,
+     19
+    ],
+    {
+     "5": 1.09,
+     "10": 1.58,
+     "15": 3.75,
+     "20": 10.0,
+     "25": 20.0,
+     "30": 36.0
+    }
+   ],
+   "Jaylen Wells": [
+    "MEM",
+    [
+     10,
+     4,
+     16,
+     0,
+     7
+    ],
+    {
+     "5": 1.11,
+     "10": 1.83,
+     "15": 4.2,
+     "20": 11.0,
+     "25": 21.0,
+     "30": 36.0
+    }
+   ],
+   "Zach Edey": [
+    "MEM",
+    [
+     13,
+     4,
+     6,
+     11,
+     14
+    ],
+    {
+     "5": 1.13,
+     "10": 2.02,
+     "15": 5.75,
+     "20": 16.0,
+     "25": 36.0
+    }
+   ]
+  },
+  "triples": {
+   "Immanuel Quickley": [
+    "TOR",
+    [
+     4,
+     4,
+     3,
+     1,
+     2
+    ],
+    {
+     "1": 1.04,
+     "2": 1.25,
+     "3": 1.8,
+     "4": 2.95,
+     "5": 5.5,
+     "6": 9.75
+    }
+   ],
+   "Ja'Kobe Walter": [
+    "TOR",
+    [
+     3,
+     3,
+     0,
+     1,
+     1
+    ],
+    {
+     "1": 1.071,
+     "2": 1.36,
+     "3": 2.1,
+     "4": 3.8,
+     "5": 7.25,
+     "6": 13.0
+    }
+   ],
+   "Ty Jerome": [
+    "MEM",
+    [
+     1,
+     1,
+     5,
+     2,
+     2
+    ],
+    {
+     "1": 1.076,
+     "2": 1.38,
+     "3": 2.15,
+     "4": 3.75,
+     "5": 7.25,
+     "6": 12.0
+    }
+   ],
+   "Cameron Boozer": [
+    "MEM",
+    [
+     4,
+     3,
+     2,
+     2,
+     0
+    ],
+    {
+     "1": 1.12,
+     "2": 1.6,
+     "3": 2.82,
+     "4": 5.75,
+     "5": 11.0,
+     "6": 19.0
+    }
+   ],
+   "RJ Barrett": [
+    "TOR",
+    [
+     1,
+     4,
+     2,
+     3,
+     0
+    ],
+    {
+     "1": 1.13,
+     "2": 1.64,
+     "3": 2.9,
+     "4": 6.0,
+     "5": 11.5,
+     "6": 19.0
+    }
+   ],
+   "Cedric Coward": [
+    "MEM",
+    [
+     3,
+     2,
+     2,
+     4,
+     2
+    ],
+    {
+     "1": 1.14,
+     "2": 1.71,
+     "3": 3.1,
+     "4": 6.5,
+     "5": 12.0,
+     "6": 20.0
+    }
+   ],
+   "Jaylen Wells": [
+    "MEM",
+    [
+     2,
+     0,
+     3,
+     0,
+     1
+    ],
+    {
+     "1": 1.18,
+     "2": 1.86,
+     "3": 3.55,
+     "4": 7.5,
+     "5": 14.0,
+     "6": 23.0
+    }
+   ],
+   "Jerami Grant": [
+    "MEM",
+    [
+     0,
+     1,
+     2,
+     2,
+     2
+    ],
+    {
+     "1": 1.26,
+     "2": 2.22,
+     "3": 4.75,
+     "4": 10.0,
+     "5": 19.0,
+     "6": 36.0
+    }
+   ],
+   "Cam Spencer": [
+    "MEM",
+    [
+     1,
+     2,
+     2,
+     1,
+     1
+    ],
+    {
+     "1": 1.27,
+     "2": 2.3,
+     "3": 5.0,
+     "4": 11.0,
+     "5": 20.0,
+     "6": 36.0
+    }
+   ],
+   "Scottie Barnes": [
+    "TOR",
+    [
+     0,
+     1,
+     0,
+     0,
+     1
+    ],
+    {
+     "1": 1.41,
+     "2": 2.82,
+     "3": 7.0,
+     "4": 13.0,
+     "5": 23.0,
+     "6": 36.0
+    }
+   ],
+   "Collin Murray-Boyles": [
+    "TOR",
+    [
+     1,
+     0,
+     1,
+     1,
+     0
+    ],
+    {
+     "1": 2.02,
+     "2": 5.75,
+     "3": 16.0,
+     "4": 36.0
+    }
+   ]
+  },
+  "asistencias": {
+   "Immanuel Quickley": [
+    "TOR",
+    [
+     7,
+     8,
+     7,
+     2,
+     7
+    ],
+    {
+     "3": 1.062,
+     "5": 1.37,
+     "7": 2.35,
+     "10": 7.5,
+     "13": 19.0,
+     "15": 36.0
+    }
+   ],
+   "Scottie Barnes": [
+    "TOR",
+    [
+     4,
+     5,
+     5,
+     8,
+     6
+    ],
+    {
+     "3": 1.071,
+     "5": 1.44,
+     "7": 2.55,
+     "10": 8.25,
+     "13": 20.0,
+     "15": 36.0
+    }
+   ],
+   "Ty Jerome": [
+    "MEM",
+    [
+     8,
+     3,
+     5,
+     3,
+     5
+    ],
+    {
+     "3": 1.071,
+     "5": 1.47,
+     "7": 2.8,
+     "10": 10.0,
+     "13": 29.0
+    }
+   ],
+   "Cam Spencer": [
+    "MEM",
+    [
+     8,
+     13,
+     7,
+     9,
+     0
+    ],
+    {
+     "3": 1.13,
+     "5": 1.71,
+     "7": 3.55,
+     "10": 13.0,
+     "13": 36.0
+    }
+   ],
+   "Cameron Boozer": [
+    "MEM",
+    [
+     12,
+     3,
+     5,
+     4,
+     4
+    ],
+    {
+     "3": 1.12,
+     "5": 1.76,
+     "7": 3.8,
+     "10": 14.0,
+     "13": 36.0
+    }
+   ],
+   "RJ Barrett": [
+    "TOR",
+    [
+     5,
+     5,
+     3,
+     3,
+     4
+    ],
+    {
+     "3": 1.22,
+     "5": 2.05,
+     "7": 4.75,
+     "10": 16.0,
+     "13": 36.0
+    }
+   ],
+   "Cedric Coward": [
+    "MEM",
+    [
+     4,
+     2,
+     3,
+     4,
+     0
+    ],
+    {
+     "3": 2.25,
+     "5": 7.5,
+     "7": 19.0
+    }
+   ],
+   "Collin Murray-Boyles": [
+    "TOR",
+    [
+     1,
+     1,
+     0,
+     2,
+     2
+    ],
+    {
+     "3": 2.5,
+     "5": 8.5,
+     "7": 20.0
+    }
+   ],
+   "Jakob Poeltl": [
+    "TOR",
+    [
+     0,
+     0,
+     3,
+     1,
+     2
+    ],
+    {
+     "3": 3.0,
+     "5": 10.5,
+     "7": 29.0
+    }
+   ],
+   "Ja'Kobe Walter": [
+    "TOR",
+    [
+     1,
+     2,
+     5,
+     2,
+     2
+    ],
+    {
+     "3": 2.82,
+     "5": 10.5,
+     "7": 29.0
+    }
+   ],
+   "Zach Edey": [
+    "MEM",
+    [
+     0,
+     0,
+     1,
+     1,
+     1
+    ],
+    {
+     "3": 9.5,
+     "5": 36.0
+    }
+   ],
+   "Jerami Grant": [
+    "MEM",
+    [
+     3,
+     1,
+     2,
+     2,
+     2
+    ],
+    {
+     "3": 5.5,
+     "5": 19.0
+    }
+   ]
+  }
+ }
+}
