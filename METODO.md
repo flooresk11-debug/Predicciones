@@ -27,3 +27,12 @@ Sin APIs de pago. Datos de **búsquedas en plataformas públicas** + datos ofici
 - Stake fijo: bajo 1 u, medio 0.75 u, alto 0.5 u (la mitad en ligas con pocos datos).
 - Combinadas: máximo 2 selecciones, de partidos distintos y sin depender de lo mismo.
 - Todo pick va a `registro/picks.csv`; `python3 evaluar.py` mide aciertos frente a lo prometido y la rentabilidad.
+
+## 5. Mercados que se trabajan en cada pick (todos calculados con `simulador_real.py`)
+Corners (totales, por equipo y quién tiene más) · Ganador · Doble oportunidad · Goles (totales, por equipo,
+rango, gol en el 1.er tiempo) · Tarjetas (totales, por equipo, quién tiene más, ambos reciben) · Remates y
+remates a puerta (totales, por equipo y quién tiene más) · Hándicap asiático · Ambos marcan · Gana cualquier
+mitad · Gana ambas mitades · Marca en ambas mitades.
+
+Cada bloque muestra su **fiabilidad medida con partidos reales** (`validar_mercados.py`, `calibrar.py`).
+Los remates totales son NO FIABLES (peor que la media de la liga) y no se usan para picks de riesgo bajo.

@@ -17,7 +17,7 @@ from collections import defaultdict
 import simulador_real as S
 
 LIGAS = ["E0", "SP1", "D1", "D2", "I1", "N1", "F1"]
-MERCADOS = (("corners", 9.5), ("amarillas", 3.5), ("tiros_puerta", 8.5), ("goles", 2.5))
+MERCADOS = (("corners", 9.5), ("amarillas", 3.5), ("tiros_puerta", 8.5), ("tiros", 23.5), ("goles", 2.5))
 GRID_K = (6, 12, 20, 30)
 GRID_ALFA = (0.3, 0.5, 0.7, 1.0)
 GRID_DELTA = (0.0, 0.25, 0.5, 1.0)

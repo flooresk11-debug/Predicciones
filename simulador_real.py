@@ -79,7 +79,7 @@ def cargar(liga, temp, max_horas=6):
             if r.get("FTHG") == "" or r.get("FTHG") is None:
                 continue
             fila = {"h": r["HomeTeam"], "a": r["AwayTeam"], "fecha": r["Date"], "arbitro": r.get("Referee", ""),
-                    "row": r}
+                    "row": r, "ht": (int(r["HTHG"]), int(r["HTAG"])) if r.get("HTHG") not in (None, "") else None}
             for s, (ch, ca) in STATS.items():
                 fila[s] = (float(r[ch]), float(r[ca])) if r.get(ch) not in (None, "") and r.get(ca) not in (None, "") else None
             filas.append(fila)
@@ -241,7 +241,7 @@ def buscar_equipo(nombre, equipos):
 
 
 # ---------------------------------------------------------------- informe de un partido
-def analizar(liga_cod, local, visit, arbitro, sims):
+def analizar(liga_cod, local, visit, arbitro, sims=0):
     act, ant = cargar(liga_cod, ACTUAL), cargar(liga_cod, ANTERIOR)
     equipos = {f["h"] for f in act} | {f["a"] for f in act}
     local, visit = buscar_equipo(local, equipos), buscar_equipo(visit, equipos)
@@ -296,59 +296,84 @@ def analizar(liga_cod, local, visit, arbitro, sims):
         print("\nSin cuotas de mercado para este partido: goles solo con estadísticas (más incertidumbre).")
     esp["goles"] = [gh, ga]
 
-    # simulación
-    rnd = random.Random(2026)
-    cont = defaultdict(int)
-    lineas = {"tiros_puerta": [6.5, 7.5, 8.5, 9.5, 10.5], "corners": [7.5, 8.5, 9.5, 10.5, 11.5],
-              "amarillas": [2.5, 3.5, 4.5, 5.5], "tiros": [20.5, 22.5, 24.5, 26.5]}
-    lineas_eq = {"tiros_puerta": [2.5, 3.5, 4.5, 5.5], "corners": [3.5, 4.5, 5.5, 6.5], "amarillas": [0.5, 1.5, 2.5]}
-    for _ in range(sims):
-        vals = {}
-        for s, (h, a) in esp.items():
-            d = L.dispersion(s)
-            vals[s] = (nb_muestra(rnd, h, d), nb_muestra(rnd, a, d))
-        gl, gv = vals["goles"]
-        cont["1"] += gl > gv; cont["X"] += gl == gv; cont["2"] += gl < gv
-        cont["over15"] += gl + gv >= 2; cont["over25"] += gl + gv >= 3; cont["over35"] += gl + gv >= 4
-        cont["btts"] += gl > 0 and gv > 0
-        for s, ls in lineas.items():
-            if s in vals:
-                for x in ls:
-                    cont[(s, "T", x)] += sum(vals[s]) > x
-        for s, ls in lineas_eq.items():
-            if s in vals:
-                for x in ls:
-                    cont[(s, "L", x)] += vals[s][0] > x
-                    cont[(s, "V", x)] += vals[s][1] > x
-    P = {k: v / sims for k, v in cont.items()}
+    # reparto real de goles entre mitades en la liga (2 temporadas)
+    con_ht = [f for f in act + ant if f["ht"] and f["goles"]]
+    s1 = sum(sum(f["ht"]) for f in con_ht) / max(1, sum(sum(f["goles"]) for f in con_ht))
+    imprimir_mercados(local, visit, gh, ga, s1, esp, L, m or {})
 
-    def fila(nombre, p, cuota_b365=None):
-        extra = ""
-        if cuota_b365:
-            extra = f" | bet365 {float(cuota_b365):.2f} -> ventaja {p * float(cuota_b365) - 1:+.1%}"
-        riesgo = "BAJO" if p >= 0.75 else "MEDIO" if p >= 0.5 else "ALTO"
-        print(f"  {nombre:34} {p:6.1%}  justa {1 / p if p else 0:6.2f}  [{riesgo}]{extra}")
 
-    print(f"\n## Simulación ({sims:,} partidos, semilla fija)")
-    print("Goles esperados finales:", f"{gh:.2f} - {ga:.2f}")
-    b = m or {}
-    fila(f"Gana {local}", P["1"], b.get("B365H")); fila("Empate", P["X"], b.get("B365D"))
-    fila(f"Gana {visit}", P["2"], b.get("B365A"))
-    fila(f"{local} o empate", P["1"] + P["X"]); fila(f"{visit} o empate", P["2"] + P["X"])
-    fila("Más de 1.5 goles", P["over15"]); fila("Más de 2.5 goles", P["over25"], b.get("B365>2.5"))
-    fila("Menos de 2.5 goles", 1 - P["over25"], b.get("B365<2.5")); fila("Menos de 3.5 goles", 1 - P["over35"])
-    fila("Ambos marcan: sí", P["btts"]); fila("Ambos marcan: no", 1 - P["btts"])
-    nombres = {"tiros_puerta": "tiros a puerta", "corners": "corners", "amarillas": "amarillas", "tiros": "tiros"}
-    for s in ("tiros_puerta", "corners", "amarillas", "tiros"):
+# Fiabilidad medida con partidos reales (validar_mercados.py y calibrar.py, 2025/26 y 2026/27, 7 ligas)
+FIABILIDAD = {
+    "Ganador y doble oportunidad": "VALIDADO: se cumple dentro de +/-3% en ~2.000 partidos (base: mercado)",
+    "Goles totales": "VALIDADO: +/-2% (base: mercado)",
+    "Goles por equipo": "VALIDADO: +/-3% (base: mercado)",
+    "Rango de goles": "derivado del mismo modelo de goles validado",
+    "Ambos marcan": "VALIDADO: +/-3% en los tramos con muestra grande",
+    "Primer tiempo y mitades": "VALIDADO: gol 1T +/-0.2%; 'gana cualquier mitad' es PRUDENTE (lo real sale 2-7% más alto)",
+    "Corners": "Totales casi = media de la liga (+0.3%). 'Quién tiene más corners' VALIDADO +/-2.5%",
+    "Tarjetas": "FIABLE: +5.1% mejor que la media de la liga; 'ambos reciben tarjeta' PRUDENTE (real +3%). Solo amarillas",
+    "Remates": "NO FIABLE: en partidos nuevos fue PEOR que la media de la liga (-7.3%). Solo referencia",
+    "Remates a puerta": "Casi = media de la liga (-0.4%): las líneas lejanas a la media no son fiables",
+}
+
+
+def imprimir_mercados(local, visit, gh, ga, s1, esp, L, b365):
+    import mercados as M
+    P, ah = M.goles(gh, ga, s1)
+    for s, nombre, lt, le in (("corners", "corners", [7.5, 8.5, 9.5, 10.5, 11.5], [2.5, 3.5, 4.5, 5.5, 6.5]),
+                              ("amarillas", "tarjetas", [2.5, 3.5, 4.5, 5.5], [0.5, 1.5, 2.5, 3.5]),
+                              ("tiros", "remates", [18.5, 20.5, 22.5, 24.5, 26.5], [8.5, 10.5, 12.5, 14.5]),
+                              ("tiros_puerta", "remates a puerta", [5.5, 6.5, 7.5, 8.5, 9.5], [1.5, 2.5, 3.5, 4.5, 5.5])):
+        if s in esp:
+            P.update(M.estadistica(nombre, esp[s][0], esp[s][1], L.dispersion(s), lt, le))
+    nom = lambda k: k.replace("Local", local).replace("local", local).replace("Visitante", visit).replace("visitante", visit)
+    cuotas = {"Gana local": b365.get("B365H"), "Empate": b365.get("B365D"), "Gana visitante": b365.get("B365A"),
+              "Más de 2.5 goles": b365.get("B365>2.5"), "Menos de 2.5 goles": b365.get("B365<2.5")}
+
+    def fila(k):
+        p = P[k]
+        if p <= 0:
+            return
+        r = "BAJO" if p >= 0.75 else "MEDIO" if p >= 0.5 else "ALTO"
+        c = cuotas.get(k)
+        extra = f" | bet365 {float(c):.2f} -> ventaja {p * float(c) - 1:+.1%}" if c else ""
+        print(f"  {nom(k)[:44]:44} {p:6.1%}  cuota justa {1 / p:6.2f}  [{r}]{extra}")
+
+    def bloque(titulo, claves):
+        print(f"\n### {titulo}")
+        clave_f = titulo.split(" (")[0]
+        if clave_f in FIABILIDAD:
+            print(f"    Fiabilidad comprobada: {FIABILIDAD[clave_f]}")
+        for k in claves:
+            if k in P:
+                fila(k)
+
+    print(f"\n## Mercados (cálculo exacto) | goles esperados {gh:.2f}-{ga:.2f} | "
+          f"{s1:.0%} de los goles de esta liga llegan en el 1.er tiempo (dato real)")
+    bloque("Ganador y doble oportunidad", ["Gana local", "Empate", "Gana visitante", "Local o empate",
+                                           "Visitante o empate", "Local o visitante (sin empate)"])
+    bloque("Goles totales", [k for k in P if k.startswith(("Más de", "Menos de")) and "goles" in k])
+    bloque("Goles por equipo", [k for k in P if k.startswith(("Local más", "Local menos", "Visitante más", "Visitante menos")) and "goles" in k])
+    bloque("Rango de goles", [k for k in P if k.startswith("Rango")])
+    bloque("Ambos marcan", ["Ambos marcan: sí", "Ambos marcan: no"])
+    bloque("Primer tiempo y mitades", ["Gol en el 1.er tiempo", "Sin gol en el 1.er tiempo", "Local gana cualquier mitad",
+                                       "Visitante gana cualquier mitad", "Local gana ambas mitades",
+                                       "Visitante gana ambas mitades", "Local marca en ambas mitades",
+                                       "Visitante marca en ambas mitades"])
+    print("\n### Hándicap asiático (local; el visitante es la línea contraria)")
+    print("    Fiabilidad comprobada: derivado del modelo de goles validado (base: mercado)")
+    for linea, (g, d, p) in ah.items():
+        print(f"  {local[:20]} {linea:+.1f}: gana {g:5.1%} | devuelve {d:5.1%} | pierde {p:5.1%} -> cuota justa {1 + p / g:5.2f}"
+              f"   ({visit[:20]} {-linea:+.1f}: cuota justa {1 + g / p if p else float('inf'):5.2f})")
+    for s, nombre in (("corners", "corners"), ("amarillas", "tarjetas"), ("tiros", "remates"), ("tiros_puerta", "remates a puerta")):
         if s not in esp:
             continue
-        print(f"\n  -- {nombres[s]}: esperados {esp[s][0]:.1f} + {esp[s][1]:.1f} = {sum(esp[s]):.1f} --")
-        for x in lineas.get(s, []):
-            fila(f"Total más de {x}", P[(s, "T", x)])
-        for x in lineas_eq.get(s, []):
-            fila(f"{local[:14]} más de {x}", P[(s, "L", x)])
-            fila(f"{visit[:14]} más de {x}", P[(s, "V", x)])
-    print("\nCuota justa = la mínima que debe pagar bet365 para no perder dinero a la larga.")
+        claves = [k for k in P if k.startswith(nombre + " ") and not (nombre == "remates" and k.startswith("remates a puerta"))] + [f"Más {nombre}: local", f"Más {nombre}: empate",
+                                                                  f"Más {nombre}: visitante"]
+        if nombre == "tarjetas":
+            claves.append("Ambos equipos reciben tarjeta")
+        bloque(f"{nombre.capitalize()} (esperados {esp[s][0]:.1f} + {esp[s][1]:.1f})", claves)
+    print("\nCuota justa = la mínima que debe pagar bet365. Riesgo: BAJO >= 75%, MEDIO 50-75%, ALTO < 50%.")
 
 
 # ---------------------------------------------------------------- validación sobre la temporada pasada

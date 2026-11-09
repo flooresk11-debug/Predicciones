@@ -23,6 +23,14 @@
     "skill_prueba": -0.0037,
     "skill_prueba_version_anterior": -0.0223
   },
+  "tiros": {
+    "K": 6,
+    "alfa": 0.5,
+    "delta": 0.0,
+    "skill_entrenamiento": 0.0341,
+    "skill_prueba": -0.0735,
+    "skill_prueba_version_anterior": -0.1616
+  },
   "goles": {
     "K": 30,
     "alfa": 0.3,
