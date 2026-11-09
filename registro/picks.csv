@@ -59,3 +59,6 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Sabadell-Real Sociedad B,Sabadell gana cualquier mitad,riesgo-medio,medio,0.662,,pendiente,cuota justa 1.51; mercado prudente en validación
 2026-11-09,Sabadell-Real Sociedad B,Más de 4.5 tarjetas,riesgo-medio,medio,0.624,,pendiente,cuota justa 1.60
 2026-11-09,Sabadell-Real Sociedad B,Más tarjetas: Real Sociedad B,riesgo-alto,alto,0.471,,pendiente,cuota justa 2.12
+2026-11-09,Kristiansund-Vålerenga,Más de 1.5 goles,riesgo-bajo,bajo,0.795,,pendiente,mercado 1X2 sin margen (2.88/3.78/2.08); cuota justa 1.26
+2026-11-09,Kristiansund-Vålerenga,Ambos marcan: sí,riesgo-medio,medio,0.592,,pendiente,cuota justa 1.69; 2026: KBK 64% y VIF 56% de sus partidos
+2026-11-09,Kristiansund-Vålerenga,Vålerenga más de 1.5 goles,riesgo-alto,alto,0.482,,pendiente,cuota justa 2.08
