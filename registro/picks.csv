@@ -21,26 +21,26 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-08,Villarreal-Getafe,Gana Villarreal (Novibet),claude-v3,medio,0.666,1.58,G,ventaja +5.2% vs Pinnacle 1.45 (rcdm.es); confirmar precios antes; Final 1-0 (Pepe) (captura bet365 del usuario)
 2026-11-08,Villarreal-Getafe,Gana Getafe (bet365),valor-v3,alto,0.131,8.00,P,ventaja +5.1% vs media de mercado; cuota mínima 7.91; 1 unidad; Final 1-0 (captura bet365 del usuario)
 2026-11-08,Freiburg-Union Berlin,Union +1.25 hándicap asiático (bet365),analista,medio,0.541,1.80,MP,sin ventaja de precio (-2.6%); H2H Freiburg 1G-4E-5P; 0.5 unidades; Final 2-0: pierde por 2 exactos = media pérdida (captura bet365 del usuario)
-2026-11-08,Inter-Como,Como +0.5 hándicap asiático (bet365),analista,medio,0.487,2.03,pendiente,sin ventaja de precio (-1.2%); Inter sin Lautaro; 0.5 unidades
+2026-11-08,Inter-Como,Como +0.5 hándicap asiático (bet365),analista,medio,0.487,2.03,P,sin ventaja de precio (-1.2%); Inter sin Lautaro; 0.5 unidades; Final 2-0 (captura del usuario)
 2026-11-08,Freiburg-Union Berlin,Friburgo marca,riesgo-bajo,bajo,0.871,,G,prob. de mercado; cuota justa 1.15; Final 2-0 (captura bet365 del usuario)
 2026-11-08,Freiburg-Union Berlin,Menos de 3.5 goles,riesgo-medio,medio,0.647,,G,prob. de mercado; cuota justa 1.55; H2H 7/10; Final 2-0 (captura bet365 del usuario)
 2026-11-08,Freiburg-Union Berlin,Menos de 2.5 goles,riesgo-alto,alto,0.423,2.30,G,prob. de mercado; cuota justa 2.36; H2H 6/10; Final 2-0 (captura bet365 del usuario)
-2026-11-08,Inter-Como,Más de 1.5 goles,riesgo-bajo,bajo,0.841,,pendiente,prob. de mercado; cuota justa 1.19; H2H 4/4
-2026-11-08,Inter-Como,Gana Inter,riesgo-medio,medio,0.515,1.91,pendiente,prob. de mercado; cuota justa 1.94; H2H 4/4
-2026-11-08,Inter-Como,Inter gana por 2+,riesgo-alto,alto,0.296,,pendiente,prob. de mercado; cuota justa 3.38; H2H 3/4
+2026-11-08,Inter-Como,Más de 1.5 goles,riesgo-bajo,bajo,0.841,,G,prob. de mercado; cuota justa 1.19; H2H 4/4; Final 2-0 (captura del usuario)
+2026-11-08,Inter-Como,Gana Inter,riesgo-medio,medio,0.515,1.91,G,prob. de mercado; cuota justa 1.94; H2H 4/4; Final 2-0 (captura del usuario)
+2026-11-08,Inter-Como,Inter gana por 2+,riesgo-alto,alto,0.296,,G,prob. de mercado; cuota justa 3.38; H2H 3/4; Final 2-0 (captura del usuario)
 2026-11-08,Villarreal-Getafe,Villarreal o empate,riesgo-bajo,bajo,0.859,,G,prob. de mercado; cuota justa 1.16; H2H 9/10; Final 1-0 (captura bet365 del usuario)
 2026-11-08,Villarreal-Getafe,Menos de 3.5 goles,riesgo-medio,medio,0.692,,G,prob. de mercado; cuota justa 1.45; H2H 10/10; Final 1-0 (captura bet365 del usuario)
 2026-11-08,Villarreal-Getafe + Freiburg-Union Berlin,Combinada: Villarreal 1.53 + Friburgo 1.61 (aumento de parlay),usuario,medio,0.411,2.46,G,apostada por el usuario en bet365; cuotas tomadas por encima del precio justo (1.52 y 1.59)
-2026-11-08,Atlético-Barcelona,Bet builder: ambos marcan + Julián Álvarez 1+ a puerta + Raphinha 1+ a puerta (superaumento 3.00),analista,alto,0.33,3.00,pendiente,CONDICIONAL: solo si Raphinha es titular; prob. 28-37% según minutos; 0.5 unidades
-2026-11-08,Tolima-Millonarios,Menos de 3.5 goles,riesgo-bajo,bajo,0.842,,pendiente,consenso de cuotas sin margen; cuota justa 1.19; sin referencia afilada (Colombia no está en football-data)
-2026-11-08,Tolima-Millonarios,Menos de 2.5 goles,riesgo-medio,medio,0.655,,pendiente,cuota justa 1.53
-2026-11-08,Tolima-Millonarios,Empate,riesgo-alto,alto,0.298,3.25,pendiente,cuota justa 3.36; bet365 3.25 (sportytrader) por debajo; Millonarios 9 empates en 17
-2026-11-08,FAS-Fuerte San Francisco,FAS marca,riesgo-bajo,bajo,0.879,,pendiente,consenso 1X2 sin margen (gainblers 1.31/4.75/7.50); cuota justa 1.14; datos escasos
-2026-11-08,FAS-Fuerte San Francisco,Ambos marcan: no,riesgo-medio,medio,0.536,,pendiente,cuota justa 1.86
-2026-11-08,FAS-Fuerte San Francisco,FAS gana por 2+ (hándicap -1.5),riesgo-alto,alto,0.443,,pendiente,cuota justa 2.26
-2026-11-08,Municipal Limeño-Atlético Balboa,Municipal Limeño o empate,riesgo-bajo,bajo,0.773,,pendiente,consenso 1X2 sin margen (1.75/3.45/3.97); cuota justa 1.29; datos escasos
-2026-11-08,Municipal Limeño-Atlético Balboa,Ambos marcan: no,riesgo-medio,medio,0.535,,pendiente,cuota justa 1.87
-2026-11-08,Municipal Limeño-Atlético Balboa,Municipal Limeño gana por 2+ (hándicap -1.5),riesgo-alto,alto,0.262,,pendiente,cuota justa 3.81; último duelo 0-2
+2026-11-08,Atlético-Barcelona,Bet builder: ambos marcan + Julián Álvarez 1+ a puerta + Raphinha 1+ a puerta (superaumento 3.00),analista,alto,0.33,3.00,pendiente,CONDICIONAL: solo si Raphinha es titular; prob. 28-37% según minutos; 0.5 unidades; final 1-2 (ambos marcan cumplido); faltan remates a puerta de Julián y Raphinha
+2026-11-08,Tolima-Millonarios,Menos de 3.5 goles,riesgo-bajo,bajo,0.842,,G,consenso de cuotas sin margen; cuota justa 1.19; sin referencia afilada (Colombia no está en football-data); Final 2-1 (captura del usuario)
+2026-11-08,Tolima-Millonarios,Menos de 2.5 goles,riesgo-medio,medio,0.655,,P,cuota justa 1.53; Final 2-1 (captura del usuario)
+2026-11-08,Tolima-Millonarios,Empate,riesgo-alto,alto,0.298,3.25,P,cuota justa 3.36; bet365 3.25 (sportytrader) por debajo; Millonarios 9 empates en 17; Final 2-1 (captura del usuario)
+2026-11-08,FAS-Fuerte San Francisco,FAS marca,riesgo-bajo,bajo,0.879,,G,consenso 1X2 sin margen (gainblers 1.31/4.75/7.50); cuota justa 1.14; datos escasos; Final 2-2 (captura del usuario)
+2026-11-08,FAS-Fuerte San Francisco,Ambos marcan: no,riesgo-medio,medio,0.536,,P,cuota justa 1.86; Final 2-2 (captura del usuario)
+2026-11-08,FAS-Fuerte San Francisco,FAS gana por 2+ (hándicap -1.5),riesgo-alto,alto,0.443,,P,cuota justa 2.26; Final 2-2 (captura del usuario)
+2026-11-08,Municipal Limeño-Atlético Balboa,Municipal Limeño o empate,riesgo-bajo,bajo,0.773,,P,consenso 1X2 sin margen (1.75/3.45/3.97); cuota justa 1.29; datos escasos; Final 3-4 (captura del usuario)
+2026-11-08,Municipal Limeño-Atlético Balboa,Ambos marcan: no,riesgo-medio,medio,0.535,,P,cuota justa 1.87; Final 3-4 (captura del usuario)
+2026-11-08,Municipal Limeño-Atlético Balboa,Municipal Limeño gana por 2+ (hándicap -1.5),riesgo-alto,alto,0.262,,P,cuota justa 3.81; último duelo 0-2; Final 3-4 (captura del usuario)
 2026-11-08,Central Córdoba-Lanús,Lanús o empate,riesgo-bajo,bajo,0.820,,pendiente,media de mercado sin margen; cuota justa 1.22
 2026-11-08,Central Córdoba-Lanús,Menos de 2.5 goles,riesgo-medio,medio,0.628,,pendiente,cuota justa 1.59; H2H media 2.1 goles
 2026-11-08,Central Córdoba-Lanús,Lanús gana por 2+ (hándicap -1.5),riesgo-alto,alto,0.285,,pendiente,cuota justa 3.51
