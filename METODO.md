@@ -79,3 +79,8 @@ Reglas del medio:
 4. Ligas sin datos completos: sin pick medio (registro 1/4).
 5. Precio: bet365 no más de un 5% por debajo de la cuota justa.
 Aplicado al registro: los medios que habrían pasado ganaron 4/6; los que habría quitado, 4/10.
+
+## 10. Lección Técnico-Manta (9/11/2026): el 80% de datos es OBLIGATORIO
+Se dio como bajo "Técnico o empate" con mercado 85% pero datos de 75% (6/8 en casa), en liga sin datos
+completos y con Manta ganador del último cruce. Perdió 1-2. Si los datos no llegan al 80%, NO es bajo,
+aunque el mercado diga 85%: se baja a medio (si cumple §9) o se queda sin pick.
