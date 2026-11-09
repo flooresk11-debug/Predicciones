@@ -50,3 +50,7 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,León-Chivas,Chivas gana cualquier mitad,riesgo-medio,medio,0.566,,P,cuota justa 1.77; mercado validado como prudente; reportado por el usuario
 2026-11-09,León-Chivas,Chivas más de 1.5 goles,riesgo-alto,alto,0.415,,P,cuota justa 2.41; reportado por el usuario
 2026-11-09,León-Chivas,Gana León 3.40 (DESCARTADO),filtro-analista,alto,0.301,3.40,P,"ventaja +2.5% descartada: Chivas 2.º y mejor en goles; León 9.º; deducido: Chivas marcó, no perdió y no ganó ninguna mitad -> empate; el filtro acertó"
+2026-11-09,Las Palmas-Eldense,Ambos equipos reciben tarjeta,riesgo-bajo,bajo,0.839,,pendiente,simulador_real SP2; cuota justa 1.19; tarjetas = mercado validado
+2026-11-09,Las Palmas-Eldense,Más de 3.5 tarjetas,riesgo-medio,medio,0.733,,pendiente,cuota justa 1.36
+2026-11-09,Las Palmas-Eldense,Las Palmas o empate,riesgo-medio,medio,0.684,,pendiente,cuota justa 1.46 (mercado)
+2026-11-09,Las Palmas-Eldense,Más tarjetas: Eldense,riesgo-alto,alto,0.469,,pendiente,cuota justa 2.13
