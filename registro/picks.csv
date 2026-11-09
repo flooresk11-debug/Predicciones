@@ -54,3 +54,8 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Las Palmas-Eldense,Más de 3.5 tarjetas,riesgo-medio,medio,0.733,,pendiente,cuota justa 1.36
 2026-11-09,Las Palmas-Eldense,Las Palmas o empate,riesgo-medio,medio,0.684,,pendiente,cuota justa 1.46 (mercado)
 2026-11-09,Las Palmas-Eldense,Más tarjetas: Eldense,riesgo-alto,alto,0.469,,pendiente,cuota justa 2.13
+2026-11-09,Sabadell-Real Sociedad B,Sabadell o empate,riesgo-bajo,bajo,0.795,,pendiente,simulador_real SP2; cuota justa 1.26
+2026-11-09,Sabadell-Real Sociedad B,Ambos equipos reciben tarjeta,riesgo-bajo,bajo,0.867,,pendiente,cuota justa 1.15
+2026-11-09,Sabadell-Real Sociedad B,Sabadell gana cualquier mitad,riesgo-medio,medio,0.662,,pendiente,cuota justa 1.51; mercado prudente en validación
+2026-11-09,Sabadell-Real Sociedad B,Más de 4.5 tarjetas,riesgo-medio,medio,0.624,,pendiente,cuota justa 1.60
+2026-11-09,Sabadell-Real Sociedad B,Más tarjetas: Real Sociedad B,riesgo-alto,alto,0.471,,pendiente,cuota justa 2.12
