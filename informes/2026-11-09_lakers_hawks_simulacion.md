@@ -15,7 +15,7 @@ Simulaciones: 200,000 (semilla 20261109). Peso del mercado: 60%.
 
 - Posesiones esperadas: 101.2
 - Lakers: 118.8 pts · Hawks: 116.4 pts · total 235.2 · margen +2.3
-- No incluye cancha ni back-to-back de los Lakers (el mercado sí).
+- No incluye cancha, descansos ni bajas recientes (el mercado sí).
 
 ## 3. Mezcla final
 

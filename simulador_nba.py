@@ -102,22 +102,27 @@ def main():
     a = ap.parse_args()
     d = json.load(open(a.datos, encoding="utf-8"))
     b = d["bet365"]
+    V, H = d["visitante"], d["local"]
+    nV, nH = d["nombres"][V], d["nombres"][H]
     out = []
     w = out.append
 
     # ---------- 1. mercado ----------
     mu_T, sd_T, e1 = ajustar_normal(escalera(b["total"]))
     # spread: P(LAL cubre con h) = P(D > -h); como "mayor que línea" sobre la variable D usamos línea = -h
-    pts_sp = sorted((-h, sin_margen(ol, oa)) for h, ol, oa in b["spread_lal"] if ol <= 4 and oa <= 4)
+    pts_sp = sorted((-h, sin_margen(ol, oa)) for h, ol, oa in b["spread_visitante"] if ol <= 4 and oa <= 4)
     mu_D, sd_D, e2 = ajustar_normal(pts_sp)
-    mu_L, sd_L, e3 = ajustar_normal(escalera(b["total_LAL"]))
-    mu_A, sd_A, e4 = ajustar_normal(escalera(b["total_ATL"]))
+    mu_L, sd_L, e3 = ajustar_normal(escalera(b["total_visitante"]))
+    if b.get("total_local"):
+        mu_A, sd_A, e4 = ajustar_normal(escalera(b["total_local"]))
+    else:  # sin escalera del local: se deduce de total y margen
+        mu_A, sd_A, e4 = mu_T - mu_L, sd_L, float("nan")
 
     # ---------- 2. modelo de ratings ----------
     E = d["equipos"]
-    poss = (E["LAL"]["ritmo"]["valor"] + E["ATL"]["ritmo"]["valor"]) / 2
-    m_L = poss * (E["LAL"]["ortg"]["valor"] + E["ATL"]["drtg"]["valor"]) / 200
-    m_A = poss * (E["ATL"]["ortg"]["valor"] + E["LAL"]["drtg"]["valor"]) / 200
+    poss = (E[V]["ritmo"]["valor"] + E[H]["ritmo"]["valor"]) / 2
+    m_L = poss * (E[V]["ortg"]["valor"] + E[H]["drtg"]["valor"]) / 200
+    m_A = poss * (E[H]["ortg"]["valor"] + E[V]["drtg"]["valor"]) / 200
 
     # mercado coherente: medias por equipo desde total y margen (más líquidos), cruzado con totales de equipo
     mk_L = (mu_T + mu_D) / 2 * 0.5 + mu_L * 0.5
@@ -152,15 +157,15 @@ def main():
     w("## 1. Lo que dice el mercado (bet365 sin margen, normal ajustada)\n")
     w("| Variable | Media | Desv. típica | Error de ajuste |\n|---|---|---|---|")
     w(f"| Total del partido | {mu_T:.1f} | {sd_T:.1f} | {e1:.4f} |")
-    w(f"| Margen Lakers − Hawks | {mu_D:+.1f} | {sd_D:.1f} | {e2:.4f} |")
-    w(f"| Puntos Lakers | {mu_L:.1f} | {sd_L:.1f} | {e3:.4f} |")
-    w(f"| Puntos Hawks | {mu_A:.1f} | {sd_A:.1f} | {e4:.4f} |")
+    w(f"| Margen {nV} − {nH} | {mu_D:+.1f} | {sd_D:.1f} | {e2:.4f} |")
+    w(f"| Puntos {nV} | {mu_L:.1f} | {sd_L:.1f} | {e3:.4f} |")
+    w(f"| Puntos {nH} | {mu_A:.1f} | {sd_A:.1f} | {e4:.4f} |")
     w("\n## 2. Modelo de ratings (Basketball-Reference)\n")
     w(f"- Posesiones esperadas: {poss:.1f}")
-    w(f"- Lakers: {m_L:.1f} pts · Hawks: {m_A:.1f} pts · total {m_L + m_A:.1f} · margen {m_L - m_A:+.1f}")
-    w("- No incluye cancha ni back-to-back de los Lakers (el mercado sí).")
+    w(f"- {nV}: {m_L:.1f} pts · {nH}: {m_A:.1f} pts · total {m_L + m_A:.1f} · margen {m_L - m_A:+.1f}")
+    w("- No incluye cancha, descansos ni bajas recientes (el mercado sí).")
     w("\n## 3. Mezcla final\n")
-    w(f"- Lakers {fin_L:.1f} · Hawks {fin_A:.1f} · total {fin_L + fin_A:.1f} · margen Lakers {fin_L - fin_A:+.1f}")
+    w(f"- {nV} {fin_L:.1f} · {nH} {fin_A:.1f} · total {fin_L + fin_A:.1f} · margen {nV} {fin_L - fin_A:+.1f}")
     w(f"- Correlación entre los puntos de ambos equipos (deducida del mercado): {rho:.2f}\n")
 
     filas = []
@@ -170,17 +175,17 @@ def main():
         filas.append((mercado, p, cuota, ev, nota))
 
     p_lal = prob(lambda l, at: l > at)
-    sel("Ganador: Lakers", p_lal, b["ganador"]["LAL"])
-    sel("Ganador: Hawks", 1 - p_lal, b["ganador"]["ATL"])
-    for h, ol, oa in b["spread_lal"]:
-        sel(f"Hándicap Lakers {h:+.1f}", prob(lambda l, at, h=h: l + h > at), ol)
-        sel(f"Hándicap Hawks {-h:+.1f}", prob(lambda l, at, h=h: at - h > l), oa)
+    sel(f"Ganador: {nV}", p_lal, b["ganador"][V])
+    sel(f"Ganador: {nH}", 1 - p_lal, b["ganador"][H])
+    for h, ol, oa in b["spread_visitante"]:
+        sel(f"Hándicap {nV} {h:+.1f}", prob(lambda l, at, h=h: l + h > at), ol)
+        sel(f"Hándicap {nH} {-h:+.1f}", prob(lambda l, at, h=h: at - h > l), oa)
     for t, om, ou in b["total"]:
         po = prob(lambda l, at, t=t: l + at > t)
         sel(f"Total: más de {t}", po, om)
         sel(f"Total: menos de {t}", 1 - po, ou)
-    for clave, nombre, idx in (("total_LAL", "Lakers", 0), ("total_ATL", "Hawks", 1)):
-        for t, om, ou in b[clave]:
+    for clave, nombre, idx in (("total_visitante", nV, 0), ("total_local", nH, 1)):
+        for t, om, ou in b.get(clave) or []:
             po = prob(lambda l, at, t=t, i=idx: (l, at)[i] > t)
             sel(f"Puntos {nombre}: más de {t}", po, om)
             sel(f"Puntos {nombre}: menos de {t}", 1 - po, ou)

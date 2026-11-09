@@ -96,3 +96,9 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Lakers@Hawks (NBA),Luka Doncic 5+ triples,simulador-nba,medio,0.707,1.90,pendiente,0.75u; justa 1.42; 5/5; no combinar con Doncic 30+
 2026-11-09,Lakers@Hawks (NBA),Nickeil Alexander-Walker 4+ triples,simulador-nba,alto,0.488,2.25,pendiente,0.5u; justa 2.05; 3/5
 2026-11-09,Lakers@Hawks (NBA),Gana Lakers,filtro-analista,medio,0.504,2.07,pendiente,DESCARTADO: modelo sin cancha ni back-to-back; Reaves en duda
+2026-11-09,Cavaliers@Hornets (NBA),Donovan Mitchell 2+ triples,simulador-nba,bajo,0.811,1.22,pendiente,1u; justa 1.23; 4/5
+2026-11-09,Cavaliers@Hornets (NBA),Cavaliers más de 102.5 puntos,simulador-nba,bajo,0.792,1.20,pendiente,alternativa de partido; justa 1.26
+2026-11-09,Cavaliers@Hornets (NBA),Evan Mobley 15+ puntos,simulador-nba,medio,0.756,1.44,pendiente,0.75u; justa 1.32; 4/5; prom 18.8
+2026-11-09,Cavaliers@Hornets (NBA),Donovan Mitchell 5+ asistencias,simulador-nba,medio,0.635,1.80,pendiente,0.75u; justa 1.58; 3/5
+2026-11-09,Cavaliers@Hornets (NBA),Evan Mobley 20+ puntos,simulador-nba,alto,0.447,2.60,pendiente,0.5u; justa 2.24; no combinar con Mobley 15+
+2026-11-09,Cavaliers@Hornets (NBA),Más de 215.5,filtro-analista,medio,0.521,1.92,pendiente,DESCARTADO: ratings CHA incluyen a Miller y Knueppel (baja)
