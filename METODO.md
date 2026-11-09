@@ -63,3 +63,19 @@ Aun así, un 80-85% se pierde 1 de cada 6-7 veces: nunca es seguro, y nunca más
 El modelo esperaba 5 amarillas; bet365 ~6; hubo 9. Los datos de la temporada ya decían 4+ en 20/24.
 Si el mercado Y los datos de la temporada (>= 80% de los partidos) coinciden en una línea de tarjetas,
 el pick NO se descarta aunque bet365 pague por debajo de la cuota justa del modelo: el modelo se queda corto.
+
+## 9. Protocolo del pick de RIESGO MEDIO (auditoría del 9/11/2026, `auditar_medios.py`)
+Registro: medios 8/16 (50%) frente a 9.4 esperados. Prueba con ~12.000 casos reales (7 ligas, 2025-27):
+- Franja 50-62%: se cumple el 56% -> es una moneda al aire; ya no es "medio" (pasa a alto o se descarta).
+- Franja 62-77%: se cumple el 70%; si los datos de la temporada de AMBOS equipos lo confirman (>= 65%): 72%.
+- Mejores mercados: Local o empate (77.7% real vs 71.8% prometido), Visitante o empate (72.0 vs 69.7),
+  Menos de 3.5 (72.6 vs 70.3), Más de 1.5 (74.2 vs 73.0), equipo marca.
+- Peores: Menos de 2.5 (57.3 vs 64.3) y Ambos marcan sí (59.6 vs 64.6) cuando los datos no confirman.
+Reglas del medio:
+1. Probabilidad del mercado 62-77% Y datos de temporada de ambos equipos >= 65%.
+2. Mercados: doble oportunidad, hándicap +0.5/+1.0, menos de 3.5, más de 1.5, equipo marca, tarjetas
+   (con datos). No: ambos marcan, menos/más de 2.5 (salvo datos >= 70% en ambos y en el H2H), resultado exacto.
+3. Misma lectura que el pick bajo: el medio es "un paso más" en la misma dirección (bajo DC -> medio gana, etc.).
+4. Ligas sin datos completos: sin pick medio (registro 1/4).
+5. Precio: bet365 no más de un 5% por debajo de la cuota justa.
+Aplicado al registro: los medios que habrían pasado ganaron 4/6; los que habría quitado, 4/10.

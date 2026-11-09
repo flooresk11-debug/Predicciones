@@ -1,0 +1,44 @@
+E0 listo
+SP1 listo
+D1 listo
+D2 listo
+I1 listo
+N1 listo
+F1 listo
+
+grupo                                                                            n prometido    real
+50-62% | Ambos marcan: no | datos NO confirman                                 571     54.1%   53.8%
+50-62% | Ambos marcan: sí | datos NO confirman                                1267     56.0%   59.4%
+50-62% | Ambos marcan: sí | datos confirman (>=65% ambos)                       78     58.0%   59.0%
+50-62% | Local más de 0.5 goles | datos NO confirman                            99     56.4%   48.5%
+50-62% | Local o empate | datos NO confirman                                   433     56.4%   57.7%
+50-62% | Menos de 2.5 goles | datos NO confirman                               502     55.1%   54.0%
+50-62% | Menos de 3.5 goles | datos NO confirman                               360     57.0%   58.3%
+50-62% | Menos de 3.5 goles | datos confirman (>=65% ambos)                     76     57.3%   64.5%
+50-62% | Más de 2.5 goles | datos NO confirman                                 991     55.2%   55.6%
+50-62% | Visitante más de 0.5 goles | datos NO confirman                       268     55.9%   56.3%
+50-62% | Visitante más de 0.5 goles | datos confirman (>=65% ambos)             72     57.8%   62.5%
+50-62% | Visitante o empate | datos NO confirman                               574     55.9%   53.8%
+50-62% | Visitante o empate | datos confirman (>=65% ambos)                     70     58.0%   48.6%
+50-62% | datos NO confirman                                                   5075     55.7%   56.3%
+50-62% | datos confirman (>=65% ambos)                                         420     57.7%   55.0%
+50-62% | todos                                                                5495     55.8%   56.2%
+62-77% | Ambos marcan: sí | datos NO confirman                                 218     64.6%   59.6%
+62-77% | Local más de 0.5 goles | datos NO confirman                           523     69.6%   71.5%
+62-77% | Local más de 0.5 goles | datos confirman (>=65% ambos)                352     71.6%   73.3%
+62-77% | Local o empate | datos NO confirman                                   762     69.1%   75.2%
+62-77% | Local o empate | datos confirman (>=65% ambos)                        130     71.8%   77.7%
+62-77% | Menos de 2.5 goles | datos NO confirman                                96     64.3%   57.3%
+62-77% | Menos de 3.5 goles | datos NO confirman                               767     67.5%   68.3%
+62-77% | Menos de 3.5 goles | datos confirman (>=65% ambos)                    591     70.3%   72.6%
+62-77% | Más de 1.5 goles | datos NO confirman                                 391     70.7%   71.6%
+62-77% | Más de 1.5 goles | datos confirman (>=65% ambos)                      609     73.0%   74.2%
+62-77% | Más de 2.5 goles | datos NO confirman                                 417     66.1%   64.7%
+62-77% | Más de 2.5 goles | datos confirman (>=65% ambos)                      103     66.8%   67.0%
+62-77% | Visitante más de 0.5 goles | datos NO confirman                       498     68.6%   67.3%
+62-77% | Visitante más de 0.5 goles | datos confirman (>=65% ambos)            663     70.2%   69.7%
+62-77% | Visitante o empate | datos NO confirman                               375     67.5%   69.9%
+62-77% | Visitante o empate | datos confirman (>=65% ambos)                    243     69.7%   72.0%
+62-77% | datos NO confirman                                                   4061     68.1%   69.2%
+62-77% | datos confirman (>=65% ambos)                                        2755     70.8%   72.1%
+62-77% | todos                                                                6816     69.2%   70.4%
