@@ -52,19 +52,19 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,León-Chivas,Gana León 3.40 (DESCARTADO),filtro-analista,alto,0.301,3.40,P,"ventaja +2.5% descartada: Chivas 2.º y mejor en goles; León 9.º; deducido: Chivas marcó, no perdió y no ganó ninguna mitad -> empate; el filtro acertó"
 2026-11-09,Las Palmas-Eldense,Hándicap asiático Eldense +2.0,riesgo-bajo,bajo,0.886,1.115,N,cuotas bet365 1.91/3.50/3.70; pierde solo si LP gana por 3+ (11.4%); devuelve si gana por 2 (14.9%); cuota justa 1.155; LP 0/12 victorias por 3+ | final 2-0
 2026-11-09,Las Palmas-Eldense,Hándicap asiático Eldense +1.5,riesgo-medio,medio,0.737,1.30,P,cuota justa 1.36; datos 20/24 sin derrota por 2+ | final 2-0
-2026-11-09,Las Palmas-Eldense,Más tarjetas: Eldense,riesgo-alto,alto,0.469,2.20,pendiente,cuota justa 2.13; Eldense más tarjetas en 6/12
-2026-11-09,Las Palmas-Eldense,Ambos equipos reciben tarjeta,filtro-analista,bajo,0.839,1.071,pendiente,DESCARTADO por precio: justa 1.19; bet365 paga >8% menos
-2026-11-09,Las Palmas-Eldense,Más de 3.5 tarjetas,filtro-analista,medio,0.733,1.16,pendiente,DESCARTADO por precio: justa 1.36 (datos reales 20/24 con 4+)
+2026-11-09,Las Palmas-Eldense,Más tarjetas: Eldense,riesgo-alto,alto,0.469,2.20,G,cuota justa 2.13; Eldense más tarjetas en 6/12 | amarillas LP 2 - Eld 7
+2026-11-09,Las Palmas-Eldense,Ambos equipos reciben tarjeta,filtro-analista,bajo,0.839,1.071,G,DESCARTADO por precio: justa 1.19; bet365 paga >8% menos | amarillas 2-7
+2026-11-09,Las Palmas-Eldense,Más de 3.5 tarjetas,filtro-analista,medio,0.733,1.16,G,DESCARTADO por precio: justa 1.36 (datos reales 20/24 con 4+) | 9 amarillas
 2026-11-09,Las Palmas-Eldense,Las Palmas o empate,filtro-analista,medio,0.730,1.28,G,DESCARTADO: LP en casa 2G 2E 2P y 4 bajas; justa 1.37 | final 2-0
 2026-11-09,Sabadell-Real Sociedad B,Sabadell o empate,riesgo-bajo,bajo,0.795,,G,simulador_real SP2; cuota justa 1.26 | final 0-0
-2026-11-09,Sabadell-Real Sociedad B,Ambos equipos reciben tarjeta,riesgo-bajo,bajo,0.867,,pendiente,cuota justa 1.15
+2026-11-09,Sabadell-Real Sociedad B,Ambos equipos reciben tarjeta,riesgo-bajo,bajo,0.867,,G,cuota justa 1.15 | amarillas 2-3
 2026-11-09,Sabadell-Real Sociedad B,Sabadell gana cualquier mitad,riesgo-medio,medio,0.662,,P,cuota justa 1.51; mercado prudente en validación | final 0-0
-2026-11-09,Sabadell-Real Sociedad B,Más de 4.5 tarjetas,riesgo-medio,medio,0.624,,pendiente,cuota justa 1.60
-2026-11-09,Sabadell-Real Sociedad B,Más tarjetas: Real Sociedad B,riesgo-alto,alto,0.471,,pendiente,cuota justa 2.12
+2026-11-09,Sabadell-Real Sociedad B,Más de 4.5 tarjetas,riesgo-medio,medio,0.624,,G,cuota justa 1.60 | 5 amarillas
+2026-11-09,Sabadell-Real Sociedad B,Más tarjetas: Real Sociedad B,riesgo-alto,alto,0.471,,G,cuota justa 2.12 | amarillas 2-3
 2026-11-09,Kristiansund-Vålerenga,Más de 1.5 goles,riesgo-bajo,bajo,0.795,,P,mercado 1X2 sin margen (2.88/3.78/2.08); cuota justa 1.26 | final 1-0
 2026-11-09,Kristiansund-Vålerenga,Ambos marcan: sí,riesgo-medio,medio,0.592,,P,cuota justa 1.69; 2026: KBK 64% y VIF 56% de sus partidos | final 1-0
 2026-11-09,Kristiansund-Vålerenga,Vålerenga más de 1.5 goles,riesgo-alto,alto,0.482,,P,cuota justa 2.08 | final 1-0
-2026-11-09,Atlético F-Badalona F,Atlético F marca,riesgo-bajo,bajo,0.85,,pendiente,"liga con pocos datos: sin cuotas fiables; estimación con promedio de goles del Atlético (19 en 9, Poisson); medio stake"
+2026-11-09,Atlético F-Badalona F,Atlético F marca,riesgo-bajo,bajo,0.85,,G,"liga con pocos datos: sin cuotas fiables; estimación con promedio de goles del Atlético (19 en 9, Poisson); medio stake" | final 3-0
 2026-11-09,Hvidovre-Aarhus Fremad,Hvidovre o empate,riesgo-bajo,bajo,0.744,,G,liga con pocos datos: cuotas Marathonbet 1.89/3.58/3.60 (fannews); Hvidovre líder invicto; medio stake | final 3-0
 2026-11-09,Köln F-RB Leipzig F,Más de 1.5 goles,riesgo-bajo,bajo,0.80,,G,"sin cuotas: estimación con resultados oficiales OpenLigaDB (Köln 13:12, Leipzig 14:14 en 8); medio stake; 2-1 en juego (captura del usuario): ya cumplido" | final 3-1
 2026-11-09,Hvidovre-Aarhus Fremad,Hvidovre o empate (revisado con cuotas bet365 actuales),riesgo-bajo,bajo,0.794,1.18,G,protocolo bajo: mercado 79% + temporada 13/13 sin perder; alineaciones no encontradas | final 3-0
@@ -75,7 +75,7 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Botosani-Otelul Galati,Menos de 2.5 goles (fila 'Menos de 3'),riesgo-medio,medio,0.55,1.85,G,mercado 53%; H2H 5 de 6 con menos de 2.5 | final 1-1
 2026-11-09,Botosani-Otelul Galati,Ambos marcan: no,riesgo-alto,alto,0.48,2.00,P,mercado 48%; H2H 4 de 6 | final 1-1
 2026-11-09,Köln F-RB Leipzig F,"Ambos marcan: sí (opcional, fuera de regla)",analista,medio,0.58,1.66,G,2-1 en juego: ya cumplido | final 3-1
-2026-11-09,Mushuc Runa-Delfín,Menos de 3.5 goles (fila 'Menos de 4'),riesgo-bajo,bajo,0.795,1.22,pendiente,"liga con pocos datos (tablas en conflicto); solo cuotas bet365 sin margen; medio stake"
+2026-11-09,Mushuc Runa-Delfín,Menos de 3.5 goles (fila 'Menos de 4'),riesgo-bajo,bajo,0.795,1.22,G,"liga con pocos datos (tablas en conflicto); solo cuotas bet365 sin margen; medio stake" | final 2-1
 2026-11-09,San Lorenzo PY-Rubio Ñu,Rubio Ñu más de 0.5 goles,riesgo-bajo,bajo,0.798,,pendiente,liga sin datos completos: media stake (0.5u); cuota justa 1.25 mínimo 1.16; San Lorenzo descendido y encaja ~1.8-2.2 por partido (2 fuentes)
 2026-11-09,San Lorenzo PY-Rubio Ñu,Hándicap asiático San Lorenzo +2.0,filtro-analista,bajo,0.894,1.12,pendiente,DESCARTADO: el mercado da 89% pero San Lorenzo 12-41 en goles; fuentes contradictorias sobre su tabla
 2026-11-09,San Lorenzo PY-Rubio Ñu,Rubio Ñu o empate,filtro-analista,medio,0.738,1.25,pendiente,DESCARTADO: 74% < 78% y bet365 paga 7% menos que lo justo (1.35); Rubio 4G 4E 10P
