@@ -79,3 +79,5 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,San Lorenzo PY-Rubio Ñu,Rubio Ñu más de 0.5 goles,riesgo-bajo,bajo,0.798,,pendiente,liga sin datos completos: media stake (0.5u); cuota justa 1.25 mínimo 1.16; San Lorenzo descendido y encaja ~1.8-2.2 por partido (2 fuentes)
 2026-11-09,San Lorenzo PY-Rubio Ñu,Hándicap asiático San Lorenzo +2.0,filtro-analista,bajo,0.894,1.12,pendiente,DESCARTADO: el mercado da 89% pero San Lorenzo 12-41 en goles; fuentes contradictorias sobre su tabla
 2026-11-09,San Lorenzo PY-Rubio Ñu,Rubio Ñu o empate,filtro-analista,medio,0.738,1.25,pendiente,DESCARTADO: 74% < 78% y bet365 paga 7% menos que lo justo (1.35); Rubio 4G 4E 10P
+2026-11-09,San Lorenzo PY-Rubio Ñu,San Lorenzo menos de 1.5 goles,riesgo-medio,medio,0.703,,pendiente,liga sin datos: 0.25u; justa 1.42; SL 12 goles en 19 partidos y <1.5 en 6 H2H seguidos (Scores24)
+2026-11-09,San Lorenzo PY-Rubio Ñu,Ambos marcan: no,riesgo-alto,alto,0.468,2.00,pendiente,liga sin datos: 0.25u; justa 2.14; Rubio 0 goles en sus 2 últimos
