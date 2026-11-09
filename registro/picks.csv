@@ -62,3 +62,4 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Kristiansund-Vålerenga,Más de 1.5 goles,riesgo-bajo,bajo,0.795,,pendiente,mercado 1X2 sin margen (2.88/3.78/2.08); cuota justa 1.26
 2026-11-09,Kristiansund-Vålerenga,Ambos marcan: sí,riesgo-medio,medio,0.592,,pendiente,cuota justa 1.69; 2026: KBK 64% y VIF 56% de sus partidos
 2026-11-09,Kristiansund-Vålerenga,Vålerenga más de 1.5 goles,riesgo-alto,alto,0.482,,pendiente,cuota justa 2.08
+2026-11-09,Atlético F-Badalona F,Atlético F marca,riesgo-bajo,bajo,0.85,,pendiente,"liga con pocos datos: sin cuotas fiables; estimación con promedio de goles del Atlético (19 en 9, Poisson); medio stake"
