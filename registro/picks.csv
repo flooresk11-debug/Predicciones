@@ -66,3 +66,6 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Hvidovre-Aarhus Fremad,Hvidovre o empate,riesgo-bajo,bajo,0.744,,pendiente,"liga con pocos datos: cuotas Marathonbet 1.89/3.58/3.60 (fannews); Hvidovre líder invicto; medio stake"
 2026-11-09,Köln F-RB Leipzig F,Más de 1.5 goles,riesgo-bajo,bajo,0.80,,pendiente,"sin cuotas: estimación con resultados oficiales OpenLigaDB (Köln 13:12, Leipzig 14:14 en 8); medio stake"
 2026-11-09,Hvidovre-Aarhus Fremad,Hvidovre o empate (revisado con cuotas bet365 actuales),riesgo-bajo,bajo,0.794,1.18,pendiente,protocolo bajo: mercado 79% + temporada 13/13 sin perder; alineaciones no encontradas
+2026-11-09,Kristiansund-Vålerenga,Vålerenga +1.5 hándicap asiático (revisado con bet365),riesgo-bajo,bajo,0.84,1.16,pendiente,protocolo bajo: mercado ~83%; KBK ganó por 2+ solo 3/25 (2 de sus últimos 10)
+2026-11-09,Kristiansund-Vålerenga,Más de 2.5 goles (fila 'Más de 2'),riesgo-medio,medio,0.72,1.28,pendiente,mercado 72.7%; últimos 10: KBK 8/10 y VIF 7/10 con 3+ goles
+2026-11-09,Kristiansund-Vålerenga,Gana Vålerenga,riesgo-alto,alto,0.44,2.10,pendiente,mercado 44%; VIF 1 derrota por 2+ en últimos 10
