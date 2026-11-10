@@ -90,27 +90,27 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Luqueño-2 de Mayo,Empate o 2 de Mayo,riesgo-medio,medio,0.638,1.50,pendiente,0.25u; justa 1.57; habría ganado en 5 de los 6 partidos de Luqueño en casa encontrados
 2026-11-09,Luqueño-2 de Mayo,Menos de 4.5 goles,filtro-analista,bajo,0.904,1.071,pendiente,DESCARTADO: partidos de Luqueño con 5 goles en 3 de 7 (1-4, 3-2, 5-0)
 2026-11-09,Luqueño-2 de Mayo,Gana 2 de Mayo,filtro-analista,alto,0.343,2.62,pendiente,DESCARTADO por precio: justa 2.92
-2026-11-09,Lakers@Hawks (NBA),Luka Doncic 30+ puntos,simulador-nba,bajo,0.912,1.27,pendiente,1u; justa 1.10; 5/5 últimos; riesgo espalda
-2026-11-09,Lakers@Hawks (NBA),Dyson Daniels 3+ asistencias,simulador-nba,bajo,0.909,1.13,pendiente,alternativa sin Doncic; justa 1.10; 5/5
+2026-11-09,Lakers@Hawks (NBA),Luka Doncic 30+ puntos,simulador-nba,bajo,0.912,1.27,G,1u; justa 1.10; 5/5 últimos; riesgo espalda | final LAL 124-114 ATL (captura bet365 del usuario)
+2026-11-09,Lakers@Hawks (NBA),Dyson Daniels 3+ asistencias,simulador-nba,bajo,0.909,1.13,G,alternativa sin Doncic; justa 1.10; 5/5 | captura bet365 del usuario
 2026-11-09,Lakers@Hawks (NBA),Nickeil Alexander-Walker 20+ puntos,simulador-nba,medio,0.667,1.95,pendiente,0.75u; justa 1.50; 4/5; prom 22.1
 2026-11-09,Lakers@Hawks (NBA),Luka Doncic 5+ triples,simulador-nba,medio,0.707,1.90,pendiente,0.75u; justa 1.42; 5/5; no combinar con Doncic 30+
 2026-11-09,Lakers@Hawks (NBA),Nickeil Alexander-Walker 4+ triples,simulador-nba,alto,0.488,2.25,pendiente,0.5u; justa 2.05; 3/5
-2026-11-09,Lakers@Hawks (NBA),Gana Lakers,filtro-analista,medio,0.504,2.07,pendiente,DESCARTADO: modelo sin cancha ni back-to-back; Reaves en duda
-2026-11-09,Cavaliers@Hornets (NBA),Donovan Mitchell 2+ triples,simulador-nba,bajo,0.811,1.22,pendiente,1u; justa 1.23; 4/5
-2026-11-09,Cavaliers@Hornets (NBA),Cavaliers más de 102.5 puntos,simulador-nba,bajo,0.792,1.20,pendiente,alternativa de partido; justa 1.26
+2026-11-09,Lakers@Hawks (NBA),Gana Lakers,filtro-analista,medio,0.504,2.07,G,DESCARTADO: modelo sin cancha ni back-to-back; Reaves en duda | LAL 124-114; el descarte fue un error
+2026-11-09,Cavaliers@Hornets (NBA),Donovan Mitchell 2+ triples,simulador-nba,bajo,0.811,1.22,P,1u; justa 1.23; 4/5 | final CHA 124-112 CLE; captura bet365 del usuario
+2026-11-09,Cavaliers@Hornets (NBA),Cavaliers más de 102.5 puntos,simulador-nba,bajo,0.792,1.20,G,alternativa de partido; justa 1.26 | CLE 112
 2026-11-09,Cavaliers@Hornets (NBA),Evan Mobley 15+ puntos,simulador-nba,medio,0.756,1.44,pendiente,0.75u; justa 1.32; 4/5; prom 18.8
 2026-11-09,Cavaliers@Hornets (NBA),Donovan Mitchell 5+ asistencias,simulador-nba,medio,0.635,1.80,pendiente,0.75u; justa 1.58; 3/5
 2026-11-09,Cavaliers@Hornets (NBA),Evan Mobley 20+ puntos,simulador-nba,alto,0.447,2.60,pendiente,0.5u; justa 2.24; no combinar con Mobley 15+
-2026-11-09,Cavaliers@Hornets (NBA),Más de 215.5,filtro-analista,medio,0.521,1.92,pendiente,DESCARTADO: ratings CHA incluyen a Miller y Knueppel (baja)
+2026-11-09,Cavaliers@Hornets (NBA),Más de 215.5,filtro-analista,medio,0.521,1.92,G,DESCARTADO: ratings CHA incluyen a Miller y Knueppel (baja) | 236 puntos; el descarte fue un error: sin Miller Charlotte anotó 124
 2026-11-09,Wizards@Pistons (NBA),Kyshawn George 3+ asistencias,simulador-nba,bajo,0.880,1.23,pendiente,1u; justa 1.14; 5/5; prom 5.2
-2026-11-09,Wizards@Pistons (NBA),Duncan Robinson 2+ triples,simulador-nba,bajo,0.890,1.12,pendiente,alternativa; justa 1.12; 5/5
+2026-11-09,Wizards@Pistons (NBA),Duncan Robinson 2+ triples,simulador-nba,bajo,0.890,1.12,G,alternativa; justa 1.12; 5/5 | 4 triples (captura bet365 con 3:31 por jugar)
 2026-11-09,Wizards@Pistons (NBA),Kyshawn George 2+ triples,simulador-nba,medio,0.836,1.55,pendiente,0.75u; justa 1.20; 5/5; rebajado a medio por defensa nº1 de DET
 2026-11-09,Wizards@Pistons (NBA),Wizards +10.5,simulador-nba,medio,0.543,1.86,pendiente,0.75u; justa 1.84; DET en back-to-back sin Duren ni Joe
 2026-11-09,Wizards@Pistons (NBA),Duncan Robinson 5+ triples,simulador-nba,alto,0.403,3.35,pendiente,0.5u; justa 2.48; 2/5
 2026-11-09,Wizards@Pistons (NBA),Anthony Davis 20+ puntos,filtro-analista,medio,0.753,1.74,pendiente,DESCARTADO: vuelve de lesión de tobillo y sus últimos 5 son anteriores
-2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 1+ triples,simulador-nba,bajo,0.897,1.14,pendiente,1u; justa 1.12; 5/5; 61.9% en triples
-2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 10+ puntos,simulador-nba,bajo,0.766,1.28,pendiente,alternativa; justa 1.31; 5/5
-2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 2+ triples,simulador-nba,medio,0.690,1.71,pendiente,0.75u; justa 1.45; 5/5; no combinar con otros de Coward
+2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 1+ triples,simulador-nba,bajo,0.897,1.14,P,1u; justa 1.12; 5/5; 61.9% en triples | según el usuario; 0 triples y 0 puntos con 7:53 por jugar; causa no encontrada
+2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 10+ puntos,simulador-nba,bajo,0.766,1.28,P,alternativa; justa 1.31; 5/5 | según el usuario; 0 puntos con 7:53 por jugar
+2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 2+ triples,simulador-nba,medio,0.690,1.71,P,0.75u; justa 1.45; 5/5; no combinar con otros de Coward | 0 triples (derivado del 1+)
 2026-11-09,Grizzlies@Raptors (NBA),Grizzlies +2.5,simulador-nba,medio,0.527,1.87,pendiente,CONDICIONAL: solo si Barnes o Quickley son baja
-2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 3+ triples,simulador-nba,alto,0.461,3.10,pendiente,0.5u; justa 2.17; 2/5
+2026-11-09,Grizzlies@Raptors (NBA),Cedric Coward 3+ triples,simulador-nba,alto,0.461,3.10,P,0.5u; justa 2.17; 2/5 | 0 triples (derivado del 1+)
 2026-11-09,Grizzlies@Raptors (NBA),Cam Spencer 5+ asistencias,filtro-analista,medio,0.698,1.71,pendiente,DESCARTADO: sin promedio de temporada y un 0 en sus últimos 5

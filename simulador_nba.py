@@ -215,16 +215,21 @@ def main():
                 x = float(lin)
                 p = sum(1 for s in muestras if s >= x - (0.5 if mercado == "puntos" else 0)) / len(muestras)
                 aciertos = sum(1 for u in ult if u >= x)
-                jug.append((f"{nombre} {lin}+ {mercado}", p, cuota, p * cuota - 1, f"últimos 5: {aciertos}/5"))
+                # Regla del 10/11/2026 (Coward y Mitchell): el modelo de props estaba sobreconfiado.
+                # Se mezcla con la probabilidad que da bet365 (1/cuota, con margen incluido: conservador).
+                p_mod = p
+                p = a.peso_mercado * min(1.0, 1 / cuota) + (1 - a.peso_mercado) * p_mod
+                jug.append((f"{nombre} {lin}+ {mercado}", p, cuota, p * cuota - 1, f"últimos 5: {aciertos}/5", p_mod))
 
     w("\n## 5. Todas las selecciones del partido\n")
     w("| Selección | Prob. | Cuota justa | bet365 | Valor | Riesgo |\n|---|---|---|---|---|---|")
     for m, p, c, ev, _ in filas:
         w(f"| {m} | {p:.1%} | {1 / p if p > 0 else float('inf'):.2f} | {c} | {ev:+.1%} | {riesgo(p)} |")
     w("\n## 6. Todas las selecciones de jugadores (si el jugador juega)\n")
-    w("| Selección | Prob. | Cuota justa | bet365 | Valor | Últimos 5 | Riesgo |\n|---|---|---|---|---|---|---|")
-    for m, p, c, ev, n in jug:
-        w(f"| {m} | {p:.1%} | {1 / p if p > 0 else float('inf'):.2f} | {c} | {ev:+.1%} | {n.split(': ')[1]} | {riesgo(p)} |")
+    w(f"Prob. = {a.peso_mercado:.0%} bet365 (1/cuota) + {1 - a.peso_mercado:.0%} modelo. Prob. modelo = solo datos del jugador.\n")
+    w("| Selección | Prob. | Prob. modelo | Cuota justa | bet365 | Valor | Últimos 5 | Riesgo |\n|---|---|---|---|---|---|---|---|")
+    for m, p, c, ev, n, pm in jug:
+        w(f"| {m} | {p:.1%} | {pm:.1%} | {1 / p if p > 0 else float('inf'):.2f} | {c} | {ev:+.1%} | {n.split(': ')[1]} | {riesgo(p)} |")
 
     texto = "\n".join(out) + "\n"
     if a.salida:

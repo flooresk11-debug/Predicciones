@@ -58,3 +58,16 @@ Un pick solo es "riesgo bajo" si cumple TODO esto:
 5. **Cuotas actuales**: si la cuota se movió en contra del pick desde el análisis, se revisa.
 6. **Precio**: no hace falta que tenga valor, pero se descarta si bet365 paga más de un 8% por debajo de lo justo.
 Aun así, un 80-85% se pierde 1 de cada 6-7 veces: nunca es seguro, y nunca más de 2 en una combinada.
+
+## 8. Lecciones de la primera noche NBA (9/11/2026)
+Resultado de los picks de riesgo bajo jugados: Doncic 30+ ✅, Daniels 3+ ast ✅, Robinson 2+ triples ✅,
+Cavs más de 102.5 ✅, Mitchell 2+ triples ❌, Coward 1+ triple ❌, Coward 10+ puntos ❌ (George 3+ ast sin cerrar).
+Fueron 4 de 7; con mis probabilidades lo esperado eran unos 6.
+1. **Nunca dos props del mismo jugador en una apuesta** (Coward 10+ puntos + 1+ triple). Si el jugador tiene una mala noche,
+   pierde la apuesta entera: no son dos apuestas del 80-90%, es una sola.
+2. **Las "Crear apuesta" de 2 patas al 85-90% cada una son apuestas del ~75%**: se pierde 1 de cada 4. No son de riesgo bajo.
+3. **Props mezclados con el mercado**: `simulador_nba.py` da ahora 60% a bet365 (1/cuota) y 40% al modelo, igual que en los
+   partidos. Con 5-10 partidos de muestra, el modelo del jugador solo no basta.
+4. **Equipo con muchas bajas ≠ equipo que no anota**: Charlotte, sin Miller, Knueppel ni Schröder, anotó 124 y ganó a Cleveland.
+   El filtro del analista descartó el más de 215.5 y la victoria de los Lakers, y los dos habrían ganado. No se descarta un valor
+   del mercado solo por suponer que las bajas pesan más de lo que el mercado ya descuenta.
