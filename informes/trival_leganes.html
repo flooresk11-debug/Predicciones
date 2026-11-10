@@ -75,6 +75,10 @@ th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-
 td:first-child,th:first-child{text-align:left}
 td{font-variant-numeric:tabular-nums}
 tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
 .g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
 .note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
 .foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
@@ -122,29 +126,28 @@ a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
       <p class="note">Del Trival Valderas no encontré resultados partido a partido de esta temporada. Solo sé que lleva 5 sin ganar, con 4 empates (una fuente).</p>
     </section>
     <section class="card" aria-labelledby="h-1x2">
-      <h2 id="h-1x2">Resultado a los 90 minutos <small>mi modelo, sin cuotas</small></h2>
+      <h2 id="h-1x2">Resultados reales <small>sin modelo</small></h2>
       <div class="odds">
-        <div><b>14%</b><span>Trival</span></div>
-        <div><b>22%</b><span>Empate</span></div>
-        <div><b style="color:var(--navy)">64%</b><span>Leganés</span></div>
+        <div><b style="color:var(--good)">3</b><span>Ganados</span></div>
+        <div><b style="color:var(--warn)">3</b><span>Empates</span></div>
+        <div><b style="color:var(--bad)">7</b><span>Perdidos</span></div>
       </div>
-      <div class="bar" aria-hidden="true"><i style="width:14%;background:var(--copa)"></i><i style="width:22%;background:var(--warn)"></i><i style="width:64%;background:var(--navy)"></i></div>
-      <p style="margin:12px 0 4px;font-weight:600">Marcadores más probables (Trival-Leganés)</p>
+      <p class="meta" style="margin-top:6px">Leganés, 13 partidos de liga · últimos 6: 0 ganados, 1 empate, 5 perdidos</p>
       <div class="scores">
-        <div><b>0-1</b><span>14.8%</span></div><div><b>0-2</b><span>13.3%</span></div><div><b>1-1</b><span>10.3%</span></div><div><b>1-2</b><span>9.3%</span></div><div><b>0-0</b><span>8.2%</span></div>
+        <div><b>11</b><span>goles a favor</span></div><div><b>24</b><span>en contra</span></div><div><b>6/13</b><span>sin marcar</span></div><div><b>10/13</b><span>le marcan</span></div><div><b>5/13</b><span>0-0 o empate al descanso</span></div>
       </div>
-      <p class="note">Goles esperados: Trival 0.7 · Leganés 1.8. Es una suposición mía: el Leganés marca 0.85 por partido en Segunda, pero contra un equipo de 5.ª categoría debería marcar más.</p>
+      <p class="note">Trival Valderas: 5 partidos sin ganar, 4 de ellos empates (una fuente) y 2-2 contra Leganés B (web oficial del Leganés). No hay más resultados verificados de su temporada.</p>
     </section>
   </div>
 
   <section class="card" aria-labelledby="h-picks">
     <h2 id="h-picks">Picks <small>ordenados por probabilidad. "Mínimo" = cuota por debajo de la cual no entrar</small></h2>
-    <div class="pick"><span class="risk b">Bajo</span><div><h3>Más de 2.5 tarjetas</h3><p>12 de 13 partidos del Leganés y los últimos 6 seguidos. El Leganés solo ya promedia 3.3 amarillas. Falla si el partido es tranquilo y el Leganés domina sin faltas.</p></div><div class="pp"><b>85%</b><span>mínimo 1.20</span></div></div>
-    <div class="pick"><span class="risk b">Bajo</span><div><h3>Trival menos de 1.5 goles</h3><p>Modelo 84%. El Leganés encajó 2 o más en 4 de sus últimos 6, por eso no es el principal.</p></div><div class="pp"><b>84%</b><span>mínimo 1.20</span></div></div>
-    <div class="pick"><span class="risk m">Medio</span><div><h3>Ambos reciben tarjeta</h3><p>11 de 13 partidos del Leganés (últimos 6: 6/6). Del Trival no hay datos de tarjetas.</p></div><div class="pp"><b>78%</b><span>mínimo 1.35</span></div></div>
-    <div class="pick"><span class="risk a">Alto</span><div><h3>Empate al descanso</h3><p>El Leganés llegó 0-0 al descanso en 6 de 13 partidos; el modelo da 41%. Partido trabado al inicio.</p></div><div class="pp"><b>43%</b><span>mínimo 2.40</span></div></div>
+    <div class="pick"><span class="risk b">Confirmado</span><div><h3>Más de 2.5 tarjetas</h3><p>Leganés: 12 de 13 partidos y los últimos 6 seguidos. Árbitra: 4.43 tarjetas por partido en Segunda y 3.82 en su carrera. Falla si el partido es tranquilo y el Leganés domina sin faltas.</p></div><div class="pp"><b>12/13</b><span>mínimo 1.22</span></div></div>
+    <div class="pick"><span class="risk x">Sin confirmar</span><div><h3>Ambos reciben tarjeta</h3><p>Leganés 11 de 13 (últimos 6: 6/6), pero del Trival no hay ni un dato de tarjetas. No se apuesta.</p></div><div class="pp"><b>11/13</b><span>falta el Trival</span></div></div>
+    <div class="pick"><span class="risk x">Sin confirmar</span><div><h3>Empate al descanso</h3><p>Leganés empatado al descanso en 5 de 13 (38%). Con un solo equipo de datos, no se apuesta.</p></div><div class="pp"><b>5/13</b><span>falta el Trival</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Trival menos de 1.5 goles</h3><p>Solo lo apoyaba el modelo. En los datos, al Leganés le marcan en 10 de 13 partidos y en los últimos 6 seguidos.</p></div><div class="pp"><b>10/13</b><span>le marcan</span></div></div>
     <div class="pick"><span class="risk x">Descartado</span><div><h3>Leganés marca</h3><p>Parece fácil, pero el Leganés marcó solo en 7 de 13 partidos de liga. Es el error de Técnico–Manta: el favorito que los datos no respaldan.</p></div><div class="pp"><b>54%</b><span>en los datos</span></div></div>
-    <div class="pick"><span class="risk x">Descartado</span><div><h3>Leganés −1.5</h3><p>Ganar por 2 o más: 37%. Con 11 goles en 13 partidos, no.</p></div><div class="pp"><b>37%</b><span>modelo</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Leganés −1.5</h3><p>El Leganés marcó 2 o más solo en 2 de 13 partidos.</p></div><div class="pp"><b>2/13</b><span>en los datos</span></div></div>
   </section>
 
   <div class="two">
@@ -175,26 +178,32 @@ a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
   </div>
 
   <section class="card" aria-labelledby="h-mk">
-    <h2 id="h-mk">Todos los mercados <small>mi probabilidad y la cuota justa (1 ÷ probabilidad)</small></h2>
-    <div class="tw"><table>
-      <thead><tr><th>Mercado</th><th>Prob.</th><th>Cuota justa</th><th>Fuente</th></tr></thead>
+    <h2 id="h-mk">Todos los mercados <small>solo datos reales del Leganés (13 partidos) y estado</small></h2>
+    <div class="tw"><table class="mk">
+      <thead><tr><th>Mercado</th><th>13 part.</th><th>Últ. 6</th><th>Estado</th></tr></thead>
       <tbody>
-        <tr><td>Gana Leganés (90 min)</td><td>64%</td><td>1.57</td><td>modelo</td></tr>
-        <tr><td>Leganés o empate</td><td>86%</td><td>1.16</td><td>modelo</td></tr>
-        <tr><td>Leganés gana cualquier mitad</td><td>73%</td><td>1.38</td><td>modelo</td></tr>
-        <tr><td>Más de 1.5 goles</td><td>71%</td><td>1.40</td><td>modelo</td></tr>
-        <tr><td>Más de 2.5 goles</td><td>46%</td><td>2.19</td><td>modelo</td></tr>
-        <tr><td>Menos de 3.5 goles</td><td>76%</td><td>1.32</td><td>modelo</td></tr>
-        <tr><td>Ambos marcan sí</td><td>42%</td><td>2.38</td><td>modelo</td></tr>
-        <tr><td>Gol en el 1.er tiempo</td><td>68%</td><td>1.48</td><td>modelo</td></tr>
-        <tr><td>Más de 2.5 tarjetas</td><td>85-88%</td><td>1.15</td><td>datos + modelo</td></tr>
-        <tr><td>Más de 3.5 tarjetas</td><td>75%</td><td>1.34</td><td>modelo (supuesto Trival 2.0)</td></tr>
-        <tr><td>Más de 4.5 tarjetas</td><td>59%</td><td>1.69</td><td>modelo</td></tr>
-        <tr><td>Más tarjetas: Leganés</td><td>62%</td><td>1.61</td><td>modelo</td></tr>
-        <tr><td>Más corners: Leganés</td><td class="nd">76%</td><td class="nd">1.31</td><td class="nd">supuesto 6.0 contra 3.0</td></tr>
-        <tr><td>Corners más de 8.5</td><td class="nd">52%</td><td class="nd">1.91</td><td class="nd">supuesto</td></tr>
+        <tr><td>Más de 2.5 tarjetas</td><td class="g">12/13</td><td class="g">6/6</td><td class="g">Confirmado</td></tr>
+        <tr><td>Más de 3.5 tarjetas</td><td class="g">11/13</td><td class="g">6/6</td><td class="w">Falta Trival</td></tr>
+        <tr><td>Más de 4.5 tarjetas</td><td>10/13</td><td class="g">6/6</td><td class="w">Falta Trival</td></tr>
+        <tr><td>Ambos reciben tarjeta</td><td class="g">11/13</td><td class="g">6/6</td><td class="w">Falta Trival</td></tr>
+        <tr><td>Leganés 2+ tarjetas</td><td class="g">11/13</td><td class="g">6/6</td><td class="w">Falta árbitra por equipo</td></tr>
+        <tr><td>Más tarjetas: Leganés</td><td>8/13</td><td>5/6</td><td class="w">Falta Trival</td></tr>
+        <tr><td>Menos de 4.5 goles</td><td class="g">11/13</td><td>5/6</td><td class="w">Falta Trival</td></tr>
+        <tr><td>Menos de 3.5 goles</td><td>9/13</td><td class="bd">3/6</td><td class="bd">No</td></tr>
+        <tr><td>Más de 1.5 goles</td><td>9/13</td><td>5/6</td><td class="w">Falta Trival</td></tr>
+        <tr><td>Más de 2.5 goles</td><td class="bd">5/13</td><td>4/6</td><td class="bd">No</td></tr>
+        <tr><td>Ambos marcan sí</td><td class="bd">5/13</td><td>3/6</td><td class="bd">No</td></tr>
+        <tr><td>Gol en el 1.er tiempo</td><td>8/13</td><td>4/6</td><td class="bd">No</td></tr>
+        <tr><td>Leganés marca</td><td class="bd">7/13</td><td>3/6</td><td class="bd">No</td></tr>
+        <tr><td>Le marcan al Leganés</td><td class="g">10/13</td><td class="g">6/6</td><td class="w">Falta Trival</td></tr>
+        <tr><td>Leganés gana</td><td class="bd">3/13</td><td class="bd">0/6</td><td class="bd">No</td></tr>
+        <tr><td>Leganés gana cualquier mitad</td><td class="bd">5/13</td><td class="bd">2/6</td><td class="bd">No</td></tr>
+        <tr><td>Corners más de 8.5</td><td>9/13</td><td class="g">6/6</td><td class="w">Falta Trival</td></tr>
+        <tr><td>Corners menos de 11.5</td><td class="g">12/13</td><td>5/6</td><td class="w">Falta Trival</td></tr>
+        <tr><td>Más corners: Leganés</td><td class="bd">6/13</td><td class="bd">2/6</td><td class="bd">No</td></tr>
+        <tr><td>Leganés 3+ remates a puerta</td><td class="bd">6/13</td><td>3/6</td><td class="bd">No</td></tr>
       </tbody></table></div>
-    <p class="note">Corners y tarjetas del Trival son supuestos: no hay estadísticas de su temporada. Los mercados en gris tienen confianza baja.</p>
+    <p class="note">"Confirmado" = lo cumplen el Leganés y la árbitra con datos de varias fuentes. "Falta Trival" = buen dato del Leganés, pero no hay estadísticas del Trival para confirmarlo. Ojo: son partidos contra rivales de Segunda; hoy el rival es de 5.ª categoría.</p>
   </section>
 
   <section class="card" aria-labelledby="h-pl">
@@ -206,12 +215,12 @@ a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
     <div class="card">Leganés<span>13 partidos reales con goles, tiros, corners y tarjetas</span></div>
     <div class="card">Trival Valderas<span>Sin datos partido a partido de 2026-27</span></div>
     <div class="card">Sin confirmar<span>Árbitro, alineaciones, cuotas de bet365</span></div>
-    <div class="card">Confianza<span>Media en tarjetas, baja en el resto</span></div>
+    <div class="card">Confirmado<span>Solo Más de 2.5 tarjetas</span></div>
   </section>
 
   <section class="card" aria-labelledby="h-met">
     <h2 id="h-met">Método y fuentes</h2>
-    <p style="margin:0 0 8px;font-size:15px;color:var(--mut)">Datos del Leganés: football-data.co.uk (13 partidos de Segunda 2026-27), contados mercado por mercado. Goles: Poisson con 0.7 y 1.8 goles esperados (supuesto). Tarjetas y corners: binomial negativa con la media real del Leganés y una suposición para el Trival. Un pick de 85% se pierde 3 de cada 20 veces. Apuesta solo lo que puedas perder.</p>
+    <p style="margin:0 0 8px;font-size:15px;color:var(--mut)">Sin modelo: cada cifra es un recuento de partidos reales. Leganés: football-data.co.uk (13 partidos de Segunda 2026-27). Árbitra: BeSoccer, Valuestats y prensa aragonesa. Alineaciones y bajas: web del Leganés, Al Cabo de la Calle y bet365 Noticias. Un pick confirmado también puede perder: 12 de 13 significa que falló 1 vez. Apuesta solo lo que puedas perder.</p>
     <div class="src">
       <a href="https://www.elgoldigital.com/futbol/copa-del-rey/trival-valderas-leganes-copa-del-rey-luis-carrion-morata/" target="_blank" rel="noopener">El Gol Digital</a>
       <a href="https://www.cdleganes.com/cup-debut-against-trival-valderas" target="_blank" rel="noopener">CD Leganés</a>
