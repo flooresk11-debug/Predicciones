@@ -109,3 +109,4 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-10,Roma F-Servette F,Más de 1.5 goles,riesgo-bajo,bajo,0.82,,pendiente,sin cuotas: Opta 67.5/17.9/14.6 -> lambdas ~2.3-0.9; Servette 6/6 partidos conocidos con 2+ goles (14 encajados en UWCL); mínimo 1.18; 0.5u
 2026-11-10,Roma F-Servette F,Gana Roma,analista,medio,0.675,,pendiente,informativo (sin medio por regla); Roma 0 goles en UWCL (0-0, 0-6, 0-2) pero 6/6 en Serie A; mínimo 1.55
 2026-11-10,Roma F-Servette F,Roma marca,filtro-analista,bajo,0.89,,pendiente,NO es bajo: Roma marcó solo en 6/9 partidos conocidos (0 en UWCL), aunque Servette encaja 4.7 por partido en UWCL
+2026-11-10,Feyenoord F-Wolfsburg F (vuelta 0-7),Wolfsburg marca,analista,bajo,0.85,,pendiente,SIN PICK por regla §11 (sin datos 2026-27 de Feyenoord; rotaciones); solo seguimiento; mínimo 1.15
