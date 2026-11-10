@@ -124,4 +124,6 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-10,Trival Valderas-Leganés (Copa),Empate al descanso,filtro-analista,alto,0.45,,pendiente,"Leganés 0-0 al descanso en 6/13 y 7 sin ganar; Trival 4 empates en 5; mínimo 2.30; 0.25u | SIN CONFIRMAR (sin datos del Trival): retirado"
 2026-11-10,Trival Valderas-Leganés (Copa),Leganés marca,filtro-analista,bajo,0.85,,pendiente,"DESCARTADO como bajo: Leganés marcó solo en 7/13 de liga (11 goles)"
 2026-11-10,Inter F-Man City F,City o empate,riesgo-bajo,bajo,0.88,,pendiente,"confirmado: City 12/12 sin perder (UEFA, Wikipedia, Goal); Inter solo perdió 1/9 (0-6 Lyon); mínimo 1.10; 0.5u; goles en conflicto -> sin pick"
-2026-11-10,PSG F-Bayern F,Más de 1.5 goles,riesgo-bajo,bajo,0.85,,pendiente,"confirmado por datos: PSG 9/10, Bayern 6/7, H2H 2025 3-1; mínimo 1.20; 0.5u"
+2026-11-10,PSG F-Bayern F,Más de 1.5 goles,filtro-analista,bajo,0.85,1.14,pendiente,"confirmado por datos: PSG 9/10, Bayern 6/7, H2H 2025 3-1; mínimo 1.20; 0.5u | sustituido por Rango 2-6 @1.22 (mismo riesgo, más pago)"
+2026-11-10,PSG F-Bayern F,Rango 2-6 goles,riesgo-bajo,bajo,0.86,1.22,pendiente,"datos: PSG 9/10, Bayern 6/7 en ese rango; bet365 1.22 > 1.20 mínimo; 0.5u"
+2026-11-10,PSG F-Bayern F,Rango 2-5 goles,riesgo-medio,medio,0.78,1.33,pendiente,"datos: PSG 9/10, Bayern 5/7; 0.25u; no combinar con 2-6"
