@@ -1,0 +1,224 @@
+<title>Trival Valderas vs Leganés</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Copa del Rey · Primera ronda · Partido único</div>
+  <header class="hero">
+    <div class="team"><b>Trival Valderas</b><span>Tercera Federación (5.ª categoría) · local nominal</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Leganés</b><span>Segunda División · 17.º, 12 puntos</span></div>
+  </header>
+  <div class="meta">Martes 10 nov 2026 · 13:00 (tu hora) · 20:00 en España · Estadio Butarque (La Canaleja no puede acoger el partido) · Árbitro sin confirmar · Sin VAR en esta ronda</div>
+
+  <section class="main-pick" aria-label="Pick principal">
+    <div><div class="eyebrow" style="color:var(--good)">Pick de riesgo bajo</div><h1>Más de 2.5 tarjetas</h1></div>
+    <div style="text-align:right"><div class="p">85%</div><div class="meta">Cuota mínima 1.20 · 0.5 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Leganés en crisis</b><span>7 partidos sin ganar. Luis Carrión llegó el 18 de octubre: 1-1, 3-4 y 1-3 desde entonces.</span></div>
+    <div class="card tile"><b>Casi no marca</b><span>11 goles en 13 partidos de liga y 6 partidos sin marcar.</span></div>
+    <div class="card tile"><b>Muchas tarjetas</b><span>3.3 amarillas propias por partido. Hubo 3 o más en 12 de 13 partidos.</span></div>
+    <div class="card tile"><b>Trival empata</b><span>5 sin ganar, pero 4 de ellos empates. El año pasado fue 2.º y perdió la final de ascenso.</span></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-forma">
+      <h2 id="h-forma">Forma del Leganés <small>últimos 6 de liga, base football-data</small></h2>
+      <div class="form">
+        <div><span>Leganés – Albacete</span><span class="r num">1-3</span><span class="chip L">P</span></div>
+        <div><span>Valladolid – Leganés</span><span class="r num">4-3</span><span class="chip L">P</span></div>
+        <div><span>Leganés – Mallorca</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Leganés – Córdoba</span><span class="r num">0-1</span><span class="chip L">P</span></div>
+        <div><span>Almería – Leganés</span><span class="r num">3-0</span><span class="chip L">P</span></div>
+        <div><span>Cádiz – Leganés</span><span class="r num">4-0</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Del Trival Valderas no encontré resultados partido a partido de esta temporada. Solo sé que lleva 5 sin ganar, con 4 empates (una fuente).</p>
+    </section>
+    <section class="card" aria-labelledby="h-1x2">
+      <h2 id="h-1x2">Resultado a los 90 minutos <small>mi modelo, sin cuotas</small></h2>
+      <div class="odds">
+        <div><b>14%</b><span>Trival</span></div>
+        <div><b>22%</b><span>Empate</span></div>
+        <div><b style="color:var(--navy)">64%</b><span>Leganés</span></div>
+      </div>
+      <div class="bar" aria-hidden="true"><i style="width:14%;background:var(--copa)"></i><i style="width:22%;background:var(--warn)"></i><i style="width:64%;background:var(--navy)"></i></div>
+      <p style="margin:12px 0 4px;font-weight:600">Marcadores más probables (Trival-Leganés)</p>
+      <div class="scores">
+        <div><b>0-1</b><span>14.8%</span></div><div><b>0-2</b><span>13.3%</span></div><div><b>1-1</b><span>10.3%</span></div><div><b>1-2</b><span>9.3%</span></div><div><b>0-0</b><span>8.2%</span></div>
+      </div>
+      <p class="note">Goles esperados: Trival 0.7 · Leganés 1.8. Es una suposición mía: el Leganés marca 0.85 por partido en Segunda, pero contra un equipo de 5.ª categoría debería marcar más.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Picks <small>ordenados por probabilidad. "Mínimo" = cuota por debajo de la cual no entrar</small></h2>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Más de 2.5 tarjetas</h3><p>12 de 13 partidos del Leganés y los últimos 6 seguidos. El Leganés solo ya promedia 3.3 amarillas. Falla si el partido es tranquilo y el Leganés domina sin faltas.</p></div><div class="pp"><b>85%</b><span>mínimo 1.20</span></div></div>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Trival menos de 1.5 goles</h3><p>Modelo 84%. El Leganés encajó 2 o más en 4 de sus últimos 6, por eso no es el principal.</p></div><div class="pp"><b>84%</b><span>mínimo 1.20</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Ambos reciben tarjeta</h3><p>11 de 13 partidos del Leganés (últimos 6: 6/6). Del Trival no hay datos de tarjetas.</p></div><div class="pp"><b>78%</b><span>mínimo 1.35</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Empate al descanso</h3><p>El Leganés llegó 0-0 al descanso en 6 de 13 partidos; el modelo da 41%. Partido trabado al inicio.</p></div><div class="pp"><b>43%</b><span>mínimo 2.40</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Leganés marca</h3><p>Parece fácil, pero el Leganés marcó solo en 7 de 13 partidos de liga. Es el error de Técnico–Manta: el favorito que los datos no respaldan.</p></div><div class="pp"><b>54%</b><span>en los datos</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Leganés −1.5</h3><p>Ganar por 2 o más: 37%. Con 11 goles en 13 partidos, no.</p></div><div class="pp"><b>37%</b><span>modelo</span></div></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-why">
+      <h2 id="h-why">Por qué las tarjetas</h2>
+      <ul class="why">
+        <li><span class="ok">✔</span><span>Leganés: 3 o más amarillas en el partido en 12 de 13 y 3.3 propias por partido.</span></li>
+        <li><span class="ok">✔</span><span>Copa sin VAR, rival amateur muy motivado y un favorito nervioso por la mala racha.</span></li>
+        <li><span class="ok">✔</span><span>No depende de goles, que es justo lo que le falta al Leganés.</span></li>
+        <li><span class="no">✖</span><span>No sé cómo juega el Trival ni quién arbitra.</span></li>
+        <li><span class="no">✖</span><span>Si el Leganés marca pronto y domina, puede haber pocas faltas.</span></li>
+      </ul>
+    </section>
+    <section class="card" aria-labelledby="h-trend">
+      <h2 id="h-trend">Leganés en 13 partidos <small>datos reales</small></h2>
+      <div class="tw"><table style="min-width:0">
+        <thead><tr><th>Mercado</th><th>Todos</th><th>Últ. 6</th></tr></thead>
+        <tbody>
+          <tr><td>Más de 2.5 tarjetas</td><td class="g">12/13</td><td class="g">6/6</td></tr>
+          <tr><td>Más de 3.5 tarjetas</td><td class="g">11/13</td><td class="g">6/6</td></tr>
+          <tr><td>Ambos reciben tarjeta</td><td class="g">11/13</td><td class="g">6/6</td></tr>
+          <tr><td>Menos de 4.5 goles</td><td class="g">11/13</td><td class="g">5/6</td></tr>
+          <tr><td>Corners menos de 11.5</td><td class="g">12/13</td><td class="g">5/6</td></tr>
+          <tr><td>Leganés marca</td><td class="bd">7/13</td><td class="w">4/6</td></tr>
+        </tbody></table></div>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-mk">
+    <h2 id="h-mk">Todos los mercados <small>mi probabilidad y la cuota justa (1 ÷ probabilidad)</small></h2>
+    <div class="tw"><table>
+      <thead><tr><th>Mercado</th><th>Prob.</th><th>Cuota justa</th><th>Fuente</th></tr></thead>
+      <tbody>
+        <tr><td>Gana Leganés (90 min)</td><td>64%</td><td>1.57</td><td>modelo</td></tr>
+        <tr><td>Leganés o empate</td><td>86%</td><td>1.16</td><td>modelo</td></tr>
+        <tr><td>Leganés gana cualquier mitad</td><td>73%</td><td>1.38</td><td>modelo</td></tr>
+        <tr><td>Más de 1.5 goles</td><td>71%</td><td>1.40</td><td>modelo</td></tr>
+        <tr><td>Más de 2.5 goles</td><td>46%</td><td>2.19</td><td>modelo</td></tr>
+        <tr><td>Menos de 3.5 goles</td><td>76%</td><td>1.32</td><td>modelo</td></tr>
+        <tr><td>Ambos marcan sí</td><td>42%</td><td>2.38</td><td>modelo</td></tr>
+        <tr><td>Gol en el 1.er tiempo</td><td>68%</td><td>1.48</td><td>modelo</td></tr>
+        <tr><td>Más de 2.5 tarjetas</td><td>85-88%</td><td>1.15</td><td>datos + modelo</td></tr>
+        <tr><td>Más de 3.5 tarjetas</td><td>75%</td><td>1.34</td><td>modelo (supuesto Trival 2.0)</td></tr>
+        <tr><td>Más de 4.5 tarjetas</td><td>59%</td><td>1.69</td><td>modelo</td></tr>
+        <tr><td>Más tarjetas: Leganés</td><td>62%</td><td>1.61</td><td>modelo</td></tr>
+        <tr><td>Más corners: Leganés</td><td class="nd">76%</td><td class="nd">1.31</td><td class="nd">supuesto 6.0 contra 3.0</td></tr>
+        <tr><td>Corners más de 8.5</td><td class="nd">52%</td><td class="nd">1.91</td><td class="nd">supuesto</td></tr>
+      </tbody></table></div>
+    <p class="note">Corners y tarjetas del Trival son supuestos: no hay estadísticas de su temporada. Los mercados en gris tienen confianza baja.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-pl">
+    <h2 id="h-pl">Jugadores y alineaciones</h2>
+    <p style="margin:0">No encontré alineaciones probables ni estadísticas por jugador de esta temporada para ninguno de los dos equipos, así que no calculo props de jugador. Carrión dijo que pondrá a los mejores; el portero titular no está decidido (Sule jugó con el filial). Una fuente menciona a Morata como delantero clave del Leganés, pero no lo pude confirmar.</p>
+  </section>
+
+  <section class="foot" aria-label="Calidad de los datos">
+    <div class="card">Leganés<span>13 partidos reales con goles, tiros, corners y tarjetas</span></div>
+    <div class="card">Trival Valderas<span>Sin datos partido a partido de 2026-27</span></div>
+    <div class="card">Sin confirmar<span>Árbitro, alineaciones, cuotas de bet365</span></div>
+    <div class="card">Confianza<span>Media en tarjetas, baja en el resto</span></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-met">
+    <h2 id="h-met">Método y fuentes</h2>
+    <p style="margin:0 0 8px;font-size:15px;color:var(--mut)">Datos del Leganés: football-data.co.uk (13 partidos de Segunda 2026-27), contados mercado por mercado. Goles: Poisson con 0.7 y 1.8 goles esperados (supuesto). Tarjetas y corners: binomial negativa con la media real del Leganés y una suposición para el Trival. Un pick de 85% se pierde 3 de cada 20 veces. Apuesta solo lo que puedas perder.</p>
+    <div class="src">
+      <a href="https://www.elgoldigital.com/futbol/copa-del-rey/trival-valderas-leganes-copa-del-rey-luis-carrion-morata/" target="_blank" rel="noopener">El Gol Digital</a>
+      <a href="https://www.cdleganes.com/cup-debut-against-trival-valderas" target="_blank" rel="noopener">CD Leganés</a>
+      <a href="https://www.cdleganes.com/en/17942233981920410" target="_blank" rel="noopener">CD Leganés (Carrión)</a>
+      <a href="https://www.sportsmole.co.uk/football/trival-valderas/copa-del-rey/preview/trival-valderas-vs-leganes-prediction-team-news-lineups_608719.html" target="_blank" rel="noopener">Sports Mole</a>
+      <a href="https://tips.gg/article/trival-valderas-vs-leganes-10-11-2026/" target="_blank" rel="noopener">Tips.gg</a>
+      <a href="https://futbolmadrid.es/club/cf-trival-valderas-alcorcon/primer-equipo" target="_blank" rel="noopener">Futbolmadrid</a>
+      <a href="https://www.football-data.co.uk/spainm.php" target="_blank" rel="noopener">football-data.co.uk</a>
+    </div>
+  </section>
+</div>

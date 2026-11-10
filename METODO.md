@@ -102,3 +102,9 @@ Orden de trabajo en ligas con base de datos (football-data: Premier, Championshi
 3. Solo entonces se mira la cuota de bet365 (precio) y las bajas/contexto.
 Comprobación con Las Palmas-Eldense: por datos salían "Más de 3.5 tarjetas" (83%) y "Corners Eldense más de 3.5"
 (83%) como bajos, y Eldense +1.5 solo 67%; las tarjetas se cumplieron (9) y Eldense +1.5 perdió.
+
+## 13. Formato del informe (petición del usuario, 10/11/2026)
+Cada partido se entrega como página (artifact) con: pick principal, claves, forma reciente, resultado 1X2,
+marcadores más probables, picks ordenados con cuota mínima, por qué sí / por qué no, tabla de datos reales,
+tabla de todos los mercados (goles, mitades, tarjetas, corners) con su fuente, jugadores y alineaciones
+(solo si hay datos; si no, se dice), calidad de los datos, método y fuentes. Ejemplo: informes/trival_leganes.html.
