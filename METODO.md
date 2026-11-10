@@ -116,3 +116,8 @@ El modelo solo ordena ideas; un pick se da cuando lo confirman los datos de vari
 3. Forma real de ambos equipos (no solo del favorito) y contexto (motivación, rotaciones, sede).
 4. Cuota de bet365 vista (captura del usuario) frente a la cuota mínima.
 Si falta alguno de los puntos 1-3, se dice "sin confirmar" y no hay pick, aunque el modelo dé un número alto.
+
+## 15. Kalshi como referencia de precio (10/11/2026)
+Kalshi (mercado de predicción, poco margen) sirve para medir si bet365 paga bien. Si los datos y Kalshi coinciden
+y bet365 paga igual o más que la cuota justa de Kalshi, el pick sube; si bet365 paga >5% menos que Kalshi, se retira.
+Buscar siempre el "Rango de goles" de bet365: a menudo paga más que "Más de X" con casi el mismo riesgo.
