@@ -114,3 +114,7 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-10,Anaitasuna-Alavés (Copa),Gana Alavés (90 min),analista,medio,0.78,,pendiente,informativo; crisis 8 sin ganar y rotaciones; mínimo 1.30
 2026-11-10,Pamplona-Eibar (Copa),Eibar marca,riesgo-bajo,bajo,0.90,,pendiente,sin cuotas; Eibar marcó 10/12 en LaLiga2 (fuera 5/6); Pamplona 15.º de Tercera Federación con 1 victoria; rotaciones; mínimo 1.08; 0.5u
 2026-11-10,Pamplona-Eibar (Copa),Gana Eibar (90 min),analista,medio,0.74,,pendiente,informativo; Forebet 71%; Eibar 4 sin ganar; mínimo 1.35
+2026-11-10,Pamplona-Eibar (Copa),Gol en el 2.º tiempo,riesgo-bajo,bajo,0.80,,pendiente,"datos: partidos del Eibar con gol en 2T 11/12, últimos 6 6/6; modelo 73%; mínimo 1.25; 0.5u"
+2026-11-10,Pamplona-Eibar (Copa),Pamplona menos de 1.5 goles,riesgo-bajo,bajo,0.86,,pendiente,"Pamplona 7 goles en 9 (⚠️ una fuente); mínimo 1.15; 0.5u"
+2026-11-10,Pamplona-Eibar (Copa),Eibar gana a cero,riesgo-alto,alto,0.41,,pendiente,"Pamplona 0.78 goles por partido; Eibar rota; mínimo 2.40; 0.25u"
+2026-11-10,Anaitasuna-Alavés (Copa),Ambos reciben tarjeta,analista,medio,0.75,,pendiente,"Alavés 10/12 con ambos tarjeta (fuera 5/6); copa sin VAR; Anaitasuna sin datos; mínimo 1.35; 0.25u"
