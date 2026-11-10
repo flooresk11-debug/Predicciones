@@ -1,0 +1,188 @@
+<title>Roma vs Servette</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">Champions League femenina · Fase de liga · Jornada 4</div>
+  <header class="hero">
+    <div class="team"><b>Roma</b><span>1.ª en Serie A (6 de 6) · 1 punto en Champions</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Servette</b><span>Campeón suizo · 3 puntos en Champions</span></div>
+  </header>
+  <div class="meta">Martes 10 nov 2026 · 14:00 (tu hora) · Stadio Tre Fontane, Roma · Árbitra: sin confirmar</div>
+
+  <section class="main-pick" aria-label="Pick confirmado">
+    <div><div class="eyebrow" style="color:var(--good)">Pick confirmado</div><h1>Más de 1.5 goles</h1></div>
+    <div style="text-align:right"><div class="p">7/8 · 5/5</div><div class="meta">cuota mínima 1.18 · 0.5 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Roma arrasa en Italia</b><span>6 de 6 en Serie A, 21 goles a favor y 7 en contra.</span></div>
+    <div class="card tile"><b>Roma bloqueada en Europa</b><span>0 goles en Champions: 0-0 Leuven, 0-6 Barcelona, 0-2 Chelsea.</span></div>
+    <div class="card tile"><b>Servette, partidos locos</b><span>14 goles encajados en 3 partidos de Champions, la peor defensa del torneo. Marca también: 5-1 al Leuven.</span></div>
+    <div class="card tile"><b>Último cruce</b><span>En 2024, Servette 2-7 Roma en Ginebra.</span></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fr">
+      <h2 id="h-fr">Roma <small>8 marcadores verificados</small></h2>
+      <div class="form">
+        <div><span>Como – Roma</span><span class="r num">0-4</span><span class="chip W">G</span></div>
+        <div><span>Roma – Chelsea (Champions)</span><span class="r num">0-2</span><span class="chip L">P</span></div>
+        <div><span>Roma – Napoli</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>Juventus – Roma</span><span class="r num">2-5</span><span class="chip W">G</span></div>
+        <div><span>Barcelona – Roma (Champions)</span><span class="r num">6-0</span><span class="chip L">P</span></div>
+        <div><span>Roma – Lazio</span><span class="r num">3-1</span><span class="chip W">G</span></div>
+        <div><span>Roma – Leuven (Champions)</span><span class="r num">0-0</span><span class="chip D">E</span></div>
+        <div><span>Sassuolo – Roma</span><span class="r num">1-3</span><span class="chip W">G</span></div>
+      </div>
+    </section>
+    <section class="card" aria-labelledby="h-fs">
+      <h2 id="h-fs">Servette <small>5 marcadores verificados</small></h2>
+      <div class="form">
+        <div><span>Servette – Rapperswil (liga)</span><span class="r num">3-3</span><span class="chip D">E</span></div>
+        <div><span>Servette – Leuven (Champions)</span><span class="r num">5-1</span><span class="chip W">G</span></div>
+        <div><span>Wil – Servette (Copa)</span><span class="r num">0-8</span><span class="chip W">G</span></div>
+        <div><span>Servette – Lyon (Champions)</span><span class="r num">0-8</span><span class="chip L">P</span></div>
+        <div><span>Servette – Sparta Praga (previa)</span><span class="r num">3-0</span><span class="chip W">G</span></div>
+      </div>
+      <p class="note">Su otro partido de Champions no aparece en ninguna fuente, pero los 14 goles encajados (UEFA, Opta) dicen que también perdió con goles.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-mk">
+    <h2 id="h-mk">Todos los mercados <small>recuento de partidos reales y estado</small></h2>
+    <div class="tw"><table class="mk">
+      <thead><tr><th>Mercado</th><th>Roma</th><th>Servette</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Más de 1.5 goles</td><td class="g">7/8</td><td class="g">5/5</td><td class="g">Confirmado</td></tr>
+        <tr><td>Más de 2.5 goles</td><td>6/8</td><td class="g">5/5</td><td class="w">Casi (en Champions Roma 1/3)</td></tr>
+        <tr><td>Servette marca</td><td>encajó 6/8</td><td class="g">4/5</td><td class="w">Casi</td></tr>
+        <tr><td>Roma marca</td><td class="bd">5/8 (0/3 en Champions)</td><td class="g">encajó 5/5</td><td class="bd">Se contradicen</td></tr>
+        <tr><td>Gana Roma</td><td>5/8</td><td>perdió 1/5 conocidos (más 1 sin marcador)</td><td class="bd">No</td></tr>
+        <tr><td>Ambos marcan sí</td><td class="bd">4/8</td><td class="bd">2/5</td><td class="bd">No</td></tr>
+        <tr><td>Rango 2-6 goles</td><td>6/8</td><td class="bd">3/5</td><td class="bd">No (Servette tuvo dos 8-0)</td></tr>
+        <tr><td>Tarjetas, corners, remates</td><td class="nd">sin datos</td><td class="nd">sin datos</td><td class="nd">Sin datos</td></tr>
+      </tbody></table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Picks</h2>
+    <div class="pick"><span class="risk b">Confirmado</span><div><h3>Más de 1.5 goles</h3><p>Roma: 7 de 8 partidos (solo falló el 0-0 contra Leuven). Servette: 5 de 5. Gana aunque la Roma siga sin marcar en Europa, porque el Servette también marca.</p></div><div class="pp"><b>7/8 · 5/5</b><span>mínimo 1.18</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Más de 2.5 goles</h3><p>Roma 6 de 8, Servette 5 de 5 y el último cruce terminó 2-7. Pero en Champions la Roma solo pasó de 2 goles 1 vez de 3. Mismo partido que el anterior: elige uno.</p></div><div class="pp"><b>6/8 · 5/5</b><span>mínimo 1.55</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Roma marca</h3><p>Parece obvio contra la peor defensa del torneo, pero la Roma no ha marcado ni un gol en Champions. Los datos se contradicen.</p></div><div class="pp"><b>0/3</b><span>en Champions</span></div></div>
+  </section>
+
+  <section class="foot" aria-label="Calidad de los datos">
+    <div class="card">Roma<span>8 marcadores (Wikipedia, Corriere dello Sport, Virgilio, DAZN, OA Sport, UEFA)</span></div>
+    <div class="card">Servette<span>5 marcadores (UEFA, club, Foot Mercato, AiScore)</span></div>
+    <div class="card">Sin confirmar<span>Árbitra, alineaciones, cuotas de bet365</span></div>
+    <div class="card">Confirmado<span>Más de 1.5 goles</span></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-met">
+    <h2 id="h-met">Método y fuentes</h2>
+    <p style="margin:0 0 8px;font-size:15px;color:var(--mut)">Sin modelo: recuento de partidos reales de esta temporada. Un mercado se confirma solo si los datos de los dos equipos apuntan al mismo lado. Apuesta solo lo que puedas perder.</p>
+    <div class="src">
+      <a href="https://it.wikipedia.org/wiki/Serie_A_2026-2027_(calcio_femminile)" target="_blank" rel="noopener">Wikipedia – Serie A</a>
+      <a href="https://www.corrieredellosport.it/squadra/calcio/roma-femminile/calendario/t14733" target="_blank" rel="noopener">Corriere dello Sport</a>
+      <a href="https://www.virgilio.it/sport/roma-juventus-derby-inter-risultati-e-classifica-6-giornata-serie-a-athora-2026-27-979481" target="_blank" rel="noopener">Virgilio – J6</a>
+      <a href="https://www.virgilio.it/sport/como-1907-roma-juventus-women-risultati-e-classifica-4-giornata-serie-a-athora-2026-2027-977386" target="_blank" rel="noopener">Virgilio – J4</a>
+      <a href="https://www.dazn.com/it-IT/news/calcio/classifica-serie-a-women-aggiornata/1qvejpct7audo1kvx1sawiz0vd" target="_blank" rel="noopener">DAZN</a>
+      <a href="https://www.oasport.it/2026/11/calcio-femminile-una-super-giugliano-trascina-la-roma-in-serie-a-linter-vince-il-derby/amp/" target="_blank" rel="noopener">OA Sport</a>
+      <a href="https://www.uefa.com/womenschampionsleague/news/02ab-2201607f4c99-fa0969df1c68-1000--women-s-champions-league-matchday-4-preview-paris-saint-/" target="_blank" rel="noopener">UEFA – previa J4</a>
+      <a href="https://theanalyst.com/articles/uefa-womens-champions-league-predictions-matchday-4-2026-27" target="_blank" rel="noopener">Opta</a>
+      <a href="https://servettefc.ch/category/equipe-feminine/" target="_blank" rel="noopener">Servette FC</a>
+      <a href="https://www.footmercato.net/live/7513973348557533258-servette-chenois-vs-olympique-lyon" target="_blank" rel="noopener">Foot Mercato</a>
+      <a href="https://www.forzafootball.com/match/servette-fc-chenois-roma-1217857959/lineups" target="_blank" rel="noopener">Forza – Servette 2-7 Roma</a>
+    </div>
+  </section>
+</div>
