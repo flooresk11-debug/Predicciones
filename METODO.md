@@ -91,3 +91,14 @@ y peleaba el descenso. Perdió. En ligas sin datos completos, el pick bajo exige
 - al menos 10 partidos de la temporada encontrados y verificados del equipo clave (no 6);
 - que el rival NO llegue con racha fuerte reciente ni con necesidad máxima (descenso/título) contra el pick.
 Si no se cumple, no hay pick.
+
+## 12. Primero los DATOS de la temporada, después las cuotas (petición del usuario, 10/11/2026)
+Orden de trabajo en ligas con base de datos (football-data: Premier, Championship, LaLiga, LaLiga2, Bundesliga,
+2. Bundesliga, Serie A, Eredivisie, Ligue 1, y otras de la misma web):
+1. `python3 perfil_equipos.py --liga X --local A --visitante B`: ~50 mercados (resultado, hándicap, goles,
+   goles por equipo, mitades, corners, tarjetas, remates a puerta) contados en los partidos REALES de la
+   temporada: local en casa / todos / últimos 6 y visitante fuera / todos / últimos 6.
+2. Candidatos = mercados que se cumplen en TODAS esas columnas (>= 80% bajo, 65-80% medio), del tipo que sea.
+3. Solo entonces se mira la cuota de bet365 (precio) y las bajas/contexto.
+Comprobación con Las Palmas-Eldense: por datos salían "Más de 3.5 tarjetas" (83%) y "Corners Eldense más de 3.5"
+(83%) como bajos, y Eldense +1.5 solo 67%; las tarjetas se cumplieron (9) y Eldense +1.5 perdió.
