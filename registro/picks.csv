@@ -112,3 +112,5 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-10,Feyenoord F-Wolfsburg F (vuelta 0-7),Wolfsburg marca,analista,bajo,0.85,,pendiente,SIN PICK por regla §11 (sin datos 2026-27 de Feyenoord; rotaciones); solo seguimiento; mínimo 1.15
 2026-11-10,Anaitasuna-Alavés (Copa),Alavés marca,riesgo-bajo,bajo,0.90,,pendiente,sin cuotas; rival de 6.ª categoría (División de Honor Gipuzkoa); Alavés marcó 9/12 en LaLiga pero 8 sin ganar; rotaciones; mínimo 1.08; 0.5u
 2026-11-10,Anaitasuna-Alavés (Copa),Gana Alavés (90 min),analista,medio,0.78,,pendiente,informativo; crisis 8 sin ganar y rotaciones; mínimo 1.30
+2026-11-10,Pamplona-Eibar (Copa),Eibar marca,riesgo-bajo,bajo,0.90,,pendiente,sin cuotas; Eibar marcó 10/12 en LaLiga2 (fuera 5/6); Pamplona 15.º de Tercera Federación con 1 victoria; rotaciones; mínimo 1.08; 0.5u
+2026-11-10,Pamplona-Eibar (Copa),Gana Eibar (90 min),analista,medio,0.74,,pendiente,informativo; Forebet 71%; Eibar 4 sin ganar; mínimo 1.35
