@@ -84,3 +84,10 @@ Aplicado al registro: los medios que habrían pasado ganaron 4/6; los que habrí
 Se dio como bajo "Técnico o empate" con mercado 85% pero datos de 75% (6/8 en casa), en liga sin datos
 completos y con Manta ganador del último cruce. Perdió 1-2. Si los datos no llegan al 80%, NO es bajo,
 aunque el mercado diga 85%: se baja a medio (si cumple §9) o se queda sin pick.
+
+## 11. Lección Luqueño-2 de Mayo (3-0, 9/11/2026): ligas sin datos
+Bajo "2 de Mayo +1.5" con mercado 85% y solo 6 partidos de local encontrados; Luqueño venía de ganar 5-0
+y peleaba el descenso. Perdió. En ligas sin datos completos, el pick bajo exige además:
+- al menos 10 partidos de la temporada encontrados y verificados del equipo clave (no 6);
+- que el rival NO llegue con racha fuerte reciente ni con necesidad máxima (descenso/título) contra el pick.
+Si no se cumple, no hay pick.

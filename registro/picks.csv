@@ -86,10 +86,10 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Técnico U-Manta,Gana Técnico,filtro-analista,medio,0.671,1.39,P,DESCARTADO: justa 1.49; Manta ganó el último cruce 1-0 | final 1-2
 2026-11-09,Técnico U-Manta,Técnico -1.0/-1.5,filtro-analista,alto,0.45,1.85,P,DESCARTADO: cruces 2026 por 1-2 goles (2-0,1-0,0-1) | final 1-2
 2026-11-09,Botosani-Otelul + Sabadell-RSB,Combinada: menos 2.5 (Botosani) + crear apuesta Sabadell o RSB y ambos tarjeta,usuario,,,1.99,P,pierna 1 ganada (1-1); al 43' Sabadell 0-0 | final 0-0
-2026-11-09,Luqueño-2 de Mayo,Hándicap asiático 2 de Mayo +1.5,riesgo-bajo,bajo,0.847,1.16,pendiente,liga sin datos: 0.5u; justa 1.18; Luqueño en casa 1G 5P (único triunfo 3-2); 2 de Mayo 4 derrotas en 18
-2026-11-09,Luqueño-2 de Mayo,Empate o 2 de Mayo,riesgo-medio,medio,0.638,1.50,pendiente,0.25u; justa 1.57; habría ganado en 5 de los 6 partidos de Luqueño en casa encontrados
-2026-11-09,Luqueño-2 de Mayo,Menos de 4.5 goles,filtro-analista,bajo,0.904,1.071,pendiente,DESCARTADO: partidos de Luqueño con 5 goles en 3 de 7 (1-4, 3-2, 5-0)
-2026-11-09,Luqueño-2 de Mayo,Gana 2 de Mayo,filtro-analista,alto,0.343,2.62,pendiente,DESCARTADO por precio: justa 2.92
+2026-11-09,Luqueño-2 de Mayo,Hándicap asiático 2 de Mayo +1.5,riesgo-bajo,bajo,0.847,1.16,P,liga sin datos: 0.5u; justa 1.18; Luqueño en casa 1G 5P (único triunfo 3-2); 2 de Mayo 4 derrotas en 18 | final 3-0
+2026-11-09,Luqueño-2 de Mayo,Empate o 2 de Mayo,riesgo-medio,medio,0.638,1.50,P,0.25u; justa 1.57; habría ganado en 5 de los 6 partidos de Luqueño en casa encontrados | final 3-0
+2026-11-09,Luqueño-2 de Mayo,Menos de 4.5 goles,filtro-analista,bajo,0.904,1.071,G,DESCARTADO: partidos de Luqueño con 5 goles en 3 de 7 (1-4, 3-2, 5-0) | final 3-0
+2026-11-09,Luqueño-2 de Mayo,Gana 2 de Mayo,filtro-analista,alto,0.343,2.62,P,DESCARTADO por precio: justa 2.92 | final 3-0
 2026-11-10,Häcken F-Chelsea F,Chelsea gana cualquier mitad,riesgo-bajo,bajo,0.824,1.12,pendiente,UWCL sin base de datos: 0.5u; justa 1.21 (modelo prudente); Chelsea 14 sin perder, 0 goles encajados en UWCL; sin James ni Ramírez
 2026-11-10,Häcken F-Chelsea F,Ambos marcan: no,riesgo-alto,alto,0.538,1.72,pendiente,0.25u; justa 1.86 (bet365 -7.5%); Chelsea 3/3 sin encajar en UWCL; Häcken 1 gol en UWCL
 2026-11-10,Häcken F-Chelsea F,Gana Chelsea,filtro-analista,medio,0.759,1.22,pendiente,DESCARTADO por precio (§9): justa 1.32, bet365 -7.5%
