@@ -119,7 +119,7 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-10,Pamplona-Eibar (Copa),Eibar gana a cero,riesgo-alto,alto,0.41,,pendiente,"Pamplona 0.78 goles por partido; Eibar rota; mínimo 2.40; 0.25u"
 2026-11-10,Anaitasuna-Alavés (Copa),Ambos reciben tarjeta,analista,medio,0.75,,pendiente,"Alavés 10/12 con ambos tarjeta (fuera 5/6); copa sin VAR; Anaitasuna sin datos; mínimo 1.35; 0.25u"
 2026-11-10,Amorebieta-Logroñés (Copa),Menos de 3.5 goles,analista,medio,0.72,,pendiente,SIN PICK por regla §11 (sin datos 2026-27 de Amorebieta; Logroñés solo 4 partidos: 2-1,1-1,0-0,1-0); seguimiento; mínimo 1.35
-2026-11-10,Trival Valderas-Leganés (Copa),Más de 2.5 tarjetas,riesgo-bajo,bajo,0.85,,pendiente,"Leganés: 12/13 partidos con 3+ amarillas (últimos 6: 6/6), 3.3 amarillas propias por partido; Trival sin datos; mínimo 1.20; 0.5u"
+2026-11-10,Trival Valderas-Leganés (Copa),Más de 2.5 tarjetas,riesgo-bajo,bajo,0.82,,pendiente,"Leganés: 12/13 partidos con 3+ amarillas (últimos 6: 6/6), 3.3 amarillas propias por partido; Trival sin datos; mínimo 1.20; 0.5u | árbitra Huerta de Aza: 4.43/partido en Segunda, 3.82 carrera, 3.3 en 2026-27"
 2026-11-10,Trival Valderas-Leganés (Copa),Ambos reciben tarjeta,riesgo-medio,medio,0.78,,pendiente,"Leganés 11/13 (últimos 6: 6/6); mínimo 1.35; 0.25u"
 2026-11-10,Trival Valderas-Leganés (Copa),Empate al descanso,riesgo-alto,alto,0.45,,pendiente,"Leganés 0-0 al descanso en 6/13 y 7 sin ganar; Trival 4 empates en 5; mínimo 2.30; 0.25u"
 2026-11-10,Trival Valderas-Leganés (Copa),Leganés marca,filtro-analista,bajo,0.85,,pendiente,"DESCARTADO como bajo: Leganés marcó solo en 7/13 de liga (11 goles)"

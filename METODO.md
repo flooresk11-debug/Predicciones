@@ -108,3 +108,11 @@ Cada partido se entrega como página (artifact) con: pick principal, claves, for
 marcadores más probables, picks ordenados con cuota mínima, por qué sí / por qué no, tabla de datos reales,
 tabla de todos los mercados (goles, mitades, tarjetas, corners) con su fuente, jugadores y alineaciones
 (solo si hay datos; si no, se dice), calidad de los datos, método y fuentes. Ejemplo: informes/trival_leganes.html.
+
+## 14. Protocolo de CONFIRMACIÓN antes de dar un pick (petición del usuario, 10/11/2026)
+El modelo solo ordena ideas; un pick se da cuando lo confirman los datos de varias fuentes:
+1. Dato clave del pick en al menos 3 fuentes independientes (base oficial, webs de estadísticas, prensa, web del club).
+2. Árbitro designado y su media de tarjetas (para mercados de tarjetas), alineación probable, bajas y sanciones.
+3. Forma real de ambos equipos (no solo del favorito) y contexto (motivación, rotaciones, sede).
+4. Cuota de bet365 vista (captura del usuario) frente a la cuota mínima.
+Si falta alguno de los puntos 1-3, se dice "sin confirmar" y no hay pick, aunque el modelo dé un número alto.
