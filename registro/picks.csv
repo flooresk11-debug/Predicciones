@@ -127,3 +127,4 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-10,PSG F-Bayern F,Más de 1.5 goles,filtro-analista,bajo,0.85,1.14,pendiente,"confirmado por datos: PSG 9/10, Bayern 6/7, H2H 2025 3-1; mínimo 1.20; 0.5u | sustituido por Rango 2-6 @1.22 (mismo riesgo, más pago)"
 2026-11-10,PSG F-Bayern F,Rango 2-6 goles,riesgo-bajo,bajo,0.86,1.22,pendiente,"datos: PSG 9/10, Bayern 6/7 en ese rango; bet365 1.22 > 1.20 mínimo; 0.5u"
 2026-11-10,PSG F-Bayern F,Rango 2-5 goles,riesgo-medio,medio,0.78,1.33,pendiente,"datos: PSG 9/10, Bayern 5/7; 0.25u; no combinar con 2-6"
+2026-11-10,PSG F-Bayern F,Ambos marcan: sí,analista,alto,0.60,1.57,pendiente,"consulta del usuario: PSG partidos con BTTS 5/10, Bayern 4/7; contra grandes PSG marcó 2/3 y Bayern encajó 2/2; precio ~justo; solo 0.25u"
