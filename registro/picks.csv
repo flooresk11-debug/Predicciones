@@ -101,3 +101,5 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-10,Real Madrid F-Paris FC F,Gana Real Madrid,filtro-analista,medio,0.670,1.42,pendiente,DESCARTADO: RM ganó 5/10; H2H 2G 1E 2P
 2026-11-10,Real Madrid F-Paris FC F,Ambos marcan: sí,filtro-analista,alto,0.528,1.66,pendiente,DESCARTADO por precio: justa 1.90; PFC fuera marca 40%
 2026-11-10,Real Madrid F-Paris FC F,Real Madrid gana cualquier mitad,filtro-analista,bajo,0.767,1.22,pendiente,DESCARTADO: datos ~70% (gana 1T 50%, 2T 40%); justa 1.30
+2026-11-10,Real Madrid F-Paris FC F,Paris FC menos de 1.5 goles,riesgo-medio,medio,0.772,1.28,pendiente,justa 1.29; PFC fuera marca 0.8/partido y no marcó en 60% fuera; RM recibe 2+ en 40%; 0.25u
+2026-11-10,Häcken F-Chelsea F,Menos de 3.5 goles (fila 'Menos de 4'),riesgo-alto,alto,0.57,1.66,pendiente,justa ~1.74; Chelsea UWCL 1-0, 0-0, 2-0; sin James ni Ramírez; 0.25u
