@@ -90,8 +90,8 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Luqueño-2 de Mayo,Empate o 2 de Mayo,riesgo-medio,medio,0.638,1.50,P,0.25u; justa 1.57; habría ganado en 5 de los 6 partidos de Luqueño en casa encontrados | final 3-0
 2026-11-09,Luqueño-2 de Mayo,Menos de 4.5 goles,filtro-analista,bajo,0.904,1.071,G,DESCARTADO: partidos de Luqueño con 5 goles en 3 de 7 (1-4, 3-2, 5-0) | final 3-0
 2026-11-09,Luqueño-2 de Mayo,Gana 2 de Mayo,filtro-analista,alto,0.343,2.62,P,DESCARTADO por precio: justa 2.92 | final 3-0
-2026-11-10,Häcken F-Chelsea F,Chelsea gana cualquier mitad,riesgo-bajo,bajo,0.824,1.12,pendiente,UWCL sin base de datos: 0.5u; justa 1.21 (modelo prudente); Chelsea 14 sin perder, 0 goles encajados en UWCL; sin James ni Ramírez | CONFIRMADO con datos: Chelsea ganó 9/11 verificados (gana mitad seguro en cada victoria); Häcken perdió 2/3 en UWCL
-2026-11-10,Häcken F-Chelsea F,Ambos marcan: no,riesgo-alto,alto,0.538,1.72,pendiente,0.25u; justa 1.86 (bet365 -7.5%); Chelsea 3/3 sin encajar en UWCL; Häcken 1 gol en UWCL | datos: Chelsea BTTS-no 8/11, Häcken UWCL 2/3; H2H 0-0 y 1-3
+2026-11-10,Häcken F-Chelsea F,Chelsea gana cualquier mitad,riesgo-bajo,bajo,0.824,1.12,pendiente,UWCL sin base de datos: 0.5u; justa 1.21 (modelo prudente); Chelsea 14 sin perder, 0 goles encajados en UWCL; sin James ni Ramírez | CONFIRMADO con datos: Chelsea ganó 9/11 verificados (gana mitad seguro en cada victoria); Häcken perdió 2/3 en UWCL | Kalshi (83/12/6) -> ~88-90%, justa ~1.12
+2026-11-10,Häcken F-Chelsea F,Ambos marcan: no,filtro-analista,alto,0.538,1.72,pendiente,0.25u; justa 1.86 (bet365 -7.5%); Chelsea 3/3 sin encajar en UWCL; Häcken 1 gol en UWCL | datos: Chelsea BTTS-no 8/11, Häcken UWCL 2/3; H2H 0-0 y 1-3 | RETIRADO: Kalshi 55% -> justa 1.82, bet365 1.72 (-5.5%)
 2026-11-10,Häcken F-Chelsea F,Gana Chelsea,filtro-analista,medio,0.759,1.22,pendiente,DESCARTADO por precio (§9): justa 1.32, bet365 -7.5%
 2026-11-10,Häcken F-Chelsea F,Más de 1.5 goles,filtro-analista,bajo,0.841,1.12,pendiente,DESCARTADO: Chelsea en UWCL 1-0, 0-0, 2-0 (1/3 con 2+ goles)
 2026-11-10,Häcken F-Chelsea F,Chelsea más de 1.5 goles,filtro-analista,medio,0.713,1.28,pendiente,DESCARTADO: justa 1.40 y Chelsea marcó 2+ en 1/3 de UWCL; sin James ni Ramírez
@@ -129,5 +129,6 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-10,PSG F-Bayern F,Rango 2-5 goles,riesgo-medio,medio,0.78,1.33,pendiente,"datos: PSG 9/10, Bayern 5/7; 0.25u; no combinar con 2-6"
 2026-11-10,PSG F-Bayern F,Ambos marcan: sí,analista,alto,0.60,1.57,pendiente,"consulta del usuario: PSG partidos con BTTS 5/10, Bayern 4/7; contra grandes PSG marcó 2/3 y Bayern encajó 2/2; precio ~justo; solo 0.25u"
 2026-11-10,Roma F-Servette F,Más de 2.5 goles,riesgo-medio,medio,0.72,,pendiente,"Roma 6/8 (UWCL 1/3), Servette 5/5, H2H 2024 2-7; mínimo 1.55; 0.25u; no combinar con más de 1.5"
-2026-11-10,Häcken F-Chelsea F,Chelsea gana a cero,analista,alto,0.58,2.00,pendiente,"alternativa al BTTS no: Chelsea ganó a cero 7/11; Häcken sin marcar 2/3 en UWCL; 0.25u; no combinar con BTTS no"
+2026-11-10,Häcken F-Chelsea F,Chelsea gana a cero,riesgo-alto,alto,0.58,2.00,pendiente,"alternativa al BTTS no: Chelsea ganó a cero 7/11; Häcken sin marcar 2/3 en UWCL; 0.25u; no combinar con BTTS no" | Kalshi ~51.5% -> justa 1.94, bet365 2.00
 2026-11-10,Real Madrid F-Paris FC F,Rango 2-6 goles,riesgo-bajo,bajo,0.84,1.20,pendiente,"datos: RM 10/10 con 2+, PFC 7/10, H2H 4/5; Kalshi ~84.5% (justa 1.18); bet365 1.20; 0.5u"
+2026-11-10,Häcken F-Chelsea F,Hándicap asiático Chelsea -1.5,analista,alto,0.63,1.65,pendiente,"Kalshi 63% (justa 1.59); datos Chelsea ganó por 2+ 7/11, Häcken perdió por 2+ 1/3; alternativa al a cero, no combinar"
