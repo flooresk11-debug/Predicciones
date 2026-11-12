@@ -1,0 +1,194 @@
+<title>Curazao vs Panamá</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">Concacaf Nations League · Liga A · Cuartos de final · Partido de ida</div>
+  <header class="hero">
+    <div class="team"><b>Curazao</b><span>FIFA 80.º · ganó su grupo invicto, 10 puntos · Dick Advocaat</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Panamá</b><span>FIFA 46.º · entró directo a cuartos · Thomas Christiansen</span></div>
+  </header>
+  <div class="meta">Jueves 12 nov 2026 · 18:30 (tu hora) · 19:30 en Panamá · Stadion Ergilio Hato, Willemstad · Árbitra: Tori Penso (EE. UU.) · Vuelta el domingo 15 en Ciudad de Panamá</div>
+
+  <section class="main-pick" aria-label="Pick recomendado">
+    <div><div class="eyebrow" style="color:var(--good)">Recomendada · riesgo bajo-medio</div><h1>Menos de 3.5 goles</h1></div>
+    <div style="text-align:right"><div class="p">78%</div><div class="meta">Cuota justa 1.28 · mínimo 1.20 · 0.5 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Panamá, pocos goles</b><span>Sus 6 partidos desde el Mundial acabaron con 2 goles o menos. Marcó 3 goles en esos 6 y no ganó ninguno en los 90 minutos.</span></div>
+    <div class="card tile"><b>Curazao, fuerte en casa</b><span>Invicto en su grupo: 6-1 a Nicaragua y 1-0 a Trinidad en Willemstad. Vuelven Fonville y Roemeratoe; no está Locadia.</span></div>
+    <div class="card tile"><b>Las casas esperan pocos goles</b><span>Menos de 2.5 es el lado favorito (1.67). Panamá paga 2.00, el empate 3.25 y Curazao 3.65.</span></div>
+    <div class="card tile"><b>Eliminatoria a dos partidos</b><span>El ganador va al Final Four y a la Copa Oro. Christiansen: "los mínimos errores se van a pagar caro". Ida de cálculo.</span></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fc">
+      <h2 id="h-fc">Curazao <small>desde el Mundial</small></h2>
+      <div class="form">
+        <div><span>Trinidad – Curazao · Nations, 4 oct</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Curazao – Trinidad · Nations, 1 oct</span><span class="r num">1-0</span><span class="chip W">G</span></div>
+        <div><span>Curazao – Nicaragua · Nations, 27 sep</span><span class="r num">6-1</span><span class="chip W">G</span></div>
+        <div><span>Curazao – C. de Marfil · Mundial</span><span class="r num">0-2</span><span class="chip L">P</span></div>
+        <div><span>Ecuador – Curazao · Mundial</span><span class="r num">0-0</span><span class="chip D">E</span></div>
+        <div><span>Alemania – Curazao · Mundial</span><span class="r num">7-1</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Acabó el grupo con 10 puntos en 4 partidos: falta un cuarto resultado (otra victoria) que no encontré. Los tres de la Nations salen de una web de aficionados; el 1-0 y el 1-1 con Trinidad coinciden con la prensa trinitense. Menos de 3.5 goles en 4 de 6.</p>
+    </section>
+    <section class="card" aria-labelledby="h-fp">
+      <h2 id="h-fp">Panamá <small>desde el Mundial</small></h2>
+      <div class="form">
+        <div><span>Ecuador – Panamá · Copa Kirin, 5 oct</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>N. Zelanda – Panamá · Copa Kirin, 1 oct</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>India – Panamá · amistoso, 25 sep</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Inglaterra – Panamá · Mundial</span><span class="r num">2-0</span><span class="chip L">P</span></div>
+        <div><span>Croacia – Panamá · Mundial</span><span class="r num">1-0</span><span class="chip L">P</span></div>
+        <div><span>Ghana – Panamá · Mundial</span><span class="r num">1-0</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Seis partidos, cero victorias en los 90 minutos, 3 goles a favor y 7 en contra. Menos de 2.5 goles en 6 de 6. Encajó en los 6. Los dos de la Copa Kirin salen solo en Wikipedia. Bajas: Daivis Murillo y Giovany Herbert.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>casas sin margen</small></h2>
+    <div class="odds">
+      <div><b>26%</b><span>Curazao · 3.65</span></div>
+      <div><b>28%</b><span>Empate · 3.25</span></div>
+      <div><b style="color:var(--good)">46%</b><span>Panamá · 2.00</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Curazao 26%, empate 28%, Panamá 46%"><i style="width:26%;background:var(--bad)"></i><i style="width:28%;background:var(--warn)"></i><i style="width:46%;background:var(--good)"></i></div>
+    <p class="meta" style="margin-top:8px">Kalshi (mercado con poco dinero): Panamá 49 · empate 31 · Curazao 30 · Más de 2.5 a 2.12, menos de 2.5 a 1.67 · Marcadores: 1-1 (13%), 0-1 (13%), 1-0 (9%), 0-0 (9%), 1-2 (9%)</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Todas las apuestas <small>de más a menos probable. "Mínimo" = cuota por debajo de la cual pagan menos de lo que vale</small></h2>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Menos de 4.5 goles</h3><p>A favor: Panamá 6 de 6. En contra: Curazao tuvo un 6-1 y un 1-7. Pagará poco. 0.5 u.</p></div><div class="pp"><b>90%</b><span>justa 1.11 · mínimo 1.06</span></div></div>
+    <div class="pick"><span class="risk b">Bajo-medio · recomendada</span><div><h3>Menos de 3.5 goles</h3><p>A favor: Panamá 6 de 6 (y los 6 con 2 goles o menos); ida de eliminatoria; las casas ya esperan pocos goles. En contra: Curazao 4 de 6, con goleadas en casa. 0.5 u.</p></div><div class="pp"><b>78%</b><span>justa 1.28 · mínimo 1.20</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Panamá marca</h3><p>A favor: marcó en sus 3 últimos. En contra: 0 goles en 3 partidos del Mundial; marca poco. 0.25 u.</p></div><div class="pp"><b>75%</b><span>justa 1.33 · mínimo 1.26</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Panamá o empate</h3><p>A favor: Curazao no le ganó en los 3 últimos cruces oficiales. En contra: Panamá no gana desde antes del Mundial y Curazao está invicto en su grupo. 0.25 u.</p></div><div class="pp"><b>73%</b><span>justa 1.37 · mínimo 1.30</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Más de 1.5 goles</h3><p>A favor: 4 de los 6 de Panamá tuvieron exactamente 2. En contra: 2 de 6 acabaron 1-0. 0.25 u.</p></div><div class="pp"><b>69%</b><span>justa 1.45 · mínimo 1.38</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Curazao marca</h3><p>A favor: a Panamá le marcaron en 6 de 6, India incluida; Curazao metió 7 en dos partidos de casa. Los datos dicen más que el modelo. 0.25 u.</p></div><div class="pp"><b>63%</b><span>justa 1.58 · mínimo 1.50</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Panamá empate no apuesta</h3><p>Si empatan te devuelven. 0.25 u.</p></div><div class="pp"><b>63%</b><span>justa 1.58 · mínimo 1.50</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Menos de 2.5 goles (1.67)</h3><p>A favor: Panamá 6 de 6, Curazao 4 de 6. Paga algo menos de lo justo según el mercado, pero los datos van claramente por aquí. 0.25 u.</p></div><div class="pp"><b>57%</b><span>justa 1.75 · pagan 1.67</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Curazao o empate</h3><p>A favor: Panamá empató sus 3 últimos y no gana; Curazao invicto en casa. Si paga 1.80 o más, me gusta más que la victoria de Panamá. 0.25 u.</p></div><div class="pp"><b>54%</b><span>justa 1.85 · mínimo 1.78</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Ambos marcan</h3><p>A favor: los 3 últimos de Panamá fueron 1-1. En contra: el mercado espera partido cerrado. Una fuente da 2.50, sin confirmar; a ese precio tendría valor. 0.25 u.</p></div><div class="pp"><b>48%</b><span>justa 2.10 · mínimo 2.00</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Gana Panamá (2.00)</h3><p>A favor: mejor ranking y plantel mundialista. En contra: 0 victorias en 6 y 3 goles. Paga algo menos de lo justo. 0.25 u.</p></div><div class="pp"><b>46%</b><span>justa 2.17 · pagan 2.00</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Más de 2.5 goles (2.12)</h3><p>En contra: 0 de 6 en Panamá. 0.25 u.</p></div><div class="pp"><b>43%</b><span>justa 2.33 · pagan 2.12</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Panamá más de 1.5 goles</h3><p>En contra: no metió 2 goles en ninguno de sus 6 partidos. 0.1 u.</p></div><div class="pp"><b>41%</b><span>justa 2.45 · mínimo 2.35</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Empate (3.25)</h3><p>A favor: 3 empates seguidos de Panamá, 2 de 6 en Curazao, y es partido de ida. El modelo da 27–28%; los datos, bastante más. Es la cuota larga que más me gusta. 0.25 u.</p></div><div class="pp"><b>28%</b><span>justa 3.57 · pagan 3.25</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Gana Panamá sin encajar</h3><p>En contra: encajó en 6 de 6. 0.1 u.</p></div><div class="pp"><b>28%</b><span>justa 3.61 · mínimo 3.40</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Gana Curazao (3.65)</h3><p>Paga casi lo justo. 0.1 u.</p></div><div class="pp"><b>26%</b><span>justa 3.85 · pagan 3.65</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Panamá −1.5 · Más de 3.5 goles</h3><p>0.1 u cada una.</p></div><div class="pp"><b>22% · 22%</b><span>justas 4.50 y 4.52</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Marcador exacto 1-1</h3><p>Los 3 últimos partidos de Panamá acabaron 1-1. 0.1 u.</p></div><div class="pp"><b>13%</b><span>justa 7.90 · mínimo 7.00</span></div></div>
+    <p class="note">Tarjetas y corners: tengo la árbitra (Tori Penso) pero no su promedio fiable, ni cuotas, ni datos por partido de estos equipos. Si me mandas las líneas de bet365, las calculo.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad media: cuotas actuales de FOX Sports y Winner364 (no de bet365), 6 partidos por equipo desde el Mundial, bajas confirmadas por la prensa panameña. Faltan estadísticas por partido. Las probabilidades salen de un modelo anclado a las cuotas (Curazao 1.00 goles esperados, Panamá 1.40). Sin acceso directo a las webs: todo sale de búsquedas cruzadas.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://es.concacaf.com/competitions/nations-league/news/curazao-y-panama-inauguran-los-cuartos-de-final-de-la-liga-a">Concacaf: previa</a>
+      <a href="https://www.prensa.com/deportes/la-roja-busca-acercarse-al-final-four-en-territorio-curazoleno/">La Prensa: árbitra</a>
+      <a href="https://www.infobae.com/panama/2026/11/12/los-minimos-errores-se-van-a-pagar-caro-christiansen-advierte-sobre-el-desafio-de-enfrentar-a-curazao/">Infobae: Christiansen</a>
+      <a href="https://futbolcentroamerica.com/noticias/donde-ver-curazao-vs-panama-por-la-nations-league-2026-27-hora-en-costa-rica-y-tv-en-panama-aHagB1S1Nrij">Fútbol Centroamérica: convocatorias</a>
+      <a href="https://www.telemetro.com/deportes/curazao-vs-panama-hora-estadio-y-detalles-del-partido-ida-cuartos-final-n6098284">Telemetro</a>
+      <a href="https://www.squawka.com/us/news/concacaf-nations-league/curacao-vs-panama-concacaf-nations-league-prediction-11-12-26/">Squawka: Kalshi</a>
+      <a href="https://www.foxsports.com/soccer/concacaf-nations-league-curacao-vs-panama-nov-12-2026-game-boxscore-1059747">FOX Sports: cuotas</a>
+      <a href="https://winner364.com/matches/curacao-vs-panama-prediction-2026-11-12/">Winner364: 1X2</a>
+      <a href="https://dailysports.net/predictions/curacao-vs-panama-can-dick-advocaats-team-surprise-the-favorite/">DailySports</a>
+      <a href="https://www.espn.com/soccer/team/results/_/id/2659/panama">ESPN: Panamá</a>
+      <a href="https://es.wikipedia.org/wiki/Selecci%C3%B3n_de_f%C3%BAtbol_de_Panam%C3%A1">Wikipedia: Panamá</a>
+      <a href="https://thebluewave.team/">The Blue Wave: Curazao</a>
+      <a href="https://www.worldcupstats.app/team/curacao">Curazao en el Mundial</a>
+    </div>
+  </section>
+</div>
