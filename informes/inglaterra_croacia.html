@@ -1,0 +1,291 @@
+<title>Inglaterra vs Croacia</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">UEFA Nations League · Liga A · Grupo 3 · Jornada 5</div>
+  <header class="hero">
+    <div class="team"><b>Inglaterra</b><span>FIFA 4.º · 2.º del grupo, 9 puntos · Thomas Tuchel</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Croacia</b><span>FIFA 14.º · 3.º del grupo, 3 puntos · Slaven Bilić</span></div>
+  </header>
+  <div class="meta">Jueves 12 nov 2026 · 13:45 (tu hora) · 19:45 en Londres · Wembley · Árbitro: Morten Krogh (Dinamarca) · Ida: Croacia 0-7 Inglaterra (3 oct)</div>
+
+  <section class="main-pick" aria-label="Pick principal">
+    <div><div class="eyebrow" style="color:var(--good)">Pick de riesgo bajo</div><h1>Más de 1.5 goles</h1></div>
+    <div style="text-align:right"><div class="p">81%</div><div class="meta">Cuota justa 1.23 · mínimo 1.14 · 0.5 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>14 goles en 4 partidos</b><span>Inglaterra es el equipo más goleador del grupo y solo ha encajado 3, todos contra España.</span></div>
+    <div class="card tile"><b>Croacia, rota atrás</b><span>14 goles en contra en el grupo. Sin Šutalo, Pongračić ni Jakić en defensa, y viene del 0-7 de Rijeka.</span></div>
+    <div class="card tile"><b>Bajas en los dos lados</b><span>Inglaterra sin Saka, Guéhi, Konsa ni Palmer. Croacia sin Perišić (sancionado, marcó los 2 últimos goles) ni Kramarić.</span></div>
+    <div class="card tile"><b>Los dos se juegan algo</b><span>A Inglaterra le vale un punto para los cuartos. Croacia necesita puntuar para no jugarse el descenso.</span></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fi">
+      <h2 id="h-fi">Inglaterra <small>últimos 11 verificados</small></h2>
+      <div class="form">
+        <div><span>Inglaterra – Chequia · Nations</span><span class="r num">3-0</span><span class="chip W">G</span></div>
+        <div><span>Croacia – Inglaterra · Nations</span><span class="r num">0-7</span><span class="chip W">G</span></div>
+        <div><span>Chequia – Inglaterra · Nations</span><span class="r num">0-2</span><span class="chip W">G</span></div>
+        <div><span>Inglaterra – España · Nations</span><span class="r num">2-3</span><span class="chip L">P</span></div>
+        <div><span>Argentina – Inglaterra · Mundial, semis</span><span class="r num">2-1</span><span class="chip L">P</span></div>
+        <div><span>Inglaterra – Noruega · cuartos (prórroga)</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>México – Inglaterra · octavos</span><span class="r num">2-3</span><span class="chip W">G</span></div>
+        <div><span>Inglaterra – RD Congo · dieciseisavos</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>Inglaterra – Panamá · Mundial</span><span class="r num">2-0</span><span class="chip W">G</span></div>
+        <div><span>Inglaterra – Ghana · Mundial</span><span class="r num">0-0</span><span class="chip D">E</span></div>
+        <div><span>Inglaterra – Croacia · Mundial</span><span class="r num">4-2</span><span class="chip W">G</span></div>
+      </div>
+      <p class="note">Marcó en 10 de 11 y metió 2 o más en 8 de 11. Hubo 2 o más goles en 10 de 11. Semifinalista del Mundial. El partido por el tercer puesto no lo pude verificar y no lo cuento.</p>
+    </section>
+    <section class="card" aria-labelledby="h-fc">
+      <h2 id="h-fc">Croacia <small>últimos 8 verificados</small></h2>
+      <div class="form">
+        <div><span>Croacia – España · Nations</span><span class="r num">1-2</span><span class="chip L">P</span></div>
+        <div><span>Croacia – Inglaterra · Nations</span><span class="r num">0-7</span><span class="chip L">P</span></div>
+        <div><span>España – Croacia · Nations</span><span class="r num">4-1</span><span class="chip L">P</span></div>
+        <div><span>Chequia – Croacia · Nations</span><span class="r num">1-2</span><span class="chip W">G</span></div>
+        <div><span>Portugal – Croacia · Mundial</span><span class="r num">2-1</span><span class="chip L">P</span></div>
+        <div><span>Croacia – Ghana · Mundial</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>Croacia – Panamá · Mundial</span><span class="r num">1-0</span><span class="chip W">G</span></div>
+        <div><span>Inglaterra – Croacia · Mundial</span><span class="r num">4-2</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Contra selecciones grandes (Inglaterra, España, Portugal): 5 partidos, 5 derrotas, y en los 5 encajó 2 o más. Aun así marcó en 7 de 8. Contra Inglaterra este año: 2-4 y 0-7.</p>
+    </section>
+  </div>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-1x2">
+      <h2 id="h-1x2">Resultado 1X2 <small>bet365 sin margen</small></h2>
+      <div class="odds">
+        <div><b style="color:var(--good)">76%</b><span>Inglaterra · 1.25</span></div>
+        <div><b>14%</b><span>Empate · 7.00</span></div>
+        <div><b>10%</b><span>Croacia · 9.00</span></div>
+      </div>
+      <div class="bar" role="img" aria-label="Inglaterra 76%, empate 14%, Croacia 10%"><i style="width:76%;background:var(--good)"></i><i style="width:14%;background:var(--warn)"></i><i style="width:10%;background:var(--bad)"></i></div>
+      <p class="meta" style="margin-top:8px">Opta es más prudente: Inglaterra 67% · Croacia 15% · Kalshi: más de 3.5 goles, 43%</p>
+      <div class="scores">
+        <div><b>2-0</b><span>14%</span></div><div><b>1-0</b><span>11%</span></div><div><b>3-0</b><span>11%</span></div><div><b>2-1</b><span>9%</span></div><div><b>1-1</b><span>7%</span></div>
+      </div>
+    </section>
+    <section class="card" aria-labelledby="h-tab">
+      <h2 id="h-tab">Grupo 3 <small>tras 4 jornadas</small></h2>
+      <div class="tw"><table style="min-width:0">
+        <tr><th>Equipo</th><th>PJ</th><th>G-E-P</th><th>Goles</th><th>Pts</th></tr>
+        <tr><td>España</td><td>4</td><td>4-0-0</td><td>12-5</td><td><b>12</b></td></tr>
+        <tr><td>Inglaterra</td><td>4</td><td>3-0-1</td><td>14-3</td><td><b>9</b></td></tr>
+        <tr><td>Croacia</td><td>4</td><td>1-0-3</td><td>4-14</td><td><b>3</b></td></tr>
+        <tr><td>Chequia</td><td>4</td><td>0-0-4</td><td>2-10</td><td><b>0</b></td></tr>
+      </table></div>
+      <p class="note">Inglaterra visita a España el domingo. Si hoy asegura el punto pronto, Tuchel puede guardar jugadores en la segunda parte: otro motivo para no apostar a goleada.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Picks <small>"mínimo" = cuota por debajo de la cual no entrar. Misma dirección: Inglaterra manda y hay goles</small></h2>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Más de 1.5 goles</h3><p>Mercado 81%. Inglaterra 10 de 11; Croacia 7 de 8. Los dos datos pasan del 80%. Croacia marca casi siempre y encaja siempre contra los grandes. Stake 0.5 u.</p></div><div class="pp"><b>81%</b><span>justa 1.23 · mínimo 1.14</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Inglaterra más de 1.5 goles</h3><p>Modelo 69%. Inglaterra metió 2 o más en 8 de 11 (73%); Croacia encajó 2 o más en 5 de 8, y en 5 de 5 contra grandes. Es el paso siguiente del pick bajo. Stake 0.5 u.</p></div><div class="pp"><b>69%</b><span>justa 1.45 · mínimo 1.38</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Inglaterra más de 4.5 corners</h3><p>Sacó exactamente 6 corners en sus 4 partidos del grupo, con 63–66% de posesión. Croacia solo sacó 1 y 2 contra Inglaterra y España. Muestra corta: stake 0.25 u y solo si veo la cuota.</p></div><div class="pp"><b>4/4</b><span>mínimo 1.30</span></div></div>
+    <div class="pick"><span class="risk m">Solo a 1.28+</span><div><h3>Gana Inglaterra</h3><p>Mercado 76%, pero bet365 paga 1.25 y lo justo es 1.32. Además Opta lo baja a 67% e Inglaterra ganó en los 90 minutos 7 de 11 (64%). A 1.25 no entra; a 1.28 o más, 0.5 u.</p></div><div class="pp"><b>76%</b><span>justa 1.32 · bet365 1.25</span></div></div>
+    <div class="pick"><span class="risk x">Seguro pero sin pago</span><div><h3>Inglaterra o empate / Inglaterra marca</h3><p>Son lo más probable del partido (90% y 91%), pero pagan alrededor de 1.05–1.08. No compensan el riesgo de un día malo.</p></div><div class="pp"><b>90%</b><span>justa 1.11</span></div></div>
+    <div class="pick"><span class="risk x">Sin confirmar</span><div><h3>Menos de 4.5 tarjetas</h3><p>Los partidos de Inglaterra en el grupo tuvieron 3, 1, 1 y 3 amarillas. Pero Krogh varía mucho según la fuente (2.3 a 4.3 por partido) y no tengo cuota. Mándame la captura.</p></div><div class="pp"><b>4/4</b><span>falta cuota</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Inglaterra −1.5 (1.70)</h3><p>Necesita ganar por 2 o más: 53% según el modelo, y lo hizo en 5 de 11. A 1.70 hay que acertar el 59%. No repitas el 0-7 en tu cabeza: fue sin público y con Saka.</p></div><div class="pp"><b>53%</b><span>justa 1.87</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Más de 2.5 goles (1.45–1.47)</h3><p>La cuota implica 65–68%. Inglaterra 7 de 11 (64%). Pagan por debajo de lo que vale, por el recuerdo del 0-7.</p></div><div class="pp"><b>62%</b><span>justa 1.60</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Ambos marcan: no (1.83)</h3><p>Tentador, pero Croacia marcó en 7 de sus últimos 8 e Inglaterra pierde a sus dos centrales titulares. Por regla no se apuesta a "ambos marcan".</p></div><div class="pp"><b>52–57%</b><span>datos en contra</span></div></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-si">
+      <h2 id="h-si">Por qué sí</h2>
+      <ul class="why">
+        <li><span class="ok">✓</span><span>Inglaterra remata 17–22 veces por partido en el grupo y Kane lleva 5 goles en los últimos 3.</span></li>
+        <li><span class="ok">✓</span><span>Croacia llega sin tres defensas y sin su mejor atacante reciente. Bilić "está en apuros" para armar el once, según la prensa croata.</span></li>
+        <li><span class="ok">✓</span><span>Los dos cruces de este año acabaron con 6 y 7 goles.</span></li>
+        <li><span class="ok">✓</span><span>Vuelve Rice. Kane juega: hoy supera a Shilton como el inglés con más partidos (126).</span></li>
+      </ul>
+    </section>
+    <section class="card" aria-labelledby="h-no">
+      <h2 id="h-no">Por qué no</h2>
+      <ul class="why">
+        <li><span class="no">✗</span><span>Tras un 0-7, lo normal es que Croacia se encierre. Un 1-0 o un 0-0 largo tumba casi todos los picks.</span></li>
+        <li><span class="no">✗</span><span>Inglaterra ya empató 0-0 con Ghana y a los 90 minutos con Noruega: contra bloques bajos se atasca.</span></li>
+        <li><span class="no">✗</span><span>Sin Saka (2 goles en la ida), Palmer ni Rashford, y con una defensa nueva: Quansah, Hill, Burn, Hall.</span></li>
+        <li><span class="no">✗</span><span>A Inglaterra le basta el empate y el domingo juega en España. Riesgo de rotaciones y de bajar el ritmo.</span></li>
+        <li><span class="no">✗</span><span>Solo vi cuotas de bet365 del 1X2, "ambos marcan: no" y poco más. Faltan goles por equipo, corners y tarjetas.</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-datos">
+    <h2 id="h-datos">Partidos del grupo con estadísticas <small>local – visitante</small></h2>
+    <div class="tw"><table>
+      <tr><th>Partido</th><th>Marcador</th><th>Posesión</th><th>Remates (a puerta)</th><th>Corners</th><th>Amarillas</th></tr>
+      <tr><td>Inglaterra – España (26 sep)</td><td>2-3</td><td>47 – 53</td><td>13 (5) – 15 (5)</td><td>6 – 3</td><td>3 – 0</td></tr>
+      <tr><td>Chequia – Inglaterra (29 sep)</td><td>0-2</td><td>34 – 66</td><td>6 – 22</td><td>1 – 6</td><td>0 – 1 · roja a Šulc</td></tr>
+      <tr><td>Croacia – Inglaterra (3 oct)</td><td>0-7</td><td>36 – 64</td><td>12 (1) – 19 (10)</td><td>1 – 6</td><td>1 – 0</td></tr>
+      <tr><td>Inglaterra – Chequia (6 oct)</td><td>3-0</td><td>64 – 36</td><td>17 – 5 (0)</td><td>6 – 3 ⚠️</td><td>1 – 2</td></tr>
+      <tr><td>España – Croacia (29 sep)</td><td>4-1</td><td>64 – 36</td><td>16 (7) – 5 (2)</td><td>6 – 2</td><td>1 – 4</td></tr>
+      <tr><td>Croacia – España (6 oct)</td><td>1-2</td><td class="nd">no encontrado</td><td class="nd">no encontrado</td><td class="nd">—</td><td>Perišić, doble amarilla</td></tr>
+      <tr><td>Chequia – Croacia (26 sep)</td><td>1-2</td><td class="nd">no encontrado</td><td class="nd">no encontrado</td><td class="nd">—</td><td class="nd">—</td></tr>
+    </table></div>
+    <p class="note">⚠️ Corners del Inglaterra–Chequia: 6-3 en unas fuentes y 6-2 en otras; los 6 de Inglaterra coinciden. La expulsión de Perišić la dan la prensa croata y WhoScored; ESPN no la recoge.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-mk">
+    <h2 id="h-mk">Todos los mercados <small>modelo anclado a bet365 (Inglaterra 2.40 goles esperados, Croacia 0.65) frente a los datos reales</small></h2>
+    <div class="tw"><table class="mk">
+      <tr><th>Mercado</th><th>Prob.</th><th>Cuota justa</th><th>Inglaterra últ. 11</th><th>Croacia últ. 8</th></tr>
+      <tr><td>Inglaterra marca</td><td class="g">91%</td><td>1.10</td><td>10/11</td><td>encajó 7/8</td></tr>
+      <tr><td>Inglaterra o empate</td><td class="g">90%</td><td>1.11</td><td>no perdió 9/11</td><td>no ganó 5/8</td></tr>
+      <tr><td>Más de 1.5 goles</td><td class="g">81%</td><td>1.23</td><td>10/11</td><td>7/8</td></tr>
+      <tr><td>Gana Inglaterra</td><td class="w">76%</td><td>1.32</td><td class="bd">7/11</td><td>perdió 5/8</td></tr>
+      <tr><td>Inglaterra 2 o más goles</td><td class="w">69%</td><td>1.45</td><td>8/11</td><td>encajó 2+ en 5/8</td></tr>
+      <tr><td>Gana Inglaterra y más de 1.5</td><td class="w">65%</td><td>1.54</td><td>7/11</td><td>—</td></tr>
+      <tr><td>Más de 2.5 goles</td><td>62%</td><td>1.60</td><td>7/11</td><td>7/8</td></tr>
+      <tr><td>Inglaterra −1.5</td><td>53%</td><td>1.87</td><td class="bd">5/11</td><td class="bd">3/8</td></tr>
+      <tr><td>Inglaterra portería a cero</td><td>52%</td><td>1.92</td><td>5/11</td><td class="bd">no marcó 1/8</td></tr>
+      <tr><td>Croacia marca</td><td>48%</td><td>2.09</td><td>encajó 6/11</td><td>7/8</td></tr>
+      <tr><td>Inglaterra 3 o más goles</td><td>43%</td><td>2.32</td><td>4/11</td><td>encajó 3+ en 3/8</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>40%</td><td>2.50</td><td>4/11</td><td>3/8</td></tr>
+    </table></div>
+    <p class="note">En rojo, los datos que contradicen al precio. "Más de 2.5" y "más de 3.5" promedian el modelo con el mercado (bet365 y Kalshi), que espera más goles que el modelo. Mitades y tarjetas por línea: sin datos suficientes de selecciones.</p>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-bajas">
+      <h2 id="h-bajas">Bajas y onces probables <small>prensa inglesa y croata</small></h2>
+      <ul class="why">
+        <li><span class="no">✗</span><span><b>Inglaterra:</b> Guéhi y Konsa (lesión), Saka (isquiotibial), Lewis-Skelly (sancionado), Palmer, Rashford y Mainoo (fuera de la lista).</span></li>
+        <li><span class="ok">✓</span><span><b>Once probable:</b> Pickford; Quansah, Hill, Burn, Hall; Rice, Anderson; Ngumoha, Bellingham, Gordon; Kane.</span></li>
+        <li><span class="no">✗</span><span><b>Croacia:</b> Perišić (sancionado), Kramarić (rodilla), Šutalo, Jakić, Ivanović y Pongračić (lesión). Luka Sučić, duda.</span></li>
+        <li><span class="ok">✓</span><span><b>Once probable:</b> Livaković; Stanišić, Vušković, Smolčić o Ćaleta-Car, Gvardiol; Modrić, Kovačić; Vlašić, P. Sučić o Pašalić, Baturina; Matanović o Budimir.</span></li>
+      </ul>
+      <p class="note">Onces de prensa. Si Kane o Bellingham no salen de inicio, quita el pick de "Inglaterra más de 1.5 goles".</p>
+    </section>
+    <section class="card" aria-labelledby="h-cal">
+      <h2 id="h-cal">Calidad de los datos</h2>
+      <ul class="why">
+        <li><span class="ok">✓</span><span><b>Resultados:</b> verificados en 2 o más fuentes (FA, ESPN, FIFA, Sportnet).</span></li>
+        <li><span class="ok">✓</span><span><b>Bajas y árbitro:</b> coinciden prensa inglesa y croata; Krogh aparece en Flashscore y Oddspedia.</span></li>
+        <li><span class="ok">✓</span><span><b>Cuotas:</b> 1X2 de bet365 publicado por Flashscore y TribalFootball (1/4, 6/1, 8/1).</span></li>
+        <li><span class="no">✗</span><span><b>No llego a 30 partidos verificados:</b> 11 de Inglaterra y 8 de Croacia. Los de 2025 y los amistosos de 2026 no los pude comprobar hoy y no los uso.</span></li>
+        <li><span class="no">✗</span><span><b>Sin acceso directo a las webs:</b> todo sale de búsquedas cruzadas, no de abrir cada página.</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Fuentes</h2>
+    <p class="note" style="margin-top:0">Ninguna apuesta de esta página tiene ventaja de precio demostrada. Un 81% falla 1 de cada 5 veces.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.englandfootball.com/articles/2026/Nov/06/england-senior-mens-squad-announcement-for-croatia-spain-games-20261106">FA: convocatoria</a>
+      <a href="https://www.englandfootball.com/england/mens-senior-team/fixtures-results/2026-27/Nations-League/croatia-england-uefa-nations-league-saturday-3-october-2026-match-centre">FA: Croacia 0-7 Inglaterra</a>
+      <a href="https://www.espn.com/soccer/team-stats/_/gameId/401861113">ESPN: estadísticas de la ida</a>
+      <a href="https://www.sportsmole.co.uk/football/england/uefa-nations-league/preview/england-vs-croatia-prediction-team-news-lineups_608818.html">Sports Mole: previa</a>
+      <a href="https://sports.yahoo.com/articles/england-xi-vs-croatia-confirmed-132458480.html">Standard/Yahoo: bajas</a>
+      <a href="https://www.whoscored.com/matches/1969851/preview/international-uefa-nations-league-a-2026-2027-england-croatia">WhoScored</a>
+      <a href="https://theanalyst.com/articles/england-vs-croatia-prediction-uefa-nations-league-preview-2026">Opta Analyst</a>
+      <a href="https://www.flashscore.co.uk/news/football-uefa-nations-league-england-vs-croatia-where-to-watch-preview-line-ups-and-odds/AkEN8SKH/">Flashscore: árbitro y cuotas</a>
+      <a href="https://www.covers.com/soccer/england-vs-croatia-prediction-picks-nov-12-2026">Covers: Kalshi</a>
+      <a href="https://sportnet.hr/vijesti/nogomet-nogometni-svijet/engleska-hrvatska-12112026-najava-utakmice/635226">Sportnet: previa croata</a>
+      <a href="https://www.nacional.hr/iskupljenje-na-wembleyu-slaven-bilic-je-na-mukama-evo-kako-ce-vjerojatno-sloziti-sastav-za-englesku/">Nacional: once croata</a>
+      <a href="https://www.espn.com/soccer/team-stats/_/gameId/401861084">ESPN: España 4-1 Croacia</a>
+      <a href="https://www.sofascore.com/news/england-2-3-spain-nations-league-thriller-at-wembley">Sofascore: Inglaterra 2-3 España</a>
+      <a href="https://www.footballwebpages.co.uk/match/2026-2027/uefa-nations-league/england/czech-republic/585342">Football Web Pages</a>
+      <a href="https://www.skysports.com/uefa-nations-league-table">Sky: tabla</a>
+      <a href="https://fifawatch.com/en/group/l/">Mundial, grupo L</a>
+      <a href="https://www.statshub.com/referee/785779">StatsHub: Krogh</a>
+    </div>
+  </section>
+</div>
