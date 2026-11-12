@@ -1,0 +1,195 @@
+<title>Real Potosí vs Nacional Potosí</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">Bolivia · Copa Paceña · Semifinal · Partido de ida</div>
+  <header class="hero">
+    <div class="team"><b>Real Potosí</b><span>Eliminó a Bolívar (3-1 y 0-1) · invicto en los 5 clásicos del año</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Nacional Potosí</b><span>Eliminó a Oriente (2-3 y 5-1) · 7.º en la liga, 32 puntos</span></div>
+  </header>
+  <div class="meta">Jueves 12 nov 2026 · 17:00 (tu hora) · 19:00 en Bolivia · Estadio Víctor Agustín Ugarte, Potosí (casi 4.000 m, casa de los dos) · Vuelta el domingo 15 en el mismo estadio · Árbitro: no encontrado</div>
+
+  <section class="main-pick" aria-label="Pick recomendado" style="border-left-color:var(--warn)">
+    <div><div class="eyebrow" style="color:var(--warn)">Recomendada · riesgo medio</div><h1>Real Potosí o empate</h1></div>
+    <div style="text-align:right"><div class="p" style="color:var(--warn)">66%</div><div class="meta">Cuota justa 1.52 · vista 1.44 · mínimo 1.45 · 0.25 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Sexto clásico del año</b><span>Real no perdió ninguno de los 5 anteriores: 2 victorias (1-0 y 1-0) y 3 empates (1-1, 2-2, 1-1).</span></div>
+    <div class="card tile"><b>Se vieron hace 4 días</b><span>1-1 en la liga el 8 de noviembre. Se conocen de memoria y juegan tres veces en una semana.</span></div>
+    <div class="card tile"><b>Clásicos con rojas</b><span>Hubo expulsados en los 5 clásicos de 2026: 3 en febrero, 2 en julio, 1 el 22 de septiembre y 1 el domingo.</span></div>
+    <div class="card tile"><b>Sin ventaja de altura</b><span>Los dos son de Potosí y comparten estadio. Real es local solo por la taquilla. Las casas lo ven parejo.</span></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-h2h">
+      <h2 id="h-h2h">Clásicos de 2026 <small>local primero</small></h2>
+      <div class="form">
+        <div><span>Nacional – Real · liga, 8 nov</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Nacional – Real · copa, 22 sep</span><span class="r num">0-1</span><span class="chip W">R</span></div>
+        <div><span>Real – Nacional · copa, 19 sep</span><span class="r num">2-2</span><span class="chip D">E</span></div>
+        <div><span>Nacional – Real · liga, 12 jul</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Real – Nacional · verano, 1 feb</span><span class="r num">1-0</span><span class="chip W">R</span></div>
+      </div>
+      <p class="note">Goles: 1, 2, 4, 1 y 2. Menos de 2.5 en 4 de 5. Ambos marcaron en 3 de 5. Real marcó en los 5; Nacional en 3. Quién fue local en los de julio y noviembre lo deduzco del titular de prensa, no está confirmado.</p>
+    </section>
+    <section class="card" aria-labelledby="h-forma">
+      <h2 id="h-forma">Forma reciente <small>lo que encontré</small></h2>
+      <div class="form">
+        <div><span>Nacional 5-1 Oriente · copa, 4 nov</span><span class="r num">5-1</span><span class="chip W">G</span></div>
+        <div><span>Real Oruro – Nacional · 31 oct</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Nacional – Guabirá · 26 oct</span><span class="r num">3-0</span><span class="chip W">G</span></div>
+        <div><span>Bolívar – Nacional · 18 oct ⚠️</span><span class="r num">1-0</span><span class="chip L">P</span></div>
+        <div><span>Bolívar – Real · copa, vuelta</span><span class="r num">1-0</span><span class="chip L">P</span></div>
+        <div><span>Real – Bolívar · copa, ida</span><span class="r num">3-1</span><span class="chip W">G</span></div>
+        <div><span>Bulo Bulo – Real · 24 oct</span><span class="r num">2-1</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">⚠️ Una sola fuente. No llego a 10 partidos verificados por equipo: de Real en liga casi no hay resultados fiables de octubre y noviembre. Tabla de Nacional: 9 ganados, 5 empates, 10 perdidos, diferencia +4.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>modelos y cuotas vistas</small></h2>
+    <div class="odds">
+      <div><b>39%</b><span>Real · ~2.40</span></div>
+      <div><b>27%</b><span>Empate · ~3.40</span></div>
+      <div><b>34%</b><span>Nacional · ~2.80</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Real 39%, empate 27%, Nacional 34%"><i style="width:39%;background:var(--good)"></i><i style="width:27%;background:var(--warn)"></i><i style="width:34%;background:var(--bad)"></i></div>
+    <p class="meta" style="margin-top:8px">Betimate 39/27/34 · Wincomparator 38/26/36 · Real o empate 1.44 · Ambos marcan 1.53–1.58 · Marcadores: 1-1 (13%), 1-0 (10%), 0-1 (9%), 2-1 (9%), 1-2 (8%)</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Todas las apuestas <small>de más a menos probable. "Mínimo" = cuota por debajo de la cual pagan menos de lo que vale</small></h2>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Más de 0.5 goles</h3><p>Los 5 clásicos tuvieron gol. Pagará muy poco (1.05 o menos). 0.5 u si la encuentras a 1.08.</p></div><div class="pp"><b>93%</b><span>justa 1.08</span></div></div>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Menos de 4.5 goles</h3><p>A favor: 5 de 5 clásicos. En contra: Nacional viene de un 5-1 y un 2-3. 0.5 u.</p></div><div class="pp"><b>88%</b><span>justa 1.14 · mínimo 1.08</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Real Potosí marca</h3><p>A favor: marcó en los 5 clásicos del año. En contra: el modelo solo da 74%. 0.25 u.</p></div><div class="pp"><b>74%</b><span>justa 1.35 · mínimo 1.28</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Menos de 3.5 goles</h3><p>A favor: 4 de 5 clásicos; ida de semifinal, nadie quiere regalar nada. En contra: Potosí es cancha de goles. 0.25 u.</p></div><div class="pp"><b>74%</b><span>justa 1.36 · mínimo 1.29</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Más de 1.5 goles</h3><p>A favor: altura y dos equipos que marcan. En contra: 2 de los 5 clásicos acabaron 1-0. 0.25 u.</p></div><div class="pp"><b>73%</b><span>justa 1.36 · mínimo 1.29</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Nacional Potosí marca</h3><p>A favor: 8 goles en sus dos últimos partidos en Potosí. En contra: no marcó en 2 de los 5 clásicos. 0.25 u.</p></div><div class="pp"><b>71%</b><span>justa 1.40 · mínimo 1.33</span></div></div>
+    <div class="pick"><span class="risk m">Medio · recomendada</span><div><h3>Real Potosí o empate (1.44)</h3><p>A favor: 5 de 5 este año y viene de eliminar a Bolívar. En contra: paga un 5% menos de lo justo y Nacional está mejor en la liga. 0.25 u, mejor si ves 1.45 o más.</p></div><div class="pp"><b>66%</b><span>justa 1.52 · vista 1.44</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Nacional o empate</h3><p>A favor: 3 de 5 clásicos fueron empate. En contra: Nacional no ganó ninguno. 0.25 u.</p></div><div class="pp"><b>61%</b><span>justa 1.64 · mínimo 1.56</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Ambos marcan (1.53–1.58)</h3><p>A favor: 3 de 5 clásicos. En contra: paga bastante menos de lo justo. 0.25 u.</p></div><div class="pp"><b>53%</b><span>justa 1.89 · pagan 1.55</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Menos de 2.5 goles</h3><p>A favor: 4 de 5 clásicos. En contra: el modelo lo deja en moneda al aire. Si paga 2.00 o más, es de las que mejor pagan frente a los datos. 0.25 u.</p></div><div class="pp"><b>52%</b><span>justa 1.93 · mínimo 1.85</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Más de 2.5 goles</h3><p>A favor: Nacional metió 5 y 3 en casa hace poco. En contra: solo 1 de 5 clásicos. 0.25 u.</p></div><div class="pp"><b>48%</b><span>justa 2.07 · mínimo 2.00</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Gana Real Potosí (~2.40)</h3><p>A favor: ganó 2 de 5 clásicos y no perdió ninguno. En contra: paga algo menos de lo justo. 0.25 u.</p></div><div class="pp"><b>39%</b><span>justa 2.55 · pagan ~2.40</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Gana Nacional Potosí (~2.80)</h3><p>A favor: mejor plantel y séptimo en la liga. En contra: 0 de 5 este año contra Real. 0.25 u.</p></div><div class="pp"><b>34%</b><span>justa 2.90 · pagan ~2.80</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Empate (~3.40)</h3><p>3 de 5 clásicos acabaron empatados y es partido de ida. El modelo da 27%, los clásicos 60%. Si paga 3.40 o más, es la cuota larga con más respaldo en los datos. 0.1 u.</p></div><div class="pp"><b>27%</b><span>justa 3.78 · pagan ~3.40</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Más de 3.5 goles</h3><p>0.1 u.</p></div><div class="pp"><b>26%</b><span>justa 3.79 · mínimo 3.60</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Marcador exacto 1-1</h3><p>Fue el resultado de 2 de los 5 clásicos. 0.1 u.</p></div><div class="pp"><b>13%</b><span>justa 8.00 · mínimo 7.00</span></div></div>
+    <div class="pick"><span class="risk m">Sin cuota</span><div><h3>Habrá tarjeta roja · Más de 4.5 tarjetas</h3><p>El dato más fuerte del partido: expulsados en 5 de 5 clásicos de 2026 (7 rojas en total). No tengo cuota, árbitro ni amarillas por partido. Si bet365 ofrece "habrá expulsión" a 2.50 o más, vale 0.25 u; mándame la captura y te la afino.</p></div><div class="pp"><b>5/5</b><span>falta cuota</span></div></div>
+    <p class="note">Corners: sin datos de ninguno de los dos equipos. No les puedo poner número.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad baja: liga boliviana sin estadísticas partido a partido, menos de 10 resultados verificados por equipo y cuotas de webs de pronósticos, no de bet365. Las probabilidades salen de un modelo anclado a esas cuotas (Real 1.35 goles esperados, Nacional 1.25). Sin acceso directo a las webs: todo sale de búsquedas cruzadas.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.vision360.bo/noticias/2026/11/12/76835-real-vs-nacional-choque-potosino-con-fuerzas-equilibradas">Visión 360: previa</a>
+      <a href="https://diez.bo/futbol/real-potosi-y-nacional-potosi-van-por-el-primer-golpe-en-la-semifinal_1794487170">Diez: previa</a>
+      <a href="https://www.bolivia.com/futbol/liga-boliviana/revisa-como-quedaron-los-partidos-por-las-semifinales-de-la-copa-pacena-610487">Bolivia.com: fixture</a>
+      <a href="https://www.bolivia.com/futbol/liga-boliviana/real-potosi-elimina-a-bolivar-de-la-copa-pacena-y-avanza-a-las-semifinales-610450">Real elimina a Bolívar</a>
+      <a href="https://larazon.bo/marcas/2026/11/04/nacional-potosi-va-por-otro-titulo-elimina-a-oriente/">La Razón: Nacional 5-1 Oriente</a>
+      <a href="https://www.vision360.bo/noticias/2026/11/08/76332-nacional-y-real-empatan-a-un-gol-en-una-nueva-edicion-del-clasico-potosino">Clásico 8 nov</a>
+      <a href="https://elpais.bo/deportes/20260923_real-potosi-se-queda-con-el-clasico-de-la-villa-imperial.html">Clásico 22 sep</a>
+      <a href="https://radiokollasuyo.bo/2026/09/19/real-potosi-y-nacional-potosi-empatan-en-un-clasico-potosino-vibrante-y-con-final-agonico/">Clásico 19 sep</a>
+      <a href="https://www.reduno.com.bo/deportes/nacional-potosi-dejo-escapar-la-victoria-en-el-ultimo-suspiro-ante-real-potosi-1-1-202671218747">Clásico 12 jul</a>
+      <a href="https://www.vision360.bo/noticias/2026/02/01/39301-real-potosi-derrota-a-nacional-por-la-minima-y-se-queda-con-el-clasico-de-la-villa-imperial">Clásico 1 feb</a>
+      <a href="https://www.futbol24.com/team/Bolivia/Nacional-Potosi">Futbol24: Nacional</a>
+      <a href="https://www.futbol24.com/team/Bolivia/Real-Potosi">Futbol24: Real</a>
+      <a href="https://betimate.com/en/news/previews/real-potosi-vs-nacional-potosi-prediction-odds-betting-tips-11122026-2991054">Betimate</a>
+      <a href="https://www.wincomparator.com/predictions/real-potosi-nacional-potosi-8964535/">Wincomparator: cuotas</a>
+      <a href="https://scores24.live/es/soccer/m-12-11-2026-real-potosi-nacional-potosi-prediction">Scores24</a>
+    </div>
+  </section>
+</div>
