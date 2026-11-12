@@ -1,0 +1,298 @@
+<title>Turquía vs Bélgica</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">UEFA Nations League · Liga A · Grupo 1 · Jornada 5</div>
+  <header class="hero">
+    <div class="team"><b>Turquía</b><span>FIFA 31.º · 4.º del grupo, 0 puntos · debut de Sergen Yalçın</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Bélgica</b><span>FIFA 8.º · 3.º del grupo, 6 puntos · Mark van Bommel</span></div>
+  </header>
+  <div class="meta">Jueves 12 nov 2026 · 11:00 (tu hora) · 20:00 en Esmirna · Estadio Gürsel Aksel · Árbitro: Sandro Schärer (Suiza) · Ida: Bélgica 3-0 Turquía (2 oct)</div>
+
+  <section class="main-pick" aria-label="Pick principal">
+    <div><div class="eyebrow" style="color:var(--good)">Pick de riesgo bajo</div><h1>Bélgica marca (más de 0.5 goles)</h1></div>
+    <div style="text-align:right"><div class="p">83%</div><div class="meta">Cuota justa 1.20 · mínimo 1.11 · 0.5 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Turquía encaja siempre</b><span>Le marcaron en sus últimos 7 partidos: 16 goles en contra. En la Nations League, 11 en 4 partidos.</span></div>
+    <div class="card tile"><b>Entrenador nuevo</b><span>Montella salió tras el 3-1 de Bolonia. Yalçın debuta hoy: nadie sabe cómo jugará su Turquía.</span></div>
+    <div class="card tile"><b>Bélgica sin Lukaku</b><span>Baja por la cadera. Aun así, 5 de los 6 goles belgas del grupo los marcaron otros (De Bruyne 2, Lukébakio 2, Godts).</span></div>
+    <div class="card tile"><b>Turquía genera</b><span>En la ida perdió 3-0 rematando 23 veces (8 a puerta). El marcador engañó: no es un rival muerto.</span></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-ft">
+      <h2 id="h-ft">Turquía <small>últimos 10</small></h2>
+      <div class="form">
+        <div><span>Italia – Turquía · Nations</span><span class="r num">3-1</span><span class="chip L">P</span></div>
+        <div><span>Bélgica – Turquía · Nations</span><span class="r num">3-0</span><span class="chip L">P</span></div>
+        <div><span>Turquía – Italia · Nations</span><span class="r num">1-4</span><span class="chip L">P</span></div>
+        <div><span>Turquía – Francia · Nations</span><span class="r num">0-1</span><span class="chip L">P</span></div>
+        <div><span>Turquía – EE. UU. · Mundial</span><span class="r num">3-2</span><span class="chip W">G</span></div>
+        <div><span>Turquía – Paraguay · Mundial</span><span class="r num">0-1</span><span class="chip L">P</span></div>
+        <div><span>Australia – Turquía · Mundial</span><span class="r num">2-0</span><span class="chip L">P</span></div>
+        <div><span>Turquía – Venezuela · amistoso</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>Turquía – Macedonia N. · amistoso</span><span class="r num">4-0</span><span class="chip W">G</span></div>
+        <div><span>Kosovo – Turquía · repesca</span><span class="r num">0-1</span><span class="chip W">G</span></div>
+      </div>
+      <p class="note">1 victoria en los últimos 7. No marcó en 4 de esos 7. Eliminada en la fase de grupos del Mundial.</p>
+    </section>
+    <section class="card" aria-labelledby="h-fb">
+      <h2 id="h-fb">Bélgica <small>últimos 10</small></h2>
+      <div class="form">
+        <div><span>Francia – Bélgica · Nations</span><span class="r num">4-1</span><span class="chip L">P</span></div>
+        <div><span>Bélgica – Turquía · Nations</span><span class="r num">3-0</span><span class="chip W">G</span></div>
+        <div><span>Bélgica – Francia · Nations</span><span class="r num">0-1</span><span class="chip L">P</span></div>
+        <div><span>Italia – Bélgica · Nations</span><span class="r num">0-2</span><span class="chip W">G</span></div>
+        <div><span>España – Bélgica · Mundial, cuartos</span><span class="r num">2-1</span><span class="chip L">P</span></div>
+        <div><span>EE. UU. – Bélgica · Mundial, octavos</span><span class="r num">1-4</span><span class="chip W">G</span></div>
+        <div><span>Bélgica – Senegal · Mundial (prórroga)</span><span class="r num">3-2</span><span class="chip W">G</span></div>
+        <div><span>N. Zelanda – Bélgica · Mundial</span><span class="r num">1-5</span><span class="chip W">G</span></div>
+        <div><span>Bélgica – Irán · Mundial</span><span class="r num">0-0</span><span class="chip D">E</span></div>
+        <div><span>Bélgica – Egipto · Mundial</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+      </div>
+      <p class="note">Marcó en 8 de los últimos 10 y en 17 de los últimos 20. Solo pierde contra Francia y España. Cuartofinalista del Mundial.</p>
+    </section>
+  </div>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-1x2">
+      <h2 id="h-1x2">Resultado 1X2 <small>mercado sin margen</small></h2>
+      <div class="odds">
+        <div><b>24%</b><span>Turquía · ~4.10</span></div>
+        <div><b>23%</b><span>Empate · ~4.00</span></div>
+        <div><b style="color:var(--good)">53%</b><span>Bélgica · ~1.85</span></div>
+      </div>
+      <div class="bar" role="img" aria-label="Turquía 24%, empate 23%, Bélgica 53%"><i style="width:24%;background:var(--bad)"></i><i style="width:23%;background:var(--warn)"></i><i style="width:53%;background:var(--good)"></i></div>
+      <p class="meta" style="margin-top:8px">Casas: Bélgica 1.83–1.90 · Polymarket: 55 / 23 / 25 · Kalshi: Bélgica 50–55%</p>
+      <div class="scores">
+        <div><b>1-1</b><span>11%</span></div><div><b>1-2</b><span>10%</span></div><div><b>0-1</b><span>9%</span></div><div><b>0-2</b><span>8%</span></div><div><b>2-1</b><span>7%</span></div>
+      </div>
+    </section>
+    <section class="card" aria-labelledby="h-tab">
+      <h2 id="h-tab">Grupo 1 <small>tras 4 jornadas</small></h2>
+      <div class="tw"><table style="min-width:0">
+        <tr><th>Equipo</th><th>PJ</th><th>G-E-P</th><th>Goles</th><th>Pts</th></tr>
+        <tr><td>Francia</td><td>4</td><td>3-1-0</td><td>7-2</td><td><b>10</b></td></tr>
+        <tr><td>Italia</td><td>4</td><td>2-1-1</td><td>8-5</td><td><b>7</b></td></tr>
+        <tr><td>Bélgica</td><td>4</td><td>2-0-2</td><td>6-5</td><td><b>6</b></td></tr>
+        <tr><td>Turquía</td><td>4</td><td>0-0-4</td><td>2-11</td><td><b>0</b></td></tr>
+      </table></div>
+      <p class="note">Bélgica necesita ganar para pelear el 2.º puesto (cuartos) con Italia, que hoy juega contra Francia. Turquía solo evita el último puesto (descenso directo) si gana hoy y el domingo en Francia.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Picks <small>"mínimo" = cuota por debajo de la cual no entrar. Todos en la misma dirección: Bélgica no pierde y marca</small></h2>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Bélgica marca (más de 0.5 goles)</h3><p>Mercado 83%. Turquía encajó en 7 de 7; Bélgica marcó en 8 de 10 y en 17 de 20. La baja de Lukaku pesa poco: el gol belga está repartido. Stake 0.5 u (selecciones = pocos datos).</p></div><div class="pp"><b>83%</b><span>justa 1.20 · mínimo 1.11</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Bélgica o empate (doble oportunidad X2)</h3><p>Mercado 76%. Turquía no ganó 6 de sus últimos 7; Bélgica no perdió 7 de 10 (16 de 20). No es bajo: el dato belga no llega al 80% y hay entrenador nuevo en casa. Stake 0.5 u.</p></div><div class="pp"><b>76%</b><span>justa 1.31 · mínimo 1.25</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Más de 1.5 goles</h3><p>Mercado 80%. Bélgica 8 de 10, pero Turquía solo 5 de 7, por eso no es bajo. Depende de lo mismo que el pick 1: elige uno de los dos, no los sumes ni los combines. Stake 0.25 u.</p></div><div class="pp"><b>80%</b><span>justa 1.25 · mínimo 1.19</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Gana Bélgica</h3><p>53% es casi una moneda al aire y las casas pagan justo lo que vale (1.83–1.90). Solo si bet365 ofrece 1.95 o más. Alternativa más prudente: Bélgica empate no apuesta, solo a 1.40 o más (justa 1.45).</p></div><div class="pp"><b>53%</b><span>justa 1.89 · mínimo 1.95</span></div></div>
+    <div class="pick"><span class="risk x">Sin confirmar</span><div><h3>Más de 3.5 tarjetas</h3><p>Schärer saca entre 4.1 y 4.6 amarillas por partido y en la ida hubo 7. Pero solo tengo tarjetas de 3 partidos por equipo y ninguna cuota. Mándame la captura de bet365 y lo cierro.</p></div><div class="pp"><b>—</b><span>falta cuota</span></div></div>
+    <div class="pick"><span class="risk x">Sin confirmar</span><div><h3>Turquía más corners que Bélgica</h3><p>Turquía ganó los corners 6-2 a Italia y 5-2 en la ida contra Bélgica. Son dos partidos y con otro entrenador: seguimiento, sin apuesta.</p></div><div class="pp"><b>2/2</b><span>muestra corta</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Más de 2.5 goles (1.50)</h3><p>La cuota implica 64%. En los datos: Turquía 4 de 7, Bélgica 6 de 10, y el modelo da 58%. Pagan menos de lo que vale.</p></div><div class="pp"><b>58%</b><span>justa 1.73</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Ambos marcan (1.50)</h3><p>Turquía no marcó en 4 de sus últimos 7 partidos. A 1.50 necesitas acertar el 67% y los datos dan alrededor del 55–59%.</p></div><div class="pp"><b>59%</b><span>justa 1.70</span></div></div>
+    <div class="pick"><span class="risk x">Descartado</span><div><h3>Gana Turquía (~4.10)</h3><p>Cuota larga contra los datos: 0 puntos, 6 derrotas en 7. El "efecto entrenador nuevo" ya está metido en el precio.</p></div><div class="pp"><b>24%</b><span>fuera por regla</span></div></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-si">
+      <h2 id="h-si">Por qué sí</h2>
+      <ul class="why">
+        <li><span class="ok">✓</span><span>Turquía recibe 2.75 goles por partido en el grupo y ya perdió 3-0 contra este rival hace seis semanas.</span></li>
+        <li><span class="ok">✓</span><span>Pierde a su central titular: Bardakcı está sancionado y Demirbağ, lesionado de ligamento cruzado.</span></li>
+        <li><span class="ok">✓</span><span>Bélgica se juega algo real: con 6 puntos necesita ganar para alcanzar a Italia.</span></li>
+        <li><span class="ok">✓</span><span>Vuelve Doku, y la plantilla belga está "completamente en forma" salvo Lukaku, Debast y Lavia (sancionado).</span></li>
+        <li><span class="ok">✓</span><span>Bélgica ganó 2-0 en Italia en este mismo grupo: fuera de casa también marca.</span></li>
+      </ul>
+    </section>
+    <section class="card" aria-labelledby="h-no">
+      <h2 id="h-no">Por qué no</h2>
+      <ul class="why">
+        <li><span class="no">✗</span><span>Entrenador nuevo: los datos de Turquía con Montella pueden no valer hoy. Es el mayor riesgo del partido.</span></li>
+        <li><span class="no">✗</span><span>Turquía recupera a Arda Güler y Barış Alper Yılmaz (cumplieron sanción) y juega en casa con el estadio a favor.</span></li>
+        <li><span class="no">✗</span><span>Bélgica se quedó a cero contra Irán y contra Francia: 2 de sus últimos 10.</span></li>
+        <li><span class="no">✗</span><span>Bélgica encajó 4 en Francia en 13 minutos. Atrás no es fiable; por eso no hay pick de portería a cero ni hándicap.</span></li>
+        <li><span class="no">✗</span><span>No he visto las cuotas reales de bet365 ni las alineaciones oficiales (salen una hora antes).</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-datos">
+    <h2 id="h-datos">Partidos del grupo con estadísticas <small>posesión, remates (a puerta), corners, amarillas</small></h2>
+    <div class="tw"><table>
+      <tr><th>Partido</th><th>Marcador</th><th>Posesión</th><th>Remates</th><th>Corners</th><th>Amarillas</th></tr>
+      <tr><td>Turquía – Francia (25 sep)</td><td>0-1</td><td class="nd">no encontrado</td><td class="nd">no encontrado</td><td class="nd">—</td><td>roja a U. Çakır (86')</td></tr>
+      <tr><td>Turquía – Italia (28 sep)</td><td>1-4</td><td>54 – 46</td><td>15 (3) – 14 (8)</td><td>6 – 2</td><td>3 – 0</td></tr>
+      <tr><td>Bélgica – Turquía (2 oct)</td><td>3-0</td><td>54 – 46</td><td>17 (10) – 23 (8)</td><td>2 – 5</td><td>4 – 3</td></tr>
+      <tr><td>Italia – Turquía (5 oct)</td><td>3-1</td><td class="nd">no encontrado</td><td>15 (6) – 14 (5)</td><td class="nd">—</td><td>2 – 2</td></tr>
+      <tr><td>Italia – Bélgica (25 sep)</td><td>0-2</td><td>56 – 44</td><td>21 (6) – 19 (8)</td><td>4 – 8</td><td class="w">fuentes no coinciden</td></tr>
+      <tr><td>Bélgica – Francia (28 sep)</td><td>0-1</td><td>35 – 65</td><td>12 (2) – 18 (7)</td><td>2 – 6</td><td>3 – 0 ⚠️</td></tr>
+      <tr><td>Francia – Bélgica (5 oct)</td><td>4-1</td><td class="nd">no encontrado</td><td class="nd">no encontrado</td><td class="nd">—</td><td class="nd">—</td></tr>
+    </table></div>
+    <p class="note">Lectura: Turquía remata mucho (14–23 por partido) pero acierta poco y defiende mal. Bélgica cede el balón (44–54%) y golpea a la contra: 8–10 remates a puerta contra Italia y Turquía. ⚠️ = una sola fuente.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-mk">
+    <h2 id="h-mk">Todos los mercados <small>modelo anclado al mercado (Turquía 1.22 goles esperados, Bélgica 1.78) frente a los datos reales</small></h2>
+    <div class="tw"><table class="mk">
+      <tr><th>Mercado</th><th>Prob.</th><th>Cuota justa</th><th>Turquía últ. 7</th><th>Bélgica últ. 10</th></tr>
+      <tr><td>Bélgica marca</td><td class="g">83%</td><td>1.20</td><td>encajó 7/7</td><td>marcó 8/10</td></tr>
+      <tr><td>Más de 1.5 goles</td><td class="g">80%</td><td>1.25</td><td>5/7</td><td>8/10</td></tr>
+      <tr><td>Menos de 4.5 goles</td><td class="g">82%</td><td>1.23</td><td class="bd">5/7</td><td class="bd">6/10</td></tr>
+      <tr><td>Bélgica o empate</td><td class="w">76%</td><td>1.31</td><td>no ganó 6/7</td><td>no perdió 7/10</td></tr>
+      <tr><td>Turquía +1.5</td><td class="w">72%</td><td>1.39</td><td class="bd">perdió por 2+ en 4/7</td><td>—</td></tr>
+      <tr><td>Turquía marca</td><td class="w">70%</td><td>1.42</td><td class="bd">marcó 3/7</td><td>encajó 7/10</td></tr>
+      <tr><td>Bélgica empate no apuesta</td><td class="w">69%</td><td>1.45</td><td>—</td><td>—</td></tr>
+      <tr><td>Más de 2.5 goles</td><td>58%</td><td>1.73</td><td>4/7</td><td>6/10</td></tr>
+      <tr><td>Ambos marcan</td><td>59%</td><td>1.70</td><td class="bd">3/7</td><td>5/10</td></tr>
+      <tr><td>Bélgica 2 o más goles</td><td>53%</td><td>1.88</td><td>encajó 2+ en 4/7</td><td>5/10</td></tr>
+      <tr><td>Gana Bélgica</td><td>53%</td><td>1.89</td><td>perdió 6/7</td><td>ganó 5/10</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>35%</td><td>2.83</td><td>3/7</td><td>4/10</td></tr>
+      <tr><td>Bélgica −1.5</td><td>28%</td><td>3.59</td><td>4/7</td><td>3/10</td></tr>
+    </table></div>
+    <p class="note">En rojo, los datos que contradicen al modelo: por eso "menos de 4.5", "Turquía +1.5" y "Turquía marca" no son picks aunque el número parezca alto. Mitades, tarjetas y corners por líneas: no hay datos suficientes de selecciones para calcularlos con rigor.</p>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-bajas">
+      <h2 id="h-bajas">Bajas y onces probables <small>prensa turca y belga</small></h2>
+      <ul class="why">
+        <li><span class="no">✗</span><span><b>Turquía:</b> Bardakcı (sancionado), Kenan Yıldız (lesión), Aral Şimşir (lesión), Demirbağ (cruzado), Aktürkoğlu (no convocado). Zeki Çelik, duda.</span></li>
+        <li><span class="ok">✓</span><span><b>Once probable:</b> U. Çakır; Kadıoğlu, Demiral, Kabak, Elmalı; Kökçü, Çalhanoğlu; O. Aydın, Arda Güler, B. A. Yılmaz; Enes Ünal.</span></li>
+        <li><span class="no">✗</span><span><b>Bélgica:</b> Lukaku (cadera), Lavia (sancionado), Debast (lesión), Openda (no convocado). De Winter renunció.</span></li>
+        <li><span class="ok">✓</span><span><b>Once probable:</b> Lammens; Castagne, Mechele, Ngoy, De Cuyper; Vanaken, Tielemans; Lukébakio, De Bruyne, Trossard o Doku; De Ketelaere.</span></li>
+      </ul>
+      <p class="note">Son onces de prensa, no oficiales. Si De Bruyne no sale de inicio, baja el stake del pick 1 a la mitad.</p>
+    </section>
+    <section class="card" aria-labelledby="h-hist">
+      <h2 id="h-hist">30 partidos por equipo <small>desde la Eurocopa 2024</small></h2>
+      <div class="tw"><table style="min-width:0">
+        <tr><th>Tramo</th><th>Turquía</th><th>Bélgica</th></tr>
+        <tr><td>2026 (verificado hoy)</td><td>5G 0E 6P · 13-17</td><td>6G 3E 3P · 26-15</td></tr>
+        <tr><td>2025 (verificado hoy)</td><td>7G 1E 2P · 25-15</td><td>5G 3E 0P · 29-7</td></tr>
+        <tr><td>2024 y mar. 2025 ⚠️</td><td>6G 2E 3P · 17-14</td><td>3G 2E 7P · 12-15</td></tr>
+      </table></div>
+      <p class="note">Goles a favor – en contra. Turquía cae en picado: de 7 victorias en 10 partidos en 2025 a 6 derrotas en los últimos 7. ⚠️ El tramo de 2024 lo pongo de memoria, sin recomprobar hoy: no sostiene ningún pick. De Bélgica faltan sus amistosos de junio de 2026.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-cal">
+    <h2 id="h-cal">Calidad de los datos y método</h2>
+    <div class="foot">
+      <div>Resultados<span>Verificados en 2+ fuentes (UEFA, ESPN, Mackolik, TFF).</span></div>
+      <div>Bajas y árbitro<span>Verificados: prensa turca, belga y neerlandesa coinciden.</span></div>
+      <div>Cuotas<span>De webs de pronósticos y Polymarket. bet365 real: sin ver.</span></div>
+      <div>Estadísticas<span>Parciales: 5 de 7 partidos del grupo, corners y tarjetas incompletos.</span></div>
+    </div>
+    <p class="note">No pude abrir las páginas directamente desde este entorno (red restringida): todo sale de búsquedas web cruzadas. Ninguna apuesta de esta página tiene ventaja de precio demostrada: son las más probables, no "seguras". Un 83% falla 1 de cada 6 veces.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000--2026-27-uefa-nations-league-all-the-league-phase-fixtures-a/">UEFA: resultados</a>
+      <a href="https://www.espn.com/soccer/match/_/gameId/401861109/turkiye-belgium">ESPN: Bélgica 3-0 Turquía</a>
+      <a href="https://www.espn.com/soccer/team-stats/_/gameId/401861077">ESPN: Turquía 1-4 Italia</a>
+      <a href="https://www.espn.com/soccer/team-stats/_/gameId/401861081">ESPN: Bélgica 0-1 Francia</a>
+      <a href="https://www.figc.it/en/national-teams/news/three-more-points-against-turkiye-as-scamacca-calafiori-and-pio-esposito-strike-in-bologna-u4ppk93x">FIGC: Italia 3-1 Turquía</a>
+      <a href="https://www.gzt.com/spor/turkiye-belcika-maci-muhtemel-11ler-milli-takim-belcika-maci-kadrosu-izmirde-iki-eksik-var-sergen-yalcin-kararini-verdi-4277760">GZT: onces y bajas</a>
+      <a href="https://www.vi.nl/nieuws/van-bommel-en-rode-duivels-reizen-zonder-lukaku-af-naar-turkije">VI: Lukaku baja</a>
+      <a href="https://voetbalfocus.be/mika-godts-terug-training-rode-duivels-turkije/">Voetbalfocus: Bélgica</a>
+      <a href="https://www.aa.com.tr/en/sports/profile-sergen-yalcin-becomes-48th-coach-of-turkish-national-football-team/4095161">Anadolu: Yalçın</a>
+      <a href="https://www.sofascore.com/news/what-happened-to-turkiye-a-golden-generation-with-1-win-in-7-games">Sofascore: crisis turca</a>
+      <a href="https://polymarket.com/sports/unl/games">Polymarket</a>
+      <a href="https://www.statshub.com/referee/scharer-sandro/137333">StatsHub: Schärer</a>
+      <a href="https://www.sportsgambler.com/betting-tips/football/turkey-vs-belgium-prediction-lineups-odds-2026-11-12/">SportsGambler: cuotas</a>
+      <a href="https://www.mackolik.com/takim/t%C3%BCrkiye/ma%C3%A7lar/9s2kpeunkes0g17l95r3t91j6">Mackolik: Turquía</a>
+      <a href="https://www.espn.com/soccer/team/results/_/id/459/belgium">ESPN: Bélgica</a>
+    </div>
+  </section>
+</div>
