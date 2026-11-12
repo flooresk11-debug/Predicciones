@@ -1,0 +1,195 @@
+<title>Pasto vs Junior</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">Colombia · Primera A · Clausura · Jornada 19</div>
+  <header class="hero">
+    <div class="team"><b>Dep. Pasto</b><span>18.º, 15 puntos · eliminado · juega con la Sub-20</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Junior</b><span>17.º, 19 puntos · eliminado · Sebastián Viera</span></div>
+  </header>
+  <div class="meta">Jueves 12 nov 2026 · 17:00 (tu hora) · 18:00 en Colombia (retrasado una hora) · Estadio Departamental Libertad, Pasto (2.527 m) · Árbitro: no encontrado</div>
+
+  <section class="main-pick" aria-label="Pick recomendado">
+    <div><div class="eyebrow" style="color:var(--good)">Recomendada</div><h1>Más de 1.5 goles</h1></div>
+    <div style="text-align:right"><div class="p">80%</div><div class="meta">Cuota justa 1.25 · mínimo 1.16 · 0.5 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Pasto juega con juveniles</b><span>Los profesionales están en huelga por dos meses de sueldo sin pagar. La Sub-20 perdió 5-0 con Santa Fe el domingo y repite hoy.</span></div>
+    <div class="card tile"><b>Junior es malo de visitante</b><span>1 victoria, 1 empate y 6 derrotas fuera: 7 goles a favor y 15 en contra en 8 salidas.</span></div>
+    <div class="card tile"><b>Viaje complicado</b><span>Junior no pudo llegar a Pasto el miércoles por el clima. Viajó hoy mismo, a 2.527 metros de altura, y por eso se retrasó el partido.</span></div>
+    <div class="card tile"><b>Nadie se juega nada</b><span>Los dos están eliminados. Junior lleva lista de 20 con seis caras nuevas y bajas; Muriel y Paiva sí viajan.</span></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fp">
+      <h2 id="h-fp">Pasto <small>últimos partidos encontrados</small></h2>
+      <div class="form">
+        <div><span>Santa Fe – Pasto · Sub-20</span><span class="r num">5-0</span><span class="chip L">P</span></div>
+        <div><span>Pasto – Jaguares</span><span class="r num">2-0</span><span class="chip W">G</span></div>
+        <div><span>Pasto – Alianza</span><span class="r num">0-1</span><span class="chip L">P</span></div>
+        <div><span>Nacional – Pasto</span><span class="r num">3-0</span><span class="chip L">P</span></div>
+        <div><span>Pasto – Once Caldas</span><span class="r num">1-0</span><span class="chip W">G</span></div>
+        <div><span>Bucaramanga – Pasto</span><span class="r num">2-1</span><span class="chip L">P</span></div>
+        <div><span>Pasto – Cali</span><span class="r num">0-2</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Solo el 5-0 es de este equipo juvenil. Los demás los jugaron los profesionales y hoy valen poco. Once probable: Marquínez; Mosquera, Revollo, Portes, Goyes; Moreno, Santacruz, Martínez, Medina; Perlaza, Preciado.</p>
+    </section>
+    <section class="card" aria-labelledby="h-fj">
+      <h2 id="h-fj">Junior <small>de visitante en el Clausura</small></h2>
+      <div class="form">
+        <div><span>Cali – Junior</span><span class="r num">0-0</span><span class="chip D">E</span></div>
+        <div><span>Bucaramanga – Junior</span><span class="r num">3-1</span><span class="chip L">P</span></div>
+        <div><span>América – Junior</span><span class="r num">4-2</span><span class="chip L">P</span></div>
+        <div><span>Fortaleza – Junior</span><span class="r num">1-4</span><span class="chip W">G</span></div>
+        <div><span>Alianza – Junior</span><span class="r num">1-0</span><span class="chip L">P</span></div>
+        <div><span>Boyacá Chicó – Junior</span><span class="r num">1-0</span><span class="chip L">P</span></div>
+        <div><span>Nacional – Junior</span><span class="r num">3-1</span><span class="chip L">P</span></div>
+        <div><span>Tolima – Junior</span><span class="r num">2-1</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">⚠️ Lista de una sola fuente, sin orden de fechas confirmado. Marcó en 5 de 8 y metió 2 o más solo en 2 de 8. Le marcaron en 7 de 8. Último partido: Junior 2-0 Cúcuta, en casa.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>casas sin margen</small></h2>
+    <div class="odds">
+      <div><b>9%</b><span>Pasto · ~10.00</span></div>
+      <div><b>15%</b><span>Empate · ~6.60</span></div>
+      <div><b style="color:var(--good)">76%</b><span>Junior · 1.14–1.21</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Pasto 9%, empate 15%, Junior 76%"><i style="width:9%;background:var(--bad)"></i><i style="width:15%;background:var(--warn)"></i><i style="width:76%;background:var(--good)"></i></div>
+    <p class="meta" style="margin-top:8px">Codere: Junior o empate 1.02 · Pasto marca 1.80 · Junior anota primero 1.22. Marcadores más probables: 0-2 (13%), 0-1 (12%), 0-3 (10%), 1-2 (9%), 1-1 (8%)</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Todas las apuestas <small>de más a menos probable. Tú eliges; "mínimo" = cuota por debajo de la cual pagan menos de lo que vale</small></h2>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Junior o empate</h3><p>A favor: los juveniles de Pasto perdieron 5-0. En contra: paga 1.02, arriesgas 100 para ganar 2. Solo sirve si la quieres de relleno, y un relleno a 1.02 no compensa.</p></div><div class="pp"><b>91%</b><span>justa 1.10 · pagan 1.02</span></div></div>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Junior marca (más de 0.5)</h3><p>A favor: delantera profesional (Muriel, Paiva) contra una defensa Sub-20. En contra: Junior se quedó a cero en 3 de 8 salidas, y llega el mismo día a la altura. 0.5 u.</p></div><div class="pp"><b>90%</b><span>justa 1.11 · mínimo 1.05</span></div></div>
+    <div class="pick"><span class="risk b">Bajo · recomendada</span><div><h3>Más de 1.5 goles</h3><p>A favor: 6 de las 8 salidas de Junior tuvieron 2 o más goles, y no depende de quién gane. En contra: partido sin nada en juego. 0.5 u.</p></div><div class="pp"><b>80%</b><span>justa 1.25 · mínimo 1.16</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Junior anota primero (1.22)</h3><p>A favor: diferencia de categoría. En contra: paga algo menos de lo justo y un 0-0 la pierde. 0.25 u.</p></div><div class="pp"><b>78%</b><span>justa 1.28 · pagan 1.22</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Gana Junior (1.14–1.21)</h3><p>A favor: profesionales contra juveniles. En contra: ganó 1 de 8 fuera, viaje el mismo día, altura y equipo con rotaciones. A 1.14 paga claramente menos de lo justo; a 1.21 se acerca. 0.5 u solo si ves 1.25 o más; si no, 0.25 u.</p></div><div class="pp"><b>76%</b><span>justa 1.32 · mínimo 1.25</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Junior más de 1.5 goles</h3><p>A favor: Santa Fe le hizo 5 a este mismo equipo. En contra: Junior metió 2 o más solo en 2 de 8 salidas. 0.25 u.</p></div><div class="pp"><b>67%</b><span>justa 1.49 · mínimo 1.42</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Más de 2.5 goles</h3><p>A favor: 4 de 8 salidas de Junior con 3 o más goles y el 5-0 del domingo. En contra: sin motivación puede ser un partido lento. 0.25 u.</p></div><div class="pp"><b>58%</b><span>justa 1.73 · mínimo 1.65</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Pasto marca (1.80)</h3><p>A favor: a Junior le marcaron en 7 de 8 salidas. En contra: los juveniles no marcaron en Bogotá. Paga algo menos de lo justo. 0.25 u.</p></div><div class="pp"><b>50%</b><span>justa 1.99 · pagan 1.80</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Junior −1.5 (gana por 2 o más)</h3><p>A favor: el 5-0 de Santa Fe. En contra: Junior solo ganó por 2 o más una vez fuera (4-1 a Fortaleza). 0.25 u.</p></div><div class="pp"><b>50%</b><span>justa 2.00 · mínimo 1.90</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Junior gana y más de 2.5 goles</h3><p>Combina las dos anteriores. 0.25 u.</p></div><div class="pp"><b>49%</b><span>justa 2.05 · mínimo 1.95</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Ambos marcan</h3><p>A favor: Junior encaja casi siempre fuera. En contra: necesita gol de los juveniles. 0.25 u.</p></div><div class="pp"><b>45%</b><span>justa 2.21 · mínimo 2.10</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Junior gana sin encajar</h3><p>A favor: Pasto Sub-20 no marcó el domingo. En contra: Junior dejó su portería a cero solo 1 vez en 8 salidas. 0.25 u.</p></div><div class="pp"><b>45%</b><span>justa 2.24 · mínimo 2.10</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Junior 3 o más goles</h3><p>0.1 u.</p></div><div class="pp"><b>40%</b><span>justa 2.48 · mínimo 2.35</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Más de 3.5 goles (1.80 en una fuente ⚠️)</h3><p>Si de verdad paga 1.80, es mucho menos de lo justo. 0.1 u.</p></div><div class="pp"><b>35%</b><span>justa 2.83 · pagan 1.80</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Junior −2.5 (gana por 3 o más)</h3><p>0.1 u.</p></div><div class="pp"><b>28%</b><span>justa 3.56 · mínimo 3.40</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Pasto o empate (1X)</h3><p>La sorpresa: Junior ganó 1 de 8 fuera y llega con el viaje encima. Las casas la pagan alrededor de 4.00–4.50. 0.1 u.</p></div><div class="pp"><b>24%</b><span>justa 4.15 · mínimo 4.00</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Empate (~6.60) · Gana Pasto (~10.00)</h3><p>0.1 u cada una como máximo.</p></div><div class="pp"><b>15% · 9%</b><span>justas 6.60 y 11.00</span></div></div>
+    <p class="note">Tarjetas y corners: no encontré ni árbitro, ni cuotas, ni datos por partido de estos equipos. No puedo ponerles número; si me mandas las líneas de bet365, las calculo.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad baja. La situación es única: un equipo juvenil del que solo existe un partido. Las probabilidades salen de las cuotas de las casas (Pasto 0.70 goles esperados, Junior 2.30), no de datos de temporada. Sin acceso directo a las webs: todo sale de búsquedas cruzadas. Liga colombiana en el registro: 2 aciertos de 9.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.infobae.com/colombia/deportes/2026/11/10/deportivo-pasto-explico-por-que-jugo-con-un-equipo-juvenil-ante-santa-fe-y-confirmo-que-usara-los-mismos-futbolistas-ante-junior-en-la-ultima-fecha-de-la-liga-betplay/">Infobae: Pasto con juveniles</a>
+      <a href="https://www.futbolred.com/amp/futbol-colombiano/liga-betplay/deportivo-pasto-explica-por-que-jugo-con-juveniles-repetira-nomina-contra-junior-275103">FutbolRed: repite nómina</a>
+      <a href="https://www.elheraldo.co/deportes/2026/11/12/dimayor-retraso-partido-entre-pasto-y-junior-se-jugara-a-las-6-p-m-de-este-jueves-12-de-noviembre/">El Heraldo: retraso</a>
+      <a href="https://www.eluniversal.com.co/deportes/2026/11/12/novedades-en-la-nomina-de-junior-de-barranquilla-para-enfrentar-al-deportivo-pasto/">El Universal: nómina de Junior</a>
+      <a href="https://www.winsports.co/futbol-colombiano/noticias/junior-sufre-bajas-clave-para-enfrentar-a-deportivo-pasto-427809">Win Sports: bajas</a>
+      <a href="https://www.deportesrcn.com/futbol/liga-betplay/pasto-vs-junior-se-juega-anuncian-contratiempo-para-la-fecha-19-de-la-liga-betplay-159549">RCN: viaje</a>
+      <a href="https://www.clarosports.com/colombia/liga-bet-play/posibles-alineaciones-del-deportivo-pasto-vs-junior-por-la-liga-betplay-2026-ii/">Claro: alineaciones</a>
+      <a href="https://www.vavel.com/colombia/futbol-colombiano/2026/11/09/independiente-santa-fe/1278695-santa-fe-se-impuso-ante-pasto-y-logra-su-clasificacion.html">Vavel: Santa Fe 5-0 Pasto</a>
+      <a href="https://blog.codere.com.co/futbol/2026/11/pasto-vs-junior-torneo-finalizacion-de-la-liga-colombiana/">Codere: cuotas</a>
+      <a href="https://rcdm.es/apuestas-y-pronostico-del-ad-pasto-vs-cd-junior-fc-12-11-26/">1X2</a>
+      <a href="https://www.infobae.com/colombia/deportes/2026/11/09/tabla-de-posiciones-de-la-liga-betplay-2026-ii-despues-de-la-derrota-de-millonarios-y-la-victoria-de-santa-fe-deportes-tolima-sigue-con-vida/">Infobae: tabla</a>
+      <a href="https://www.noticiascaracol.com/golcaracol/futbol-colombiano/junior-quedo-eliminado-de-la-liga-betplay-ii-2026-el-futbol-colombiano-tendra-nuevo-campeon-rg10">Caracol: campaña de Junior</a>
+    </div>
+  </section>
+</div>
