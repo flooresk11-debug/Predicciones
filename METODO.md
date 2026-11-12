@@ -121,3 +121,14 @@ Si falta alguno de los puntos 1-3, se dice "sin confirmar" y no hay pick, aunque
 Kalshi (mercado de predicción, poco margen) sirve para medir si bet365 paga bien. Si los datos y Kalshi coinciden
 y bet365 paga igual o más que la cuota justa de Kalshi, el pick sube; si bet365 paga >5% menos que Kalshi, se retira.
 Buscar siempre el "Rango de goles" de bet365: a menudo paga más que "Más de X" con casi el mismo riesgo.
+
+## 16. No descartar apuestas: se entregan TODAS (petición del usuario, 12/11/2026)
+El usuario quiere ver siempre todas las apuestas analizadas, no solo las que pasan el filtro.
+- Cada informe lista TODOS los mercados trabajados como apuestas jugables, ordenados de mayor a menor
+  probabilidad, con probabilidad, cuota justa, cuota mínima y stake sugerido. Ninguno se etiqueta "Descartado".
+- En vez de descartar, cada apuesta lleva su nivel: bajo / medio / alto / muy alto, y una línea con lo que
+  dicen los datos a favor y en contra. El usuario decide cuáles juega.
+- Se sigue marcando con claridad cuál es la recomendada y cuáles pagan por debajo de lo justo (el aviso de
+  precio se mantiene; lo que cambia es que ya no se ocultan ni se retiran).
+- Todas van a `registro/picks.csv` para medir también las que antes se descartaban.
+Motivo: el 12/11 varios descartes habrían ganado (Inglaterra 1.25, Ghana 1.05, más de 2.5 en Inglaterra-Croacia).
