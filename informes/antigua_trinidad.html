@@ -1,0 +1,187 @@
+<title>Antigua vs Trinidad y Tobago</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">Concacaf Nations League · Play-in a la previa de la Copa Oro · Partido de ida</div>
+  <header class="hero">
+    <div class="team"><b>Antigua y Barbuda</b><span>FIFA 162.º · ganó su grupo de la Liga C con 9 puntos · Jacques Passy</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Trinidad y Tobago</b><span>FIFA 105.º · descendió de la Liga A con 1 punto · Derek King</span></div>
+  </header>
+  <div class="meta">Jueves 12 nov 2026 · 17:00 (tu hora) · 19:00 en Antigua · Sir Vivian Richards Stadium, North Sound · Vuelta el 16 nov en Puerto España · Árbitro: no encontrado</div>
+
+  <section class="main-pick" aria-label="Pick recomendado">
+    <div><div class="eyebrow" style="color:var(--good)">Recomendada · riesgo bajo-medio</div><h1>Más de 1.5 goles</h1></div>
+    <div style="text-align:right"><div class="p">78%</div><div class="meta">Cuota justa 1.29 · mínimo 1.20 · 0.5 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Trinidad no gana con King</b><span>10 partidos con este entrenador: 0 victorias, 1 empate y 9 derrotas (una por penaltis). Y aun así es favorita a 1.30.</span></div>
+    <div class="card tile"><b>Sin su capitán</b><span>Levi Garcia, Rio Cardines y Kobi Henry no juegan la ida. Garcia podría volver para la vuelta.</span></div>
+    <div class="card tile"><b>Antigua marca en casa</b><span>5-0 a Anguila y 3-2 a Aruba en este mismo estadio. Pero eran rivales de la Liga C, dos escalones por debajo.</span></div>
+    <div class="card tile"><b>Trinidad pierde por poco</b><span>Sus tres derrotas en la Liga A fueron por un gol (2-3, 1-2, 0-1) contra Haití, Dominicana y otro rival de nivel alto.</span></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fa">
+      <h2 id="h-fa">Antigua y Barbuda <small>Liga C, grupo B</small></h2>
+      <div class="form">
+        <div><span>Antigua – Aruba · 6 oct</span><span class="r num">3-2</span><span class="chip W">G</span></div>
+        <div><span>Antigua – Anguila · 26 sep</span><span class="r num">5-0</span><span class="chip W">G</span></div>
+        <div><span>Aruba – Antigua · 23 sep ⚠️</span><span class="r num">1-0</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Acabó con 9 puntos en 4 partidos y diferencia de +8, así que el cuarto partido fue otra victoria (contra Anguila); no encontré el marcador. ⚠️ La derrota en Aruba sale en una sola fuente. No hay más resultados de 2026.</p>
+    </section>
+    <section class="card" aria-labelledby="h-ft">
+      <h2 id="h-ft">Trinidad y Tobago <small>2026</small></h2>
+      <div class="form">
+        <div><span>Trinidad – Curazao · 4 oct</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Partido del 1 oct ⚠️</span><span class="r num">0-1</span><span class="chip L">P</span></div>
+        <div><span>Trinidad – R. Dominicana · 28 sep</span><span class="r num">1-2</span><span class="chip L">P</span></div>
+        <div><span>Haití – Trinidad · 24 sep</span><span class="r num">3-2</span><span class="chip L">P</span></div>
+        <div><span>Bolivia – Trinidad · amistoso, mar</span><span class="r num">3-0</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Encajó en los 5 partidos que encontré y marcó en 3. Contra Haití ganaba 2-1 y perdió con dos goles en el descuento. ⚠️ Rival y sede del 1 de octubre sin confirmar. Faltan otros 5 partidos de la etapa de King.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>modelo propio; las cuotas vistas son antiguas</small></h2>
+    <div class="odds">
+      <div><b>17%</b><span>Antigua · ~7.50</span></div>
+      <div><b>21%</b><span>Empate · ~5.25</span></div>
+      <div><b style="color:var(--good)">62%</b><span>Trinidad · 1.30–1.36</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Antigua 17%, empate 21%, Trinidad 62%"><i style="width:17%;background:var(--bad)"></i><i style="width:21%;background:var(--warn)"></i><i style="width:62%;background:var(--good)"></i></div>
+    <p class="meta" style="margin-top:8px">Las casas dan a Trinidad un 70%; yo la bajo a 62% por su racha y las bajas. Historial: Trinidad ganó 12 de 15. Ambos marcan 1.75–1.82. Marcadores: 0-1 (11%), 0-2 (11%), 1-1 (10%), 1-2 (10%), 0-3 (7%)</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Todas las apuestas <small>de más a menos probable. "Mínimo" = cuota por debajo de la cual pagan menos de lo que vale</small></h2>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Trinidad marca</h3><p>A favor: 43 puestos más arriba en el ranking; Antigua recibió 2 de Aruba en casa. En contra: Trinidad se quedó a cero en 2 de 5 este año y no tiene a Garcia. 0.5 u.</p></div><div class="pp"><b>86%</b><span>justa 1.17 · mínimo 1.10</span></div></div>
+    <div class="pick"><span class="risk b">Bajo</span><div><h3>Trinidad o empate</h3><p>A favor: diferencia de categoría y 12 de 15 en el historial. En contra: pagará muy poco (1.08–1.12) para un equipo que no gana. 0.5 u solo a 1.15 o más.</p></div><div class="pp"><b>83%</b><span>justa 1.20 · mínimo 1.15</span></div></div>
+    <div class="pick"><span class="risk b">Bajo-medio · recomendada</span><div><h3>Más de 1.5 goles</h3><p>A favor: no depende de quién gane; a Trinidad le marcan siempre y Antigua metió 8 en sus dos partidos de casa. En contra: ida de eliminatoria. 0.5 u.</p></div><div class="pp"><b>78%</b><span>justa 1.29 · mínimo 1.20</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Menos de 3.5 goles</h3><p>A favor: 4 de 5 partidos de Trinidad este año. En contra: Antigua viene de un 5-0 y un 3-2. 0.25 u.</p></div><div class="pp"><b>68%</b><span>justa 1.47 · mínimo 1.40</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Gana Trinidad (1.30–1.36)</h3><p>A favor: mejor plantel, viene de la Liga A. En contra: 0 victorias en 10 con King y sin capitán. Paga bastante menos de lo justo: no la pongas de base de una combinada. 0.25 u; 0.5 u solo si ves 1.55 o más.</p></div><div class="pp"><b>62%</b><span>justa 1.61 · pagan ~1.33</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Antigua marca</h3><p>A favor: Trinidad encajó en 5 de 5 este año; Antigua marcó 8 en dos partidos de casa. En contra: salto de nivel del rival. El modelo se queda corto frente a los datos. 0.25 u.</p></div><div class="pp"><b>59%</b><span>justa 1.69 · mínimo 1.60</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Trinidad más de 1.5 goles</h3><p>A favor: marcó 2 a Haití. En contra: solo 1 de 5 partidos con 2 o más goles. 0.25 u.</p></div><div class="pp"><b>58%</b><span>justa 1.72 · mínimo 1.65</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Más de 2.5 goles</h3><p>Un modelo externo le da 64%. Trinidad: 3 de 5 este año. 0.25 u.</p></div><div class="pp"><b>54%</b><span>justa 1.85 · mínimo 1.75</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Ambos marcan (1.75–1.82)</h3><p>A favor: es lo que piden los datos de los dos equipos (Trinidad encaja siempre, Antigua marca en casa). Paga cerca de lo justo: de las de riesgo alto, la que más me gusta. 0.25 u.</p></div><div class="pp"><b>51%</b><span>justa 1.96 · pagan ~1.80</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Trinidad gana y más de 2.5</h3><p>0.25 u.</p></div><div class="pp"><b>40%</b><span>justa 2.53 · mínimo 2.40</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Antigua o empate (1X)</h3><p>A favor: Trinidad no gana desde antes de King; una web seria (Sports Mole) pronostica 2-1 para Antigua. Si paga 3.00 o más, es la cuota con más valor frente a los datos. 0.25 u.</p></div><div class="pp"><b>38%</b><span>justa 2.62 · mínimo 2.60</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Trinidad −1.5</h3><p>En contra: no gana ni por uno. 0.25 u.</p></div><div class="pp"><b>37%</b><span>justa 2.67 · mínimo 2.55</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Trinidad gana sin encajar</h3><p>En contra: encajó en todos sus partidos del año. 0.1 u.</p></div><div class="pp"><b>35%</b><span>justa 2.87 · mínimo 2.75</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Más de 3.5 goles</h3><p>0.1 u.</p></div><div class="pp"><b>32%</b><span>justa 3.13 · mínimo 3.00</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Empate (~5.25)</h3><p>Paga más de lo que marca el modelo (justa 4.67). Cuota larga con algo de valor, si sigue a ese precio. 0.1 u.</p></div><div class="pp"><b>21%</b><span>justa 4.67 · pagan ~5.25</span></div></div>
+    <div class="pick"><span class="risk a">Muy alto</span><div><h3>Gana Antigua (~7.50)</h3><p>Paga más de lo que marca el modelo (justa 6.00), pero la cuota que vi tiene un mes. 0.1 u.</p></div><div class="pp"><b>17%</b><span>justa 6.00 · pagan ~7.50</span></div></div>
+    <p class="note">Tarjetas y corners: sin árbitro, sin cuotas y sin datos por partido. No les puedo poner número.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad baja: 3 partidos verificados de Antigua y 5 de Trinidad, cuotas 1X2 con un mes de antigüedad y ninguna de bet365. Las probabilidades salen de un modelo (Antigua 0.90 goles esperados, Trinidad 1.95) ajustado a mano por la racha de Trinidad. Sin acceso directo a las webs: todo sale de búsquedas cruzadas.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.sportsmole.co.uk/football/antigua-and-barbuda/preview/antigua-vs-trin--tob-prediction-team-news-lineups_608834.html">Sports Mole: previa</a>
+      <a href="https://wired868.com/2026/11/08/king-names-28-man-squad-to-face-antigua-but-levi-garcia-doubtful-for-gold-cup-play-in/">Wired868: convocatoria</a>
+      <a href="https://www3.cnc3.co.tt/soca-warriors-without-garcia-cardines-henry-tonight/">CNC3: bajas</a>
+      <a href="https://wired868.com/2026/10/06/soca-warriors-draw-antigua-for-gold-cup-play-in-kings-troops-start-new-mission/">Wired868: sorteo</a>
+      <a href="https://wired868.com/2026/10/05/king-the-guys-were-really-outstanding-we-will-be-back-in-concacaf-league-a-soon/">Wired868: descenso</a>
+      <a href="https://www.besoccer.com/team/trinidad-and-tobago">BeSoccer: Trinidad</a>
+      <a href="https://www.espn.com/soccer/match/_/gameId/401900571">ESPN: Antigua 3-2 Aruba</a>
+      <a href="https://www.espn.com/soccer/match/_/gameId/401900623/anguilla-antigua-and-barbuda">ESPN: Antigua 5-0 Anguila</a>
+      <a href="https://www.thestatszone.com/antigua-and-barbuda-vs-trinidad-and-tobago-preview-prediction-2026-27-concacaf-nations-league-237710">Stats Zone</a>
+      <a href="https://dailysports.net/predictions/who-will-come-out-on-top-antigua-and-barbuda-vs-trinidad-and-tobago-prediction-november-13/">DailySports: ambos marcan</a>
+      <a href="https://www.predictz.com/us/picks/">PredictZ: 1X2</a>
+      <a href="https://news.bet365.com/en-gb/article/how-to-watch-antigua-and-barbuda-v-trinidad-and-tobago-live-stream-tv-channel-kick-off-time-and-head-to-head-stats/2026111015052671814">bet365 News: historial</a>
+    </div>
+  </section>
+</div>
