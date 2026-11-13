@@ -1,0 +1,214 @@
+<title>Serbia vs Alemania</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">UEFA Nations League · Liga A · Grupo 2 · Jornada 5</div>
+  <header class="hero">
+    <div class="team"><b>Serbia</b><span>FIFA 44.º · último del grupo, 0 puntos · 6 derrotas seguidas · Veljko Paunović</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Alemania</b><span>FIFA 13.º · 3.º del grupo, 5 puntos · Jürgen Klopp</span></div>
+  </header>
+  <div class="meta">Viernes 13 nov 2026 · 13:45 (tu hora) · 20:45 en Belgrado · Estadio Rajko Mitić · Árbitro: no encontrado · Ida: Alemania 2-0 Serbia (1 oct)</div>
+
+  <section class="main-pick" aria-label="Pick recomendado">
+    <div><div class="eyebrow" style="color:var(--good)">Recomendada · paga 1.30 o más</div><h1>Menos de 3.5 goles</h1></div>
+    <div style="text-align:right"><div class="p">58–88%</div><div class="meta">Vista a 1.77 · cuota justa 1.72 · entra desde 1.65 · 0.5 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Las casas esperan goleada</b><span>Alemania paga 1.27 y la línea de goles está en 3.5. Pero 7 de los 8 últimos partidos de cada uno acabaron con 3 goles o menos.</span></div>
+    <div class="card tile"><b>Alemania marca poco</b><span>Con Klopp: 1-1, 0-1, 2-0 y 0-0. Metió 2 goles o más solo en 3 de sus 8 últimos. Hoy necesita ganar: Países Bajos y Grecia le sacan 3 puntos.</span></div>
+    <div class="card tile"><b>Serbia pierde, pero por poco</b><span>Seis derrotas seguidas. En el grupo, tres de las cuatro fueron por un gol (1-2, 1-2, 1-2) y marcó en tres.</span></div>
+    <div class="card tile"><b>Serbia, con muchas bajas</b><span>Lukić y Maksimović sancionados; Pavlović, Terzić y Gudelj fuera. Vlahović, baja según una fuente. Vuelve Milenković.</span></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fs">
+      <h2 id="h-fs">Serbia <small>2026, 8 partidos</small></h2>
+      <div class="form">
+        <div><span>Países Bajos – Serbia · Nations</span><span class="r num">2-1</span><span class="chip L">P</span></div>
+        <div><span>Alemania – Serbia · Nations</span><span class="r num">2-0</span><span class="chip L">P</span></div>
+        <div><span>Serbia – Países Bajos · Nations</span><span class="r num">1-2</span><span class="chip L">P</span></div>
+        <div><span>Serbia – Grecia · Nations</span><span class="r num">1-2</span><span class="chip L">P</span></div>
+        <div><span>México – Serbia · amistoso</span><span class="r num">5-1</span><span class="chip L">P</span></div>
+        <div><span>Cabo Verde – Serbia · amistoso</span><span class="r num">3-0</span><span class="chip L">P</span></div>
+        <div><span>Arabia Saudí – Serbia · amistoso</span><span class="r num">1-2</span><span class="chip W">G</span></div>
+        <div><span>España – Serbia · amistoso</span><span class="r num">3-0</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Encajó 2 goles o más en 7 de 8. Marcó en 5 de 8. Hubo 2 goles o más en los 8, y exactamente 2 o 3 en 7 de 8. Quién fue local en los amistosos no está confirmado.</p>
+    </section>
+    <section class="card" aria-labelledby="h-fa">
+      <h2 id="h-fa">Alemania <small>últimos 8</small></h2>
+      <div class="form">
+        <div><span>Grecia – Alemania · Nations</span><span class="r num">0-0</span><span class="chip D">E</span></div>
+        <div><span>Alemania – Serbia · Nations</span><span class="r num">2-0</span><span class="chip W">G</span></div>
+        <div><span>Alemania – Grecia · Nations</span><span class="r num">0-1</span><span class="chip L">P</span></div>
+        <div><span>Países Bajos – Alemania · Nations</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Alemania – Paraguay · Mundial (penaltis)</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Ecuador – Alemania · Mundial</span><span class="r num">2-1</span><span class="chip L">P</span></div>
+        <div><span>Alemania – C. de Marfil · Mundial</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>Alemania – Curazao · Mundial</span><span class="r num">7-1</span><span class="chip W">G</span></div>
+      </div>
+      <p class="note">Solo 3 victorias en 8 y eliminada del Mundial en dieciseisavos. Sin contar el 7-1 a Curazao: 7 goles en 7 partidos. Sin Raum. Once probable: Ter Stegen; Treu, Tah, Schlotterbeck, Mittelstädt; Kimmich, Pavlović; Karl, Wirtz, Scherhant; Havertz.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>casas sin margen</small></h2>
+    <div class="odds">
+      <div><b>11%</b><span>Serbia · 8.50–9.00</span></div>
+      <div><b>15%</b><span>Empate · 6.00–6.25</span></div>
+      <div><b style="color:var(--good)">74%</b><span>Alemania · 1.25–1.29</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Serbia 11%, empate 15%, Alemania 74%"><i style="width:11%;background:var(--bad)"></i><i style="width:15%;background:var(--warn)"></i><i style="width:74%;background:var(--good)"></i></div>
+    <p class="meta" style="margin-top:8px">Menos de 3.5 a 1.77 · más de 3.5 a 2.10 · ambos marcan sí 1.73 / no 2.00 · Alemania gana y menos de 4.5 a 1.75 · Marcadores: 0-2 (10%), 1-2 (10%), 0-1 (9%), 1-1 (9%)</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Las mejores, desde cuota 1.30 <small>lectura: Alemania gana corto; no es partido de goleada</small></h2>
+    <div class="pick"><span class="risk m">Medio · recomendada</span><div><h3>Menos de 3.5 goles (1.77)</h3><p>Alemania: 7 de 8. Serbia: 7 de 8. El modelo da 58% y aun así la cuota paga algo más de lo justo. En contra: Serbia ya recibió 5 de México y 3 de España y de Cabo Verde, y llega con bajas atrás. 0.5 u.</p></div><div class="pp"><b>58–88%</b><span>justa 1.72 · pagan 1.77</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Alemania más de 1.5 goles</h3><p>Serbia encajó 2 o más en 7 de 8, incluido el 2-0 de la ida. En contra: Alemania solo metió 2 o más en 3 de 8. 0.5 u.</p></div><div class="pp"><b>67%</b><span>justa 1.49 · desde 1.40</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Más de 2.5 goles</h3><p>Serbia: 7 de 8. Alemania: 3 de 8. Va bien con la recomendada si acaba 2-1 o 3-0. 0.25 u.</p></div><div class="pp"><b>64%</b><span>justa 1.56 · desde 1.50</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Exactamente 2 o 3 goles</h3><p>Pasó en 7 de 8 partidos de Serbia y en 5 de 8 de Alemania. El modelo solo da 42%, así que suele pagar alrededor de 2.00–2.20. Es la apuesta donde más se separan los datos del precio. 0.25 u.</p></div><div class="pp"><b>42–75%</b><span>justa 2.37 · desde 2.00</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Serbia +1.5</h3><p>Gana si Serbia no pierde por 2 o más. Tres de sus cuatro derrotas del grupo fueron por un gol, y Alemania ganó por 2 o más solo en 2 de 8. En contra: perdió 0-2 en la ida. 0.25 u.</p></div><div class="pp"><b>56%</b><span>justa 1.78 · desde 1.75</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Ambos marcan (1.73)</h3><p>Serbia marcó en 3 de 4 del grupo y Alemania encajó en 6 de 8. En contra: sin Vlahović (según una fuente). Paga lo justo. 0.25 u.</p></div><div class="pp"><b>57%</b><span>justa 1.76 · pagan 1.73</span></div></div>
+    <p class="note"><b>Pick fuerte (stakazo): ninguno hoy.</b> Gana Alemania llega al 74% en el mercado, pero paga 1.27 y los datos no lo acompañan (3 victorias en 8). Lo demás no pasa del 67%.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-all">
+    <h2 id="h-all">Todas las apuestas <small>modelo anclado al mercado (Serbia 1.00 goles esperados, Alemania 2.30)</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota justa</th><th>Serbia (8)</th><th>Alemania (8)</th><th>Riesgo</th></tr>
+      <tr><td>Alemania marca</td><td class="g">90%</td><td>1.11</td><td>encajó 8/8</td><td>6/8</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Alemania o empate</td><td class="g">85%</td><td>1.18</td><td>no ganó 7/8</td><td>6/8</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Más de 1.5 goles</td><td class="g">84%</td><td>1.19</td><td>8/8</td><td>6/8</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Menos de 4.5 goles</td><td class="w">76%</td><td>1.31</td><td>7/8</td><td>7/8</td><td>bajo-medio</td></tr>
+      <tr><td>Gana Alemania</td><td class="w">67–74%</td><td>1.35–1.50</td><td>perdió 7/8</td><td class="bd">3/8</td><td>medio · pagan 1.27</td></tr>
+      <tr><td>Alemania 2 o más goles</td><td class="w">67%</td><td>1.49</td><td>encajó 2+ en 7/8</td><td class="bd">3/8</td><td>medio</td></tr>
+      <tr><td>Más de 2.5 goles</td><td class="w">64%</td><td>1.56</td><td>7/8</td><td class="bd">3/8</td><td>medio</td></tr>
+      <tr><td>Serbia marca</td><td>63%</td><td>1.58</td><td>5/8</td><td>encajó 6/8</td><td>medio</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td>58%</td><td>1.72</td><td>7/8</td><td>7/8</td><td>medio · pagan 1.77</td></tr>
+      <tr><td>Ambos marcan</td><td>57%</td><td>1.76</td><td>5/8</td><td>5/8</td><td>alto · pagan 1.73</td></tr>
+      <tr><td>Serbia +1.5</td><td>56%</td><td>1.78</td><td>4/8</td><td>6/8</td><td>alto</td></tr>
+      <tr><td>Alemania gana y más de 2.5</td><td>48%</td><td>2.07</td><td>—</td><td class="bd">2/8</td><td>alto</td></tr>
+      <tr><td>Alemania gana y menos de 4.5</td><td>47%</td><td>2.11</td><td>—</td><td class="bd">2/8</td><td>alto · pagan 1.75</td></tr>
+      <tr><td>Alemania −1.5</td><td>44%</td><td>2.29</td><td>perdió por 2+ en 4/8</td><td class="bd">2/8</td><td>alto</td></tr>
+      <tr><td>Ambos marcan: no</td><td>43%</td><td>2.32</td><td>3/8</td><td>3/8</td><td>alto · pagan 2.00</td></tr>
+      <tr><td>Exactamente 2 o 3 goles</td><td>42%</td><td>2.37</td><td>7/8</td><td>5/8</td><td>alto</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>42%</td><td>2.38</td><td class="bd">1/8</td><td class="bd">1/8</td><td>alto · pagan 2.10</td></tr>
+      <tr><td>Alemania 3 o más goles</td><td>40%</td><td>2.48</td><td>encajó 3+ en 3/8</td><td class="bd">1/8</td><td>muy alto</td></tr>
+      <tr><td>Alemania gana sin encajar</td><td>33%</td><td>3.02</td><td>no marcó 3/8</td><td class="bd">1/8</td><td>muy alto</td></tr>
+      <tr><td>Empate</td><td>15–19%</td><td>5.40–6.50</td><td>0/8</td><td>3/8</td><td>muy alto · pagan 6.00+</td></tr>
+      <tr><td>Gana Serbia</td><td>11–15%</td><td>6.70–9.00</td><td>1/8</td><td>perdió 2/8</td><td>muy alto · pagan 8.50+</td></tr>
+    </table></div>
+    <p class="note">En rojo, lo que los datos contradicen. "Más de 3.5 goles" a 2.10 y "Alemania gana y menos de 4.5" a 1.75 pagan menos de lo justo. Una fuente da "Alemania gana y más de 2.5" a 1.40: no cuadra con el resto y no la uso. Tarjetas y corners: sin árbitro ni datos por partido.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad media: 8 partidos por equipo verificados en 2 o más fuentes (ESPN, FIFA, UEFA, Goal), bajas de prensa con un conflicto (Vlahović), cuotas de Sofascore, Betfred y BET99 (no de bet365). Sin estadísticas por partido. Sin acceso directo a las webs: todo sale de búsquedas cruzadas.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.whoscored.com/matches/1969827/preview/international-uefa-nations-league-a-2026-2027-serbia-germany">WhoScored</a>
+      <a href="https://www.sofascore.com/news/serbia-vs-germany-preview-form-odds-and-players-to-watch">Sofascore: cuotas</a>
+      <a href="https://www.rotowire.com/soccer/article/serbia-vs-germany-prediction-predicted-lineups-team-news-146069">Rotowire: bajas</a>
+      <a href="https://www.bavarianfootballworks.com/germany-international-soccer/280155/nations-league-matchday-preview-serbia-vs-germany">Bavarian Football Works</a>
+      <a href="https://hooligan-soccer.com/serbia-face-germany-in-nations-league-clash/">Hooligan Soccer</a>
+      <a href="https://ran.joyn.de/sports/fussball/nations-league-a/dfb-team-voraussichtliche-aufstellung-gegen-serbien-ueberrascht-juergen-klopp-auf-dieser-position-215186">ran: once alemán</a>
+      <a href="https://www.90min.de/erstes-klopp-endspiel-in-serbien-die-voraussichtliche-aufstellung-von-deutschland">90min: "primera final de Klopp"</a>
+      <a href="https://www.espn.com/soccer/team/results/_/id/6757/serbia">ESPN: Serbia</a>
+      <a href="https://www.espn.com/soccer/team/results/_/id/481/league/FIFA.WORLD">ESPN: Alemania en el Mundial</a>
+      <a href="https://greekreporter.com/2026/09/28/greece-beats-germany-nations-league/">Alemania 0-1 Grecia</a>
+      <a href="https://www.goal.com/en-ca/betting/tips/serbia-vs-germany-predictions-13-11-2026/A%3Ablta64401b3eca1ccd2">Goal: cuotas de goles</a>
+      <a href="https://winner364.com/matches/serbia-vs-germany-prediction-2026-11-13/">Winner364: 1X2</a>
+    </div>
+  </section>
+</div>
