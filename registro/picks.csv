@@ -148,7 +148,7 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-12,Pasto-Junior,Junior o empate,todas-s16,bajo,0.91,1.02,G,justa 1.10; Pasto con Sub-20 | FINAL 0-1
 2026-11-12,Pasto-Junior,Junior marca,todas-s16,bajo,0.90,,G,justa 1.11; 0.5u; Pasto con Sub-20 | FINAL 0-1
 2026-11-12,Pasto-Junior,Más de 1.5 goles,todas-s16,bajo,0.80,,P,"RECOMENDADA; justa 1.25, mínimo 1.16; 0.5u; Pasto con Sub-20 | FINAL 0-1"
-2026-11-12,Pasto-Junior,Junior anota primero,todas-s16,medio,0.78,1.22,G,justa 1.28; 0.25u; Pasto con Sub-2 | FINAL 0-1"
+2026-11-12,Pasto-Junior,Junior anota primero,todas-s16,medio,0.78,1.22,G,"justa 1.28; 0.25u; Pasto con Sub-2 | FINAL 0-1"""
 2026-11-12,Pasto-Junior,Gana Junior,todas-s16,medio,0.76,1.21,G,justa 1.32; Junior 1/8 fuera; 0.25u; Pasto con Sub-20 | FINAL 0-1
 2026-11-12,Pasto-Junior,Junior más de 1.5 goles,todas-s16,medio,0.67,,P,justa 1.49; 0.25u; Pasto con Sub-20 | FINAL 0-1
 2026-11-12,Pasto-Junior,Más de 2.5 goles,todas-s16,alto,0.58,,P,justa 1.73; 0.25u; Pasto con Sub-20 | FINAL 0-1
@@ -196,22 +196,22 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Más de 3.5 goles,todas-s16,alto,0.32,,G,justa 3.13 | FINAL 2-3
 2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Empate,todas-s16,alto,0.21,5.25,P,justa 4.67 | FINAL 2-3
 2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Gana Antigua,todas-s16,alto,0.17,7.50,P,justa 6.00 | FINAL 2-3
-2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 4.5 goles,todas-s16,bajo,0.9,,pendiente,justa 1.11
-2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 3.5 goles,todas-s16,bajo,0.78,,pendiente,"RECOMENDADA; justa 1.28, mínimo 1.20; Panamá 6/6, Curazao 4/6; 0.5u"
-2026-11-12,Curazao-Panamá (CNL cuartos),Panamá marca,todas-s16,medio,0.75,,pendiente,justa 1.33
-2026-11-12,Curazao-Panamá (CNL cuartos),Panamá o empate,todas-s16,medio,0.73,,pendiente,justa 1.37
-2026-11-12,Curazao-Panamá (CNL cuartos),Más de 1.5 goles,todas-s16,medio,0.69,,pendiente,justa 1.45
-2026-11-12,Curazao-Panamá (CNL cuartos),Curazao marca,todas-s16,medio,0.63,,pendiente,justa 1.58
-2026-11-12,Curazao-Panamá (CNL cuartos),Panamá empate no apuesta,todas-s16,medio,0.63,,pendiente,justa 1.58
-2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 2.5 goles,todas-s16,medio,0.57,1.67,pendiente,justa 1.75; Panamá 6/6
-2026-11-12,Curazao-Panamá (CNL cuartos),Curazao o empate,todas-s16,medio,0.54,,pendiente,justa 1.85
-2026-11-12,Curazao-Panamá (CNL cuartos),Ambos marcan,todas-s16,alto,0.48,,pendiente,justa 2.10
-2026-11-12,Curazao-Panamá (CNL cuartos),Gana Panamá,todas-s16,alto,0.46,2.00,pendiente,justa 2.17
-2026-11-12,Curazao-Panamá (CNL cuartos),Más de 2.5 goles,todas-s16,alto,0.43,2.12,pendiente,justa 2.33
-2026-11-12,Curazao-Panamá (CNL cuartos),Panamá más de 1.5 goles,todas-s16,alto,0.41,,pendiente,justa 2.45
-2026-11-12,Curazao-Panamá (CNL cuartos),Empate,todas-s16,alto,0.28,3.25,pendiente,justa 3.57; 0.25u
-2026-11-12,Curazao-Panamá (CNL cuartos),Gana Panamá sin encajar,todas-s16,alto,0.28,,pendiente,justa 3.61
-2026-11-12,Curazao-Panamá (CNL cuartos),Gana Curazao,todas-s16,alto,0.26,3.65,pendiente,justa 3.85
-2026-11-12,Curazao-Panamá (CNL cuartos),Panamá -1.5,todas-s16,alto,0.22,,pendiente,justa 4.50
-2026-11-12,Curazao-Panamá (CNL cuartos),Más de 3.5 goles,todas-s16,alto,0.22,,pendiente,justa 4.52
-2026-11-12,Curazao-Panamá (CNL cuartos),Marcador 1-1,todas-s16,alto,0.13,,pendiente,justa 7.90
+2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 4.5 goles,todas-s16,bajo,0.9,,G,justa 1.11 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 3.5 goles,todas-s16,bajo,0.78,,G,"RECOMENDADA; justa 1.28, mínimo 1.20; Panamá 6/6, Curazao 4/6; 0.5u | FINAL 0-0"
+2026-11-12,Curazao-Panamá (CNL cuartos),Panamá marca,todas-s16,medio,0.75,,P,justa 1.33 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Panamá o empate,todas-s16,medio,0.73,,G,justa 1.37 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Más de 1.5 goles,todas-s16,medio,0.69,,P,justa 1.45 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Curazao marca,todas-s16,medio,0.63,,P,justa 1.58 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Panamá empate no apuesta,todas-s16,medio,0.63,,N,justa 1.58 | FINAL 0-0 (devuelta)
+2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 2.5 goles,todas-s16,medio,0.57,1.67,G,justa 1.75; Panamá 6/6 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Curazao o empate,todas-s16,medio,0.54,,G,justa 1.85 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Ambos marcan,todas-s16,alto,0.48,,P,justa 2.10 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Gana Panamá,todas-s16,alto,0.46,2.00,P,justa 2.17 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Más de 2.5 goles,todas-s16,alto,0.43,2.12,P,justa 2.33 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Panamá más de 1.5 goles,todas-s16,alto,0.41,,P,justa 2.45 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Empate,todas-s16,alto,0.28,3.25,G,justa 3.57; 0.25u | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Gana Panamá sin encajar,todas-s16,alto,0.28,,P,justa 3.61 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Gana Curazao,todas-s16,alto,0.26,3.65,P,justa 3.85 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Panamá -1.5,todas-s16,alto,0.22,,P,justa 4.50 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Más de 3.5 goles,todas-s16,alto,0.22,,P,justa 4.52 | FINAL 0-0
+2026-11-12,Curazao-Panamá (CNL cuartos),Marcador 1-1,todas-s16,alto,0.13,,P,justa 7.90 | FINAL 0-0
