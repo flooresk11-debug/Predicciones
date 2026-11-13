@@ -64,9 +64,9 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Kristiansund-Vålerenga,Más de 1.5 goles,riesgo-bajo,bajo,0.795,,P,mercado 1X2 sin margen (2.88/3.78/2.08); cuota justa 1.26 | final 1-0
 2026-11-09,Kristiansund-Vålerenga,Ambos marcan: sí,riesgo-medio,medio,0.592,,P,cuota justa 1.69; 2026: KBK 64% y VIF 56% de sus partidos | final 1-0
 2026-11-09,Kristiansund-Vålerenga,Vålerenga más de 1.5 goles,riesgo-alto,alto,0.482,,P,cuota justa 2.08 | final 1-0
-2026-11-09,Atlético F-Badalona F,Atlético F marca,riesgo-bajo,bajo,0.85,,G,"liga con pocos datos: sin cuotas fiables; estimación con promedio de goles del Atlético (19 en 9, Poisson); medio stake" | final 3-0
+2026-11-09,Atlético F-Badalona F,Atlético F marca,riesgo-bajo,bajo,0.85,,G,"liga con pocos datos: sin cuotas fiables; estimación con promedio de goles del Atlético (19 en 9, Poisson); medio stake | final 3-0"
 2026-11-09,Hvidovre-Aarhus Fremad,Hvidovre o empate,riesgo-bajo,bajo,0.744,,G,liga con pocos datos: cuotas Marathonbet 1.89/3.58/3.60 (fannews); Hvidovre líder invicto; medio stake | final 3-0
-2026-11-09,Köln F-RB Leipzig F,Más de 1.5 goles,riesgo-bajo,bajo,0.80,,G,"sin cuotas: estimación con resultados oficiales OpenLigaDB (Köln 13:12, Leipzig 14:14 en 8); medio stake; 2-1 en juego (captura del usuario): ya cumplido" | final 3-1
+2026-11-09,Köln F-RB Leipzig F,Más de 1.5 goles,riesgo-bajo,bajo,0.80,,G,"sin cuotas: estimación con resultados oficiales OpenLigaDB (Köln 13:12, Leipzig 14:14 en 8); medio stake; 2-1 en juego (captura del usuario): ya cumplido | final 3-1"
 2026-11-09,Hvidovre-Aarhus Fremad,Hvidovre o empate (revisado con cuotas bet365 actuales),riesgo-bajo,bajo,0.794,1.18,G,protocolo bajo: mercado 79% + temporada 13/13 sin perder; alineaciones no encontradas | final 3-0
 2026-11-09,Kristiansund-Vålerenga,Vålerenga +1.5 hándicap asiático (revisado con bet365),riesgo-bajo,bajo,0.84,1.16,G,protocolo bajo: mercado ~83%; KBK ganó por 2+ solo 3/25 (2 de sus últimos 10) | final 1-0
 2026-11-09,Kristiansund-Vålerenga,Más de 2.5 goles (fila 'Más de 2'),riesgo-medio,medio,0.72,1.28,P,mercado 72.7%; últimos 10: KBK 8/10 y VIF 7/10 con 3+ goles | final 1-0
@@ -75,7 +75,7 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-09,Botosani-Otelul Galati,Menos de 2.5 goles (fila 'Menos de 3'),riesgo-medio,medio,0.55,1.85,G,mercado 53%; H2H 5 de 6 con menos de 2.5 | final 1-1
 2026-11-09,Botosani-Otelul Galati,Ambos marcan: no,riesgo-alto,alto,0.48,2.00,P,mercado 48%; H2H 4 de 6 | final 1-1
 2026-11-09,Köln F-RB Leipzig F,"Ambos marcan: sí (opcional, fuera de regla)",analista,medio,0.58,1.66,G,2-1 en juego: ya cumplido | final 3-1
-2026-11-09,Mushuc Runa-Delfín,Menos de 3.5 goles (fila 'Menos de 4'),riesgo-bajo,bajo,0.795,1.22,G,"liga con pocos datos (tablas en conflicto); solo cuotas bet365 sin margen; medio stake" | final 2-1
+2026-11-09,Mushuc Runa-Delfín,Menos de 3.5 goles (fila 'Menos de 4'),riesgo-bajo,bajo,0.795,1.22,G,liga con pocos datos (tablas en conflicto); solo cuotas bet365 sin margen; medio stake | final 2-1
 2026-11-09,San Lorenzo PY-Rubio Ñu,Rubio Ñu más de 0.5 goles,riesgo-bajo,bajo,0.798,,G,liga sin datos completos: media stake (0.5u); cuota justa 1.25 mínimo 1.16; San Lorenzo descendido y encaja ~1.8-2.2 por partido (2 fuentes) | final 2-2
 2026-11-09,San Lorenzo PY-Rubio Ñu,Hándicap asiático San Lorenzo +2.0,filtro-analista,bajo,0.894,1.12,G,DESCARTADO: el mercado da 89% pero San Lorenzo 12-41 en goles; fuentes contradictorias sobre su tabla | final 2-2
 2026-11-09,San Lorenzo PY-Rubio Ñu,Rubio Ñu o empate,filtro-analista,medio,0.738,1.25,G,DESCARTADO: 74% < 78% y bet365 paga 7% menos que lo justo (1.35); Rubio 4G 4E 10P | final 2-2
@@ -115,103 +115,103 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-10,Pamplona-Eibar (Copa),Eibar marca,riesgo-bajo,bajo,0.90,,pendiente,sin cuotas; Eibar marcó 10/12 en LaLiga2 (fuera 5/6); Pamplona 15.º de Tercera Federación con 1 victoria; rotaciones; mínimo 1.08; 0.5u
 2026-11-10,Pamplona-Eibar (Copa),Gana Eibar (90 min),analista,medio,0.74,,pendiente,informativo; Forebet 71%; Eibar 4 sin ganar; mínimo 1.35
 2026-11-10,Pamplona-Eibar (Copa),Gol en el 2.º tiempo,riesgo-bajo,bajo,0.80,,pendiente,"datos: partidos del Eibar con gol en 2T 11/12, últimos 6 6/6; modelo 73%; mínimo 1.25; 0.5u"
-2026-11-10,Pamplona-Eibar (Copa),Pamplona menos de 1.5 goles,riesgo-bajo,bajo,0.86,,pendiente,"Pamplona 7 goles en 9 (⚠️ una fuente); mínimo 1.15; 0.5u"
-2026-11-10,Pamplona-Eibar (Copa),Eibar gana a cero,riesgo-alto,alto,0.41,,pendiente,"Pamplona 0.78 goles por partido; Eibar rota; mínimo 2.40; 0.25u"
-2026-11-10,Anaitasuna-Alavés (Copa),Ambos reciben tarjeta,filtro-analista,medio,0.75,,pendiente,"Alavés 10/12 con ambos tarjeta (fuera 5/6); copa sin VAR; Anaitasuna sin datos; mínimo 1.35; 0.25u" | RETIRADO por protocolo §14: Anaitasuna sin 10 partidos verificados
+2026-11-10,Pamplona-Eibar (Copa),Pamplona menos de 1.5 goles,riesgo-bajo,bajo,0.86,,pendiente,Pamplona 7 goles en 9 (⚠️ una fuente); mínimo 1.15; 0.5u
+2026-11-10,Pamplona-Eibar (Copa),Eibar gana a cero,riesgo-alto,alto,0.41,,pendiente,Pamplona 0.78 goles por partido; Eibar rota; mínimo 2.40; 0.25u
+2026-11-10,Anaitasuna-Alavés (Copa),Ambos reciben tarjeta,filtro-analista,medio,0.75,,pendiente,Alavés 10/12 con ambos tarjeta (fuera 5/6); copa sin VAR; Anaitasuna sin datos; mínimo 1.35; 0.25u | RETIRADO por protocolo §14: Anaitasuna sin 10 partidos verificados
 2026-11-10,Amorebieta-Logroñés (Copa),Menos de 3.5 goles,analista,medio,0.72,,pendiente,SIN PICK por regla §11 (sin datos 2026-27 de Amorebieta; Logroñés solo 4 partidos: 2-1,1-1,0-0,1-0); seguimiento; mínimo 1.35
-2026-11-10,Trival Valderas-Leganés (Copa),Más de 2.5 tarjetas,riesgo-medio,medio,0.82,,pendiente,"Leganés: 12/13 partidos con 3+ amarillas (últimos 6: 6/6), 3.3 amarillas propias por partido; Trival sin datos; mínimo 1.20; 0.5u | árbitra Huerta de Aza: 4.43/partido en Segunda, 3.82 carrera, 3.3 en 2026-27 | CORRECCIÓN: árbitra Huerta de Aza está en Inter-City (UEFA); árbitro sin confirmar -> medio 0.25u" | Kalshi: Leganés 88%, -1.5 68%, +2.5 goles 65%, BTTS 37% -> partido dominado, menos faltas: riesgo para tarjetas
-2026-11-10,Trival Valderas-Leganés (Copa),Ambos reciben tarjeta,filtro-analista,medio,0.78,,pendiente,"Leganés 11/13 (últimos 6: 6/6); mínimo 1.35; 0.25u | SIN CONFIRMAR (sin datos del Trival): retirado"
-2026-11-10,Trival Valderas-Leganés (Copa),Empate al descanso,filtro-analista,alto,0.45,,pendiente,"Leganés 0-0 al descanso en 6/13 y 7 sin ganar; Trival 4 empates en 5; mínimo 2.30; 0.25u | SIN CONFIRMAR (sin datos del Trival): retirado"
-2026-11-10,Trival Valderas-Leganés (Copa),Leganés marca,filtro-analista,bajo,0.85,,pendiente,"DESCARTADO como bajo: Leganés marcó solo en 7/13 de liga (11 goles)"
+2026-11-10,Trival Valderas-Leganés (Copa),Más de 2.5 tarjetas,riesgo-medio,medio,0.82,,pendiente,"Leganés: 12/13 partidos con 3+ amarillas (últimos 6: 6/6), 3.3 amarillas propias por partido; Trival sin datos; mínimo 1.20; 0.5u | árbitra Huerta de Aza: 4.43/partido en Segunda, 3.82 carrera, 3.3 en 2026-27 | CORRECCIÓN: árbitra Huerta de Aza está en Inter-City (UEFA); árbitro sin confirmar -> medio 0.25u | Kalshi: Leganés 88%", -1.5 68%, +2.5 goles 65%, BTTS 37% -> partido dominado, menos faltas: riesgo para tarjetas
+2026-11-10,Trival Valderas-Leganés (Copa),Ambos reciben tarjeta,filtro-analista,medio,0.78,,pendiente,Leganés 11/13 (últimos 6: 6/6); mínimo 1.35; 0.25u | SIN CONFIRMAR (sin datos del Trival): retirado
+2026-11-10,Trival Valderas-Leganés (Copa),Empate al descanso,filtro-analista,alto,0.45,,pendiente,Leganés 0-0 al descanso en 6/13 y 7 sin ganar; Trival 4 empates en 5; mínimo 2.30; 0.25u | SIN CONFIRMAR (sin datos del Trival): retirado
+2026-11-10,Trival Valderas-Leganés (Copa),Leganés marca,filtro-analista,bajo,0.85,,pendiente,DESCARTADO como bajo: Leganés marcó solo en 7/13 de liga (11 goles)
 2026-11-10,Inter F-Man City F,City o empate,riesgo-bajo,bajo,0.88,,pendiente,"confirmado: City 12/12 sin perder (UEFA, Wikipedia, Goal); Inter solo perdió 1/9 (0-6 Lyon); mínimo 1.10; 0.5u; goles en conflicto -> sin pick"
 2026-11-10,PSG F-Bayern F,Más de 1.5 goles,filtro-analista,bajo,0.85,1.14,pendiente,"confirmado por datos: PSG 9/10, Bayern 6/7, H2H 2025 3-1; mínimo 1.20; 0.5u | sustituido por Rango 2-6 @1.22 (mismo riesgo, más pago)"
 2026-11-10,PSG F-Bayern F,Rango 2-6 goles,riesgo-bajo,bajo,0.86,1.22,pendiente,"datos: PSG 9/10, Bayern 6/7 en ese rango; bet365 1.22 > 1.20 mínimo; 0.5u"
 2026-11-10,PSG F-Bayern F,Rango 2-5 goles,riesgo-medio,medio,0.78,1.33,pendiente,"datos: PSG 9/10, Bayern 5/7; 0.25u; no combinar con 2-6"
 2026-11-10,PSG F-Bayern F,Ambos marcan: sí,analista,alto,0.60,1.57,pendiente,"consulta del usuario: PSG partidos con BTTS 5/10, Bayern 4/7; contra grandes PSG marcó 2/3 y Bayern encajó 2/2; precio ~justo; solo 0.25u"
-2026-11-10,Roma F-Servette F,Más de 2.5 goles,riesgo-medio,medio,0.72,,pendiente,"Roma 6/8 (UWCL 1/3), Servette 5/5, H2H 2024 2-7; mínimo 1.55; 0.25u; no combinar con más de 1.5" | Kalshi 75% -> justa 1.33 (datos y Kalshi coinciden)
-2026-11-10,Häcken F-Chelsea F,Chelsea gana a cero,riesgo-alto,alto,0.58,2.00,pendiente,"alternativa al BTTS no: Chelsea ganó a cero 7/11; Häcken sin marcar 2/3 en UWCL; 0.25u; no combinar con BTTS no" | Kalshi ~51.5% -> justa 1.94, bet365 2.00
+2026-11-10,Roma F-Servette F,Más de 2.5 goles,riesgo-medio,medio,0.72,,pendiente,"Roma 6/8 (UWCL 1/3), Servette 5/5, H2H 2024 2-7; mínimo 1.55; 0.25u; no combinar con más de 1.5 | Kalshi 75% -> justa 1.33 (datos y Kalshi coinciden)"
+2026-11-10,Häcken F-Chelsea F,Chelsea gana a cero,riesgo-alto,alto,0.58,2.00,pendiente,alternativa al BTTS no: Chelsea ganó a cero 7/11; Häcken sin marcar 2/3 en UWCL; 0.25u; no combinar con BTTS no | Kalshi ~51.5% -> justa 1.94, bet365 2.00
 2026-11-10,Real Madrid F-Paris FC F,Rango 2-6 goles,riesgo-bajo,bajo,0.84,1.20,pendiente,"datos: RM 10/10 con 2+, PFC 7/10, H2H 4/5; Kalshi ~84.5% (justa 1.18); bet365 1.20; 0.5u"
 2026-11-10,Häcken F-Chelsea F,Hándicap asiático Chelsea -1.5,analista,alto,0.63,1.65,pendiente,"Kalshi 63% (justa 1.59); datos Chelsea ganó por 2+ 7/11, Häcken perdió por 2+ 1/3; alternativa al a cero, no combinar"
-2026-11-10,Mijas Las Lagunas-Real Jaén (Copa),Sin pick,filtro-analista,,,,N,"SIN PICK por §11/§14: sin 10 partidos verificados de ninguno; campo neutral (Estepona); misma categoría probable"
-2026-11-11,Leuven F-Køge F,Leuven menos de 1.5 goles,filtro-analista,medio,0.74,1.28,pendiente,"SIN CONFIRMAR (solo 3 partidos UWCL por equipo): Leuven marcó 0,1,0; Køge encajó 1,1,8; seguimiento" | Kalshi 74% (justa 1.36); mínimo 1.36; 0.25u | RETIRADO: bet365 1.28 vs Kalshi 1.36 (-6%)
-2026-11-11,Leuven F-Køge F,Køge o empate,filtro-analista,bajo,0.83,1.14,pendiente,"SIN CONFIRMAR: Køge líder en Dinamarca (11G 2E 1P), Leuven 0 victorias en UWCL; tips.gg Køge 1.62; seguimiento" | SUBE a bajo con Kalshi (64/22/17 -> 83%, justa 1.21); mínimo 1.21; 0.5u | RETIRADO: bet365 1.14 vs Kalshi 1.21 (-6%)
+2026-11-10,Mijas Las Lagunas-Real Jaén (Copa),Sin pick,filtro-analista,,,,N,SIN PICK por §11/§14: sin 10 partidos verificados de ninguno; campo neutral (Estepona); misma categoría probable
+2026-11-11,Leuven F-Køge F,Leuven menos de 1.5 goles,filtro-analista,medio,0.74,1.28,pendiente,"SIN CONFIRMAR (solo 3 partidos UWCL por equipo): Leuven marcó 0,1,0; Køge encajó 1,1,8; seguimiento | Kalshi 74% (justa 1.36); mínimo 1.36; 0.25u | RETIRADO: bet365 1.28 vs Kalshi 1.36 (-6%)"
+2026-11-11,Leuven F-Køge F,Køge o empate,filtro-analista,bajo,0.83,1.14,pendiente,"SIN CONFIRMAR: Køge líder en Dinamarca (11G 2E 1P), Leuven 0 victorias en UWCL; tips.gg Køge 1.62; seguimiento | SUBE a bajo con Kalshi (64/22/17 -> 83%", justa 1.21); mínimo 1.21; 0.5u | RETIRADO: bet365 1.14 vs Kalshi 1.21 (-6%)
 2026-11-12,Turquía-Bélgica (Nations),Bélgica marca (más de 0.5),riesgo-bajo,bajo,0.83,,G,"mercado 83% (justa 1.20, mínimo 1.11); Turquía encajó 7/7, Bélgica marcó 8/10 y 17/20; sin Lukaku; debut Yalçın; bet365 sin ver; 0.5u | FINAL 1-2; corners 2-3; amarillas 2-0"
 2026-11-12,Turquía-Bélgica (Nations),Bélgica o empate,analista,medio,0.76,,G,"mercado 76% (justa 1.31, mínimo 1.25); Turquía no ganó 6/7, Bélgica no perdió 7/10; 0.5u | FINAL 1-2; corners 2-3; amarillas 2-0"
 2026-11-12,Turquía-Bélgica (Nations),Más de 1.5 goles,analista,medio,0.80,,G,"alternativa al pick bajo, no sumar; Turquía 5/7, Bélgica 8/10; justa 1.25, mínimo 1.19; 0.25u | FINAL 1-2; corners 2-3; amarillas 2-0"
 2026-11-12,Inglaterra-Croacia (Nations),Más de 1.5 goles,riesgo-bajo,bajo,0.81,,G,"mercado 81% (justa 1.23, mínimo 1.14); Inglaterra 10/11, Croacia 7/8; bet365 sin ver; 0.5u | FINAL 2-1; corners 6-7; amarillas 0-1"
 2026-11-12,Inglaterra-Croacia (Nations),Inglaterra más de 1.5 goles,analista,medio,0.69,,G,"justa 1.45, mínimo 1.38; Inglaterra 2+ en 8/11, Croacia encajó 2+ en 5/8 (5/5 vs grandes); sin Saka; 0.5u | FINAL 2-1; corners 6-7; amarillas 0-1"
-2026-11-12,Inglaterra-Croacia (Nations),Inglaterra más de 4.5 corners,analista,medio,,,G,"6 corners en 4/4 del grupo; muestra corta; mínimo 1.30; 0.25u; cuota sin ver | FINAL 2-1; corners 6-7; amarillas 0-1"
+2026-11-12,Inglaterra-Croacia (Nations),Inglaterra más de 4.5 corners,analista,medio,,,G,6 corners en 4/4 del grupo; muestra corta; mínimo 1.30; 0.25u; cuota sin ver | FINAL 2-1; corners 6-7; amarillas 0-1
 2026-11-12,Inglaterra-Croacia (Nations),Gana Inglaterra,filtro-analista,medio,0.76,1.25,N,"NO ENTRA a 1.25 (justa 1.32, -5%); solo a 1.28+; Opta 67%; seguimiento | FINAL 2-1; corners 6-7; amarillas 0-1 (no se entró; habría ganado)"
 2026-11-12,Ghana-Somalia (clasif. CAN),Menos de 4.5 goles,riesgo-bajo,bajo,0.82,,G,"competición sin datos completos; Somalia 18/18 con 4 goles o menos, Ghana 8/10; justa 1.22, mínimo 1.13; cuota sin ver; 0.25u | FINAL 2-0; corners 7-3; amarillas 0-1"
 2026-11-12,Ghana-Somalia (clasif. CAN),Gana Ghana,filtro-analista,,0.91,1.05,N,"SIN PICK: 1.05 no paga; Ghana 1 victoria en 10, debut de entrenador interino; seguimiento | FINAL 2-0; corners 7-3; amarillas 0-1 (no se entró; habría ganado)"
 
-2026-11-12,Pasto-Junior,Junior o empate,todas-s16,bajo,0.91,1.02,pendiente,"justa 1.10; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Junior marca,todas-s16,bajo,0.90,,pendiente,"justa 1.11; 0.5u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Más de 1.5 goles,todas-s16,bajo,0.80,,pendiente,"RECOMENDADA; justa 1.25, mínimo 1.16; 0.5u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Junior anota primero,todas-s16,medio,0.78,1.22,pendiente,"justa 1.28; 0.25u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Gana Junior,todas-s16,medio,0.76,1.21,pendiente,"justa 1.32; Junior 1/8 fuera; 0.25u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Junior más de 1.5 goles,todas-s16,medio,0.67,,pendiente,"justa 1.49; 0.25u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Más de 2.5 goles,todas-s16,alto,0.58,,pendiente,"justa 1.73; 0.25u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Pasto marca,todas-s16,alto,0.50,1.80,pendiente,"justa 1.99; 0.25u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Junior -1.5,todas-s16,alto,0.50,,pendiente,"justa 2.00; 0.25u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Junior gana y más de 2.5,todas-s16,alto,0.49,,pendiente,"justa 2.05; 0.25u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Ambos marcan,todas-s16,alto,0.45,,pendiente,"justa 2.21; 0.25u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Junior gana sin encajar,todas-s16,alto,0.45,,pendiente,"justa 2.24; 0.25u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Junior 3+ goles,todas-s16,alto,0.40,,pendiente,"justa 2.48; 0.1u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Más de 3.5 goles,todas-s16,alto,0.35,1.80,pendiente,"justa 2.83; 0.1u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Junior -2.5,todas-s16,alto,0.28,,pendiente,"justa 3.56; 0.1u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Pasto o empate,todas-s16,alto,0.24,,pendiente,"justa 4.15; 0.1u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Empate,todas-s16,alto,0.15,6.60,pendiente,"0.1u; Pasto con Sub-20"
-2026-11-12,Pasto-Junior,Gana Pasto,todas-s16,alto,0.09,10.00,pendiente,"0.1u; Pasto con Sub-20"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Más de 0.5 goles,todas-s16,bajo,0.93,,pendiente,"justa 1.08"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Menos de 4.5 goles,todas-s16,bajo,0.88,,pendiente,"justa 1.14; H2H 5/5"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Real Potosí marca,todas-s16,medio,0.74,,pendiente,"justa 1.35; H2H 5/5"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Menos de 3.5 goles,todas-s16,medio,0.74,,pendiente,"justa 1.36; H2H 4/5"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Más de 1.5 goles,todas-s16,medio,0.73,,pendiente,"justa 1.36; H2H 3/5"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Nacional Potosí marca,todas-s16,medio,0.71,,pendiente,"justa 1.40; H2H 3/5"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Real Potosí o empate,todas-s16,medio,0.66,1.44,pendiente,"RECOMENDADA; justa 1.52; H2H 5/5; 0.25u"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Nacional o empate,todas-s16,medio,0.61,,pendiente,"justa 1.64"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Ambos marcan,todas-s16,alto,0.53,1.55,pendiente,"justa 1.89"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Menos de 2.5 goles,todas-s16,alto,0.52,,pendiente,"justa 1.93; H2H 4/5"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Más de 2.5 goles,todas-s16,alto,0.48,,pendiente,"justa 2.07"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Gana Real Potosí,todas-s16,alto,0.39,2.40,pendiente,"justa 2.55"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Gana Nacional Potosí,todas-s16,alto,0.34,2.80,pendiente,"justa 2.90"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Empate,todas-s16,alto,0.27,3.40,pendiente,"justa 3.78; H2H 3/5"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Más de 3.5 goles,todas-s16,alto,0.26,,pendiente,"justa 3.79"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Marcador 1-1,todas-s16,alto,0.13,,pendiente,"justa 8.00"
-2026-11-12,Real Potosí-Nacional Potosí (Copa),Habrá tarjeta roja,todas-s16,medio,,,pendiente,"rojas en 5/5 clásicos de 2026; sin cuota"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad marca,todas-s16,bajo,0.86,,pendiente,"justa 1.17"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad o empate,todas-s16,bajo,0.83,,pendiente,"justa 1.20"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Más de 1.5 goles,todas-s16,bajo,0.78,,pendiente,"RECOMENDADA; justa 1.29, mínimo 1.20; 0.5u"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Menos de 3.5 goles,todas-s16,medio,0.68,,pendiente,"justa 1.47"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Gana Trinidad,todas-s16,medio,0.62,1.33,pendiente,"justa 1.61; 0 victorias en 10 con King"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Antigua marca,todas-s16,medio,0.59,,pendiente,"justa 1.69"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad más de 1.5 goles,todas-s16,medio,0.58,,pendiente,"justa 1.72"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Más de 2.5 goles,todas-s16,alto,0.54,,pendiente,"justa 1.85"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Ambos marcan,todas-s16,alto,0.51,1.80,pendiente,"justa 1.96"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad gana y más de 2.5,todas-s16,alto,0.4,,pendiente,"justa 2.53"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Antigua o empate,todas-s16,alto,0.38,,pendiente,"justa 2.62"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad -1.5,todas-s16,alto,0.37,,pendiente,"justa 2.67"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad gana sin encajar,todas-s16,alto,0.35,,pendiente,"justa 2.87"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Más de 3.5 goles,todas-s16,alto,0.32,,pendiente,"justa 3.13"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Empate,todas-s16,alto,0.21,5.25,pendiente,"justa 4.67"
-2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Gana Antigua,todas-s16,alto,0.17,7.50,pendiente,"justa 6.00"
-2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 4.5 goles,todas-s16,bajo,0.9,,pendiente,"justa 1.11"
+2026-11-12,Pasto-Junior,Junior o empate,todas-s16,bajo,0.91,1.02,G,justa 1.10; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Junior marca,todas-s16,bajo,0.90,,G,justa 1.11; 0.5u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Más de 1.5 goles,todas-s16,bajo,0.80,,P,"RECOMENDADA; justa 1.25, mínimo 1.16; 0.5u; Pasto con Sub-20 | FINAL 0-1"
+2026-11-12,Pasto-Junior,Junior anota primero,todas-s16,medio,0.78,1.22,pendiente,justa 1.28; 0.25u; Pasto con Sub-20
+2026-11-12,Pasto-Junior,Gana Junior,todas-s16,medio,0.76,1.21,G,justa 1.32; Junior 1/8 fuera; 0.25u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Junior más de 1.5 goles,todas-s16,medio,0.67,,P,justa 1.49; 0.25u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Más de 2.5 goles,todas-s16,alto,0.58,,P,justa 1.73; 0.25u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Pasto marca,todas-s16,alto,0.50,1.80,P,justa 1.99; 0.25u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Junior -1.5,todas-s16,alto,0.50,,P,justa 2.00; 0.25u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Junior gana y más de 2.5,todas-s16,alto,0.49,,P,justa 2.05; 0.25u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Ambos marcan,todas-s16,alto,0.45,,P,justa 2.21; 0.25u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Junior gana sin encajar,todas-s16,alto,0.45,,G,justa 2.24; 0.25u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Junior 3+ goles,todas-s16,alto,0.40,,P,justa 2.48; 0.1u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Más de 3.5 goles,todas-s16,alto,0.35,1.80,P,justa 2.83; 0.1u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Junior -2.5,todas-s16,alto,0.28,,P,justa 3.56; 0.1u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Pasto o empate,todas-s16,alto,0.24,,P,justa 4.15; 0.1u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Empate,todas-s16,alto,0.15,6.60,P,0.1u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Pasto-Junior,Gana Pasto,todas-s16,alto,0.09,10.00,P,0.1u; Pasto con Sub-20 | FINAL 0-1
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Más de 0.5 goles,todas-s16,bajo,0.93,,G,justa 1.08 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Menos de 4.5 goles,todas-s16,bajo,0.88,,P,justa 1.14; H2H 5/5 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Real Potosí marca,todas-s16,medio,0.74,,G,justa 1.35; H2H 5/5 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Menos de 3.5 goles,todas-s16,medio,0.74,,P,justa 1.36; H2H 4/5 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Más de 1.5 goles,todas-s16,medio,0.73,,G,justa 1.36; H2H 3/5 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Nacional Potosí marca,todas-s16,medio,0.71,,G,justa 1.40; H2H 3/5 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Real Potosí o empate,todas-s16,medio,0.66,1.44,G,RECOMENDADA; justa 1.52; H2H 5/5; 0.25u | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Nacional o empate,todas-s16,medio,0.61,,G,justa 1.64 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Ambos marcan,todas-s16,alto,0.53,1.55,G,justa 1.89 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Menos de 2.5 goles,todas-s16,alto,0.52,,P,justa 1.93; H2H 4/5 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Más de 2.5 goles,todas-s16,alto,0.48,,G,justa 2.07 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Gana Real Potosí,todas-s16,alto,0.39,2.40,P,justa 2.55 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Gana Nacional Potosí,todas-s16,alto,0.34,2.80,P,justa 2.90 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Empate,todas-s16,alto,0.27,3.40,G,justa 3.78; H2H 3/5 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Más de 3.5 goles,todas-s16,alto,0.26,,G,justa 3.79 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Marcador 1-1,todas-s16,alto,0.13,,P,justa 8.00 | FINAL 5-5
+2026-11-12,Real Potosí-Nacional Potosí (Copa),Habrá tarjeta roja,todas-s16,medio,,,pendiente,rojas en 5/5 clásicos de 2026; sin cuota
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad marca,todas-s16,bajo,0.86,,G,justa 1.17 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad o empate,todas-s16,bajo,0.83,,G,justa 1.20 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Más de 1.5 goles,todas-s16,bajo,0.78,,G,"RECOMENDADA; justa 1.29, mínimo 1.20; 0.5u | FINAL 2-3"
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Menos de 3.5 goles,todas-s16,medio,0.68,,P,justa 1.47 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Gana Trinidad,todas-s16,medio,0.62,1.33,G,justa 1.61; 0 victorias en 10 con King | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Antigua marca,todas-s16,medio,0.59,,G,justa 1.69 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad más de 1.5 goles,todas-s16,medio,0.58,,G,justa 1.72 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Más de 2.5 goles,todas-s16,alto,0.54,,G,justa 1.85 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Ambos marcan,todas-s16,alto,0.51,1.80,G,justa 1.96 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad gana y más de 2.5,todas-s16,alto,0.4,,G,justa 2.53 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Antigua o empate,todas-s16,alto,0.38,,P,justa 2.62 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad -1.5,todas-s16,alto,0.37,,P,justa 2.67 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Trinidad gana sin encajar,todas-s16,alto,0.35,,P,justa 2.87 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Más de 3.5 goles,todas-s16,alto,0.32,,G,justa 3.13 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Empate,todas-s16,alto,0.21,5.25,P,justa 4.67 | FINAL 2-3
+2026-11-12,Antigua-Trinidad y Tobago (CNL play-in),Gana Antigua,todas-s16,alto,0.17,7.50,P,justa 6.00 | FINAL 2-3
+2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 4.5 goles,todas-s16,bajo,0.9,,pendiente,justa 1.11
 2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 3.5 goles,todas-s16,bajo,0.78,,pendiente,"RECOMENDADA; justa 1.28, mínimo 1.20; Panamá 6/6, Curazao 4/6; 0.5u"
-2026-11-12,Curazao-Panamá (CNL cuartos),Panamá marca,todas-s16,medio,0.75,,pendiente,"justa 1.33"
-2026-11-12,Curazao-Panamá (CNL cuartos),Panamá o empate,todas-s16,medio,0.73,,pendiente,"justa 1.37"
-2026-11-12,Curazao-Panamá (CNL cuartos),Más de 1.5 goles,todas-s16,medio,0.69,,pendiente,"justa 1.45"
-2026-11-12,Curazao-Panamá (CNL cuartos),Curazao marca,todas-s16,medio,0.63,,pendiente,"justa 1.58"
-2026-11-12,Curazao-Panamá (CNL cuartos),Panamá empate no apuesta,todas-s16,medio,0.63,,pendiente,"justa 1.58"
-2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 2.5 goles,todas-s16,medio,0.57,1.67,pendiente,"justa 1.75; Panamá 6/6"
-2026-11-12,Curazao-Panamá (CNL cuartos),Curazao o empate,todas-s16,medio,0.54,,pendiente,"justa 1.85"
-2026-11-12,Curazao-Panamá (CNL cuartos),Ambos marcan,todas-s16,alto,0.48,,pendiente,"justa 2.10"
-2026-11-12,Curazao-Panamá (CNL cuartos),Gana Panamá,todas-s16,alto,0.46,2.00,pendiente,"justa 2.17"
-2026-11-12,Curazao-Panamá (CNL cuartos),Más de 2.5 goles,todas-s16,alto,0.43,2.12,pendiente,"justa 2.33"
-2026-11-12,Curazao-Panamá (CNL cuartos),Panamá más de 1.5 goles,todas-s16,alto,0.41,,pendiente,"justa 2.45"
-2026-11-12,Curazao-Panamá (CNL cuartos),Empate,todas-s16,alto,0.28,3.25,pendiente,"justa 3.57; 0.25u"
-2026-11-12,Curazao-Panamá (CNL cuartos),Gana Panamá sin encajar,todas-s16,alto,0.28,,pendiente,"justa 3.61"
-2026-11-12,Curazao-Panamá (CNL cuartos),Gana Curazao,todas-s16,alto,0.26,3.65,pendiente,"justa 3.85"
-2026-11-12,Curazao-Panamá (CNL cuartos),Panamá -1.5,todas-s16,alto,0.22,,pendiente,"justa 4.50"
-2026-11-12,Curazao-Panamá (CNL cuartos),Más de 3.5 goles,todas-s16,alto,0.22,,pendiente,"justa 4.52"
-2026-11-12,Curazao-Panamá (CNL cuartos),Marcador 1-1,todas-s16,alto,0.13,,pendiente,"justa 7.90"
+2026-11-12,Curazao-Panamá (CNL cuartos),Panamá marca,todas-s16,medio,0.75,,pendiente,justa 1.33
+2026-11-12,Curazao-Panamá (CNL cuartos),Panamá o empate,todas-s16,medio,0.73,,pendiente,justa 1.37
+2026-11-12,Curazao-Panamá (CNL cuartos),Más de 1.5 goles,todas-s16,medio,0.69,,pendiente,justa 1.45
+2026-11-12,Curazao-Panamá (CNL cuartos),Curazao marca,todas-s16,medio,0.63,,pendiente,justa 1.58
+2026-11-12,Curazao-Panamá (CNL cuartos),Panamá empate no apuesta,todas-s16,medio,0.63,,pendiente,justa 1.58
+2026-11-12,Curazao-Panamá (CNL cuartos),Menos de 2.5 goles,todas-s16,medio,0.57,1.67,pendiente,justa 1.75; Panamá 6/6
+2026-11-12,Curazao-Panamá (CNL cuartos),Curazao o empate,todas-s16,medio,0.54,,pendiente,justa 1.85
+2026-11-12,Curazao-Panamá (CNL cuartos),Ambos marcan,todas-s16,alto,0.48,,pendiente,justa 2.10
+2026-11-12,Curazao-Panamá (CNL cuartos),Gana Panamá,todas-s16,alto,0.46,2.00,pendiente,justa 2.17
+2026-11-12,Curazao-Panamá (CNL cuartos),Más de 2.5 goles,todas-s16,alto,0.43,2.12,pendiente,justa 2.33
+2026-11-12,Curazao-Panamá (CNL cuartos),Panamá más de 1.5 goles,todas-s16,alto,0.41,,pendiente,justa 2.45
+2026-11-12,Curazao-Panamá (CNL cuartos),Empate,todas-s16,alto,0.28,3.25,pendiente,justa 3.57; 0.25u
+2026-11-12,Curazao-Panamá (CNL cuartos),Gana Panamá sin encajar,todas-s16,alto,0.28,,pendiente,justa 3.61
+2026-11-12,Curazao-Panamá (CNL cuartos),Gana Curazao,todas-s16,alto,0.26,3.65,pendiente,justa 3.85
+2026-11-12,Curazao-Panamá (CNL cuartos),Panamá -1.5,todas-s16,alto,0.22,,pendiente,justa 4.50
+2026-11-12,Curazao-Panamá (CNL cuartos),Más de 3.5 goles,todas-s16,alto,0.22,,pendiente,justa 4.52
+2026-11-12,Curazao-Panamá (CNL cuartos),Marcador 1-1,todas-s16,alto,0.13,,pendiente,justa 7.90
