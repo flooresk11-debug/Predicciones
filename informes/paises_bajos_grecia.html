@@ -1,0 +1,211 @@
+<title>Países Bajos vs Grecia</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">UEFA Nations League · Liga A · Grupo 2 · Jornada 5</div>
+  <header class="hero">
+    <div class="team"><b>Países Bajos</b><span>FIFA 9.º · 1.º del grupo, 8 puntos · goles 7-5 · Xavi</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Grecia</b><span>FIFA 41.º · 2.º del grupo, 8 puntos · goles 5-3 · Ivan Jovanović</span></div>
+  </header>
+  <div class="meta">Viernes 13 nov 2026 · 13:45 (tu hora) · 20:45 en Ámsterdam · Johan Cruijff ArenA · Árbitro: no encontrado · Ida: Grecia 2-2 Países Bajos (1 oct)</div>
+
+  <section class="main-pick" aria-label="Pick recomendado">
+    <div><div class="eyebrow" style="color:var(--good)">Recomendada · paga 1.30 o más</div><h1>Grecia +1.5</h1></div>
+    <div style="text-align:right"><div class="p">65%</div><div class="meta">Vista a 1.60 · cuota justa 1.54 · entra desde 1.55 · 0.5 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Grecia no pierde</b><span>Invicta en el grupo: ganó en Serbia y en Alemania, 2-2 con Países Bajos y 0-0 con Alemania. No perdió por 2 goles en ninguno de sus 5 últimos.</span></div>
+    <div class="card tile"><b>A Países Bajos le marcan siempre</b><span>Encajó en sus 8 últimos partidos (Mundial y Nations). También marcó en los 8.</span></div>
+    <div class="card tile"><b>Defensa neerlandesa en cuadro</b><span>Sin Van Dijk, Aké, Hato ni Frimpong. Tampoco Gravenberch ni Brobbey. Vuelve Frenkie de Jong tras 4 meses.</span></div>
+    <div class="card tile"><b>Grecia, con dos sancionados</b><span>Zafeiris y Saliakas no juegan. Kourbelis (autor del gol en Alemania) es duda por un tobillo.</span></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fn">
+      <h2 id="h-fn">Países Bajos <small>últimos 8</small></h2>
+      <div class="form">
+        <div><span>Países Bajos – Serbia · Nations</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>Grecia – Países Bajos · Nations</span><span class="r num">2-2</span><span class="chip D">E</span></div>
+        <div><span>Serbia – Países Bajos · Nations</span><span class="r num">1-2</span><span class="chip W">G</span></div>
+        <div><span>Países Bajos – Alemania · Nations</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Países Bajos – Marruecos · Mundial (penaltis)</span><span class="r num">1-1</span><span class="chip D">E</span></div>
+        <div><span>Túnez – Países Bajos · Mundial</span><span class="r num">1-3</span><span class="chip W">G</span></div>
+        <div><span>Países Bajos – Suecia · Mundial</span><span class="r num">5-1</span><span class="chip W">G</span></div>
+        <div><span>Países Bajos – Japón · Mundial</span><span class="r num">2-2</span><span class="chip D">E</span></div>
+      </div>
+      <p class="note">Invicto en los 90 minutos en los 8, pero solo ganó 4. Ambos marcaron en 8 de 8. Ganó por 2 goles o más en 2 de 8. Eliminado del Mundial por penaltis en dieciseisavos.</p>
+    </section>
+    <section class="card" aria-labelledby="h-fg">
+      <h2 id="h-fg">Grecia <small>últimos 5 encontrados</small></h2>
+      <div class="form">
+        <div><span>Grecia – Alemania · Nations</span><span class="r num">0-0</span><span class="chip D">E</span></div>
+        <div><span>Grecia – Países Bajos · Nations</span><span class="r num">2-2</span><span class="chip D">E</span></div>
+        <div><span>Alemania – Grecia · Nations</span><span class="r num">0-1</span><span class="chip W">G</span></div>
+        <div><span>Serbia – Grecia · Nations</span><span class="r num">1-2</span><span class="chip W">G</span></div>
+        <div><span>Italia – Grecia · amistoso, jun</span><span class="r num">1-0</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Contra Países Bajos ganaba 2-0 al descanso y le empataron. Marcó en 3 de 5 y encajó en 3 de 5. Solo 2 de sus 5 partidos pasaron de 2.5 goles. No jugó el Mundial. Faltan más resultados de 2026: muestra corta.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>casas sin margen</small></h2>
+    <div class="odds">
+      <div><b style="color:var(--good)">63%</b><span>Países Bajos · 1.50</span></div>
+      <div><b>21%</b><span>Empate · 4.40–4.65</span></div>
+      <div><b>16%</b><span>Grecia · 5.80</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Países Bajos 63%, empate 21%, Grecia 16%"><i style="width:63%;background:var(--good)"></i><i style="width:21%;background:var(--warn)"></i><i style="width:16%;background:var(--bad)"></i></div>
+    <p class="meta" style="margin-top:8px">Más de 2.5 a 1.57 · menos de 2.5 a 2.30 · ambos marcan 1.67–1.72 · Grecia +1.5 a 1.60 · menos de 4.5 tarjetas a 1.83 · Marcadores: 1-0 (11%), 2-0 (10%), 1-1 (10%), 2-1 (10%)</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Las mejores, desde cuota 1.30 <small>lectura: Países Bajos no pierde, pero Grecia compite y marca</small></h2>
+    <div class="pick"><span class="risk m">Medio · recomendada</span><div><h3>Grecia +1.5 (1.60)</h3><p>Gana si Grecia gana, empata o pierde por un gol. Países Bajos solo ganó por 2 o más en 2 de 8; Grecia no perdió por 2 en ninguno de 5. La cuota vista paga algo más de lo justo. En contra: Grecia sin dos titulares y fuera de casa. 0.5 u.</p></div><div class="pp"><b>65%</b><span>justa 1.54 · pagan 1.60</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Grecia marca</h3><p>A Países Bajos le marcaron en 8 de 8 y hoy le falta media defensa. Grecia marcó en 3 de 4 del grupo, 2 en la ida. En contra: Kourbelis duda. 0.5 u.</p></div><div class="pp"><b>61–75%</b><span>justa 1.63 · desde 1.55</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Ambos marcan (1.67–1.72)</h3><p>Países Bajos: 8 de 8. Grecia: 2 de 5, porque defiende muy bien (0-0 y 0-1 contra Alemania). Paga cerca de lo justo. 0.25 u.</p></div><div class="pp"><b>52–56%</b><span>justa 1.80 · pagan 1.70</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Gana Países Bajos (1.50)</h3><p>A favor: casa y plantilla; lidera el grupo. En contra: ganó 4 de 8, Grecia está invicta y la defensa llega remendada. Paga lo justo, sin margen. 0.25 u.</p></div><div class="pp"><b>60–63%</b><span>justa 1.60 · pagan 1.50</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Países Bajos más de 1.5 goles</h3><p>Marcó 2 o más en 6 de 8. En contra: Grecia encajó 2 solo una vez en 5 (contra este mismo rival). 0.25 u.</p></div><div class="pp"><b>57%</b><span>justa 1.77 · desde 1.70</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Empate (4.40–4.65)</h3><p>Países Bajos empató 4 de sus últimos 8 y Grecia 2 de 4 en el grupo. El modelo da 22% (justa 4.55): paga lo justo o algo más. Cuota larga que respaldan los datos. 0.25 u.</p></div><div class="pp"><b>22%</b><span>justa 4.55 · pagan 4.40+</span></div></div>
+    <p class="note"><b>Pick fuerte (stakazo): ninguno hoy.</b> Ninguna apuesta de 1.50 o más llega al 67% en el mercado. Son selecciones: 8 y 5 partidos de datos, lejos de los 10 por equipo que pide la regla.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-all">
+    <h2 id="h-all">Todas las apuestas <small>modelo anclado al mercado (Países Bajos 1.90 goles esperados, Grecia 0.95)</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota justa</th><th>P. Bajos (8)</th><th>Grecia (5)</th><th>Riesgo</th></tr>
+      <tr><td>Países Bajos marca</td><td class="g">85%</td><td>1.18</td><td>8/8</td><td>encajó 3/5</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Menos de 4.5 goles</td><td class="g">84%</td><td>1.19</td><td>7/8</td><td>5/5</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Grecia +2.5</td><td class="g">83%</td><td>1.20</td><td>7/8</td><td>5/5</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Países Bajos o empate</td><td class="g">82%</td><td>1.23</td><td>8/8</td><td class="bd">perdió 1/5</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Más de 1.5 goles</td><td class="w">78%</td><td>1.29</td><td>8/8</td><td class="bd">2/5</td><td>medio</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td class="w">68%</td><td>1.47</td><td>5/8</td><td>4/5</td><td>medio</td></tr>
+      <tr><td>Grecia +1.5</td><td class="w">65%</td><td>1.54</td><td>6/8</td><td>5/5</td><td>medio · pagan 1.60</td></tr>
+      <tr><td>Grecia marca</td><td class="w">61%</td><td>1.63</td><td>encajó 8/8</td><td>3/5</td><td>medio</td></tr>
+      <tr><td>Gana Países Bajos</td><td>60%</td><td>1.68</td><td>4/8</td><td class="bd">perdió 1/5</td><td>medio · pagan 1.50</td></tr>
+      <tr><td>Países Bajos 2 o más goles</td><td>57%</td><td>1.77</td><td>6/8</td><td class="bd">encajó 2+ en 1/5</td><td>medio</td></tr>
+      <tr><td>Más de 2.5 goles</td><td>54%</td><td>1.85</td><td>6/8</td><td class="bd">2/5</td><td>alto · pagan 1.57</td></tr>
+      <tr><td>Ambos marcan</td><td>52%</td><td>1.92</td><td>8/8</td><td>2/5</td><td>medio · pagan 1.70</td></tr>
+      <tr><td>Menos de 2.5 goles</td><td>46%</td><td>2.18</td><td class="bd">2/8</td><td>3/5</td><td>alto · pagan 2.30</td></tr>
+      <tr><td>Grecia o empate</td><td>40%</td><td>2.48</td><td class="bd">0/8 perdidos</td><td>4/5</td><td>alto</td></tr>
+      <tr><td>Países Bajos gana y más de 2.5</td><td>38%</td><td>2.62</td><td>4/8</td><td>—</td><td>alto</td></tr>
+      <tr><td>Países Bajos −1.5</td><td>35%</td><td>2.84</td><td class="bd">2/8</td><td class="bd">0/5</td><td>alto</td></tr>
+      <tr><td>Países Bajos gana sin encajar</td><td>33%</td><td>3.04</td><td class="bd">0/8</td><td>no marcó 2/5</td><td>muy alto</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>32%</td><td>3.13</td><td>3/8</td><td>1/5</td><td>muy alto</td></tr>
+      <tr><td>Países Bajos gana y ambos marcan</td><td>27%</td><td>3.75</td><td>3/8</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Empate</td><td>22%</td><td>4.55</td><td>4/8</td><td>2/5</td><td>alto · pagan 4.40+</td></tr>
+      <tr><td>Gana Grecia</td><td>18%</td><td>5.43</td><td class="bd">0/8</td><td>2/5</td><td>muy alto · pagan 5.80</td></tr>
+    </table></div>
+    <p class="note">En rojo, lo que los datos contradicen. "Más de 2.5 goles" a 1.57 paga menos de lo justo: Países Bajos empuja hacia arriba, pero Grecia juega a pocos goles. Tarjetas: la única cuota que vi es "menos de 4.5" a 1.83, sin árbitro ni datos por partido para ponerle número. Corners: sin datos.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad media: resultados verificados en 2 o más fuentes (UEFA, ESPN, FIFA, prensa griega), bajas confirmadas por prensa neerlandesa, cuotas de 1xBet y webs de pronósticos (no de bet365). Sin estadísticas por partido ni árbitro. Sin acceso directo a las webs: todo sale de búsquedas cruzadas.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000--2026-27-uefa-nations-league-all-the-league-phase-fixtures-a/">UEFA: resultados</a>
+      <a href="https://www.espn.com/soccer/team/results/_/id/449/league/UEFA.NATIONS">ESPN: Países Bajos</a>
+      <a href="https://www.espn.com/soccer/team/results/_/id/455/league/UEFA.NATIONS">ESPN: Grecia</a>
+      <a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/teams/netherlands/fixtures">FIFA: Mundial</a>
+      <a href="https://greekreporter.com/2026/10/02/greece-netherlands-nations-league/">Greek Reporter: ida 2-2</a>
+      <a href="https://greekreporter.com/2026/10/05/greece-germany-draw-nations-league/">Greek Reporter: 0-0</a>
+      <a href="https://www.voetbalprimeur.nl/nieuws/2155836/dit-zijn-de-opvallendste-afwezigen-bij-oranje-voor-interlandperiode-van-november.html">VoetbalPrimeur: ausencias</a>
+      <a href="https://www.voetbalzone.nl/nieuws/vermoedelijke-opstelling-nederlands-elftal-moeilijke-keuze-voor-xavi-in-verdediging/blt02fd9917aac31005">Voetbalzone: once probable</a>
+      <a href="https://www.whoscored.com/matches/1969826/preview/international-uefa-nations-league-a-2026-2027-netherlands-greece">WhoScored</a>
+      <a href="https://www.tribalfootball.com/article/soccer-uefa-nations-league-netherlands-vs-greece-confirmed-team-news-as-xavi-aims-to-send-his-side-top-of-the-group-ed49852d-c5fb-482f-b7a0-8a942130ff2a">TribalFootball</a>
+      <a href="https://www.goal.com/en-ng/betting/tips/netherlands-vs-greece-predictions-13-11-2026/A%3Ablta55cf4e5cf49ca09">Goal: cuotas</a>
+      <a href="https://footballpredictions.com/footballpredictions/nations-league-predictions/netherlands-vs-greece-prediction-13-11-2026/">FootballPredictions: cuotas</a>
+    </div>
+  </section>
+</div>
