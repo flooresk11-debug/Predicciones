@@ -148,7 +148,7 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-12,Pasto-Junior,Junior o empate,todas-s16,bajo,0.91,1.02,G,justa 1.10; Pasto con Sub-20 | FINAL 0-1
 2026-11-12,Pasto-Junior,Junior marca,todas-s16,bajo,0.90,,G,justa 1.11; 0.5u; Pasto con Sub-20 | FINAL 0-1
 2026-11-12,Pasto-Junior,Más de 1.5 goles,todas-s16,bajo,0.80,,P,"RECOMENDADA; justa 1.25, mínimo 1.16; 0.5u; Pasto con Sub-20 | FINAL 0-1"
-2026-11-12,Pasto-Junior,Junior anota primero,todas-s16,medio,0.78,1.22,pendiente,justa 1.28; 0.25u; Pasto con Sub-20
+2026-11-12,Pasto-Junior,Junior anota primero,todas-s16,medio,0.78,1.22,G,justa 1.28; 0.25u; Pasto con Sub-2 | FINAL 0-1"
 2026-11-12,Pasto-Junior,Gana Junior,todas-s16,medio,0.76,1.21,G,justa 1.32; Junior 1/8 fuera; 0.25u; Pasto con Sub-20 | FINAL 0-1
 2026-11-12,Pasto-Junior,Junior más de 1.5 goles,todas-s16,medio,0.67,,P,justa 1.49; 0.25u; Pasto con Sub-20 | FINAL 0-1
 2026-11-12,Pasto-Junior,Más de 2.5 goles,todas-s16,alto,0.58,,P,justa 1.73; 0.25u; Pasto con Sub-20 | FINAL 0-1
