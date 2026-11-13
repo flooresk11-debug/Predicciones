@@ -132,3 +132,14 @@ El usuario quiere ver siempre todas las apuestas analizadas, no solo las que pas
   precio se mantiene; lo que cambia es que ya no se ocultan ni se retiran).
 - Todas van a `registro/picks.csv` para medir también las que antes se descartaban.
 Motivo: el 12/11 varios descartes habrían ganado (Inglaterra 1.25, Ghana 1.05, más de 2.5 en Inglaterra-Croacia).
+
+## 17. Cuota mínima 1.30 y "pick fuerte" (petición del usuario, 13/11/2026)
+- La apuesta RECOMENDADA de cada partido debe pagar 1.30 o más. Las de menos de 1.30 se siguen listando (§16),
+  pero marcadas "paga menos de 1.30" y nunca como recomendada.
+- A 1.30 hay que acertar el 77% para no perder; a 1.50, el 67%. Ninguna apuesta a esas cuotas es segura.
+- "Pick fuerte" (lo más parecido a un stakazo; máximo 1 u, nunca más): cuota real vista >= 1.50, probabilidad
+  del mercado sin margen >= 67%, datos de AMBOS equipos >= 70% en 10+ partidos verificados, cuota real >= cuota
+  justa, y liga con datos completos. Si falta una condición, no hay pick fuerte ese día.
+- Lecciones del 12/11: (a) un solo partido no es referencia (Pasto Sub-20); (b) 5 enfrentamientos directos no
+  bastan para ir a pocos goles en la altura (Potosí 5-5): en Bolivia "menos de 4.5" no es riesgo bajo;
+  (c) "más de 1.5" no es la más segura en partidos sin nada en juego.
