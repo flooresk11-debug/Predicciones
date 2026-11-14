@@ -1,0 +1,251 @@
+<title>San Vicente–Belice</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">Liga de Naciones Concacaf · Liga B · Grupo D · Jornada 5</div>
+  <header class="hero">
+    <div class="team"><b>San Vicente y las Granadinas</b><span>1.º del grupo, 12 puntos · 4 de 4 · goles 11-3</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Belice</b><span>3 puntos · 1 victoria en 4 · goles 1-4</span></div>
+  </header>
+  <div class="meta">Fin de semana del 14–15 nov 2026 · hora y estadio no confirmados · San Vicente figura como local · Árbitro: sin dato · Ida: Belice 0-1 San Vicente (29 sep, gol de A. Johnson, min 10)</div>
+
+  <section class="main-pick" aria-label="Pick recomendado" style="border-left-color:var(--warn)">
+    <div><div class="eyebrow" style="color:var(--warn)">Recomendada · riesgo medio</div><h1>Gana San Vicente</h1></div>
+    <div style="text-align:right"><div class="p" style="color:var(--warn)">62%</div><div class="meta">Cuota justa 1.62 · entra desde 1.65 · no vi su cuota · 0.25 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>San Vicente llega perfecto</b><span>4 victorias en 4 (12 puntos), 13 victorias en sus últimos 20 y 2.35 goles a favor por partido. Ya ganó 1-0 en Belice el 29 sep.</span></div>
+    <div class="card tile"><b>Belice casi no marca</b><span>1 gol en 4 partidos de grupo y 1.30 por partido en 20. Pero concede pocos remates: 7.0 por partido (−46.5% frente a la liga).</span></div>
+    <div class="card tile"><b>La línea de goles pide ~2.8</b><span>bet365: más/menos 2.5 a 1.80 / 2.00. Los datos de ambos suman ~3.2 goles, pero con rivales flojos de por medio. Sin ventaja clara en ningún lado.</span></div>
+    <div class="card tile"><b>Me falta el 1X2</b><span>No vi cuotas de victoria/empate. Mi 62% sale de la línea de goles y de los datos: cuando veas la cuota, compárala con 1.65.</span></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-cap">
+    <h2 id="h-cap">Tus capturas, traducidas <small>StatsHub · últimos 20 partidos, 90 minutos · "Total" = los dos equipos juntos</small></h2>
+    <div class="tw"><table>
+      <tr><th>Mercado</th><th>Línea y cuota bet365</th><th>San Vicente</th><th>Belice</th><th>Lectura</th></tr>
+      <tr><td>Goles: más de 2.5</td><td>Más/Menos 2.5: 1.800 / 2.000 · 2.25: 1.600 / 2.300</td><td>70% · prom. 3.5</td><td>50% · prom. 3.0</td><td>Partidos de San Vicente tienen más goles que los de Belice</td></tr>
+      <tr><td>Goles a favor / en contra (20 partidos)</td><td>—</td><td>2.35 / 1.10 · 13G 3E 4P</td><td>1.30 / 1.70 · 8G 2E 10P</td><td>Diferencia +1.25 contra −0.40</td></tr>
+      <tr><td>xG (goles esperados): más de 2.5</td><td>—</td><td>70% (7/10) · prom. 3.01</td><td>44% (4/9) · prom. 2.26</td><td>Pocos partidos con dato xG</td></tr>
+      <tr><td>Córneres: más de 7.5</td><td>Totales 8.5: 1.800 / 1.909 · Asiático 9: 2.250 / 1.909 · 1.er tiempo 4: 1.900 / 1.900</td><td>80% · prom. 10.6</td><td>55% · prom. 8.3</td><td>El asiático 9 suma 97% de probabilidad implícita: línea mal rotulada, no la uso</td></tr>
+      <tr><td>Remates</td><td>—</td><td>13.0 por partido · 46% posesión</td><td>12.5 · 57% posesión</td><td>Belice concede 7.0 (−46.5%); San Vicente concede 10.5 (−23.3%)</td></tr>
+      <tr><td>Remates por jugador</td><td>—</td><td>O. Anderson 3.14 · C. Stewart 2.00 · J. Audain 2.00 · A. Solomon 1.40</td><td>O. Velásquez 2.20 · D. Daniels 2.00 · J. Polanco 1.58 · D. Wade 1.50</td><td>Sin cuotas de jugadores en las capturas</td></tr>
+      <tr><td>Faltas (última partida)</td><td>—</td><td>Mapa de calor por jugador</td><td>Mapa de calor por jugador</td><td>Sin línea de tarjetas ni árbitro: no calculo tarjetas</td></tr>
+    </table></div>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fa">
+      <h2 id="h-fa">San Vicente <small>Liga de Naciones 2026</small></h2>
+      <div class="form">
+        <div><span>San Vicente – San Martín · 6 oct</span><span class="r num">4-0</span><span class="chip W">G</span></div>
+        <div><span>San Martín – San Vicente · 3 oct</span><span class="r num">2-4</span><span class="chip W">G</span></div>
+        <div><span>Belice – San Vicente · 29 sep</span><span class="r num">0-1</span><span class="chip W">G</span></div>
+        <div><span>San Vicente – Guayana Francesa · 26 sep</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>Barbados – San Vicente · 29 mar</span><span class="r num">2-3</span><span class="chip W">G</span></div>
+      </div>
+      <p class="note">20 partidos: 13G 3E 4P, 2.35 a favor y 1.10 en contra. Muchos goles ante rivales débiles (7-0 y 1-0 a Cuba, 6-0 a Anguila). Perdió con Puerto Rico, Rep. Dominicana, Jamaica y Bonaire: los equipos de más nivel le ganan.</p>
+    </section>
+    <section class="card" aria-labelledby="h-fi">
+      <h2 id="h-fi">Belice <small>Liga de Naciones 2026</small></h2>
+      <div class="form">
+        <div><span>Guayana Francesa – Belice · 6 oct</span><span class="r num">1-0</span><span class="chip L">P</span></div>
+        <div><span>Belice – Guayana Francesa · 3 oct</span><span class="r num">0-2</span><span class="chip L">P</span></div>
+        <div><span>Belice – San Vicente · 29 sep</span><span class="r num">0-1</span><span class="chip L">P</span></div>
+        <div><span>San Martín – Belice · 26 sep</span><span class="r num">0-1</span><span class="chip W">G</span></div>
+        <div><span>Guyana – Belice · 30 mar</span><span class="r num">3-1</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">20 partidos: 8G 2E 10P, 1.30 a favor y 1.70 en contra. Perdió 0-7 y 1-6 con Costa Rica, 0-2 con Panamá. 3 derrotas seguidas en el grupo sin marcar; su único gol en 4 partidos fue el 1-0 en San Martín.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-conf">
+    <h2 id="h-conf">Confirmación con otras fuentes</h2>
+    <div class="tw"><table>
+      <tr><th>Dato</th><th>StatsHub (tus capturas)</th><th>Otras fuentes</th><th>Estado</th></tr>
+      <tr><td>Tabla del grupo D</td><td>Resultados: San Vicente 4/4, Belice 1 victoria en 4</td><td>Preview de Scores24: San Vicente 12 pts (11-3), Belice 3 pts (1-4), Guayana Francesa 9, San Martín 0</td><td class="g">Confirmado</td></tr>
+      <tr><td>Ida</td><td>Belice 0-1 San Vicente (29 sep)</td><td>ESPN: 0-1, gol de A. Johnson (min 10), FFB Stadium</td><td class="g">Confirmado</td></tr>
+      <tr><td>Fecha y hora</td><td>Capturas con fecha 14 nov</td><td>Una preview lo pone el 15 nov; no encontré hora ni estadio oficiales</td><td class="w">Sin confirmar</td></tr>
+      <tr><td>Bajas</td><td>Sin sección de noticias en las capturas</td><td>No encontré parte de lesiones de ninguno de los dos</td><td class="w">Sin dato</td></tr>
+      <tr><td>Árbitro</td><td>—</td><td>No encontrado</td><td class="w">Sin dato</td></tr>
+      <tr><td>Cuotas 1X2</td><td>—</td><td>No encontradas</td><td class="w">Sin ver</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>estimado: línea de goles (60%) y datos (40%)</small></h2>
+    <div class="odds">
+      <div><b style="color:var(--good)">62%</b><span>San Vicente · justa 1.62</span></div>
+      <div><b>22%</b><span>Empate · justa 4.62</span></div>
+      <div><b>17%</b><span>Belice · justa 6.04</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="San Vicente 62%, empate 22%, Belice 17%"><i style="width:62%;background:var(--good)"></i><i style="width:22%;background:var(--warn)"></i><i style="width:17%;background:var(--bad)"></i></div>
+    <p class="meta" style="margin-top:8px">Goles esperados: ~1.9 y ~0.9. Marcadores más probables: 1-0, 2-0, 1-1, 2-1. Sin cuotas 1X2 del mercado, el reparto entre equipos sale solo de los datos: más incierto que en otros partidos.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Las mejores <small>lectura: San Vicente favorito claro, goles en el punto medio</small></h2>
+    <div class="pick"><span class="risk m">Medio · recomendada</span><div><h3>Gana San Vicente (desde 1.65)</h3><p>Primero del grupo con 4 de 4, ya ganó en Belice, y Belice perdió 3 seguidas sin marcar. En contra: Belice concede pocos remates y el partido puede ser cerrado (1-0). Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>62%</b><span>justa 1.62</span></div></div>
+    <div class="pick"><span class="risk a">Medio-alto</span><div><h3>Menos de 3.5 goles (desde 1.45)</h3><p>Falla solo con 4 goles o más. En contra: de los 17 partidos de San Vicente que se ven en la captura, 8 tuvieron 4 o más goles (7-0 y 6-0 incluidos) y promedia 3.45 en total; por eso lo bajo a riesgo medio-alto. Sin cuota vista; por el 1.80 de "más 2.5" calculo ~1.40. 0.25 u.</p></div><div class="pp"><b>69%</b><span>justa 1.44</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Belice +1.5 (hándicap) (desde 1.60)</h3><p>Gana si Belice no pierde por 2 o más. La ida fue 0-1. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>63%</b><span>justa 1.59</span></div></div>
+    <div class="pick"><span class="risk a">Medio-alto</span><div><h3>San Vicente 2 o más goles (desde 1.80)</h3><p>Promedia 2.35 por partido, pero en la ida solo hizo 1 gol. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>57%</b><span>justa 1.75</span></div></div>
+    <p class="note"><b>Pick fuerte (stakazo): ninguno.</b> Nada de 1.50 hacia arriba llega al 67% y no tengo la cuota 1X2. <b>Combinada del día:</b> sin patas que lleguen a 1.80 con 75%+ en este partido; las de 1.30 no juntan 1.80 con otro partido de forma segura.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-all">
+    <h2 id="h-all">Todas las apuestas <small>probabilidad mezclada · valor = ganancia esperada con la cuota vista</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota justa</th><th>Cuota vista</th><th>Valor</th><th>Riesgo</th></tr>
+      <tr><td>Menos de 4.5 goles</td><td class="g">85%</td><td>1.18</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>San Vicente marca</td><td class="g">85%</td><td>1.17</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>San Vicente o empate</td><td class="g">83%</td><td>1.20</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>San Vicente o Belice (12)</td><td class="w">78%</td><td>1.28</td><td>—</td><td>—</td><td>medio · desde 1.30</td></tr>
+      <tr><td>Más de 1.5 goles</td><td class="w">77%</td><td>1.30</td><td>—</td><td>—</td><td>medio · desde 1.32</td></tr>
+      <tr><td>San Vicente o empate y menos 4.5</td><td class="w">71%</td><td>1.42</td><td>—</td><td>—</td><td>medio · desde 1.45</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td class="w">69%</td><td>1.44</td><td>—</td><td>—</td><td>medio · desde 1.45</td></tr>
+      <tr><td>Belice +1.5</td><td class="w">63%</td><td>1.59</td><td>—</td><td>—</td><td>medio · desde 1.60</td></tr>
+      <tr><td>Gana San Vicente</td><td class="w">62%</td><td>1.62</td><td>—</td><td>—</td><td>medio · RECOMENDADA desde 1.65</td></tr>
+      <tr><td>Rango 2-4 goles</td><td class="w">62%</td><td>1.62</td><td>—</td><td>—</td><td>medio · desde 1.65</td></tr>
+      <tr><td>Belice marca</td><td class="w">58%</td><td>1.72</td><td>—</td><td>—</td><td>medio-alto · desde 1.75</td></tr>
+      <tr><td>San Vicente 2 o más goles</td><td>57%</td><td>1.75</td><td>—</td><td>—</td><td>medio-alto · desde 1.80</td></tr>
+      <tr><td>Más de 2.5 goles</td><td>53%</td><td>1.90</td><td>1.800</td><td class="bd">−5%</td><td>medio-alto</td></tr>
+      <tr><td>Más de 2.25 goles (asiático)</td><td>~53% (media pérdida con 2)</td><td>—</td><td>1.600</td><td class="bd">−3%</td><td>medio-alto</td></tr>
+      <tr><td>Ambos marcan: Sí</td><td>50%</td><td>2.01</td><td>—</td><td>—</td><td>alto · desde 2.05</td></tr>
+      <tr><td>Ambos marcan: No</td><td>50%</td><td>1.99</td><td>—</td><td>—</td><td>alto · desde 2.05</td></tr>
+      <tr><td>Menos de 2.5 goles</td><td>47%</td><td>2.12</td><td>2.000</td><td class="bd">−6%</td><td>alto</td></tr>
+      <tr><td>Menos de 2.25 goles (asiático)</td><td>~47% (media ganancia con 2)</td><td>—</td><td>2.300</td><td class="bd">−8%</td><td>alto</td></tr>
+      <tr><td>Rango 2-3 goles</td><td>46%</td><td>2.17</td><td>—</td><td>—</td><td>alto · desde 2.20</td></tr>
+      <tr><td>Belice no marca</td><td>42%</td><td>2.40</td><td>—</td><td>—</td><td>alto · desde 2.45</td></tr>
+      <tr><td>San Vicente gana y menos de 3.5</td><td>40%</td><td>2.49</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>San Vicente gana y más de 2.5</td><td>39%</td><td>2.58</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Belice o empate</td><td>38%</td><td>2.62</td><td>—</td><td>—</td><td>alto · desde 2.65</td></tr>
+      <tr><td>Rango 3-4 goles</td><td>38%</td><td>2.65</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>San Vicente −1.5</td><td>37%</td><td>2.70</td><td>—</td><td>—</td><td>alto · desde 2.75</td></tr>
+      <tr><td>San Vicente gana sin encajar</td><td>36%</td><td>2.81</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>San Vicente 3 o más goles</td><td>30%</td><td>3.33</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>31%</td><td>3.27</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Empate</td><td>22%</td><td>4.62</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Belice 2 o más goles</td><td>22%</td><td>4.59</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>San Vicente −2.5</td><td>18%</td><td>5.56</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Gana Belice</td><td>17%</td><td>6.04</td><td>—</td><td>—</td><td>muy alto · 0.1 u solo si paga 6.5+</td></tr>
+      <tr><td>Más de 4.5 goles</td><td>15%</td><td>6.65</td><td>—</td><td>—</td><td>muy alto</td></tr>
+    </table></div>
+    <p class="note">Sin cuota vista (—) significa que no apareció en tus capturas: entra desde la cuota de la columna "Riesgo". Las 1X2 y de hándicap salen de un reparto de goles estimado con datos, no de cuotas de mercado.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-est">
+    <h2 id="h-est">Córneres, tarjetas y remates <small>cuotas bet365 de tus capturas</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota vista</th><th>Valor</th><th>Nota</th></tr>
+      <tr><td>Córneres más de 8.5</td><td>~54%</td><td>1.800</td><td class="bd">−3%</td><td>San Vicente 10.6 y Belice 8.3 por partido; mi prueba dice que los córneres totales rinden como la media de la liga</td></tr>
+      <tr><td>Córneres menos de 8.5</td><td>~46%</td><td>1.909</td><td class="bd">−12%</td><td>Los datos van hacia más córneres</td></tr>
+      <tr><td>Córneres asiático 9 (2.250 / 1.909)</td><td>—</td><td>—</td><td class="w">no uso</td><td>Probabilidades implícitas suman 97%: no es una pareja normal</td></tr>
+      <tr><td>Córneres 1.er tiempo 4</td><td>~50%</td><td>1.900 / 1.900</td><td class="w">~−5%</td><td>Sin ventaja</td></tr>
+      <tr><td>Remates de Anderson (San Vicente) 2+</td><td>—</td><td>—</td><td class="w">sin cuota</td><td>Promedia 3.14, pero remates por jugador son "no fiables" en mis pruebas</td></tr>
+      <tr><td>Tarjetas</td><td>—</td><td>—</td><td class="w">sin datos</td><td>Sin línea ni árbitro en las capturas</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad media-baja. Tengo 20 partidos por equipo, pero casi todos contra rivales del Caribe de nivel muy distinto, sin cuotas 1X2, sin bajas, sin árbitro ni hora confirmada. Por eso las apuestas sin cuota vista son estimaciones para comparar con lo que veas en tu casa de apuestas.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.espn.com/soccer/match/_/gameId/401900605">ESPN: Belice 0-1 San Vicente</a>
+      <a href="https://scores24.live/fr/soccer/m-11-11-2026-saint-vincent-and-the-grenadines-belize-prediction">Scores24: previa y tabla</a>
+      <a href="https://www.foresportia.com/es/pronostico/concacaf-nations-league/saint-vincent-and-the-grenadines-sint-maarten-2026-10-06/">Foresportia: grupo D</a>
+      <a href="https://www.concacaf.com/competitions/nations-league">Concacaf: Liga de Naciones</a>
+    </div>
+  </section>
+</div>
+</body></html>
