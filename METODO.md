@@ -144,12 +144,14 @@ Motivo: el 12/11 varios descartes habrían ganado (Inglaterra 1.25, Ghana 1.05, 
   bastan para ir a pocos goles en la altura (Potosí 5-5): en Bolivia "menos de 4.5" no es riesgo bajo;
   (c) "más de 1.5" no es la más segura en partidos sin nada en juego.
 
-## 18. Combinada del día: 2 favoritos (petición del usuario, 13/11/2026)
-El 13/11 el usuario ganó una combinada de 2 favoritos (Países Bajos + Alemania, ambos ganando 3-0 y 2-0). Desde ahora
-cada día con partidos analizados se añade una "combinada del día" además de las apuestas sueltas:
-- 2 selecciones de partidos distintos, ambas "gana el favorito" (o "favorito o empate" si la cuota de ganar es < 1.30).
-- Cada favorito: probabilidad del mercado >= 70%, y sus datos o los del rival lo apoyan (el favorito gana >= 60% de
-  sus últimos 8-10, o el rival pierde >= 60%). Sin bajas clave ni rotaciones esperadas.
-- Cuota de cada selección >= 1.30 y cuota combinada >= 1.80 (con dos favoritos de ~75% acierta ~55%: por debajo de 1.80 no compensa).
-- Stake máximo 0.5 u. Nunca 3 o más selecciones, y nunca dos del mismo torneo si se juegan el mismo día con lo mismo en juego.
-- Se anotan en `registro/picks.csv` como origen "combinada" con ambas cuotas, para medir su acierto frente a las sueltas.
+## 18. Combinada del día: lo más fácil de cumplir (petición del usuario, 13-14/11/2026)
+El 13/11 el usuario ganó una combinada de 2 favoritos. Pidió ampliarla: no solo favoritos, sino "lo que se pueda dar
+fácilmente". Cada día con partidos analizados se añade una "combinada del día" con las selecciones MÁS PROBABLES de
+cualquier mercado (más de 0.5/1.5, menos de 3.5/4.5, doble oportunidad, equipo marca, favorito gana, tarjetas...):
+- 2 selecciones (3 solo si cada una >= 82%), de partidos distintos. Nunca dos del mismo partido.
+- Cada selección: probabilidad del mercado >= 75% Y datos de la temporada de ambos equipos >= 75% (en 8+ partidos).
+- Sin bajas clave, rotaciones ni partido sin nada en juego que cambie la lectura.
+- Cuota combinada >= 1.80. Si las selecciones más fáciles no llegan a 1.80, no hay combinada: no se sube el riesgo para
+  forzar la cuota.
+- Honestidad con los números: 2 selecciones de 80% aciertan 64%; 3 de 80%, 51%. Cuantas más piernas, menos se acierta.
+- Stake máximo 0.5 u. Se anotan en `registro/picks.csv` como origen "combinada" con todas las cuotas.
