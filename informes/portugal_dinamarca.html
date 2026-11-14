@@ -1,0 +1,267 @@
+<title>Portugal vs Dinamarca</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">UEFA Nations League · Liga A · Grupo 4 · Jornada 5</div>
+  <header class="hero">
+    <div class="team"><b>Portugal</b><span>1.º del grupo, 12 puntos · 4 de 4 · ya clasificada a cuartos · Jorge Jesus</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Dinamarca</b><span>2.º del grupo, 6 puntos · goles 7-7 · Brian Riemer</span></div>
+  </header>
+  <div class="meta">Sábado 14 nov 2026 · 14:45 (tu hora) · 19:45 en Londres · Estádio Municipal de Braga · Árbitro: Rade Obrenovič, Eslovenia (una fuente) · Ida: Dinamarca 2-4 Portugal (1 oct)</div>
+
+  <section class="main-pick" aria-label="Pick recomendado" style="border-left-color:var(--warn)">
+    <div><div class="eyebrow" style="color:var(--warn)">Recomendada · riesgo medio-alto</div><h1>Ambos marcan: Sí</h1></div>
+    <div style="text-align:right"><div class="p" style="color:var(--warn)">58%</div><div class="meta">Cuota justa 1.72 · vista 1.63–1.67 (otras casas) · entra desde 1.70 · 0.25 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Portugal sin Ronaldo</b><span>Se retiró de la selección tras chocar con Jorge Jesus. Homenaje al 7 antes del partido. A Portugal le basta el empate para ser primera.</span></div>
+    <div class="card tile"><b>Bajas en las dos defensas</b><span>Portugal sin Cancelo y Conceição (sancionados), Leão, Nuno Mendes y Nuno Tavares. Dinamarca sin Christensen, Gaaei y, según dos fuentes, Dolberg.</span></div>
+    <div class="card tile"><b>La ida: 4-2 para Portugal</b><span>Seis goles, xG total 3.01 y 10 córneres. Dinamarca marcó en sus 4 partidos del grupo; Portugal también.</span></div>
+    <div class="card tile"><b>Las casas ven más de 3 goles</b><span>"Más de 2.5" paga 1.50 (62%). Los datos de los dos equipos dicen 60–65%: sin ventaja ni en un lado ni en el otro.</span></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-cap">
+    <h2 id="h-cap">Tus capturas, traducidas <small>StatsHub · últimos 20 partidos, 90 minutos · "Total" = los dos equipos juntos</small></h2>
+    <div class="tw"><table>
+      <tr><th>Mercado</th><th>Línea y cuota bet365</th><th>Portugal</th><th>Dinamarca</th><th>Lectura</th></tr>
+      <tr><td>Goles: más de 2.5</td><td>Más/Menos 2.5: 1.500 / 2.500 · Totals 2.5: 1.525 / 2.425</td><td>60% (12/20) · prom. 3.1</td><td>65% (13/20) · prom. 3.2</td><td>Mercado 62%; datos 62%</td></tr>
+      <tr><td>xG (goles esperados): más de 2.5</td><td>—</td><td>75% (15/20) · prom. 3.33</td><td>60% (12/20) · prom. 2.94</td><td>Partidos de ~3 goles esperados</td></tr>
+      <tr><td>Córneres: más de 7.5</td><td>Asiático 9: más 2.00 · menos 2.20 · Totales 9: 1.825 / 1.975 · Portugal 5.5: 1.80 / 1.909 · Dinamarca 3.5: 2.20 / 1.615 · 1.er tiempo 4: 1.725 / 2.075</td><td>65% (13/20) · prom. 8.8</td><td>85% (17/20) · prom. 11.4</td><td>Más de 9.5: Portugal 40%, Dinamarca ~75%</td></tr>
+      <tr><td>Tarjetas: más de 1.5</td><td>Línea 3.5: más 1.666 · menos 2.10</td><td>80% (16/20) · prom. 3.5</td><td>90% (18/20) · prom. 3.8</td><td>Más de 3.5: Portugal 40%, Dinamarca 45%</td></tr>
+      <tr><td>Remates a puerta: más de 7.5</td><td>Partido: más 1.25 · menos 3.75 · Dinamarca 3.5: 1.909 / 1.80</td><td>80% (16/20) · prom. 9.2</td><td>70% (14/20) · prom. 9.7</td><td>La línea de Portugal (3.25 / 1.333) viene mal rotulada: no la uso</td></tr>
+      <tr><td>Paradas del portero: más de 5.5</td><td>Más 4.000 (un solo portero)</td><td>65% (13/20) · prom. 6.0</td><td>60% (12/20) · prom. 6.2</td><td>Suman unas 6 paradas</td></tr>
+      <tr><td>Grandes ocasiones creadas: más de 3.5</td><td>No se ve</td><td>60% (12/20) · prom. 5.0</td><td>75% (15/20) · prom. 4.3</td><td>Dinamarca crea más de lo que anota</td></tr>
+    </table></div>
+    <p class="note"><b>Cruce de remates:</b> Portugal promedia 17.25 remates y 61% de posesión; Dinamarca 17.10 y 59%. Los dos enfrentan una defensa cerrada: Dinamarca concede 9.5 remates por partido (media de la liga 13.5, −29.8%) y Portugal solo 7.0 (media 12.5, −44%). Pero esos promedios incluyen rivales débiles: en su partido de ida hubo 6 goles. <b>Primer tiempo (Totals HT):</b> "más 5.000 / menos 1.170" con etiqueta 2.5: no cuadra y no la uso.</p>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fp">
+      <h2 id="h-fp">Portugal <small>Nations League 2026</small></h2>
+      <div class="form">
+        <div><span>Portugal – Noruega · 4 oct</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>Dinamarca – Portugal · 1 oct</span><span class="r num">2-4</span><span class="chip W">G</span></div>
+        <div><span>Noruega – Portugal · 27 sep</span><span class="r num">1-2</span><span class="chip W">G</span></div>
+        <div><span>Portugal – Gales · 24 sep</span><span class="r num">1-0</span><span class="chip W">G</span></div>
+      </div>
+      <p class="note">9 goles a favor y 4 en contra. Ganó por 1 gol en 3 de 4. Antes del grupo: Mundial (cayó 0-1 con España el 6 jul) y partidos de 2025 con goleadas (10-1 a Armenia).</p>
+    </section>
+    <section class="card" aria-labelledby="h-fd">
+      <h2 id="h-fd">Dinamarca <small>Nations League 2026</small></h2>
+      <div class="form">
+        <div><span>Gales – Dinamarca · 4 oct</span><span class="r num">0-1</span><span class="chip W">G</span></div>
+        <div><span>Dinamarca – Portugal · 1 oct</span><span class="r num">2-4</span><span class="chip L">P</span></div>
+        <div><span>Dinamarca – Gales · 27 sep</span><span class="r num">2-0</span><span class="chip W">G</span></div>
+        <div><span>Noruega – Dinamarca · 24 sep</span><span class="r num">3-2</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Marcó en los 4 y encajó en 2: 7 goles a favor y 7 en contra. Solo ganó a Gales (los dos 1-0 y 2-0). Seis jugadores están a una tarjeta de sanción, según una previa.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-conf">
+    <h2 id="h-conf">Confirmación con otras fuentes</h2>
+    <div class="tw"><table>
+      <tr><th>Dato</th><th>StatsHub (tus capturas)</th><th>Otras fuentes</th><th>Estado</th></tr>
+      <tr><td>Grupo A4</td><td>Resultados por partido</td><td>Portugal 12, Dinamarca 6, Gales 3, Noruega 3; Portugal clasificada (Fox, NBC, The Sports Encounter)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Cancelo y Conceição</td><td>Sancionados por acumulación de tarjetas</td><td>Cancelo sancionado (previas y prensa danesa); Conceição solo aparece en StatsHub y una previa</td><td class="g">Cancelo confirmado</td></tr>
+      <tr><td>Leão, Tavares</td><td>Lesionados (isquiotibial, muscular)</td><td>Leão y Tavares fuera en prensa danesa; Nuno Mendes y Tomás Araújo también lesionados</td><td class="g">Confirmado</td></tr>
+      <tr><td>Ronaldo</td><td>Aparece en el historial pero no en los últimos partidos</td><td>Retirado de la selección tras el choque con Jorge Jesus (Yahoo, ESPN); homenaje en este partido</td><td class="g">Confirmado</td></tr>
+      <tr><td>Bajas de Dinamarca</td><td>Stage (muslo), Dolberg y Holse (rodilla), Gaaei (rodilla)</td><td>Dolberg y Gaaei confirmados en prensa danesa; Christensen (muslo) también fuera; Dorgu convocado tras una duda; Damsgaard vuelve</td><td class="w">Parcial</td></tr>
+      <tr><td>Alineaciones</td><td>Portugal 4-2-3-1; Dinamarca 4-4-2</td><td>Una fuente dice que Neto y Veiga no entran en la lista; otras los dan de titulares</td><td class="w">Conflicto</td></tr>
+      <tr><td>Hora y sede</td><td>—</td><td>19:45 en Londres (20:45 en Dinamarca), Braga</td><td class="g">Confirmado</td></tr>
+      <tr><td>Árbitro</td><td>—</td><td>Rade Obrenovič (Eslovenia) según una fuente danesa; carrera 4.31 amarillas por partido (StatsHub); 2025/26: 3.33 en 3 partidos</td><td class="w">Una fuente</td></tr>
+      <tr><td>Cuotas 1X2</td><td>—</td><td>Portugal 1.50 (bet365, una previa); Polymarket: Portugal 61%, Dinamarca 18%; Opta: 59% y 19%</td><td class="w">Sin ver el 1X2 de bet365</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>casas sin margen · mezcla de mercado (60%) y datos (40%)</small></h2>
+    <div class="odds">
+      <div><b style="color:var(--good)">59%</b><span>Portugal · 1.50 (mercado 62, datos 53)</span></div>
+      <div><b>21%</b><span>Empate · ~4.40</span></div>
+      <div><b>20%</b><span>Dinamarca · ~5.50</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Portugal 59%, empate 21%, Dinamarca 20%"><i style="width:59%;background:var(--good)"></i><i style="width:21%;background:var(--warn)"></i><i style="width:20%;background:var(--bad)"></i></div>
+    <p class="meta" style="margin-top:8px">Goles esperados: mercado 2.15 y 1.05; datos 1.85 y 1.20. Marcadores más probables: 2-1, 1-1, 2-0, 1-0. El empate y la victoria danesa no tienen cuota vista en bet365: son estimaciones.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Las mejores <small>lectura: partido abierto, Portugal gana corto y Dinamarca marca</small></h2>
+    <div class="pick"><span class="risk a">Medio-alto · recomendada</span><div><h3>Ambos marcan: Sí (1.63–1.67)</h3><p>A favor: los dos marcaron en los 4 partidos del grupo; Portugal encajó en 3 de 4; hay bajas en las dos defensas; la ida terminó 4-2. En contra: ambas defensas promedian pocos remates en contra y a Dinamarca le faltan sus delanteros. Paga un 4% menos de lo justo (se ve en otras casas, no en bet365). 0.25 u.</p></div><div class="pp"><b>58%</b><span>justa 1.72 · desde 1.70</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Dinamarca marca</h3><p>Marcó en 4 de 4 en el grupo, 2 en cada uno de los 3 últimos. Sin cuota vista: entra desde 1.50. 0.5 u.</p></div><div class="pp"><b>67%</b><span>justa 1.49 · desde 1.50</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Dinamarca +1.5 (hándicap)</h3><p>Gana si Dinamarca no pierde por 2 o más. Portugal ganó por 1 gol 3 de 4. En contra: perdió 2-4 en la ida. Sin cuota: entra desde 1.55. 0.25 u.</p></div><div class="pp"><b>65%</b><span>justa 1.55 · desde 1.55</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Rango 2 a 4 goles</h3><p>Los dos equipos y la ida entran ahí. Sin cuota vista: entra desde 1.65. 0.25 u.</p></div><div class="pp"><b>61%</b><span>justa 1.63 · desde 1.65</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Menos de 2.5 goles (2.50 / 2.425)</h3><p>Es lo más cercano a un precio justo en lo que vi (−2%). Dos defensas con pocos remates concedidos, Portugal con tribute y sin Ronaldo, y Dinamarca sin sus delanteros. Pero Portugal y Dinamarca promedian 3.1 y 3.2 goles. 0.1 u.</p></div><div class="pp"><b>39%</b><span>justa 2.55 · pagan 2.50</span></div></div>
+    <p class="note"><b>Pick fuerte (stakazo): ninguno.</b> Nada de 1.50 hacia arriba llega al 67%. <b>Combinada del día:</b> hoy no hay. Con los tres partidos que me mandaste (Noruega–Gales, Kosovo–Israel y este), las apuestas más fáciles pagan 1.10–1.30 y juntas no llegan a 1.80 sin subir el riesgo.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-all">
+    <h2 id="h-all">Todas las apuestas <small>probabilidad mezclada · valor = ganancia esperada con la cuota vista</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota justa</th><th>Cuota vista</th><th>Valor</th><th>Riesgo</th></tr>
+      <tr><td>Portugal marca</td><td class="g">87%</td><td>1.15</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Más de 1.5 goles</td><td class="g">82%</td><td>1.22</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Portugal o empate</td><td class="g">80%</td><td>1.26</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Portugal o Dinamarca (12)</td><td class="g">79%</td><td>1.27</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Menos de 4.5 goles</td><td class="g">79%</td><td>1.26</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Dinamarca marca</td><td class="w">67%</td><td>1.49</td><td>—</td><td>—</td><td>medio · desde 1.50</td></tr>
+      <tr><td>Dinamarca +1.5</td><td class="w">65%</td><td>1.55</td><td>—</td><td>—</td><td>medio · desde 1.55</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td class="w">62%</td><td>1.62</td><td>~1.57 *</td><td class="bd">−3%</td><td>medio · desde 1.65</td></tr>
+      <tr><td>Rango 2-4 goles</td><td class="w">61%</td><td>1.63</td><td>—</td><td>—</td><td>medio · desde 1.65</td></tr>
+      <tr><td>Más de 2.5 goles</td><td class="w">61%</td><td>1.65</td><td>1.50</td><td class="bd">−9%</td><td>medio-alto</td></tr>
+      <tr><td>Portugal 2 o más goles</td><td>60%</td><td>1.67</td><td>—</td><td>—</td><td>medio-alto · desde 1.70</td></tr>
+      <tr><td>Gana Portugal</td><td>59%</td><td>1.71</td><td>1.50</td><td class="bd">−12%</td><td>medio-alto · no entra</td></tr>
+      <tr><td>Ambos marcan: Sí</td><td>58%</td><td>1.72</td><td>1.63–1.67</td><td class="bd">−4%</td><td>medio-alto · RECOMENDADA</td></tr>
+      <tr><td>Rango 2-3 goles</td><td>44%</td><td>2.29</td><td>—</td><td>—</td><td>alto · desde 2.30</td></tr>
+      <tr><td>Ambos marcan: No</td><td>42%</td><td>2.38</td><td>~2.10</td><td class="bd">−12%</td><td>alto</td></tr>
+      <tr><td>Dinamarca o empate</td><td>42%</td><td>2.41</td><td>—</td><td>—</td><td>alto · desde 2.40</td></tr>
+      <tr><td>Portugal gana y más de 2.5</td><td>41%</td><td>2.45</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Menos de 2.5 goles</td><td>39%</td><td>2.55</td><td>2.50</td><td class="w">−2%</td><td>alto</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>38%</td><td>2.60</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Portugal −1.5</td><td>36%</td><td>2.82</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Portugal gana y ambos marcan</td><td>30%</td><td>3.35</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Dinamarca 2 o más goles</td><td>31%</td><td>3.28</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Portugal gana sin encajar</td><td>29%</td><td>3.48</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Empate</td><td>21%</td><td>4.74</td><td>~4.40</td><td class="w">−7%</td><td>muy alto</td></tr>
+      <tr><td>Gana Dinamarca</td><td>20%</td><td>4.90</td><td>~5.50 (Polymarket 18%)</td><td class="w">+12%</td><td>muy alto · 0.1 u</td></tr>
+    </table></div>
+    <p class="note">* Estimada a partir de "más de 2.5" a 1.50 y los demás precios de goles: no la vi en las capturas. "~" = cuota calculada o de otra página, no de bet365. El +12% de "gana Dinamarca" depende de mi parte de datos (40%) y de una cuota que no vi.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-est">
+    <h2 id="h-est">Córneres, tarjetas y remates <small>cuotas bet365 de tus capturas</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota vista</th><th>Valor</th><th>Nota</th></tr>
+      <tr><td>Córneres más de 9 (asiático)</td><td>~50% (devuelve ~10%)</td><td>2.00</td><td class="w">0 a +10%</td><td>Dinamarca promedia 11.4 por rivales débiles; en la Nations League los dos rondan 9.3</td></tr>
+      <tr><td>Córneres menos de 9 (asiático)</td><td>~40% (devuelve ~10%)</td><td>2.20</td><td class="w">−2%</td><td>En la ida hubo 10</td></tr>
+      <tr><td>Córneres de Dinamarca menos de 3.5</td><td>~50%</td><td>1.615</td><td class="bd">−19%</td><td>Dinamarca promedia más de 5 córneres propios</td></tr>
+      <tr><td>Tarjetas más de 3.5</td><td>~50%</td><td>1.666</td><td class="bd">−17%</td><td>Árbitro con 4.3 amarillas de carrera, pero el dato reciente es 3.3 y 1.8</td></tr>
+      <tr><td>Tarjetas menos de 3.5</td><td>~50%</td><td>2.10</td><td class="g">+5%</td><td>Sin certeza sobre el árbitro</td></tr>
+      <tr><td>Remates a puerta más de 7.5 (partido)</td><td>~75%</td><td>1.25</td><td class="bd">−6%</td><td>Paga menos de 1.30</td></tr>
+      <tr><td>Remates a puerta de Dinamarca más de 3.5</td><td>~50%</td><td>1.909</td><td class="w">−4%</td><td>Mercado de remates "no fiable" en mis pruebas</td></tr>
+    </table></div>
+    <p class="note">Faltan las cuotas de bet365 de faltas, grandes ocasiones y paradas por equipo; las líneas de jugadores no se leen con claridad en las capturas. Para tarjetas, si el árbitro cambia, la recalculo.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-jug">
+    <h2 id="h-jug">Jugadores <small>remates por partido en los últimos 20 · alineaciones previstas, no confirmadas</small></h2>
+    <ul class="why">
+      <li><span class="ok">✓</span><span><b>Portugal:</b> J. Félix 2.19 remates, B. Fernandes 2.00, G. Ramos 1.81. Ronaldo (4.57) ya no juega.</span></li>
+      <li><span class="ok">✓</span><span><b>Dinamarca:</b> Isaksen 2.88, Eriksen 2.77 (en la lista de StatsHub, sin confirmar que juegue), Højlund 2.32, Højbjerg 2.06.</span></li>
+      <li><span class="ok">✓</span><span><b>Once previsto de Portugal:</b> D. Costa; Dalot, Dias, Veiga, Nazinho; Vitinha, Fernandes, Neves; Félix, Neto o Ramos (según previas, no confirmado). <b>Dinamarca:</b> Hermansen; Kristensen, Andersen, Provstgaard, Mæhle; Isaksen, Hjulmand, Højbjerg, Daramy; Højlund, Froholdt u Osula.</span></li>
+      <li><span class="no">✗</span><span><b>Mercados de jugadores:</b> los precios de remates y faltas de las capturas no se leen con claridad al tamaño enviado; no los uso. Si quieres uno, mándame un recorte ampliado.</span></li>
+    </ul>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad media-alta: 20 partidos por equipo en StatsHub con cuotas de bet365 en goles, córneres, tarjetas y remates; bajas confirmadas por varias fuentes. Falta el 1X2 de bet365 y las cuotas de BTTS en bet365 (las que vi son de otras casas). El árbitro sale de una sola fuente. Sin acceso directo a las webs: lo que no sale de tus capturas viene de búsquedas cruzadas.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.sportsmole.co.uk/football/portugal/uefa-nations-league/preview/portugal-vs-denmark-prediction-team-news-lineups_608969.html">Sports Mole: previa</a>
+      <a href="https://www.rotowire.com/soccer/article/portugal-vs-denmark-prediction-predicted-lineups-team-news-146286">Rotowire: bajas</a>
+      <a href="https://www.aljazeera.com/sports/2026/11/13/portugal-denmark-ronaldo-uefa-nations-league-predictions-teams">Al Jazeera</a>
+      <a href="https://sports.yahoo.com/articles/cristiano-ronaldo-retires-portugal-23-143018336.html">Yahoo: retiro de Ronaldo</a>
+      <a href="https://www.espn.com/soccer/story/_/id/50069045/cristiano-ronaldo-portugal-coach-leave-camp-jorge-jesus-bench-denmark">ESPN: Ronaldo y Jesus</a>
+      <a href="https://www.moroccoworldnews.com/2026/11/346332/portugal-to-honor-ronaldo-with-special-tribute-against-denmark/">Morocco World News: homenaje</a>
+      <a href="https://bold.dk/fodbold/klubber/portugal/nyheder/portugal-har-siet-tre-spillere-fra-mod-danmark">Bold.dk: bajas y árbitro</a>
+      <a href="https://www.eurosport.dk/vaeddemaal/forudsigelser/portugal-vs-danmark-tips-forudsigelse-og-odds-14-11-26/">Eurosport DK</a>
+      <a href="https://www.noticiasaominuto.com/desporto/3084091/liga-das-nacoes-jorge-jesus-risca-trio-do-portugal-dinamarca">Notícias ao Minuto</a>
+      <a href="https://www.rtp.pt/noticias/futebol-internacional/liga-nacoes-bah-e-froholdt-nos-convocados-da-dinamarca-para-jogo-com-portugal_d1776915">RTP: convocados de Dinamarca</a>
+      <a href="https://polymarket.com/sports/unl/unl-prt-den-2026-11-14">Polymarket</a>
+      <a href="https://thefootballfaithful.com/portugal-vs-denmark-prediction-betting-tips-14-11-2026/">Football Faithful: cuotas</a>
+      <a href="https://statshub.com/referee/rade-obrenovic/300916">StatsHub: árbitro</a>
+      <a href="https://thesportsencounter.com/2026/10/04/portugal-reach-nations-league-qfs-netherlands-go-top-germany-stall-but-denmark-punish-wales/">The Sports Encounter: tabla</a>
+    </div>
+  </section>
+</div>
