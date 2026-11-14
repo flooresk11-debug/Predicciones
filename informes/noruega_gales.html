@@ -1,0 +1,261 @@
+<title>Noruega vs Gales</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">UEFA Nations League · Liga A · Grupo 4 · Jornada 5</div>
+  <header class="hero">
+    <div class="team"><b>Noruega</b><span>FIFA 19.º · último del grupo, 3 puntos · Ståle Solbakken</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Gales</b><span>FIFA 39.º · 3.º del grupo, 3 puntos · Craig Bellamy</span></div>
+  </header>
+  <div class="meta">Sábado 14 nov 2026 · 11:00 (tu hora) · 17:00 en Londres · Estadio Ullevaal, Oslo · Árbitro: no encontrado · Ida: Gales 2-1 Noruega (1 oct)</div>
+
+  <section class="main-pick" aria-label="Pick recomendado" style="border-left-color:var(--warn)">
+    <div><div class="eyebrow" style="color:var(--warn)">Recomendada · riesgo medio-alto</div><h1>Ambos marcan: Sí</h1></div>
+    <div style="text-align:right"><div class="p" style="color:var(--warn)">54%</div><div class="meta">Cuota justa 1.85 · vista ~1.89 (otra casa) · entra desde 1.85 · 0.25 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Noruega encaja siempre</b><span>Recibió 2 goles en cada uno de sus 4 partidos de la Nations League (3-2, 1-2, 1-2, 1-2) y perdió los últimos 3.</span></div>
+    <div class="card tile"><b>Gales marca poco</b><span>Solo marcó en 1 de sus 4 partidos del grupo: los 2 goles fueron a Noruega, en Cardiff (2-1, su primera victoria en Liga A).</span></div>
+    <div class="card tile"><b>Defensas diezmadas</b><span>Gales sin Cabango y S. Thomas (sancionados) ni Jordan James. Noruega sin Langås (lesión) y Kvalvagnes (sancionado, una fuente).</span></div>
+    <div class="card tile"><b>El mercado espera goles</b><span>"Más de 2.5" paga 1.363: las casas lo dan por 73% seguro. Los datos de los dos equipos dicen 60–65%.</span></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-cap">
+    <h2 id="h-cap">Tus capturas, traducidas <small>StatsHub · últimos 20 partidos, 90 minutos · cuotas de bet365</small></h2>
+    <div class="tw"><table>
+      <tr><th>Mercado</th><th>Línea y cuota bet365</th><th>Noruega</th><th>Gales</th><th>Lectura</th></tr>
+      <tr><td>Goles: más de 2.5</td><td>Más 1.363 · Menos 3.100 (Totals: 1.375 / 3.000)</td><td>75% (15/20) · prom. 3.8</td><td>45% (9/20) · prom. 2.9</td><td>Mercado 70%; datos ~60%</td></tr>
+      <tr><td>xG (goles esperados): más de 2.5</td><td>—</td><td>65% (13/20) · prom. 3.16</td><td>60% (12/20) · prom. 3.05</td><td>Partidos de ~3 goles esperados</td></tr>
+      <tr><td>xG: menos de 3.5</td><td>—</td><td>75% (15/20)</td><td>75% (15/20)</td><td>Pocos pasan de 3.5 xG</td></tr>
+      <tr><td>Córneres: más de 7.5</td><td>Línea 9.5: más 2.10 · menos 1.666 · 1.er tiempo 4.5: 2.05 / 1.75 · Noruega 5.5: 1.833 / 1.833 · Gales 3.5: 2.00 / 1.727</td><td>70% (14/20) · prom. 9.1</td><td>75% (15/20) · prom. 10.2</td><td>Más de 9.5: Noruega 35%, Gales 55%</td></tr>
+      <tr><td>Tarjetas: más de 1.5</td><td>Línea 3.5: más 1.666 · menos 2.10</td><td>45% (9/20) · prom. 2.3</td><td>95% (19/20) · prom. 3.6</td><td>Más de 3.5: Noruega 25%, Gales 40%</td></tr>
+      <tr><td>Remates a puerta: más de 7.5</td><td>Partido: más 1.20 · menos 4.333 · Noruega 7.5: 2.00 / 1.727 · Gales 2.5: 1.727 / 2.00</td><td>70% (14/20) · prom. 9.4</td><td>60% (12/20) · prom. 8.8</td><td>Suman unos 9 por partido</td></tr>
+      <tr><td>Remates totales: más de 22.5</td><td>Partido 21.5: más 1.10 · menos 6.50 · Noruega 21.5: 2.375 / 1.533 · Gales 7.5: 1.80 / 1.909</td><td>75% (15/20) · prom. 25.5</td><td>75% (15/20) · prom. 26.3</td><td>El mercado espera ~20 remates de Noruega</td></tr>
+      <tr><td>Paradas del portero: más de 3.5</td><td>Más 5.000</td><td>80% (16/20) · prom. 5.7</td><td>95% (19/20) · prom. 5.8</td><td>La cuota 5.00 es de un solo portero, no del partido</td></tr>
+    </table></div>
+    <p class="note"><b>Cruce de remates:</b> Gales concede 21.5 remates por partido, 58.8% más que la media de la liga (13.5): cruce favorable para Noruega, que promedia 14.05 remates y 54% de posesión. Noruega concede 12.5 (la media): cruce equilibrado para Gales, que promedia 13.0 remates y 59% de posesión. <b>Primer tiempo (Totals HT):</b> la captura muestra "más 4.000 / menos 1.230" con la etiqueta 2.5; esas cuotas no cuadran con esa línea (parece 1.5) y no las uso.</p>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fn">
+      <h2 id="h-fn">Noruega <small>Nations League 2026</small></h2>
+      <div class="form">
+        <div><span>Portugal – Noruega · 4 oct</span><span class="r num">2-1</span><span class="chip L">P</span></div>
+        <div><span>Gales – Noruega · 1 oct</span><span class="r num">2-1</span><span class="chip L">P</span></div>
+        <div><span>Noruega – Portugal · 27 sep</span><span class="r num">1-2</span><span class="chip L">P</span></div>
+        <div><span>Noruega – Dinamarca · 24 sep</span><span class="r num">3-2</span><span class="chip W">G</span></div>
+      </div>
+      <p class="note">Marcó en los 4 y encajó 2 en cada uno: los 4 partidos tuvieron 3 goles o más. Antes, cuartofinalista del Mundial (cayó 1-2 con Inglaterra en la prórroga). Sus 3.8 goles por partido incluyen goleadas a rivales débiles (12 goles en un partido).</p>
+    </section>
+    <section class="card" aria-labelledby="h-fg">
+      <h2 id="h-fg">Gales <small>Nations League 2026</small></h2>
+      <div class="form">
+        <div><span>Gales – Dinamarca · 4 oct</span><span class="r num">0-1</span><span class="chip L">P</span></div>
+        <div><span>Gales – Noruega · 1 oct</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>Dinamarca – Gales · 27 sep</span><span class="r num">2-0</span><span class="chip L">P</span></div>
+        <div><span>Portugal – Gales · 24 sep</span><span class="r num">1-0</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">3 puntos, solo 2 goles a favor. Perdió por la mínima 2 de 3 derrotas. Si pierde por 2 o más en Oslo, queda último por el duelo directo. Jordan James se cayó de la convocatoria por lesión.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-conf">
+    <h2 id="h-conf">Confirmación con otras fuentes</h2>
+    <div class="tw"><table>
+      <tr><th>Dato</th><th>StatsHub (tus capturas)</th><th>Otras fuentes</th><th>Estado</th></tr>
+      <tr><td>Grupo A4</td><td>—</td><td>Portugal 12 (clasificado), Dinamarca 6, Gales 3, Noruega 3; Gales arriba por el duelo directo (Fox, NBC)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Resultados Nations League</td><td>Noruega 3-2, 1-2, 1-2, 1-2; Gales 0-1, 2-1, 0-2, 0-1</td><td>Mismos marcadores (The Sports Encounter, Fox)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Bajas de Gales</td><td>Cabango y S. Thomas sancionados; Jordan James y Lawlor lesionados</td><td>Previa de TNT: Cabango y Thomas sancionados; The Independent: James fuera</td><td class="g">Confirmado</td></tr>
+      <tr><td>Bajas de Noruega</td><td>Kvalvagnes sancionado; Langås lesionado hasta enero</td><td>Langås confirmado. Una previa añade Aursnes y Strand Larsen fuera; otra dice que no falta nadie</td><td class="w">Parcial</td></tr>
+      <tr><td>Hora y sede</td><td>14.11, 11:00 tu hora</td><td>17:00 en Londres, Ullevaal, Oslo</td><td class="g">Confirmado</td></tr>
+      <tr><td>Cuotas 1X2</td><td>—</td><td>Sky Bet: Noruega 1/5, empate 11/2, Gales 17/2. Una previa da bet365: 2/9, 6/1, 9/1</td><td class="w">Sin ver bet365</td></tr>
+      <tr><td>Árbitro y portero</td><td>—</td><td>Árbitro por designar. Noruega duda entre Nyland y Selvik</td><td class="bd">Sin confirmar</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>casas sin margen · datos · mezcla</small></h2>
+    <div class="odds">
+      <div><b style="color:var(--good)">73%</b><span>Noruega · 1.20–1.22 (mercado 77, datos 66)</span></div>
+      <div><b>16%</b><span>Empate · 6.00–7.00</span></div>
+      <div><b>11%</b><span>Gales · 9.00–10.00</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Noruega 73%, empate 16%, Gales 11%"><i style="width:73%;background:var(--good)"></i><i style="width:16%;background:var(--warn)"></i><i style="width:11%;background:var(--bad)"></i></div>
+    <p class="meta" style="margin-top:8px">Mezcla del 60% mercado y 40% datos, como en el método. Goles esperados: mercado 2.75 y 0.85; datos 2.2 y 0.95. Marcadores más probables: 2-1, 2-0, 3-1, 1-1.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Las mejores <small>lectura: partido abierto, con goles de los dos, pero sin ninguna apuesta con ventaja clara</small></h2>
+    <div class="pick"><span class="risk a">Medio-alto · recomendada</span><div><h3>Ambos marcan: Sí</h3><p>A favor: Noruega encajó 2 en cada partido del grupo y le faltan defensas; Gales marcó 2 en Cardiff; xG por partido ~3. En contra: Gales marcó en solo 1 de 4 partidos del grupo y llega sin 2 titulares atrás. La única cuota que vi (1.89) es de otra casa, no de bet365. 0.25 u.</p></div><div class="pp"><b>54%</b><span>justa 1.85 · desde 1.85</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Gales marca (más de 0.5)</h3><p>Es lo mismo que "ambos marcan" sin necesitar el gol noruego, que casi seguro llega. Sin cuota vista: entra desde 1.70. 0.25 u.</p></div><div class="pp"><b>59%</b><span>justa 1.70 · desde 1.70</span></div></div>
+    <div class="pick"><span class="risk m">Medio · la más fácil</span><div><h3>Más de 2.5 goles (1.363)</h3><p>Es la más probable de las que paga 1.30 o más, y los dos equipos tienen datos a favor. Pero paga un 10% menos de lo justo: las casas la cobran como si fuera 73%. Solo si la quieres por probabilidad, no por valor. 0.25 u.</p></div><div class="pp"><b>66%</b><span>justa 1.51 · pagan 1.363</span></div></div>
+    <div class="pick"><span class="risk a">Alto</span><div><h3>Menos de 2.5 goles (3.100)</h3><p>Es la única línea de tus capturas con ventaja teórica (+5%): los datos de los dos esperan unos 3.1 goles y el mercado 3.6. Cuota larga, falla 2 de cada 3 veces. 0.1 u.</p></div><div class="pp"><b>34%</b><span>justa 2.96 · pagan 3.10</span></div></div>
+    <p class="note"><b>Pick fuerte (stakazo): ninguno.</b> Nada llega al 67% con cuota de 1.50 o más. <b>Combinada del día:</b> no hay, es un solo partido y la regla pide partidos distintos. Mándame otro partido de hoy y la armo.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-all">
+    <h2 id="h-all">Todas las apuestas <small>probabilidad mezclada · valor = ganancia esperada con la cuota vista</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota justa</th><th>Cuota vista</th><th>Valor</th><th>Riesgo</th></tr>
+      <tr><td>Noruega o empate</td><td class="g">89%</td><td>1.13</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Más de 1.5 goles</td><td class="g">85%</td><td>1.17</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Noruega gana</td><td class="w">73%</td><td>1.38</td><td>1.20–1.22</td><td class="bd">−11%</td><td>medio · no entra</td></tr>
+      <tr><td>Noruega 2 o más goles</td><td class="w">71%</td><td>1.40</td><td>—</td><td>—</td><td>medio · desde 1.45</td></tr>
+      <tr><td>Más de 2.5 goles</td><td class="w">66%</td><td>1.51</td><td>1.363</td><td class="bd">−10%</td><td>medio</td></tr>
+      <tr><td>Gales marca</td><td class="w">59%</td><td>1.70</td><td>—</td><td>—</td><td>medio · desde 1.70</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td class="w">56%</td><td>1.80</td><td>—</td><td>—</td><td>medio-alto · desde 1.80</td></tr>
+      <tr><td>Ambos marcan: Sí</td><td>54%</td><td>1.85</td><td>~1.89 *</td><td class="g">+2%</td><td>medio-alto · RECOMENDADA</td></tr>
+      <tr><td>Noruega gana y más de 2.5</td><td>54%</td><td>1.85</td><td>—</td><td>—</td><td>alto · desde 1.90</td></tr>
+      <tr><td>Noruega −1.5</td><td>51%</td><td>1.96</td><td>—</td><td>—</td><td>alto · desde 2.00</td></tr>
+      <tr><td>Gales +1.5</td><td>49%</td><td>2.04</td><td>—</td><td>—</td><td>alto · desde 2.10</td></tr>
+      <tr><td>Ambos marcan: No</td><td>46%</td><td>2.17</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>45%</td><td>2.25</td><td>—</td><td>—</td><td>alto · desde 2.30</td></tr>
+      <tr><td>Rango 2-3 goles</td><td>41%</td><td>2.45</td><td>—</td><td>—</td><td>alto · desde 2.50</td></tr>
+      <tr><td>Noruega gana sin encajar</td><td>38%</td><td>2.65</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Noruega gana y ambos marcan</td><td>35%</td><td>2.87</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Menos de 2.5 goles</td><td>34%</td><td>2.96</td><td>3.100</td><td class="g">+5%</td><td>alto</td></tr>
+      <tr><td>Noruega −2.5</td><td>30%</td><td>3.30</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Gales o empate</td><td>27%</td><td>3.64</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Más de 4.5 goles</td><td>26%</td><td>3.84</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Empate</td><td>16%</td><td>6.23</td><td>6.00–7.00</td><td class="w">0 a +13%</td><td>muy alto</td></tr>
+      <tr><td>Gana Gales</td><td>11%</td><td>8.78</td><td>9.00–10.00</td><td class="w">+3 a +14%</td><td>muy alto · 0.1 u</td></tr>
+    </table></div>
+    <p class="note">* Cuota de otra casa de una previa, no de bet365. El valor en empate y Gales depende de que los datos pesen 40%: son cuotas largas y la ventaja es pequeña, no la trates como segura.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-est">
+    <h2 id="h-est">Córneres, tarjetas y remates <small>cuotas bet365 de tus capturas · mercados menos fiables</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota vista</th><th>Valor</th><th>Nota</th></tr>
+      <tr><td>Córneres más de 9.5</td><td>45%</td><td>2.10</td><td class="bd">−5%</td><td>Noruega 35%, Gales 55%; promedio ~9.5</td></tr>
+      <tr><td>Córneres menos de 9.5</td><td>55%</td><td>1.666</td><td class="bd">−8%</td><td>En su partido del 1 oct hubo 6 córneres</td></tr>
+      <tr><td>Tarjetas más de 3.5</td><td>53%</td><td>1.666</td><td class="bd">−12%</td><td>Sin árbitro. En la Nations League hubo más tarjetas (Noruega 5, 5, 9, 6) que en el resto</td></tr>
+      <tr><td>Tarjetas menos de 3.5</td><td>47%</td><td>2.10</td><td class="bd">−1%</td><td>Muestra mezclada: Mundial y amistosos con pocas tarjetas</td></tr>
+      <tr><td>Remates a puerta más de 7.5 (partido)</td><td>72%</td><td>1.20</td><td class="bd">−13%</td><td>Paga menos de 1.30</td></tr>
+      <tr><td>Remates a puerta menos de 7.5 (partido)</td><td>~28%</td><td>4.333</td><td class="w">+20% teórico</td><td>Mi prueba con datos reales: remates "NO FIABLES". No la recomiendo</td></tr>
+      <tr><td>Remates más de 21.5 (partido)</td><td>~83%</td><td>1.10</td><td class="bd">−9%</td><td>Paga menos de 1.30</td></tr>
+      <tr><td>Remates de Noruega menos de 21.5</td><td>~68%</td><td>1.533</td><td class="w">+5% teórico</td><td>Noruega solo pasó de 21 remates en 2 de sus 16 partidos visibles</td></tr>
+    </table></div>
+    <p class="note">Sin datos por equipo (las capturas son del total) no puedo calcular córneres ni tarjetas de cada selección. Para tarjetas necesito el árbitro: en cuanto salga, la reviso.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-jug">
+    <h2 id="h-jug">Jugadores <small>alineaciones previstas, no confirmadas (4-2-3-1 los dos)</small></h2>
+    <ul class="why">
+      <li><span class="ok">✓</span><span><b>Noruega:</b> Haaland promedia 3.8 remates por partido (4.1 por 90') y marcó en 7 de sus ~15 partidos visibles; Ødegaard 2.1; Nusa 2.0; Sørloth 1.9. Cuota de gol de Haaland: 4/11 (≈1.36) en Coral, una previa; sin valor.</span></li>
+      <li><span class="ok">✓</span><span><b>Gales:</b> Moore 1.6 remates por partido, D. James 1.5, Brooks 1.4, Koumas 1.1.</span></li>
+      <li><span class="no">✗</span><span><b>Mercados de jugadores:</b> las líneas de las capturas de la tabla de remates y de faltas no se leen con claridad al tamaño enviado; no las uso. Si quieres uno, mándame un recorte ampliado.</span></li>
+    </ul>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad media-alta en estadísticas (20 partidos por equipo en StatsHub con cuotas de bet365); media en bajas; baja en árbitro y alineaciones. Mi regla pide cuota de bet365 vista para dar un pick fuerte: no la tengo para "ambos marcan", el 1X2 ni "menos de 3.5". Sin acceso directo a las webs: lo que no sale de tus capturas viene de búsquedas cruzadas.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.foxsports.com/soccer/nations-league/standings">Fox: tabla</a>
+      <a href="https://www.nbcsports.com/soccer/news/uefa-nations-league-2026-27-nations-league-format-schedule-standings-scores">NBC: grupos</a>
+      <a href="https://thesportsencounter.com/2026/10/04/portugal-reach-nations-league-qfs-netherlands-go-top-germany-stall-but-denmark-punish-wales/">The Sports Encounter: 4 oct</a>
+      <a href="https://www.tntsports.co.uk/betting/tips/norway-vs-wales-prediction-tips-and-team-news-14-11-26/">TNT: previa</a>
+      <a href="https://www.racingpost.com/sport/football-tips/nations-league/norway-vs-wales-predictions-team-news-odds-betting-tips-bet-builder-a6q3o4D7wsjZ/">Racing Post</a>
+      <a href="https://www.sportinglife.com/football/news/norway-vs-wales-tips-best-bets-predictions-and-nations-league-preview/235370">Sporting Life</a>
+      <a href="https://khelnow.com/football/norway-vs-wales-preview-uefa-nations-league-202611">Khel Now</a>
+      <a href="https://thehardtackle.com/round-up/2026/11/13/norway-vs-wales-preview-prediction-probable-lineups-tactics-team-news-key-stats/">The Hard Tackle</a>
+      <a href="https://faw.cymru/news/cymru-squad-announced-for-norway-and-portugal">FAW: convocatoria</a>
+      <a href="https://sports.yahoo.com/articles/joe-rodon-named-wales-squad-114324794.html">Independent: Jordan James</a>
+      <a href="https://uk.sports.yahoo.com/news/norway-sweat-erling-haaland-martin-162252431.html">Yahoo: Haaland y Ødegaard</a>
+      <a href="https://winner364.com/matches/norway-vs-wales-prediction-2026-11-14/">Winner364: cuotas</a>
+      <a href="https://statshub.com/fixture/norway-vs-wales-muqmxu/497951">StatsHub: tus capturas</a>
+    </div>
+  </section>
+</div>
