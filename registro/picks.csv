@@ -510,3 +510,15 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-15,España-Inglaterra (Nations A),Gana España,todas-s16,alto,0.42,,pendiente,sin cuota vista
 2026-11-15,España-Inglaterra (Nations A),Gana Inglaterra,todas-s16,alto,0.3,,pendiente,sin cuota vista
 2026-11-15,España-Inglaterra (Nations A),Ambos marcan: Sí,todas-s16,alto,0.47,,pendiente,sin cuota vista
+2026-11-15,Francia-Turquía (Nations A),Ambos marcan: Sí,analista,medio,0.67,,pendiente,recomendada · sin cuota vista
+2026-11-15,Francia-Turquía (Nations A),Francia o Turquía,todas-s16,medio,0.78,,pendiente,paga <1.30 probable
+2026-11-15,Francia-Turquía (Nations A),Más de 2.5 goles,todas-s16,medio,0.67,1.333,pendiente,-11%
+2026-11-15,Francia-Turquía (Nations A),Menos de 2.5 goles,todas-s16,alto,0.33,3.4,pendiente,+13% · 0.1u
+2026-11-15,Francia-Turquía (Nations A),Turquía marca,todas-s16,medio,0.79,,pendiente,sin cuota vista
+2026-11-15,Francia-Turquía (Nations A),Francia marca,todas-s16,bajo,0.85,,pendiente,paga <1.30
+2026-11-15,Francia-Turquía (Nations A),Más de 1.5 goles,todas-s16,bajo,0.86,,pendiente,paga <1.30
+2026-11-15,Francia-Turquía (Nations A),Gana Francia,todas-s16,alto,0.46,,pendiente,sin cuota vista
+2026-11-15,Francia-Turquía (Nations A),Gana Turquía,todas-s16,alto,0.32,,pendiente,sin cuota vista
+2026-11-15,Francia-Turquía (Nations A),Córneres más de 9.5,todas-s16,medio-alto,0.52,1.833,pendiente,~-5%
+2026-11-15,Francia-Turquía (Nations A),Córneres menos de 9.5,todas-s16,alto,0.48,1.833,pendiente,~-12%
+2026-11-15,Francia-Turquía (Nations A),Turquía +1.5,todas-s16,medio,0.75,,pendiente,sin cuota vista
