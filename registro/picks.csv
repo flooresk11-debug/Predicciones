@@ -475,3 +475,15 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-15,Letonia-Armenia (Nations C),Letonia marca,todas-s16,medio,0.65,,pendiente,sin cuota vista
 2026-11-15,Letonia-Armenia (Nations C),Ambos marcan: Sí,todas-s16,alto,0.49,,pendiente,sin cuota vista
 2026-11-15,Letonia-Armenia (Nations C),Ambos marcan: No,todas-s16,medio-alto,0.51,,pendiente,sin cuota vista
+2026-11-15,Tenerife-Ceuta (Hypermotion),Menos de 3.5 goles,analista,medio,0.74,,pendiente,sin cuota vista · recomendada
+2026-11-15,Tenerife-Ceuta (Hypermotion),Tenerife o Ceuta,todas-s16,medio,0.74,,pendiente,sin cuota vista
+2026-11-15,Tenerife-Ceuta (Hypermotion),Ceuta marca,todas-s16,medio,0.73,,pendiente,sin cuota vista
+2026-11-15,Tenerife-Ceuta (Hypermotion),Tenerife marca,todas-s16,medio,0.72,,pendiente,sin cuota vista
+2026-11-15,Tenerife-Ceuta (Hypermotion),Ambos marcan: Sí,todas-s16,medio-alto,0.53,,pendiente,sin cuota vista
+2026-11-15,Tenerife-Ceuta (Hypermotion),Más de 2.5 goles,todas-s16,alto,0.48,1.95,pendiente,-6%
+2026-11-15,Tenerife-Ceuta (Hypermotion),Menos de 2.5 goles,todas-s16,medio-alto,0.52,1.85,pendiente,-4%
+2026-11-15,Tenerife-Ceuta (Hypermotion),Más de 1.5 goles,todas-s16,medio,0.73,1.285,pendiente,-6%
+2026-11-15,Tenerife-Ceuta (Hypermotion),Córneres más de 9,todas-s16,medio-alto,0.44,1.85,pendiente,~-6% (devuelve con 9)
+2026-11-15,Tenerife-Ceuta (Hypermotion),Córneres menos de 9,todas-s16,medio-alto,0.43,1.95,pendiente,~-3% (devuelve con 9)
+2026-11-15,Tenerife-Ceuta (Hypermotion),Gana Ceuta,todas-s16,alto,0.38,,pendiente,sin cuota vista
+2026-11-15,Tenerife-Ceuta (Hypermotion),Gana Tenerife,todas-s16,alto,0.36,,pendiente,sin cuota vista

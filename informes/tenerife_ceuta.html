@@ -1,0 +1,249 @@
+<title>Tenerife–Ceuta</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">LaLiga Hypermotion · Jornada 14</div>
+  <header class="hero">
+    <div class="team"><b>Tenerife</b><span>14.º, 15 puntos · 5 partidos sin ganar (4 empates seguidos) · Álvaro Cervera</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Ceuta</b><span>L L G L L · estrena entrenador (Sergio Lobera, según una previa)</span></div>
+  </header>
+  <div class="meta">Domingo 15 nov 2026 · 08:00 (tu hora; 14:00 en España) · Estadio Heliodoro Rodríguez López, Santa Cruz de Tenerife · Árbitro: Iosu Galech Apezteguía (recién descendido de Primera) · DAZN / LaLiga TV Hypermotion</div>
+
+  <section class="main-pick" aria-label="Pick recomendado" style="border-left-color:var(--warn)">
+    <div><div class="eyebrow" style="color:var(--warn)">Recomendada · riesgo medio</div><h1>Menos de 3.5 goles</h1></div>
+    <div style="text-align:right"><div class="p" style="color:var(--warn)">74%</div><div class="meta">Cuota justa 1.36 · entra desde 1.36 · no vi su cuota · 0.25 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Ceuta mete y recibe goles</b><span>Sus partidos promedian 2.8 goles (90% con más de 1.5) y 3.48 de xG; en sus últimos 5 pasaron 2+ goles siempre. Tenerife promedia 2.4, con xG de 2.22 (solo 25% pasa de 2.5).</span></div>
+    <div class="card tile"><b>La línea pide ~2.6 goles</b><span>bet365: más/menos 2.5 a 1.950 / 1.850; más de 1.5 a 1.285 (3.500). Ninguna tiene valor (−4% a −6%).</span></div>
+    <div class="card tile"><b>Ceuta cambia de entrenador</b><span>Debut de Sergio Lobera, según una previa; Cervera dice que no sabe cómo jugará el rival. Puede haber más incertidumbre en sus remates y su defensa.</span></div>
+    <div class="card tile"><b>Tarjetas altas</b><span>Ceuta promedia 6.0 amarillas (80% con más de 4.5) y Tenerife 4.9 (55%). Árbitro nuevo en Segunda sin promedio de carrera conocido.</span></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-cap">
+    <h2 id="h-cap">Tus capturas, traducidas <small>StatsHub · últimos 20 partidos, 90 minutos · "Total" = los dos equipos juntos</small></h2>
+    <div class="tw"><table>
+      <tr><th>Mercado</th><th>Línea y cuota bet365</th><th>Tenerife</th><th>Ceuta</th><th>Lectura</th></tr>
+      <tr><td>Goles: más de 1.5</td><td>Más/Menos 2.5: 1.950 / 1.850 · Más/Menos 1.5: 1.285 / 3.500 · 1.er tiempo 1.5: 2.750 / 1.425</td><td>85% (17/20) · prom. 2.4</td><td>90% (18/20) · prom. 2.8</td><td>Casi siempre 2+ goles</td></tr>
+      <tr><td>xG (goles esperados): más de 2.5</td><td>—</td><td>25% (5/20) · prom. 2.22</td><td>75% (15/20) · prom. 3.48</td><td>Ceuta genera y concede mucho</td></tr>
+      <tr><td>Córneres: más de 8.5</td><td>Totales 9: 1.850 / 1.950 (con devolución en 9) · Local 5.5: 2.000 / 1.727 · Visitante 3.5: 1.833 / 1.833 · "Córneres 9": 2.100 / 2.200 (suma menos de 100%: mal rotulada, no la uso)</td><td>50% (10/20) · prom. 8.0</td><td>60% (12/20) · prom. 9.2</td><td>Cruce ~8.6: justo la línea de 9</td></tr>
+      <tr><td>Amarillas: más de 4.5</td><td>Sin cuotas en la captura</td><td>55% (11/20) · prom. 4.9</td><td>80% (16/20) · prom. 6.0</td><td>Ceuta es el equipo que más amonestan</td></tr>
+      <tr><td>Remates a puerta: más de 7.5</td><td>Sin cuotas en la captura</td><td>35% (7/20) · prom. 6.8</td><td>75% (15/20) · prom. 9.3</td><td>Ceuta remata mucho</td></tr>
+      <tr><td>Remates totales: más de 22.5</td><td>Sin cuotas en la captura</td><td>40% (8/20) · prom. 20.9</td><td>80% (16/20) · prom. 27.1</td><td>Ceuta concede solo 13.3 (−8.7% vs liga: 14.6)</td></tr>
+    </table></div>
+    <p class="note"><b>Remates por jugador (mapa, predicho):</b> Tenerife (4-4-2): Zalazar, Gallego, Meléndez, Anuar, Gil; Ceuta (4-3-3): Teguia, Illescas, Bodiger, Escobar. Sin cuotas de jugadores en la captura.</p>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fa">
+      <h2 id="h-fa">Tenerife <small>forma reciente (E P E E E)</small></h2>
+      <div class="form">
+        <div><span>Goles totales de los últimos 6 partidos</span><span class="r num">2, 2, 2, 5, 2, 5</span><span class="chip D">—</span></div>
+        <div><span>Los 6 anteriores</span><span class="r num">2, 2, 1, 1, 4, 3</span><span class="chip D">—</span></div>
+      </div>
+      <p class="note">4 empates seguidos y 5 sin ganar. Un jugador, Jesús de Miguel, falleció tras un choque en el partido ante el Andorra (El Diario): el equipo vuelve al Heliodoro con ese recuerdo. Bajas: la lista de StatsHub marca a Dani Fernández y Grant-Leon Ranos como sancionados por la selección (no por el club).</p>
+    </section>
+    <section class="card" aria-labelledby="h-fi">
+      <h2 id="h-fi">Ceuta <small>forma reciente (D D G D D)</small></h2>
+      <div class="form">
+        <div><span>Goles totales de los últimos 6 partidos</span><span class="r num">3, 2, 3, 4, 3, 3</span><span class="chip D">—</span></div>
+        <div><span>Los 6 anteriores</span><span class="r num">2, 4, 2, 4, 2, 3</span><span class="chip D">—</span></div>
+      </div>
+      <p class="note">Sus últimos 12 partidos tuvieron 2 o más goles siempre. Bajas: Kenneth Mamah (lesión); Edgar Sevikyan figura sancionado por la selección de Armenia en StatsHub, pero una previa dice que Lobera podrá contar con él.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-conf">
+    <h2 id="h-conf">Confirmación con otras fuentes</h2>
+    <div class="tw"><table>
+      <tr><th>Dato</th><th>StatsHub (tus capturas)</th><th>Otras fuentes</th><th>Estado</th></tr>
+      <tr><td>Jornada y sede</td><td>Heliodoro Rodríguez López, domingo 15</td><td>LaLiga Hypermotion, jornada 14; Heliodoro (LaLiga, bet365 Noticias)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Hora</td><td>07:00 en StatsHub</td><td>StatsHub muestra una hora menos que tu hora de Colombia (como en Chipre–Montenegro): 14:00 España = 08:00 Colombia</td><td class="w">Deducido</td></tr>
+      <tr><td>Árbitro</td><td>—</td><td>Iosu Galech Apezteguía; asistentes Barroso y Pérez de Colosía; VAR Muñiz Ruiz y Cuadra Fernández (Ceuta TV)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Posición Tenerife</td><td>—</td><td>14.º, 15 puntos; 5 partidos sin ganar, 4 empates seguidos (El Diario)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Bajas</td><td>Lista con sanciones de selección</td><td>Mamah (Ceuta) lesionado; Sevikyan disponible según El Diario; portero y alineaciones difieren entre fuentes</td><td class="w">Parcial</td></tr>
+      <tr><td>Entrenador de Ceuta</td><td>—</td><td>Cambio de entrenador, debut con Lobera (El Pueblo de Ceuta, Ceuta TV, El Diario)</td><td class="w">Una fuente</td></tr>
+      <tr><td>Cuotas 1X2</td><td>—</td><td>No encontradas</td><td class="w">Sin ver</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>estimado: línea de goles (60%) y datos (40%)</small></h2>
+    <div class="odds">
+      <div><b>36%</b><span>Tenerife · justa 2.78</span></div>
+      <div><b>26%</b><span>Empate · justa 3.80</span></div>
+      <div><b>38%</b><span>Ceuta · justa 2.65</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Tenerife 36%, empate 26%, Ceuta 38%"><i style="width:36%;background:var(--good)"></i><i style="width:26%;background:var(--warn)"></i><i style="width:38%;background:var(--bad)"></i></div>
+    <p class="meta" style="margin-top:8px">Goles esperados: ~1.3 Tenerife y ~1.3 Ceuta. Marcadores más probables: 1-1, 1-0, 0-1, 2-1. No vi cuotas 1X2: el reparto entre equipos sale de datos y ventaja de local, no del mercado.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Las mejores <small>lectura: partido abierto y equilibrado, 2 a 3 goles</small></h2>
+    <div class="pick"><span class="risk m">Medio · recomendada</span><div><h3>Menos de 3.5 goles (desde 1.36)</h3><p>Falla con 4 goles o más (26%). Tenerife casi siempre 2 goles (xG 2.22) y la línea de bet365 ronda 2.6. En contra: Ceuta pasa de 2.5 en 75% de sus xG y viene de partidos de 3-4 goles. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>74%</b><span>justa 1.36</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Tenerife o Ceuta: no empate (desde 1.36)</h3><p>Pierde solo con empate (26%). Ojo: Tenerife acumula 4 empates seguidos. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>74%</b><span>justa 1.36</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Ceuta marca (desde 1.40)</h3><p>Ceuta marcó casi siempre y remata 27.1 por partido. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>73%</b><span>justa 1.37</span></div></div>
+    <div class="pick"><span class="risk a">Medio-alto</span><div><h3>Ambos marcan: Sí (desde 1.90)</h3><p>Tenerife marca 72% y Ceuta 73%. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>53%</b><span>justa 1.90</span></div></div>
+    <p class="note"><b>Pick fuerte (stakazo): ninguno.</b> Ninguna con cuota 1.50 o más llega a 67% con cuota vista. <b>Combinada del día:</b> hoy no hay: las patas al 75% no tienen cuota vista y las vistas (más de 1.5 a 1.285) pagan menos de 1.30.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-all">
+    <h2 id="h-all">Todas las apuestas <small>probabilidad mezclada · valor = ganancia esperada con la cuota vista</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota justa</th><th>Cuota vista</th><th>Valor</th><th>Riesgo</th></tr>
+      <tr><td>Menos de 4.5 goles</td><td>88%</td><td>1.14</td><td>—</td><td class="">—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Ceuta +1.5</td><td>84%</td><td>1.19</td><td>—</td><td class="">—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Tenerife +1.5</td><td>83%</td><td>1.20</td><td>—</td><td class="">—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td>74%</td><td>1.36</td><td>—</td><td class="">—</td><td>medio · RECOMENDADA desde 1.36</td></tr>
+      <tr><td>Tenerife o Ceuta (12)</td><td>74%</td><td>1.36</td><td>—</td><td class="">—</td><td>medio · desde 1.36</td></tr>
+      <tr><td>Más de 1.5 goles</td><td>73%</td><td>1.37</td><td>1.285</td><td class="bd">−6%</td><td>medio · no entra</td></tr>
+      <tr><td>Ceuta marca</td><td>73%</td><td>1.37</td><td>—</td><td class="">—</td><td>medio · desde 1.40</td></tr>
+      <tr><td>Tenerife marca</td><td>72%</td><td>1.39</td><td>—</td><td class="">—</td><td>medio · desde 1.40</td></tr>
+      <tr><td>Rango 1-3 goles</td><td>66%</td><td>1.51</td><td>—</td><td class="">—</td><td>medio · desde 1.55</td></tr>
+      <tr><td>Ceuta o empate</td><td>64%</td><td>1.56</td><td>—</td><td class="">—</td><td>medio · desde 1.60</td></tr>
+      <tr><td>Tenerife o empate</td><td>62%</td><td>1.61</td><td>—</td><td class="">—</td><td>medio · desde 1.65</td></tr>
+      <tr><td>Rango 2-4 goles</td><td>61%</td><td>1.64</td><td>—</td><td class="">—</td><td>medio-alto · desde 1.65</td></tr>
+      <tr><td>Ambos marcan: Sí</td><td>53%</td><td>1.90</td><td>—</td><td class="">—</td><td>medio-alto · desde 1.90</td></tr>
+      <tr><td>Menos de 2.5 goles</td><td>52%</td><td>1.92</td><td>1.850</td><td class="w">−4%</td><td>medio-alto</td></tr>
+      <tr><td>Ceuta DNB (sin empate)</td><td>51%</td><td>1.95</td><td>—</td><td class="">—</td><td>medio-alto · desde 2.00</td></tr>
+      <tr><td>Tenerife DNB (sin empate)</td><td>49%</td><td>2.05</td><td>—</td><td class="">—</td><td>alto · desde 2.10</td></tr>
+      <tr><td>Más de 2.5 goles</td><td>48%</td><td>2.09</td><td>1.950</td><td class="bd">−6%</td><td>alto</td></tr>
+      <tr><td>Ambos marcan: No</td><td>47%</td><td>2.11</td><td>—</td><td class="">—</td><td>alto · desde 2.15</td></tr>
+      <tr><td>Ceuta o empate y menos de 3.5</td><td>47%</td><td>2.11</td><td>—</td><td class="">—</td><td>alto</td></tr>
+      <tr><td>Rango 2-3 goles</td><td>47%</td><td>2.13</td><td>—</td><td class="">—</td><td>alto · desde 2.15</td></tr>
+      <tr><td>Tenerife o empate y menos de 3.5</td><td>46%</td><td>2.16</td><td>—</td><td class="">—</td><td>alto</td></tr>
+      <tr><td>Gana Ceuta</td><td>38%</td><td>2.65</td><td>—</td><td class="">—</td><td>alto · desde 2.70</td></tr>
+      <tr><td>Ceuta 2 o más goles</td><td>38%</td><td>2.64</td><td>—</td><td class="">—</td><td>alto</td></tr>
+      <tr><td>Gana Tenerife</td><td>36%</td><td>2.78</td><td>—</td><td class="">—</td><td>alto · desde 2.80</td></tr>
+      <tr><td>Tenerife 2 o más goles</td><td>36%</td><td>2.74</td><td>—</td><td class="">—</td><td>alto</td></tr>
+      <tr><td>Rango 3-4 goles</td><td>36%</td><td>2.79</td><td>—</td><td class="">—</td><td>alto</td></tr>
+      <tr><td>Empate</td><td>26%</td><td>3.80</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>26%</td><td>3.81</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Ceuta gana sin encajar</td><td>21%</td><td>4.87</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Ceuta −1.5</td><td>17%</td><td>5.88</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Tenerife −1.5</td><td>16%</td><td>6.31</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Más de 4.5 goles</td><td>12%</td><td>8.23</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+    </table></div>
+    <p class="note">"—" = no vi la cuota en tus capturas: entra desde la cuota de la columna "Riesgo". Las probabilidades 1X2, de hándicap y de resultado salen de un reparto de goles estimado.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-est">
+    <h2 id="h-est">Córneres, tarjetas y remates <small>cuotas bet365 de tus capturas donde las hay</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota vista</th><th>Valor</th><th>Nota</th></tr>
+      <tr><td>Córneres más de 9 (devuelve con 9)</td><td>~44% gana · ~13% devuelve</td><td>1.850</td><td class="bd">~−6%</td><td>Tenerife 8.0 y Ceuta 9.2 por partido</td></tr>
+      <tr><td>Córneres menos de 9</td><td>~43% gana · ~13% devuelve</td><td>1.950</td><td class="w">~−3%</td><td>Sin ventaja</td></tr>
+      <tr><td>Córneres local más de 5.5 / menos</td><td>—</td><td>2.000 / 1.727</td><td class="w">sin base</td><td>No tengo córneres a favor por equipo en las capturas</td></tr>
+      <tr><td>Córneres visitante más de 3.5 / menos</td><td>—</td><td>1.833 / 1.833</td><td class="w">sin base</td><td>Idem</td></tr>
+      <tr><td>Amarillas más de 4.5</td><td>~62%</td><td>sin cuota · desde 1.60</td><td class="w">—</td><td>Ceuta 80% (prom. 6.0); árbitro sin promedio conocido</td></tr>
+      <tr><td>Amarillas más de 5.5</td><td>~45%</td><td>sin cuota · desde 2.20</td><td class="w">—</td><td>—</td></tr>
+      <tr><td>Remates a puerta más de 7.5</td><td>~62%</td><td>sin cuota · desde 1.60</td><td class="w">—</td><td>"No fiable" en mis pruebas; Ceuta 9.3 contra Tenerife 6.8</td></tr>
+      <tr><td>Remates totales más de 22.5</td><td>~65%</td><td>sin cuota · desde 1.55</td><td class="w">—</td><td>Ceuta 27.1 y Tenerife 20.9</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad media: 20 partidos por equipo con cuotas bet365 de goles y córneres; árbitro y posición confirmados; falta 1X2, bajas claras, alineaciones oficiales y primer dato del nuevo entrenador de Ceuta. El cambio de entrenador y la situación emocional de Tenerife aumentan la incertidumbre.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.eldiario.es/canariasahora/Deportes/futbol/tenerife-regresa-heliodoro-ceuta-miguel-memoria_1_13664906.html">El Diario: previa</a>
+      <a href="https://www.ceutatv.com/ad-ceuta-fc/arbitro-recien-descendido-primera-tenerife-ceuta/20261114141900260774.html">Ceuta TV: árbitro</a>
+      <a href="https://www.ceutatv.com/ad-ceuta-fc/alvaro-cervera-es-complicado-es-dificil-que-avanzar-sea-lento/20261114172953260785.html">Ceuta TV: rueda de prensa</a>
+      <a href="https://www.elpueblodeceuta.es/sec/deportes/debut-sonar-nueva_1_1199022.html">El Pueblo de Ceuta: debut</a>
+      <a href="https://news.bet365.es/es-es/article/tenerife-ad-ceuta-alineaciones-estadisticas-horario-donde-ver/2026111311345555596">bet365 Noticias</a>
+      <a href="https://www.laliga.com/en-GB/match/temporada-2026-2027-laliga-hypermotion-cd-tenerife-ad-ceuta-fc-14">LaLiga: partido</a>
+    </div>
+  </section>
+</div>
+</body></html>
