@@ -218,110 +218,110 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-12,Turquía-Bélgica (Nations),Ambos marcan,tipster,,,1.45,G,tipster; escalón 2 de escalera; FINAL 1-2; mi cuota justa era 1.70
 2026-11-12,Inglaterra-Croacia (Nations),Inglaterra/Inglaterra (descanso/final),tipster,,,1.82,G,tipster; escalón 3 de escalera; FINAL 2-1
 2026-11-12,Estudiantes LP-Independiente Rivadavia (final),Estudiantes levanta la copa,tipster,,,1.67,G,tipster; stakazo; 2-2 y 3-2 en penales; fecha aproximada
-2026-11-13,Leganés-Burgos,Más de 3.5 tarjetas,todas-s16,bajo,0.79,,pendiente,"RECOMENDADA; justa 1.26, entra desde 1.30; Leganés 11/13, Burgos 9/13; árbitro sin confirmar; 0.5u"
-2026-11-13,Leganés-Burgos,Burgos marca,todas-s16,medio,0.68,,pendiente,"justa 1.46, desde 1.40; 0.5u"
-2026-11-13,Leganés-Burgos,Leganés menos de 1.5 goles,todas-s16,medio,0.66,,pendiente,"justa 1.51, desde 1.40; Leganés 11/13; 0.5u"
-2026-11-13,Leganés-Burgos,Burgos o empate,todas-s16,medio,0.63,,pendiente,justa 1.60; mercado 56%; 0.5u
-2026-11-13,Leganés-Burgos,Más de 4.5 tarjetas,todas-s16,medio,0.63,,pendiente,justa 1.58; 0.25u
-2026-11-13,Leganés-Burgos,Más de 7.5 corners,todas-s16,medio,0.72,,pendiente,justa 1.39; 0.25u
-2026-11-13,Leganés-Burgos,Gana Burgos,todas-s16,alto,0.35,3.00,pendiente,justa 2.88; única con precio sobre lo justo; 0.25u
-2026-11-13,Leganés-Burgos,Menos de 4.5 goles,todas-s16,bajo,0.91,,pendiente,justa 1.10; paga <1.30
-2026-11-13,Leganés-Burgos,Ambos reciben tarjeta,todas-s16,bajo,0.87,,pendiente,justa 1.15; paga <1.30
-2026-11-13,Leganés-Burgos,Burgos +1.5,todas-s16,bajo,0.84,,pendiente,justa 1.19; 13/13 y 13/13
-2026-11-13,Leganés-Burgos,Menos de 3.5 goles,todas-s16,medio,0.79,,pendiente,justa 1.27
-2026-11-13,Leganés-Burgos,Más de 1.5 goles,todas-s16,medio,0.68,,pendiente,justa 1.47
-2026-11-13,Leganés-Burgos,Menos de 2.5 goles,todas-s16,alto,0.58,,pendiente,justa 1.72
-2026-11-13,Leganés-Burgos,Ambos marcan,todas-s16,alto,0.48,,pendiente,justa 2.09
-2026-11-13,Leganés-Burgos,Más de 2.5 goles,todas-s16,alto,0.42,,pendiente,justa 2.38
-2026-11-13,Leganés-Burgos,Gana Leganés,todas-s16,alto,0.37,2.17,pendiente,justa 2.68; paga bajo lo justo
-2026-11-13,Leganés-Burgos,Empate,todas-s16,alto,0.28,3.22,pendiente,justa 3.58
-2026-11-13,Países Bajos-Grecia (Nations),Grecia +1.5,todas-s16,medio,0.65,1.60,pendiente,"RECOMENDADA; justa 1.54; PB ganó por 2+ en 2/8, Grecia perdió por 2+ 0/5; 0.5u"
-2026-11-13,Países Bajos-Grecia (Nations),Grecia marca,todas-s16,medio,0.61,,pendiente,"justa 1.63, desde 1.55; PB encajó 8/8; 0.5u"
-2026-11-13,Países Bajos-Grecia (Nations),Ambos marcan,todas-s16,medio,0.52,1.70,pendiente,justa 1.92/1.80; 0.25u
-2026-11-13,Países Bajos-Grecia (Nations),Gana Países Bajos,todas-s16,medio,0.6,1.50,pendiente,justa 1.60-1.68; 0.25u
-2026-11-13,Países Bajos-Grecia (Nations),Países Bajos más de 1.5 goles,todas-s16,medio,0.57,,pendiente,justa 1.77; 0.25u
-2026-11-13,Países Bajos-Grecia (Nations),Empate,todas-s16,alto,0.22,4.40,pendiente,justa 4.55; 0.25u
-2026-11-13,Países Bajos-Grecia (Nations),Países Bajos marca,todas-s16,bajo,0.85,,pendiente,justa 1.18
-2026-11-13,Países Bajos-Grecia (Nations),Menos de 4.5 goles,todas-s16,bajo,0.84,,pendiente,justa 1.19
-2026-11-13,Países Bajos-Grecia (Nations),Países Bajos o empate,todas-s16,bajo,0.82,,pendiente,justa 1.23
-2026-11-13,Países Bajos-Grecia (Nations),Más de 1.5 goles,todas-s16,medio,0.78,,pendiente,justa 1.29
-2026-11-13,Países Bajos-Grecia (Nations),Menos de 3.5 goles,todas-s16,medio,0.68,,pendiente,justa 1.47
-2026-11-13,Países Bajos-Grecia (Nations),Más de 2.5 goles,todas-s16,alto,0.54,1.57,pendiente,justa 1.85
-2026-11-13,Países Bajos-Grecia (Nations),Menos de 2.5 goles,todas-s16,alto,0.46,2.30,pendiente,justa 2.18
-2026-11-13,Países Bajos-Grecia (Nations),Países Bajos -1.5,todas-s16,alto,0.35,,pendiente,justa 2.84
-2026-11-13,Países Bajos-Grecia (Nations),Países Bajos gana sin encajar,todas-s16,alto,0.33,,pendiente,justa 3.04
-2026-11-13,Países Bajos-Grecia (Nations),Más de 3.5 goles,todas-s16,alto,0.32,,pendiente,justa 3.13
-2026-11-13,Países Bajos-Grecia (Nations),Gana Grecia,todas-s16,alto,0.18,5.80,pendiente,justa 5.43
-2026-11-13,Serbia-Alemania (Nations),Menos de 3.5 goles,todas-s16,medio,0.58,1.77,pendiente,"RECOMENDADA; justa 1.72; Serbia 7/8, Alemania 7/8; 0.5u"
-2026-11-13,Serbia-Alemania (Nations),Alemania más de 1.5 goles,todas-s16,medio,0.67,,pendiente,"justa 1.49, desde 1.40; 0.5u"
-2026-11-13,Serbia-Alemania (Nations),Más de 2.5 goles,todas-s16,medio,0.64,,pendiente,justa 1.56; 0.25u
-2026-11-13,Serbia-Alemania (Nations),Exactamente 2 o 3 goles,todas-s16,alto,0.42,,pendiente,"justa 2.37; Serbia 7/8, Alemania 5/8; 0.25u"
-2026-11-13,Serbia-Alemania (Nations),Serbia +1.5,todas-s16,alto,0.56,,pendiente,justa 1.78; 0.25u
-2026-11-13,Serbia-Alemania (Nations),Ambos marcan,todas-s16,alto,0.57,1.73,pendiente,justa 1.76; 0.25u
-2026-11-13,Serbia-Alemania (Nations),Alemania marca,todas-s16,bajo,0.9,,pendiente,justa 1.11
-2026-11-13,Serbia-Alemania (Nations),Alemania o empate,todas-s16,bajo,0.85,,pendiente,justa 1.18
-2026-11-13,Serbia-Alemania (Nations),Más de 1.5 goles,todas-s16,bajo,0.84,,pendiente,justa 1.19
-2026-11-13,Serbia-Alemania (Nations),Menos de 4.5 goles,todas-s16,bajo,0.76,,pendiente,justa 1.31
-2026-11-13,Serbia-Alemania (Nations),Gana Alemania,todas-s16,medio,0.7,1.27,pendiente,justa 1.35-1.50; Alemania 3/8
-2026-11-13,Serbia-Alemania (Nations),Serbia marca,todas-s16,medio,0.63,,pendiente,justa 1.58
-2026-11-13,Serbia-Alemania (Nations),Alemania -1.5,todas-s16,alto,0.44,,pendiente,justa 2.29
-2026-11-13,Serbia-Alemania (Nations),Más de 3.5 goles,todas-s16,alto,0.42,2.10,pendiente,justa 2.38
-2026-11-13,Serbia-Alemania (Nations),Alemania gana sin encajar,todas-s16,alto,0.33,,pendiente,justa 3.02
-2026-11-13,Serbia-Alemania (Nations),Empate,todas-s16,alto,0.17,6.00,pendiente,
-2026-11-13,Serbia-Alemania (Nations),Gana Serbia,todas-s16,alto,0.13,8.50,pendiente,
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Menos de 3.5 goles,todas-s16,medio,0.7,,pendiente,"RECOMENDADA; justa 1.42, desde 1.35; Escocia 7/8, Macedonia 4/4; 0.5u"
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Macedonia del Norte no marca,todas-s16,medio,0.58,,pendiente,"justa 1.73, desde 1.60; 0.5u"
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Escocia más de 1.5 goles,todas-s16,medio,0.65,,pendiente,justa 1.55; 0.25u
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Escocia -1.5,todas-s16,alto,0.51,,pendiente,justa 1.96; 0.25u
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Escocia gana sin encajar,todas-s16,alto,0.51,1.73,pendiente,justa 1.95; 0.25u
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Exactamente 2 o 3 goles,todas-s16,alto,0.46,,pendiente,justa 2.16; 0.25u
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Gana Escocia,todas-s16,medio,0.77,1.20,pendiente,justa 1.27-1.33; Escocia 3/8
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Menos de 4.5 goles,todas-s16,bajo,0.86,,pendiente,justa 1.17
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Más de 1.5 goles,todas-s16,medio,0.76,,pendiente,justa 1.32
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Ambos marcan: no,todas-s16,medio,0.62,,pendiente,justa 1.60
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Más de 2.5 goles,todas-s16,alto,0.52,,pendiente,justa 1.93
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Menos de 2.5 goles,todas-s16,alto,0.48,2.10,pendiente,justa 2.08
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Ambos marcan,todas-s16,alto,0.38,,pendiente,justa 2.66
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Más de 3.5 goles,todas-s16,alto,0.3,,pendiente,justa 3.37
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Escocia gana y menos de 2.5,todas-s16,alto,0.3,3.00,pendiente,justa 3.38
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Empate,todas-s16,alto,0.15,6.50,pendiente,
-2026-11-13,Escocia-Macedonia del Norte (Nations B),Gana Macedonia del Norte,todas-s16,alto,0.07,13.00,pendiente,
-2026-11-13,Eslovenia-Suiza (Nations B),Gana Suiza,todas-s16,medio,0.55,1.62,pendiente,"RECOMENDADA desde 1.65; justa 1.79; Suiza 4/4 en el grupo, 7/10; le vale el empate; 0.5u"
-2026-11-13,Eslovenia-Suiza (Nations B),Menos de 3.5 goles,todas-s16,bajo,0.78,,pendiente,"justa 1.28, desde 1.30; Suiza 9/10, Eslovenia 5/5; 0.5u"
-2026-11-13,Eslovenia-Suiza (Nations B),Suiza empate no apuesta,todas-s16,medio,0.72,,pendiente,"justa 1.38, desde 1.30; 0.5u"
-2026-11-13,Eslovenia-Suiza (Nations B),Eslovenia +1.5,todas-s16,medio,0.72,,pendiente,justa 1.39; 0.25u
-2026-11-13,Eslovenia-Suiza (Nations B),Exactamente 2 o 3 goles,todas-s16,alto,0.47,,pendiente,"justa 2.13; Suiza 8/10, Eslovenia 4/5; 0.25u"
-2026-11-13,Eslovenia-Suiza (Nations B),Empate,todas-s16,alto,0.26,3.50,pendiente,justa 3.90; 0.25u
-2026-11-13,Eslovenia-Suiza (Nations B),Menos de 4.5 goles,todas-s16,bajo,0.9,,pendiente,justa 1.11
-2026-11-13,Eslovenia-Suiza (Nations B),Suiza o empate,todas-s16,bajo,0.81,,pendiente,justa 1.21-1.26
-2026-11-13,Eslovenia-Suiza (Nations B),Suiza marca,todas-s16,bajo,0.79,,pendiente,justa 1.27
-2026-11-13,Eslovenia-Suiza (Nations B),Más de 1.5 goles,todas-s16,medio,0.69,,pendiente,justa 1.45
-2026-11-13,Eslovenia-Suiza (Nations B),Eslovenia marca,todas-s16,alto,0.57,,pendiente,justa 1.75
-2026-11-13,Eslovenia-Suiza (Nations B),Menos de 2.5 goles,todas-s16,alto,0.57,1.69,pendiente,justa 1.75; datos en contra
-2026-11-13,Eslovenia-Suiza (Nations B),Ambos marcan: no,todas-s16,alto,0.55,1.65,pendiente,justa 1.82
-2026-11-13,Eslovenia-Suiza (Nations B),Ambos marcan,todas-s16,alto,0.45,2.10,pendiente,justa 2.22
-2026-11-13,Eslovenia-Suiza (Nations B),Más de 2.5 goles,todas-s16,alto,0.43,,pendiente,justa 2.33
-2026-11-13,Eslovenia-Suiza (Nations B),Suiza -1.5,todas-s16,alto,0.28,,pendiente,justa 3.55
-2026-11-13,Eslovenia-Suiza (Nations B),Más de 3.5 goles,todas-s16,alto,0.22,,pendiente,justa 4.52
-2026-11-13,Eslovenia-Suiza (Nations B),Gana Eslovenia,todas-s16,alto,0.19,5.46,pendiente,
-2026-11-13,Moldavia-Kazajistán (Nations C),Menos de 2.5 goles,todas-s16,medio,0.66,1.55,pendiente,RECOMENDADA; justa 1.51; 0.5u
-2026-11-13,Moldavia-Kazajistán (Nations C),Moldavia empate no apuesta,todas-s16,medio,0.52,1.88,pendiente,justa 1.93; 0.25u
-2026-11-13,Moldavia-Kazajistán (Nations C),Empate,todas-s16,alto,0.3,3.00,pendiente,justa 3.29; 0.25u
-2026-11-13,Moldavia-Kazajistán (Nations C),Ambos marcan: no,todas-s16,alto,0.59,,pendiente,justa 1.70; desde 1.75; 0.25u
-2026-11-13,Moldavia-Kazajistán (Nations C),Más de 0.5 goles,todas-s16,bajo,0.87,,pendiente,justa 1.15
-2026-11-13,Moldavia-Kazajistán (Nations C),Menos de 3.5 goles,todas-s16,bajo,0.85,,pendiente,justa 1.18
-2026-11-13,Moldavia-Kazajistán (Nations C),Doble oportunidad 12,todas-s16,medio,0.7,,pendiente,justa 1.44
-2026-11-13,Moldavia-Kazajistán (Nations C),Moldavia o empate,todas-s16,medio,0.67,,pendiente,justa 1.50
-2026-11-13,Moldavia-Kazajistán (Nations C),Kazajistán o empate,todas-s16,medio,0.64,,pendiente,justa 1.56
-2026-11-13,Moldavia-Kazajistán (Nations C),Moldavia marca,todas-s16,medio,0.65,,pendiente,justa 1.54
-2026-11-13,Moldavia-Kazajistán (Nations C),Kazajistán marca,todas-s16,medio,0.63,,pendiente,justa 1.58
-2026-11-13,Moldavia-Kazajistán (Nations C),Más de 1.5 goles,todas-s16,medio,0.61,,pendiente,justa 1.65
-2026-11-13,Moldavia-Kazajistán (Nations C),Exactamente 2 o 3 goles,todas-s16,alto,0.46,,pendiente,justa 2.20
-2026-11-13,Moldavia-Kazajistán (Nations C),Ambos marcan,todas-s16,alto,0.41,2.10,pendiente,justa 2.43
-2026-11-13,Moldavia-Kazajistán (Nations C),Gana Moldavia,todas-s16,alto,0.36,2.60,pendiente,justa 2.77
-2026-11-13,Moldavia-Kazajistán (Nations C),Gana Kazajistán,todas-s16,alto,0.34,2.80,pendiente,justa 2.98
-2026-11-13,Moldavia-Kazajistán (Nations C),Más de 2.5 goles,todas-s16,alto,0.34,2.50,pendiente,justa 2.97
-2026-11-13,Moldavia-Kazajistán (Nations C),Más de 3.5 goles,todas-s16,alto,0.15,,pendiente,justa 6.58
+2026-11-13,Leganés-Burgos,Más de 3.5 tarjetas,todas-s16,bajo,0.79,,G,"RECOMENDADA; justa 1.26, entra desde 1.30; Leganés 11/13, Burgos 9/13; árbitro sin confirmar; 0.5u | final 3-1; córneres 13; tarjetas 7"
+2026-11-13,Leganés-Burgos,Burgos marca,todas-s16,medio,0.68,,G,"justa 1.46, desde 1.40; 0.5u | final 3-1; córneres 13; tarjetas 7"
+2026-11-13,Leganés-Burgos,Leganés menos de 1.5 goles,todas-s16,medio,0.66,,P,"justa 1.51, desde 1.40; Leganés 11/13; 0.5u"
+2026-11-13,Leganés-Burgos,Burgos o empate,todas-s16,medio,0.63,,P,justa 1.60; mercado 56%; 0.5u | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Más de 4.5 tarjetas,todas-s16,medio,0.63,,P,justa 1.58; 0.25u | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Más de 7.5 corners,todas-s16,medio,0.72,,P,justa 1.39; 0.25u | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Gana Burgos,todas-s16,alto,0.35,3.00,P,justa 2.88; única con precio sobre lo justo; 0.25u | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Menos de 4.5 goles,todas-s16,bajo,0.91,,G,justa 1.10; paga <1.30 | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Ambos reciben tarjeta,todas-s16,bajo,0.87,,G,justa 1.15; paga <1.30
+2026-11-13,Leganés-Burgos,Burgos +1.5,todas-s16,bajo,0.84,,P,justa 1.19; 13/13 y 13/13 | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Menos de 3.5 goles,todas-s16,medio,0.79,,P,justa 1.27 | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Más de 1.5 goles,todas-s16,medio,0.68,,G,justa 1.47 | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Menos de 2.5 goles,todas-s16,alto,0.58,,P,justa 1.72 | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Ambos marcan,todas-s16,alto,0.48,,G,justa 2.09 | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Más de 2.5 goles,todas-s16,alto,0.42,,G,justa 2.38 | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Gana Leganés,todas-s16,alto,0.37,2.17,G,justa 2.68; paga bajo lo justo | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Leganés-Burgos,Empate,todas-s16,alto,0.28,3.22,P,justa 3.58 | final 3-1; córneres 13; tarjetas 7
+2026-11-13,Países Bajos-Grecia (Nations),Grecia +1.5,todas-s16,medio,0.65,1.60,P,"RECOMENDADA; justa 1.54; PB ganó por 2+ en 2/8, Grecia perdió por 2+ 0/5; 0.5u | final 7-0; córneres 9; tarjetas None"
+2026-11-13,Países Bajos-Grecia (Nations),Grecia marca,todas-s16,medio,0.61,,P,"justa 1.63, desde 1.55; PB encajó 8/8; 0.5u | final 7-0; córneres 9; tarjetas None"
+2026-11-13,Países Bajos-Grecia (Nations),Ambos marcan,todas-s16,medio,0.52,1.70,P,justa 1.92/1.80; 0.25u | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Gana Países Bajos,todas-s16,medio,0.6,1.50,G,justa 1.60-1.68; 0.25u | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Países Bajos más de 1.5 goles,todas-s16,medio,0.57,,G,justa 1.77; 0.25u
+2026-11-13,Países Bajos-Grecia (Nations),Empate,todas-s16,alto,0.22,4.40,P,justa 4.55; 0.25u | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Países Bajos marca,todas-s16,bajo,0.85,,G,justa 1.18 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Menos de 4.5 goles,todas-s16,bajo,0.84,,P,justa 1.19 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Países Bajos o empate,todas-s16,bajo,0.82,,G,justa 1.23 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Más de 1.5 goles,todas-s16,medio,0.78,,G,justa 1.29 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Menos de 3.5 goles,todas-s16,medio,0.68,,P,justa 1.47 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Más de 2.5 goles,todas-s16,alto,0.54,1.57,G,justa 1.85 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Menos de 2.5 goles,todas-s16,alto,0.46,2.30,P,justa 2.18 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Países Bajos -1.5,todas-s16,alto,0.35,,G,justa 2.84 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Países Bajos gana sin encajar,todas-s16,alto,0.33,,G,justa 3.04 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Más de 3.5 goles,todas-s16,alto,0.32,,G,justa 3.13 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Países Bajos-Grecia (Nations),Gana Grecia,todas-s16,alto,0.18,5.80,P,justa 5.43 | final 7-0; córneres 9; tarjetas None
+2026-11-13,Serbia-Alemania (Nations),Menos de 3.5 goles,todas-s16,medio,0.58,1.77,P,"RECOMENDADA; justa 1.72; Serbia 7/8, Alemania 7/8; 0.5u | final 1-3; córneres 6; tarjetas 4"
+2026-11-13,Serbia-Alemania (Nations),Alemania más de 1.5 goles,todas-s16,medio,0.67,,G,"justa 1.49, desde 1.40; 0.5u"
+2026-11-13,Serbia-Alemania (Nations),Más de 2.5 goles,todas-s16,medio,0.64,,G,justa 1.56; 0.25u | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Exactamente 2 o 3 goles,todas-s16,alto,0.42,,G,"justa 2.37; Serbia 7/8, Alemania 5/8; 0.25u | final 1-3; córneres 6; tarjetas 4"
+2026-11-13,Serbia-Alemania (Nations),Serbia +1.5,todas-s16,alto,0.56,,P,justa 1.78; 0.25u | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Ambos marcan,todas-s16,alto,0.57,1.73,G,justa 1.76; 0.25u | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Alemania marca,todas-s16,bajo,0.9,,G,justa 1.11 | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Alemania o empate,todas-s16,bajo,0.85,,G,justa 1.18 | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Más de 1.5 goles,todas-s16,bajo,0.84,,G,justa 1.19 | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Menos de 4.5 goles,todas-s16,bajo,0.76,,G,justa 1.31 | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Gana Alemania,todas-s16,medio,0.7,1.27,G,justa 1.35-1.50; Alemania 3/8 | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Serbia marca,todas-s16,medio,0.63,,G,justa 1.58 | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Alemania -1.5,todas-s16,alto,0.44,,G,justa 2.29 | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Más de 3.5 goles,todas-s16,alto,0.42,2.10,G,justa 2.38 | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Alemania gana sin encajar,todas-s16,alto,0.33,,P,justa 3.02 | final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Empate,todas-s16,alto,0.17,6.00,P,final 1-3; córneres 6; tarjetas 4
+2026-11-13,Serbia-Alemania (Nations),Gana Serbia,todas-s16,alto,0.13,8.50,P,final 1-3; córneres 6; tarjetas 4
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Menos de 3.5 goles,todas-s16,medio,0.7,,G,"RECOMENDADA; justa 1.42, desde 1.35; Escocia 7/8, Macedonia 4/4; 0.5u | final 2-1; córneres 14; tarjetas 1"
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Macedonia del Norte no marca,todas-s16,medio,0.58,,P,"justa 1.73, desde 1.60; 0.5u | final 2-1; córneres 14; tarjetas 1"
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Escocia más de 1.5 goles,todas-s16,medio,0.65,,G,justa 1.55; 0.25u
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Escocia -1.5,todas-s16,alto,0.51,,P,justa 1.96; 0.25u | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Escocia gana sin encajar,todas-s16,alto,0.51,1.73,P,justa 1.95; 0.25u | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Exactamente 2 o 3 goles,todas-s16,alto,0.46,,G,justa 2.16; 0.25u | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Gana Escocia,todas-s16,medio,0.77,1.20,G,justa 1.27-1.33; Escocia 3/8 | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Menos de 4.5 goles,todas-s16,bajo,0.86,,G,justa 1.17 | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Más de 1.5 goles,todas-s16,medio,0.76,,G,justa 1.32 | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Ambos marcan: no,todas-s16,medio,0.62,,P,justa 1.60 | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Más de 2.5 goles,todas-s16,alto,0.52,,G,justa 1.93 | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Menos de 2.5 goles,todas-s16,alto,0.48,2.10,P,justa 2.08 | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Ambos marcan,todas-s16,alto,0.38,,G,justa 2.66 | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Más de 3.5 goles,todas-s16,alto,0.3,,P,justa 3.37 | final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Escocia gana y menos de 2.5,todas-s16,alto,0.3,3.00,P,justa 3.38
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Empate,todas-s16,alto,0.15,6.50,P,final 2-1; córneres 14; tarjetas 1
+2026-11-13,Escocia-Macedonia del Norte (Nations B),Gana Macedonia del Norte,todas-s16,alto,0.07,13.00,P,final 2-1; córneres 14; tarjetas 1
+2026-11-13,Eslovenia-Suiza (Nations B),Gana Suiza,todas-s16,medio,0.55,1.62,P,"RECOMENDADA desde 1.65; justa 1.79; Suiza 4/4 en el grupo, 7/10; le vale el empate; 0.5u | final 0-0; córneres 18; tarjetas 2"
+2026-11-13,Eslovenia-Suiza (Nations B),Menos de 3.5 goles,todas-s16,bajo,0.78,,G,"justa 1.28, desde 1.30; Suiza 9/10, Eslovenia 5/5; 0.5u | final 0-0; córneres 18; tarjetas 2"
+2026-11-13,Eslovenia-Suiza (Nations B),Suiza empate no apuesta,todas-s16,medio,0.72,,N,"justa 1.38, desde 1.30; 0.5u"
+2026-11-13,Eslovenia-Suiza (Nations B),Eslovenia +1.5,todas-s16,medio,0.72,,G,justa 1.39; 0.25u | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Exactamente 2 o 3 goles,todas-s16,alto,0.47,,P,"justa 2.13; Suiza 8/10, Eslovenia 4/5; 0.25u | final 0-0; córneres 18; tarjetas 2"
+2026-11-13,Eslovenia-Suiza (Nations B),Empate,todas-s16,alto,0.26,3.50,G,justa 3.90; 0.25u | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Menos de 4.5 goles,todas-s16,bajo,0.9,,G,justa 1.11 | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Suiza o empate,todas-s16,bajo,0.81,,G,justa 1.21-1.26 | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Suiza marca,todas-s16,bajo,0.79,,P,justa 1.27 | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Más de 1.5 goles,todas-s16,medio,0.69,,P,justa 1.45 | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Eslovenia marca,todas-s16,alto,0.57,,P,justa 1.75 | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Menos de 2.5 goles,todas-s16,alto,0.57,1.69,G,justa 1.75; datos en contra | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Ambos marcan: no,todas-s16,alto,0.55,1.65,G,justa 1.82 | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Ambos marcan,todas-s16,alto,0.45,2.10,P,justa 2.22 | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Más de 2.5 goles,todas-s16,alto,0.43,,P,justa 2.33 | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Suiza -1.5,todas-s16,alto,0.28,,P,justa 3.55 | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Más de 3.5 goles,todas-s16,alto,0.22,,P,justa 4.52 | final 0-0; córneres 18; tarjetas 2
+2026-11-13,Eslovenia-Suiza (Nations B),Gana Eslovenia,todas-s16,alto,0.19,5.46,P,final 0-0; córneres 18; tarjetas 2
+2026-11-13,Moldavia-Kazajistán (Nations C),Menos de 2.5 goles,todas-s16,medio,0.66,1.55,P,RECOMENDADA; justa 1.51; 0.5u | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Moldavia empate no apuesta,todas-s16,medio,0.52,1.88,G,justa 1.93; 0.25u
+2026-11-13,Moldavia-Kazajistán (Nations C),Empate,todas-s16,alto,0.3,3.00,P,justa 3.29; 0.25u | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Ambos marcan: no,todas-s16,alto,0.59,,P,justa 1.70; desde 1.75; 0.25u | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Más de 0.5 goles,todas-s16,bajo,0.87,,G,justa 1.15 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Menos de 3.5 goles,todas-s16,bajo,0.85,,G,justa 1.18 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Doble oportunidad 12,todas-s16,medio,0.7,,G,justa 1.44
+2026-11-13,Moldavia-Kazajistán (Nations C),Moldavia o empate,todas-s16,medio,0.67,,G,justa 1.50 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Kazajistán o empate,todas-s16,medio,0.64,,P,justa 1.56 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Moldavia marca,todas-s16,medio,0.65,,G,justa 1.54 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Kazajistán marca,todas-s16,medio,0.63,,G,justa 1.58 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Más de 1.5 goles,todas-s16,medio,0.61,,G,justa 1.65 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Exactamente 2 o 3 goles,todas-s16,alto,0.46,,G,justa 2.20 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Ambos marcan,todas-s16,alto,0.41,2.10,G,justa 2.43 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Gana Moldavia,todas-s16,alto,0.36,2.60,G,justa 2.77 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Gana Kazajistán,todas-s16,alto,0.34,2.80,P,justa 2.98 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Más de 2.5 goles,todas-s16,alto,0.34,2.50,G,justa 2.97 | final 2-1; córneres 5; tarjetas 4
+2026-11-13,Moldavia-Kazajistán (Nations C),Más de 3.5 goles,todas-s16,alto,0.15,,P,justa 6.58 | final 2-1; córneres 5; tarjetas 4
 2026-11-14,Noruega-Gales (Nations A),Ambos marcan,todas-s16,medio,0.54,1.89,G,"RECOMENDADA desde 1.85; justa 1.85; Noruega encajó 2 en 4/4 NL, Gales marcó en 1/4 NL; cuota de otra casa; 0.25u | final 3-1; córneres 10; tarjetas 3"
 2026-11-14,Noruega-Gales (Nations A),Gales marca,todas-s16,medio,0.59,,G,"justa 1.70, desde 1.70; 0.25u | final 3-1; córneres 10; tarjetas 3"
 2026-11-14,Noruega-Gales (Nations A),Más de 2.5 goles,todas-s16,medio,0.66,1.363,G,justa 1.51; paga 10% menos de lo justo; 0.25u | final 3-1; córneres 10; tarjetas 3
