@@ -455,3 +455,13 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-14,Jamaica-México (CNL cuartos ida),Córneres 1.er tiempo menos de 4,todas-s16,medio-alto,0.55,1.95,pendiente,~+7% estimado
 2026-11-14,Jamaica-México (CNL cuartos ida),Gana México,todas-s16,alto,0.43,,P,sin cuota vista | final 3-2; córneres 7; tarjetas None
 2026-11-14,Jamaica-México (CNL cuartos ida),Ambos marcan: Sí,todas-s16,medio-alto,0.52,,G,sin cuota vista | final 3-2; córneres 7; tarjetas None
+2026-11-15,Chipre-Montenegro (Nations C),Más de 2.5 goles,analista,medio-alto,0.51,2.0,pendiente,+2% · recomendada
+2026-11-15,Chipre-Montenegro (Nations C),Menos de 2.5 goles,todas-s16,alto,0.49,1.8,pendiente,-12%
+2026-11-15,Chipre-Montenegro (Nations C),Menos de 3.5 goles,todas-s16,medio,0.71,,pendiente,sin cuota vista
+2026-11-15,Chipre-Montenegro (Nations C),Chipre o Montenegro,todas-s16,medio,0.75,,pendiente,sin cuota vista
+2026-11-15,Chipre-Montenegro (Nations C),Chipre marca,todas-s16,medio,0.7,,pendiente,sin cuota vista
+2026-11-15,Chipre-Montenegro (Nations C),Montenegro marca,todas-s16,medio,0.77,,pendiente,paga <1.30
+2026-11-15,Chipre-Montenegro (Nations C),Ambos marcan: Sí,todas-s16,medio-alto,0.54,,pendiente,sin cuota vista
+2026-11-15,Chipre-Montenegro (Nations C),Gana Montenegro,todas-s16,alto,0.44,2.2,pendiente,-3% (cuota de otra previa)
+2026-11-15,Chipre-Montenegro (Nations C),Montenegro o empate,todas-s16,medio,0.69,,pendiente,sin cuota vista
+2026-11-15,Chipre-Montenegro (Nations C),Más de 1.5 goles,todas-s16,medio,0.75,,pendiente,sin cuota vista

@@ -1,0 +1,249 @@
+<title>Chipre–Montenegro</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">UEFA Nations League · Liga C · Grupo 2 · Jornada 6 (última)</div>
+  <header class="hero">
+    <div class="team"><b>Chipre</b><span>2.º del grupo, 8 puntos · local · ya con el play-off asegurado</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Montenegro</b><span>1.º, 13 puntos · ascenso directo según una fuente · sin Stefan Savić (sancionado)</span></div>
+  </header>
+  <div class="meta">Domingo 15 nov 2026 · 08:00 según StatsHub (otras fuentes: 14:00 UTC = 09:00 tu hora: confírmalo) · Alphamega Stadium, Limasol · Árbitro: Sander van der Eijk (Países Bajos), 3.83 tarjetas por partido (StatsHub) · Ida: Montenegro 2-1 Chipre (25 sep)</div>
+
+  <section class="main-pick" aria-label="Pick recomendado" style="border-left-color:var(--warn)">
+    <div><div class="eyebrow" style="color:var(--warn)">Recomendada · riesgo medio-alto</div><h1>Más de 2.5 goles</h1></div>
+    <div style="text-align:right"><div class="p" style="color:var(--warn)">51%</div><div class="meta">Cuota justa 1.97 · bet365 2.000 · valor +2% · 0.25 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Los datos piden más goles que la línea</b><span>bet365 da más/menos 2.5 a 2.000 / 1.800 (mercado ~2.5 goles). Los partidos de Chipre promedian 2.9 goles y los de Montenegro 3.1; el xG ronda 2.85 y 3.27.</span></div>
+    <div class="card tile"><b>Partido con poco en juego</b><span>Es la última jornada: Montenegro ya sería primero (13 puntos) y Chipre segundo con play-off, según una fuente. Puede haber rotaciones.</span></div>
+    <div class="card tile"><b>Montenegro con bajas atrás</b><span>Savić está sancionado (acumulación de tarjetas) y Vukčević es duda (muscular). Chipre sin bajas en StatsHub, aunque otra fuente dice que Pileas está sancionado.</span></div>
+    <div class="card tile"><b>Árbitro de ritmo medio</b><span>Van der Eijk: 3.83 tarjetas por partido. Los dos equipos pasan de 3.5 tarjetas en 75% de sus partidos (prom. 4.5 y 4.8).</span></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-cap">
+    <h2 id="h-cap">Tus capturas, traducidas <small>StatsHub · últimos 20 partidos, 90 minutos · "Total" = los dos equipos juntos</small></h2>
+    <div class="tw"><table>
+      <tr><th>Mercado</th><th>Línea y cuota bet365</th><th>Chipre</th><th>Montenegro</th><th>Lectura</th></tr>
+      <tr><td>Goles: más de 2.5</td><td>Más/Menos 2.5: 2.000 / 1.800 · otra pareja 2.025 / 1.775 · "1.er tiempo 2.5 a 7.00 / 1.083" (mal rotulada, no la uso)</td><td>50% (10/20) · prom. 2.9</td><td>70% (14/20) · prom. 3.1</td><td>Montenegro empuja hacia más goles</td></tr>
+      <tr><td>xG (goles esperados): más de 2.5</td><td>—</td><td>67% (10/15) · prom. 2.85</td><td>62% (8/13) · prom. 3.27</td><td>Pocos partidos con dato xG</td></tr>
+      <tr><td>Córneres: más de 8.5</td><td>Sin cuotas en la captura</td><td>75% (15/20) · prom. 10.2</td><td>75% (15/20) · prom. 10.2</td><td>Muchos córneres en sus partidos</td></tr>
+      <tr><td>Tarjetas: más de 3.5</td><td>Sin cuotas en la captura</td><td>75% (15/20) · prom. 4.5</td><td>75% (15/20) · prom. 4.8</td><td>Árbitro neerlandés 3.83 por partido</td></tr>
+      <tr><td>Remates a puerta: más de 7.5</td><td>Sin cuotas en la captura</td><td>70% (14/20) · prom. 8.7</td><td>80% (16/20) · prom. 9.8</td><td>Partido con remates a puerta</td></tr>
+      <tr><td>Remates totales: más de 23.5</td><td>Sin cuotas en la captura</td><td>75% (15/20) · prom. 25.9</td><td>70% (14/20) · prom. 27.8</td><td>Montenegro concede 11.5 remates (−15.3% vs liga: 13.6)</td></tr>
+      <tr><td>Paradas del portero: más de 4.5</td><td>Sin cuotas en la captura</td><td>80% (16/20) · prom. 5.9</td><td>85% (17/20) · prom. 6.7</td><td>Con muchos remates a puerta, hay paradas</td></tr>
+    </table></div>
+    <p class="note"><b>Remates por jugador (mapa, predicho):</b> Chipre: Edwards, Pittas, Laifis, Kastanos; Montenegro: Adžić, Krstović, Bulatović, Vujačić, Jankovic, Rubežić. Sin cuotas de jugadores en la captura.</p>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fa">
+      <h2 id="h-fa">Chipre <small>forma reciente (L E G G E)</small></h2>
+      <div class="form">
+        <div><span>Goles totales de los últimos 6 partidos</span><span class="r num">2, 3, 2, 0, 3, 2</span><span class="chip D">—</span></div>
+        <div><span>Los 6 anteriores</span><span class="r num">2, 5, 1, 6, 2, 4</span><span class="chip D">—</span></div>
+      </div>
+      <p class="note">En sus 20: 50% con más de 2.5 goles, 75% con más de 8.5 córneres y 75% con más de 3.5 tarjetas. El 12 nov perdió de visita (2 goles totales) y el 5 oct jugó en casa (3 goles totales); sin marcadores exactos en la captura.</p>
+    </section>
+    <section class="card" aria-labelledby="h-fi">
+      <h2 id="h-fi">Montenegro <small>forma reciente (G G G E G)</small></h2>
+      <div class="form">
+        <div><span>Goles totales de los últimos 6 partidos</span><span class="r num">3, 0, 3, 5, 3, 4</span><span class="chip D">—</span></div>
+        <div><span>Los 6 anteriores</span><span class="r num">1, 5, 2, 5, 3, 3</span><span class="chip D">—</span></div>
+      </div>
+      <p class="note">En sus 20: 70% con más de 2.5 goles, 75% con más de 8.5 córneres y más de 3.5 tarjetas. Ganó 2-1 a Chipre el 25 sep. Líder del grupo con 13 puntos.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-conf">
+    <h2 id="h-conf">Confirmación con otras fuentes</h2>
+    <div class="tw"><table>
+      <tr><th>Dato</th><th>StatsHub (tus capturas)</th><th>Otras fuentes</th><th>Estado</th></tr>
+      <tr><td>Torneo y jornada</td><td>—</td><td>Nations League Liga C, jornada 6 (UEFA, Sports Mole, tips.gg)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Hora</td><td>08:00 (domingo 15)</td><td>14:00 UTC = 09:00 Colombia (varias); UEFA lista 15:00 CET; una ficha 09:00</td><td class="w">Conflicto: confirma</td></tr>
+      <tr><td>Sede</td><td>Alphamega Stadium</td><td>Alphamega Stadium, Limasol</td><td class="g">Confirmado</td></tr>
+      <tr><td>Posiciones</td><td>—</td><td>Montenegro 13 puntos, Chipre 8 (previas citadas)</td><td class="w">Una fuente</td></tr>
+      <tr><td>Bajas</td><td>Montenegro: Savić sancionado, Vukčević duda; Chipre: sin bajas</td><td>Una previa: Pileas (Chipre) sancionado y Savić sancionado</td><td class="w">Parcial</td></tr>
+      <tr><td>Árbitro</td><td>Sander van der Eijk, 3.83 tarjetas por partido</td><td>No contrastado</td><td class="w">Una fuente</td></tr>
+      <tr><td>Cuotas 1X2</td><td>—</td><td>bet365 (vía una previa): Montenegro 2.20, Chipre 3.30; otra previa: Chipre 2.83–3.17 y Montenegro 2.19–2.43. Foresportia: 24% / 22% / 55%</td><td class="w">Varían</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>mercado (60%) y datos (40%)</small></h2>
+    <div class="odds">
+      <div><b>31%</b><span>Chipre · justa 3.25</span></div>
+      <div><b>25%</b><span>Empate · justa 3.92</span></div>
+      <div><b style="color:var(--good)">44%</b><span>Montenegro · justa 2.29</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Chipre 31%, empate 25%, Montenegro 44%"><i style="width:31%;background:var(--bad)"></i><i style="width:25%;background:var(--warn)"></i><i style="width:44%;background:var(--good)"></i></div>
+    <p class="meta" style="margin-top:8px">Goles esperados: ~1.2 Chipre y ~1.4 Montenegro. Marcadores más probables: 1-1, 0-1, 1-2, 1-0. Las cuotas 1X2 vienen de previas, no de tus capturas.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Las mejores <small>lectura: Montenegro algo favorito, partido con goles, poco en juego</small></h2>
+    <div class="pick"><span class="risk a">Medio-alto · recomendada</span><div><h3>Más de 2.5 goles (2.000)</h3><p>Montenegro promedia 3.1 goles en sus partidos y Chipre 2.9; xG de 2.85 y 3.27. La línea de bet365 está en ~2.5. Es la única con valor visto (+2%). En contra: partido sin mucho en juego. 0.25 u.</p></div><div class="pp"><b>51%</b><span>justa 1.97</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Menos de 3.5 goles (desde 1.40)</h3><p>Falla con 4 goles o más (29%). Sin cuota vista; por el 2.000 de "más 2.5" calculo ~1.35–1.40. 0.25 u.</p></div><div class="pp"><b>71%</b><span>justa 1.40</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Chipre o Montenegro: no empate (desde 1.35)</h3><p>Pierde solo con empate (25%). Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>75%</b><span>justa 1.34</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Chipre marca (desde 1.45)</h3><p>Chipre juega en casa, marcó en la mayoría de sus partidos y Montenegro concede ~1.5. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>70%</b><span>justa 1.42</span></div></div>
+    <p class="note"><b>Pick fuerte (stakazo): ninguno.</b> Ninguna con cuota 1.50 o más llega a 67% con cuota vista. <b>Combinada del día:</b> sin cuotas vistas de patas al 75% no armo una de 1.80; la única que se acerca es "Chipre o Montenegro" (75% a ~1.34).</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-all">
+    <h2 id="h-all">Todas las apuestas <small>probabilidad mezclada · valor = ganancia esperada con la cuota vista</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota justa</th><th>Cuota vista</th><th>Valor</th><th>Riesgo</th></tr>
+      <tr><td>Menos de 4.5 goles</td><td>86%</td><td>1.16</td><td>—</td><td class="">—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Montenegro +1.5</td><td>87%</td><td>1.15</td><td>—</td><td class="">—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Chipre +1.5</td><td>78%</td><td>1.27</td><td>—</td><td class="">—</td><td>bajo-medio · paga &lt;1.30</td></tr>
+      <tr><td>Montenegro marca</td><td>77%</td><td>1.29</td><td>—</td><td class="">—</td><td>medio · paga &lt;1.30</td></tr>
+      <tr><td>Chipre o Montenegro (12)</td><td>75%</td><td>1.34</td><td>—</td><td class="">—</td><td>medio · desde 1.35</td></tr>
+      <tr><td>Más de 1.5 goles</td><td>75%</td><td>1.33</td><td>—</td><td class="">—</td><td>medio · desde 1.35</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td>71%</td><td>1.40</td><td>—</td><td class="">—</td><td>medio · desde 1.40</td></tr>
+      <tr><td>Chipre marca</td><td>70%</td><td>1.42</td><td>—</td><td class="">—</td><td>medio · desde 1.45</td></tr>
+      <tr><td>Montenegro o empate</td><td>69%</td><td>1.44</td><td>—</td><td class="">—</td><td>medio · desde 1.45</td></tr>
+      <tr><td>Rango 1-3 goles</td><td>64%</td><td>1.55</td><td>—</td><td class="">—</td><td>medio · desde 1.55</td></tr>
+      <tr><td>Rango 2-4 goles</td><td>61%</td><td>1.63</td><td>—</td><td class="">—</td><td>medio-alto · desde 1.65</td></tr>
+      <tr><td>Montenegro DNB (sin empate)</td><td>59%</td><td>1.71</td><td>—</td><td class="">—</td><td>medio-alto · desde 1.75</td></tr>
+      <tr><td>Chipre o empate</td><td>56%</td><td>1.78</td><td>—</td><td class="">—</td><td>medio-alto · desde 1.80</td></tr>
+      <tr><td>Ambos marcan: Sí</td><td>54%</td><td>1.84</td><td>—</td><td class="">—</td><td>medio-alto · desde 1.85</td></tr>
+      <tr><td>Más de 2.5 goles</td><td>51%</td><td>1.97</td><td>2.000</td><td class="g">+2%</td><td>medio-alto · RECOMENDADA</td></tr>
+      <tr><td>Menos de 2.5 goles</td><td>49%</td><td>2.03</td><td>1.800</td><td class="bd">−12%</td><td>alto</td></tr>
+      <tr><td>Montenegro o empate y menos de 3.5</td><td>49%</td><td>2.05</td><td>—</td><td class="">—</td><td>alto</td></tr>
+      <tr><td>Ambos marcan: No</td><td>46%</td><td>2.19</td><td>—</td><td class="">—</td><td>alto · desde 2.20</td></tr>
+      <tr><td>Rango 2-3 goles</td><td>46%</td><td>2.16</td><td>—</td><td class="">—</td><td>alto · desde 2.20</td></tr>
+      <tr><td>Montenegro 2 o más goles</td><td>44%</td><td>2.27</td><td>—</td><td class="">—</td><td>alto</td></tr>
+      <tr><td>Gana Montenegro</td><td>44%</td><td>2.29</td><td>~2.20 *</td><td class="w">−3%</td><td>alto</td></tr>
+      <tr><td>Chipre DNB</td><td>41%</td><td>2.42</td><td>—</td><td class="">—</td><td>alto</td></tr>
+      <tr><td>Ambos marcan y más de 2.5</td><td>42%</td><td>2.36</td><td>—</td><td class="">—</td><td>alto</td></tr>
+      <tr><td>Rango 3-4 goles</td><td>37%</td><td>2.71</td><td>—</td><td class="">—</td><td>alto</td></tr>
+      <tr><td>Gana Chipre</td><td>31%</td><td>3.25</td><td>~3.30 *</td><td class="w">+2%</td><td>alto · 0.1 u</td></tr>
+      <tr><td>Montenegro gana y más de 2.5</td><td>26%</td><td>3.80</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>29%</td><td>3.47</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Empate</td><td>25%</td><td>3.92</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Montenegro gana sin encajar</td><td>23%</td><td>4.34</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Montenegro −1.5</td><td>22%</td><td>4.64</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Más de 4.5 goles</td><td>14%</td><td>7.19</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+      <tr><td>Chipre −1.5</td><td>13%</td><td>7.83</td><td>—</td><td class="">—</td><td>muy alto</td></tr>
+    </table></div>
+    <p class="note">* Cuota de otra previa (bet365 según una página), no de tus capturas. "—" = no vi la cuota: entra desde la cuota de la columna "Riesgo".</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-est">
+    <h2 id="h-est">Córneres, tarjetas y remates <small>sin cuotas en tus capturas: probabilidades estimadas con tus datos</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob. estimada</th><th>Entra desde</th><th>Nota</th></tr>
+      <tr><td>Córneres más de 8.5</td><td>~70%</td><td>1.45</td><td>Los dos pasan de 8.5 en 75% de sus partidos (prom. 10.2). Mis pruebas: córneres totales rinden cerca de la media, así que bajo de 75% a ~70%</td></tr>
+      <tr><td>Córneres más de 9.5</td><td>~58%</td><td>1.75</td><td>—</td></tr>
+      <tr><td>Córneres más de 10.5</td><td>~45%</td><td>2.25</td><td>—</td></tr>
+      <tr><td>Tarjetas más de 3.5</td><td>~63%</td><td>1.60</td><td>Equipos: 75% y 75%; árbitro: 3.83 por partido</td></tr>
+      <tr><td>Tarjetas más de 4.5</td><td>~42%</td><td>2.35</td><td>—</td></tr>
+      <tr><td>Remates a puerta más de 7.5</td><td>~72%</td><td>1.40</td><td>Los remates por equipo son "no fiables" en mis pruebas; confirma la cuota</td></tr>
+      <tr><td>Remates totales más de 23.5</td><td>~72%</td><td>1.40</td><td>Chipre 25.9, Montenegro 27.8; Montenegro concede pocos remates (−15.3%)</td></tr>
+      <tr><td>Paradas más de 4.5</td><td>~75%</td><td>1.35</td><td>Los porteros hacen 5.9 y 6.7 paradas por partido; sin saber si es el total del partido o de un portero, confirma la línea</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad media: 20 partidos por equipo con cuotas bet365 solo de goles; sin cuotas de córneres, tarjetas ni remates; hora en conflicto (08:00 contra 09:00); cuotas 1X2 de previas; partido con poco en juego (posibles rotaciones).</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.sportsmole.co.uk/football/cyprus/uefa-nations-league/preview/cyprus-vs-montenegro-prediction-team-news-lineups_609044.html">Sports Mole: previa</a>
+      <a href="https://thefootballfaithful.com/cyprus-vs-montenegro-prediction-betting-tips-15-11-2026/">Football Faithful</a>
+      <a href="https://tips.gg/article/cyprus-vs-montenegro-head-to-head-2026/">tips.gg: H2H</a>
+      <a href="https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000--2026-27-uefa-nations-league-all-the-league-phase-fixtures-a/">UEFA: calendario</a>
+      <a href="https://www.foresportia.com/es/pronostico/uefa-nations-league/cyprus-montenegro-2026-11-15/">Foresportia</a>
+    </div>
+  </section>
+</div>
+</body></html>
