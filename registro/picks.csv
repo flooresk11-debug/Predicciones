@@ -418,18 +418,18 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-14,Austria-Irlanda (Nations B),Córneres menos de 8.5,todas-s16,medio,0.53,1.833,pendiente,-3%
 2026-11-14,Austria-Irlanda (Nations B),Tarjetas menos de 3.5,todas-s16,alto,0.47,2.00,pendiente,-6%
 2026-11-14,Austria-Irlanda (Nations B),Tarjetas más de 3.5,todas-s16,alto,0.53,1.727,pendiente,-9%
-2026-11-14,San Vicente-Belice (CNL B),Gana San Vicente,analista,medio,0.62,,pendiente,recomendada · sin cuota vista
-2026-11-14,San Vicente-Belice (CNL B),Menos de 3.5 goles,todas-s16,medio-alto,0.69,,pendiente,sin cuota vista
-2026-11-14,San Vicente-Belice (CNL B),Belice +1.5,todas-s16,medio,0.63,,pendiente,sin cuota vista
-2026-11-14,San Vicente-Belice (CNL B),San Vicente 2 o más goles,todas-s16,medio-alto,0.57,,pendiente,sin cuota vista
-2026-11-14,San Vicente-Belice (CNL B),Más de 2.5 goles,todas-s16,medio-alto,0.53,1.8,pendiente,-5%
-2026-11-14,San Vicente-Belice (CNL B),Menos de 2.5 goles,todas-s16,alto,0.47,2.0,pendiente,-6%
-2026-11-14,San Vicente-Belice (CNL B),Córneres más de 8.5,todas-s16,medio-alto,0.54,1.8,pendiente,-3%
-2026-11-14,San Vicente-Belice (CNL B),Córneres menos de 8.5,todas-s16,alto,0.46,1.909,pendiente,-12%
-2026-11-14,San Vicente-Belice (CNL B),Más de 1.5 goles,todas-s16,medio,0.77,,pendiente,sin cuota vista
-2026-11-14,San Vicente-Belice (CNL B),San Vicente o empate,todas-s16,bajo,0.83,,pendiente,paga <1.30
-2026-11-14,San Vicente-Belice (CNL B),Ambos marcan: Sí,todas-s16,alto,0.5,,pendiente,sin cuota vista
-2026-11-14,San Vicente-Belice (CNL B),Belice marca,todas-s16,medio-alto,0.58,,pendiente,sin cuota vista
+2026-11-14,San Vicente-Belice (CNL B),Gana San Vicente,analista,medio,0.62,,G,recomendada · sin cuota vista | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),Menos de 3.5 goles,todas-s16,medio-alto,0.69,,G,sin cuota vista | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),Belice +1.5,todas-s16,medio,0.63,,G,sin cuota vista | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),San Vicente 2 o más goles,todas-s16,medio-alto,0.57,,P,sin cuota vista | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),Más de 2.5 goles,todas-s16,medio-alto,0.53,1.8,P,-5% | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),Menos de 2.5 goles,todas-s16,alto,0.47,2.0,G,-6% | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),Córneres más de 8.5,todas-s16,medio-alto,0.54,1.8,G,-3% | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),Córneres menos de 8.5,todas-s16,alto,0.46,1.909,P,-12% | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),Más de 1.5 goles,todas-s16,medio,0.77,,P,sin cuota vista | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),San Vicente o empate,todas-s16,bajo,0.83,,G,paga <1.30 | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),Ambos marcan: Sí,todas-s16,alto,0.5,,P,sin cuota vista | final 1-0; córneres 15; tarjetas 2
+2026-11-14,San Vicente-Belice (CNL B),Belice marca,todas-s16,medio-alto,0.58,,P,sin cuota vista | final 1-0; córneres 15; tarjetas 2
 2026-11-14,Chapecoense-Vasco (Brasileirão),Chapecoense +1.5,analista,medio,0.72,,P,sin cuota vista · recomendada | final 0-2; córneres 10; tarjetas 4
 2026-11-14,Chapecoense-Vasco (Brasileirão),Chapecoense marca,todas-s16,medio,0.68,,P,sin cuota vista | final 0-2; córneres 10; tarjetas 4
 2026-11-14,Chapecoense-Vasco (Brasileirão),Menos de 3.5 goles,todas-s16,medio,0.67,,G,sin cuota vista | final 0-2; córneres 10; tarjetas 4
@@ -443,15 +443,15 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-14,Chapecoense-Vasco (Brasileirão),Tarjetas más de 3.5,todas-s16,medio-alto,0.57,1.666,G,-5% | final 0-2; córneres 10; tarjetas 4
 2026-11-14,Chapecoense-Vasco (Brasileirão),Tarjetas menos de 3.5,todas-s16,alto,0.43,2.1,P,-9% | final 0-2; córneres 10; tarjetas 4
 2026-11-14,Chapecoense-Vasco (Brasileirão),Más de 1.5 goles,todas-s16,bajo,0.79,,G,paga <1.30 | final 0-2; córneres 10; tarjetas 4
-2026-11-14,Jamaica-México (CNL cuartos ida),Córneres menos de 8.5,analista,medio-alto,0.57,1.909,pendiente,+9% · recomendada
-2026-11-14,Jamaica-México (CNL cuartos ida),Menos de 3.5 goles,todas-s16,medio,0.74,,pendiente,sin cuota vista
-2026-11-14,Jamaica-México (CNL cuartos ida),México marca,todas-s16,medio,0.76,,pendiente,sin cuota vista
-2026-11-14,Jamaica-México (CNL cuartos ida),México o empate,todas-s16,medio,0.69,,pendiente,sin cuota vista
-2026-11-14,Jamaica-México (CNL cuartos ida),Jamaica marca,todas-s16,medio,0.68,,pendiente,sin cuota vista
-2026-11-14,Jamaica-México (CNL cuartos ida),Más de 2.5 goles,todas-s16,alto,0.47,1.95,pendiente,-8%
-2026-11-14,Jamaica-México (CNL cuartos ida),Menos de 2.5 goles,todas-s16,medio-alto,0.53,1.85,pendiente,-2%
-2026-11-14,Jamaica-México (CNL cuartos ida),Más de 1.5 goles,todas-s16,medio,0.73,1.3,pendiente,-5%
-2026-11-14,Jamaica-México (CNL cuartos ida),Córneres más de 8.5,todas-s16,alto,0.43,1.8,pendiente,-23%
+2026-11-14,Jamaica-México (CNL cuartos ida),Córneres menos de 8.5,analista,medio-alto,0.57,1.909,G,+9% · recomendada | final 3-2; córneres 7; tarjetas None
+2026-11-14,Jamaica-México (CNL cuartos ida),Menos de 3.5 goles,todas-s16,medio,0.74,,P,sin cuota vista | final 3-2; córneres 7; tarjetas None
+2026-11-14,Jamaica-México (CNL cuartos ida),México marca,todas-s16,medio,0.76,,G,sin cuota vista | final 3-2; córneres 7; tarjetas None
+2026-11-14,Jamaica-México (CNL cuartos ida),México o empate,todas-s16,medio,0.69,,P,sin cuota vista | final 3-2; córneres 7; tarjetas None
+2026-11-14,Jamaica-México (CNL cuartos ida),Jamaica marca,todas-s16,medio,0.68,,G,sin cuota vista | final 3-2; córneres 7; tarjetas None
+2026-11-14,Jamaica-México (CNL cuartos ida),Más de 2.5 goles,todas-s16,alto,0.47,1.95,G,-8% | final 3-2; córneres 7; tarjetas None
+2026-11-14,Jamaica-México (CNL cuartos ida),Menos de 2.5 goles,todas-s16,medio-alto,0.53,1.85,P,-2% | final 3-2; córneres 7; tarjetas None
+2026-11-14,Jamaica-México (CNL cuartos ida),Más de 1.5 goles,todas-s16,medio,0.73,1.3,G,-5% | final 3-2; córneres 7; tarjetas None
+2026-11-14,Jamaica-México (CNL cuartos ida),Córneres más de 8.5,todas-s16,alto,0.43,1.8,P,-23% | final 3-2; córneres 7; tarjetas None
 2026-11-14,Jamaica-México (CNL cuartos ida),Córneres 1.er tiempo menos de 4,todas-s16,medio-alto,0.55,1.95,pendiente,~+7% estimado
-2026-11-14,Jamaica-México (CNL cuartos ida),Gana México,todas-s16,alto,0.43,,pendiente,sin cuota vista
-2026-11-14,Jamaica-México (CNL cuartos ida),Ambos marcan: Sí,todas-s16,medio-alto,0.52,,pendiente,sin cuota vista
+2026-11-14,Jamaica-México (CNL cuartos ida),Gana México,todas-s16,alto,0.43,,P,sin cuota vista | final 3-2; córneres 7; tarjetas None
+2026-11-14,Jamaica-México (CNL cuartos ida),Ambos marcan: Sí,todas-s16,medio-alto,0.52,,G,sin cuota vista | final 3-2; córneres 7; tarjetas None
