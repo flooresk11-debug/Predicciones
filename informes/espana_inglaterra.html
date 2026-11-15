@@ -1,0 +1,221 @@
+<title>España–Inglaterra</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">UEFA Nations League · Liga A · Grupo 3 · Jornada 6 (última)</div>
+  <header class="hero">
+    <div class="team"><b>España</b><span>Líder del grupo · 4-2-3-1 · local</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Inglaterra</b><span>2.ª del grupo · 4-2-3-1 · ganó 2-1 a Croacia el 12 nov</span></div>
+  </header>
+  <div class="meta">Domingo 15 nov 2026 · 14:45 (tu hora; 20:45 en Madrid) · Metropolitano (la mayoría de fuentes; una dice Bernabéu) · Árbitro: sin dato · Por el primer puesto del grupo</div>
+
+  <section class="main-pick" aria-label="Pick recomendado" style="border-left-color:var(--warn)">
+    <div><div class="eyebrow" style="color:var(--warn)">Recomendada · riesgo medio</div><h1>España o Inglaterra (no empate)</h1></div>
+    <div style="text-align:right"><div class="p" style="color:var(--warn)">72%</div><div class="meta">Cuota justa 1.38 · entra desde 1.40 · no vi cuotas del partido · 0.25 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Sin cuotas</b><span>Tus capturas son tablas por partido y la lista con líneas de faltas; no encontré cuotas de goles ni 1X2. Todo sale de tus datos con un reparto prudente: úsalo para comparar con tu casa.</span></div>
+    <div class="card tile"><b>Dos defensas fuertes</b><span>España concede 0.50 goles y 6.65 remates por partido; Inglaterra 0.90 goles y 9.45 remates. Pero ambas promedian contra rivales mucho más débiles.</span></div>
+    <div class="card tile"><b>Bajas en las dos</b><span>España sin Rodri, Olmo, Jesús Rodríguez, Barrenetxea e Iglesias (regreso "7 nov", fecha vencida: confirma). Inglaterra sin Wharton (sancionado), James, Guéhi y Saka; Tomori duda.</span></div>
+    <div class="card tile"><b>Pocas tarjetas</b><span>Amarillas por partido: España 3.20, Inglaterra 2.25. No hay árbitro ni línea.</span></div>
+  </section>
+
+  <section class="card">
+    <h2>Tus capturas, traducidas <small>StatsHub · últimos 20 partidos · prom. · a favor · en contra</small></h2>
+    <div class="tw"><table>
+      <tr><th>Estadística</th><th>España</th><th>Inglaterra</th></tr>
+      <tr><td>Goles</td><td>2.70 · 2.20 · 0.50</td><td>3.35 · 2.45 · 0.90</td></tr>
+      <tr><td>xG</td><td>2.73 · 2.16 · 0.57</td><td>3.16 · 2.13 · 1.03</td></tr>
+      <tr><td>Remates totales</td><td>24.10 · 17.45 · 6.65</td><td>26.65 · 17.20 · 9.45</td></tr>
+      <tr><td>Remates a puerta</td><td>8.55 · 6.55 · 2.00</td><td>8.90 · 6.15 · 2.75</td></tr>
+      <tr><td>Grandes ocasiones creadas</td><td>5.05 · 4.00 · 1.05</td><td>5.35 · 3.80 · 1.55</td></tr>
+      <tr><td>Córneres</td><td>9.10 · 6.70 · 2.40</td><td>9.70 · 6.35 · 3.35</td></tr>
+      <tr><td>Amarillas</td><td>3.20 · 0.80 · 2.40</td><td>2.25 · 0.85 · 1.40</td></tr>
+      <tr><td>Faltas</td><td>19.75 · 9.85 · 9.90</td><td>21.95 · 9.05 · 12.90</td></tr>
+      <tr><td>Posesión</td><td>65.6%</td><td>60.9%</td></tr>
+      <tr><td>Paradas del portero</td><td>5.90 · 1.55 · 4.35</td><td>5.40 · 1.80 · 3.60</td></tr>
+    </table></div>
+    <p class="note">Los promedios se inflan con partidos contra Chequia, Croacia, Panamá, Ghana, RD Congo y similares. En septiembre España ganó 3-2 en Inglaterra (26 sep, según las dos tablas). Por eso asumo ~2.35 goles totales en vez de los ~3 de los promedios.</p>
+    <p class="note"><b>Líneas de faltas por jugador (bet365, captura de alineaciones):</b> España: Cucurella 1.5 a 2.62, Laporte 0.5 a 1.73, Pedri 0.5 a 1.57, Ruiz 0.5 a 1.57, Oyarzabal 0.5 a 1.55, Cubarsí 0.5 a 1.55, Zubimendi 0.5 a 1.40, Yamal 0.5 a 1.36. Inglaterra: Quansah 0.5 a 1.83, Rogers 1.5 a 2.63, Anderson 1.5 a 1.67, Kane 1.5 a 2.63, Rice 0.5 a 2.20, Burn 0.5 a 2.25, Gordon 1.5 a 1.73, Hall 1.5 a 2.38. No tengo base para valorarlas.</p>
+  </section>
+
+  <section class="card">
+    <h2>Confirmación con otras fuentes</h2>
+    <div class="tw"><table>
+      <tr><th>Dato</th><th>Fuentes</th><th>Estado</th></tr>
+      <tr><td>Fecha y hora</td><td>19:45 GMT = 14:45 Colombia (Yahoo, NBC, TV Guide, Africasoccer)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Sede</td><td>Metropolitano según la mayoría; Bernabéu según una</td><td class="w">Conflicto</td></tr>
+      <tr><td>Contexto</td><td>España líder y Inglaterra segunda del grupo: duelo por el primer puesto</td><td class="g">Confirmado</td></tr>
+      <tr><td>Bajas</td><td>Guéhi fuera; Konsa y Spence disponibles; Yamal en principio disponible</td><td class="w">Parcial</td></tr>
+      <tr><td>Árbitro y cuotas</td><td>No encontrados</td><td class="w">Sin dato</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card">
+    <h2>Resultado 1X2 <small>solo con tus datos y ventaja de local</small></h2>
+    <div class="odds">
+      <div><b style="color:var(--good)">42%</b><span>España · justa 2.37</span></div>
+      <div><b>28%</b><span>Empate · justa 3.61</span></div>
+      <div><b>30%</b><span>Inglaterra · justa 3.33</span></div>
+    </div>
+    <p class="meta" style="margin-top:8px">Goles esperados ~1.30 España y ~1.05 Inglaterra. Estimación prudente sin mercado: es más incierta que en otros partidos.</p>
+  </section>
+
+  <section class="card">
+    <h2>Las mejores</h2>
+    <div class="pick"><span class="risk m">Medio · recomendada</span><div><h3>España o Inglaterra: no empate (desde 1.40)</h3><p>Pierde solo con empate (28%). Dos equipos que buscan el primer puesto. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>72%</b><span>justa 1.38</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Menos de 3.5 goles (solo desde 1.30)</h3><p>Dos defensas que conceden 0.50 y 0.90 goles y un partido por el primer puesto. Pero paga poco: cuota justa 1.27, por debajo de 1.30. El duelo de septiembre fue de 5 goles. Solo si ves 1.30 o más.</p></div><div class="pp"><b>79%</b><span>justa 1.27</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Más de 1.5 goles (desde 1.40)</h3><p>Los dos promedian más de 2.5 goles, aunque contra rivales flojos. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>68%</b><span>justa 1.47</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Inglaterra +1.5 (desde 1.35)</h3><p>España gana por 2 o más solo en ~19% de los casos. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>81%</b><span>justa 1.24</span></div></div>
+    <p class="note"><b>Pick fuerte:</b> ninguno. <b>Combinada del día:</b> sin cuotas vistas no armo una.</p>
+  </section>
+
+  <section class="card">
+    <h2>Todas las apuestas <small>probabilidad con tus datos · sin cuotas vistas</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota justa</th><th>Cuota vista</th><th>Valor</th><th>Riesgo</th></tr>
+      <tr><td>Gana España</td><td>42%</td><td>2.37</td><td>—</td><td>—</td><td>alto · entra desde 2.44</td></tr>
+      <tr><td>Empate</td><td>28%</td><td>3.61</td><td>—</td><td>—</td><td>muy alto · entra desde 3.71</td></tr>
+      <tr><td>Gana Inglaterra</td><td>30%</td><td>3.33</td><td>—</td><td>—</td><td>muy alto · entra desde 3.43</td></tr>
+      <tr><td>España o empate</td><td>70%</td><td>1.43</td><td>—</td><td>—</td><td>medio · entra desde 1.47</td></tr>
+      <tr><td>Inglaterra o empate</td><td>58%</td><td>1.73</td><td>—</td><td>—</td><td>medio-alto · entra desde 1.78</td></tr>
+      <tr><td>España o Inglaterra (sin empate)</td><td>72%</td><td>1.38</td><td>—</td><td>—</td><td>medio · entra desde 1.43</td></tr>
+      <tr><td>Inglaterra +1.5</td><td>81%</td><td>1.24</td><td>—</td><td>—</td><td>bajo · entra desde 1.30</td></tr>
+      <tr><td>España +1.5</td><td>89%</td><td>1.13</td><td>—</td><td>—</td><td>bajo · entra desde 1.30</td></tr>
+      <tr><td>España −1.5</td><td>19%</td><td>5.20</td><td>—</td><td>—</td><td>muy alto · entra desde 5.36</td></tr>
+      <tr><td>Más de 1.5 goles</td><td>68%</td><td>1.47</td><td>—</td><td>—</td><td>medio · entra desde 1.51</td></tr>
+      <tr><td>Más de 2.5 goles</td><td>42%</td><td>2.40</td><td>—</td><td>—</td><td>alto · entra desde 2.47</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>21%</td><td>4.74</td><td>—</td><td>—</td><td>muy alto · entra desde 4.88</td></tr>
+      <tr><td>Menos de 1.5 goles</td><td>32%</td><td>3.13</td><td>—</td><td>—</td><td>muy alto · entra desde 3.22</td></tr>
+      <tr><td>Menos de 2.5 goles</td><td>58%</td><td>1.72</td><td>—</td><td>—</td><td>medio-alto · entra desde 1.77</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td>79%</td><td>1.27</td><td>—</td><td>—</td><td>bajo · entra desde 1.31</td></tr>
+      <tr><td>Menos de 4.5 goles</td><td>91%</td><td>1.10</td><td>—</td><td>—</td><td>bajo · entra desde 1.30</td></tr>
+      <tr><td>Ambos marcan: Sí</td><td>47%</td><td>2.11</td><td>—</td><td>—</td><td>alto · entra desde 2.18</td></tr>
+      <tr><td>Ambos marcan: No</td><td>53%</td><td>1.90</td><td>—</td><td>—</td><td>medio-alto · entra desde 1.95</td></tr>
+      <tr><td>España marca</td><td>73%</td><td>1.37</td><td>—</td><td>—</td><td>medio · entra desde 1.42</td></tr>
+      <tr><td>Inglaterra marca</td><td>65%</td><td>1.54</td><td>—</td><td>—</td><td>medio · entra desde 1.58</td></tr>
+      <tr><td>Rango 1-3 goles</td><td>69%</td><td>1.44</td><td>—</td><td>—</td><td>medio · entra desde 1.48</td></tr>
+      <tr><td>Rango 2-4 goles</td><td>59%</td><td>1.69</td><td>—</td><td>—</td><td>medio-alto · entra desde 1.74</td></tr>
+      <tr><td>Rango 2-3 goles</td><td>47%</td><td>2.13</td><td>—</td><td>—</td><td>alto · entra desde 2.19</td></tr>
+      <tr><td>España gana sin encajar</td><td>25%</td><td>3.93</td><td>—</td><td>—</td><td>muy alto · entra desde 4.05</td></tr>
+      <tr><td>España o empate y menos de 3.5</td><td>55%</td><td>1.82</td><td>—</td><td>—</td><td>medio-alto · entra desde 1.87</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card">
+    <h2>Córneres, tarjetas y remates <small>estimaciones con tus promedios, sin cuotas</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob. estimada</th><th>Nota</th></tr>
+      <tr><td>Córneres más de 8.5</td><td>~58%</td><td>España 9.1 y Inglaterra 9.7; los córneres totales rinden cerca de la media según mis pruebas</td></tr>
+      <tr><td>Córneres más de 9.5</td><td>~45%</td><td>—</td></tr>
+      <tr><td>Amarillas más de 3.5</td><td>~48%</td><td>3.20 y 2.25 por partido; sin árbitro</td></tr>
+      <tr><td>Amarillas menos de 4.5</td><td>~72%</td><td>Pocas tarjetas en los dos</td></tr>
+      <tr><td>Remates a puerta más de 7.5</td><td>~60%</td><td>"No fiable" en mis pruebas</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card">
+    <h2>Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad media-baja: tablas de 20 partidos por equipo, pero sin cuotas, sin árbitro, con sede en disputa y promedios inflados por rivales débiles.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://sports.yahoo.com/articles/spain-vs-england-nations-league-121841864.html">Yahoo Sports</a>
+      <a href="https://www.nbcsports.com/soccer/news/how-to-watch-spain-vs-england-live-stream-tv-team-news-prediction">NBC Sports</a>
+      <a href="https://www.tvguide.co.uk/sport/football/fixtures/spain-vs-england-20261115-072cd5c9e4">TV Guide</a>
+      <a href="https://africasoccer.com/spain-v-england-nations-league-kick-off-time-venue-and-how-to-watch/">Africasoccer</a>
+    </div>
+  </section>
+</div>
+</body></html>

@@ -499,3 +499,14 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-15,Granada-Las Palmas (Hypermotion),Gana Granada,todas-s16,alto,0.43,,pendiente,sin cuota vista
 2026-11-15,Granada-Las Palmas (Hypermotion),Gana Las Palmas,todas-s16,alto,0.31,,pendiente,sin cuota vista
 2026-11-15,Granada-Las Palmas (Hypermotion),Empate,todas-s16,muy alto,0.26,,pendiente,sin cuota vista
+2026-11-15,España-Inglaterra (Nations A),España o Inglaterra,analista,medio,0.72,,pendiente,sin cuota vista · recomendada
+2026-11-15,España-Inglaterra (Nations A),Más de 1.5 goles,todas-s16,medio,0.68,,pendiente,sin cuota vista
+2026-11-15,España-Inglaterra (Nations A),Menos de 3.5 goles,todas-s16,bajo,0.79,,pendiente,paga <1.30
+2026-11-15,España-Inglaterra (Nations A),Inglaterra +1.5,todas-s16,bajo,0.81,,pendiente,paga <1.30
+2026-11-15,España-Inglaterra (Nations A),Menos de 2.5 goles,todas-s16,medio-alto,0.58,,pendiente,sin cuota vista
+2026-11-15,España-Inglaterra (Nations A),Más de 2.5 goles,todas-s16,alto,0.42,,pendiente,sin cuota vista
+2026-11-15,España-Inglaterra (Nations A),España marca,todas-s16,medio,0.73,,pendiente,sin cuota vista
+2026-11-15,España-Inglaterra (Nations A),Inglaterra marca,todas-s16,medio,0.65,,pendiente,sin cuota vista
+2026-11-15,España-Inglaterra (Nations A),Gana España,todas-s16,alto,0.42,,pendiente,sin cuota vista
+2026-11-15,España-Inglaterra (Nations A),Gana Inglaterra,todas-s16,alto,0.3,,pendiente,sin cuota vista
+2026-11-15,España-Inglaterra (Nations A),Ambos marcan: Sí,todas-s16,alto,0.47,,pendiente,sin cuota vista
