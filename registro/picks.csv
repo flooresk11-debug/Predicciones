@@ -487,3 +487,15 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-15,Tenerife-Ceuta (Hypermotion),Córneres menos de 9,todas-s16,medio-alto,0.43,1.95,pendiente,~-3% (devuelve con 9)
 2026-11-15,Tenerife-Ceuta (Hypermotion),Gana Ceuta,todas-s16,alto,0.38,,pendiente,sin cuota vista
 2026-11-15,Tenerife-Ceuta (Hypermotion),Gana Tenerife,todas-s16,alto,0.36,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Granada marca,analista,medio,0.77,,pendiente,recomendada · sin cuotas del partido
+2026-11-15,Granada-Las Palmas (Hypermotion),Más de 1.5 goles,todas-s16,medio,0.74,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Granada o Las Palmas,todas-s16,medio,0.74,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Menos de 3.5 goles,todas-s16,medio,0.73,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Las Palmas marca,todas-s16,medio,0.7,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Granada o empate,todas-s16,medio,0.69,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Ambos marcan: Sí,todas-s16,medio-alto,0.53,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Más de 2.5 goles,todas-s16,medio-alto,0.49,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Menos de 2.5 goles,todas-s16,medio-alto,0.51,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Gana Granada,todas-s16,alto,0.43,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Gana Las Palmas,todas-s16,alto,0.31,,pendiente,sin cuota vista
+2026-11-15,Granada-Las Palmas (Hypermotion),Empate,todas-s16,muy alto,0.26,,pendiente,sin cuota vista

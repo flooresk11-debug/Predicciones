@@ -1,0 +1,263 @@
+<title>Granada–Las Palmas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <div class="eyebrow">LaLiga Hypermotion · Jornada 14</div>
+  <header class="hero">
+    <div class="team"><b>Granada</b><span>Promoción de ascenso con un partido menos · 5 victorias seguidas · Pacheta</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Las Palmas</b><span>10.º, 20 puntos (una ficha) · 3–4 victorias seguidas · sin Pezzolesi y Herzog</span></div>
+  </header>
+  <div class="meta">Domingo 15 nov 2026 · 09:15 (tu hora; 15:15 en España) · Estadio Nuevo Los Cármenes, Granada · Árbitro: sin dato · TV Canaria / Movistar LaLiga Hypermotion</div>
+
+  <section class="main-pick" aria-label="Pick recomendado" style="border-left-color:var(--warn)">
+    <div><div class="eyebrow" style="color:var(--warn)">Recomendada · riesgo medio</div><h1>Granada marca</h1></div>
+    <div style="text-align:right"><div class="p" style="color:var(--warn)">77%</div><div class="meta">Cuota justa 1.31 · entra desde 1.35 · no vi cuotas de este partido · 0.25 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Este informe no tiene cuotas</b><span>Tus capturas son tablas por partido sin las líneas de bet365, y no encontré cuotas del partido. Las probabilidades salen solo de tus datos: no puedo decirte si algo tiene valor.</span></div>
+    <div class="card tile"><b>Dos equipos en racha</b><span>Granada ganó 5 seguidos (incluye 2-0 y 0-1 fuera). Las Palmas ganó 9 nov 2-0, 2 nov 2-3 y la Copa 1-3, con 4 victorias seguidas entre liga y Copa.</span></div>
+    <div class="card tile"><b>Partido de ~2.7 goles</b><span>Granada: 2.90 goles por partido (1.45 a favor, 1.45 en contra); Las Palmas 2.95 (1.35 y 1.60). xG: 2.78 y 2.72.</span></div>
+    <div class="card tile"><b>Las Palmas concede remates</b><span>15.8 por partido (+8.4% sobre la liga: 14.6). Granada concede 13.3, Las Palmas genera 10.1 remates por partido contra 12.8 de Granada.</span></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-cap">
+    <h2 id="h-cap">Tus capturas, traducidas <small>StatsHub · últimos 20 partidos · "FOR" = a favor, "AGT" = en contra</small></h2>
+    <div class="tw"><table>
+      <tr><th>Estadística</th><th>Granada (prom. · a favor · en contra)</th><th>Las Palmas (prom. · a favor · en contra)</th><th>Lectura</th></tr>
+      <tr><td>Goles</td><td>2.90 · 1.45 · 1.45</td><td>2.95 · 1.35 · 1.60</td><td>Partidos de ~3 goles totales</td></tr>
+      <tr><td>xG (goles esperados)</td><td>2.78 · 1.38 · 1.40</td><td>2.72 · 1.14 · 1.58</td><td>Las Palmas concede más xG que Granada</td></tr>
+      <tr><td>Remates totales</td><td>26.05 · 12.79 · 13.26</td><td>23.37 · 10.11 · 13.26</td><td>Granada genera más remates</td></tr>
+      <tr><td>Remates a puerta</td><td>9.21 · 4.00 · 5.21</td><td>8.32 · 3.68 · 4.63</td><td>Granada concede 5.21 a puerta</td></tr>
+      <tr><td>Remates dentro del área</td><td>15.47 · 7.79 · 7.68</td><td>15.21 · 5.95 · 9.26</td><td>Las Palmas concede 9.26 dentro del área</td></tr>
+      <tr><td>Grandes ocasiones creadas</td><td>4.32 · 2.11 · 2.21</td><td>4.47 · 1.68 · 2.79</td><td>Las Palmas concede 2.79 por partido</td></tr>
+      <tr><td>Córneres</td><td>8.47 · 4.47 · 4.00</td><td>9.11 · 4.11 · 5.00</td><td>Cruce ~8.8 córneres</td></tr>
+      <tr><td>Amarillas</td><td>4.95 · 2.45 · 2.50</td><td>4.65 · 2.10 · 2.55</td><td>Cruce ~4.8 amarillas</td></tr>
+      <tr><td>Tarjetas rojas</td><td>0.20 · 0.05 · 0.15</td><td>0.15 · 0.10 · 0.05</td><td>Rojas poco frecuentes</td></tr>
+      <tr><td>Faltas</td><td>27.58 · 12.32 · 15.26</td><td>26.84 · 11.11 · 15.74</td><td>Partidos con muchas faltas</td></tr>
+      <tr><td>Posesión</td><td>51.3%</td><td>51.6%</td><td>Igualada</td></tr>
+      <tr><td>Paradas del portero</td><td>6.37 · 3.68 · 2.68</td><td>5.26 · 3.00 · 2.26</td><td>—</td></tr>
+    </table></div>
+    <p class="note">En StatsHub marca "Easier matchup vs Las Palmas: Las Palmas concede 8.4% más remates que la media (15.8 contra 14.6)" para Granada. Los marcadores son los de la tabla (local primero).</p>
+  </section>
+
+  <div class="two">
+    <section class="card" aria-labelledby="h-fa">
+      <h2 id="h-fa">Granada <small>últimos partidos (resultado de Granada)</small></h2>
+      <div class="form">
+        <div><span>1 nov · visita</span><span class="r num">2-0</span><span class="chip W">G</span></div>
+        <div><span>29 oct (Copa) · visita</span><span class="r num">3-0</span><span class="chip W">G</span></div>
+        <div><span>23 oct · local</span><span class="r num">2-1</span><span class="chip W">G</span></div>
+        <div><span>18 oct · local</span><span class="r num">2-0</span><span class="chip W">G</span></div>
+        <div><span>12 oct · visita</span><span class="r num">1-0</span><span class="chip W">G</span></div>
+      </div>
+      <p class="note">Marcadores deducidos de la tabla (local primero con el color del resultado). Antes: 3-2 a favor y tres derrotas en septiembre, con partidos de 5 goles. Recuperados de molestias: Marqués, Alcaraz y Alemañ.</p>
+    </section>
+    <section class="card" aria-labelledby="h-fi">
+      <h2 id="h-fi">Las Palmas <small>últimos partidos (resultado de Las Palmas)</small></h2>
+      <div class="form">
+        <div><span>9 nov · local</span><span class="r num">2-0</span><span class="chip W">G</span></div>
+        <div><span>2 nov · visita</span><span class="r num">3-2</span><span class="chip W">G</span></div>
+        <div><span>27 oct (Copa) · visita</span><span class="r num">3-1</span><span class="chip W">G</span></div>
+        <div><span>24 oct · local</span><span class="r num">1-0</span><span class="chip W">G</span></div>
+        <div><span>17 oct · local</span><span class="r num">0-3</span><span class="chip L">P</span></div>
+      </div>
+      <p class="note">Sin Valentín Pezzolesi ni Juanma Herzog (selección sub-21). Marcadores deducidos de la tabla.</p>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="h-conf">
+    <h2 id="h-conf">Confirmación con otras fuentes</h2>
+    <div class="tw"><table>
+      <tr><th>Dato</th><th>StatsHub (tus capturas)</th><th>Otras fuentes</th><th>Estado</th></tr>
+      <tr><td>Jornada, fecha y sede</td><td>Domingo 15, Estadio Nuevo Los Cármenes, 09:15</td><td>J14 LaLiga Hypermotion; 15:15 en España = 09:15 Colombia (Granada CF, UD Las Palmas web)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Forma</td><td>Granada G G G G G; Las Palmas P G G G G</td><td>Granada ganó los 5 últimos; Las Palmas busca su 4.ª victoria seguida en liga (El Diario)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Posición</td><td>—</td><td>Granada en zona de promoción con un partido menos; Las Palmas 10.º con 20 puntos (una ficha de la web del Granada)</td><td class="w">Una fuente</td></tr>
+      <tr><td>Bajas</td><td>—</td><td>Las Palmas: Pezzolesi y Herzog con la sub-21. Granada: Marqués, Alcaraz y Alemañ recuperados (Las Palmas web, El Diario)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Árbitro</td><td>—</td><td>No encontrado</td><td class="w">Sin dato</td></tr>
+      <tr><td>Cuotas</td><td>—</td><td>No encontradas (solo de temporadas pasadas)</td><td class="w">Sin ver</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-1x2">
+    <h2 id="h-1x2">Resultado 1X2 <small>solo con tus datos (sin cuotas de mercado)</small></h2>
+    <div class="odds">
+      <div><b style="color:var(--good)">43%</b><span>Granada · justa 2.33</span></div>
+      <div><b>26%</b><span>Empate · justa 3.87</span></div>
+      <div><b>31%</b><span>Las Palmas · justa 3.20</span></div>
+    </div>
+    <div class="bar" role="img" aria-label="Granada 43%, empate 26%, Las Palmas 31%"><i style="width:43%;background:var(--good)"></i><i style="width:26%;background:var(--warn)"></i><i style="width:31%;background:var(--bad)"></i></div>
+    <p class="meta" style="margin-top:8px">Goles esperados: ~1.45 Granada y ~1.20 Las Palmas (promedios a favor y en contra de tus capturas, algo hacia la media de la liga). Marcadores más probables: 1-1, 1-0, 2-1, 0-1. No hay cuotas: esto es una estimación, no un cruce con el mercado.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-picks">
+    <h2 id="h-picks">Las mejores <small>lectura: Granada algo mejor, partido de 2 a 3 goles</small></h2>
+    <div class="pick"><span class="risk m">Medio · recomendada</span><div><h3>Granada marca (desde 1.35)</h3><p>Marca 1.45 por partido y Las Palmas concede 1.60 goles, 4.63 remates a puerta y 9.26 dentro del área. Granada en casa con 5 victorias seguidas. Sin cuota vista: mi mínimo es 1.35. 0.25 u.</p></div><div class="pp"><b>77%</b><span>justa 1.31</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Más de 1.5 goles (desde 1.35)</h3><p>Los dos promedian ~2.9 goles en sus partidos. Falla con 0-0, 1-0 o 0-1 (26%). Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>74%</b><span>justa 1.35</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Granada o Las Palmas: no empate (desde 1.35)</h3><p>Pierde solo con empate (26%). Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>74%</b><span>justa 1.35</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Menos de 3.5 goles (desde 1.40)</h3><p>Falla con 4 goles o más (27%). Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>73%</b><span>justa 1.38</span></div></div>
+    <p class="note"><b>Pick fuerte (stakazo): ninguno.</b> Sin cuotas vistas no puedo cumplir el criterio de cuota 1.50 y valor. <b>Combinada del día:</b> sin cuotas vistas de patas al 75% no armo una de 1.80.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-all">
+    <h2 id="h-all">Todas las apuestas <small>probabilidad con tus datos · entra desde la cuota de la columna "Riesgo"</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Cuota justa</th><th>Cuota vista</th><th>Valor</th><th>Riesgo</th></tr>
+      <tr><td>Más de 4.5 goles</td><td>13%</td><td>7.71</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Menos de 4.5 goles</td><td>87%</td><td>1.15</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Granada +1.5</td><td>87%</td><td>1.15</td><td>—</td><td>—</td><td>bajo · paga &lt;1.30</td></tr>
+      <tr><td>Las Palmas +1.5</td><td>79%</td><td>1.26</td><td>—</td><td>—</td><td>bajo-medio · paga &lt;1.30</td></tr>
+      <tr><td>Granada marca</td><td>77%</td><td>1.31</td><td>—</td><td>—</td><td>medio · RECOMENDADA desde 1.35</td></tr>
+      <tr><td>Más de 1.5 goles</td><td>74%</td><td>1.35</td><td>—</td><td>—</td><td>medio · desde 1.35</td></tr>
+      <tr><td>Granada o Las Palmas: no empate (12)</td><td>74%</td><td>1.35</td><td>—</td><td>—</td><td>medio · desde 1.35</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td>73%</td><td>1.38</td><td>—</td><td>—</td><td>medio · desde 1.40</td></tr>
+      <tr><td>Las Palmas marca</td><td>70%</td><td>1.43</td><td>—</td><td>—</td><td>medio · desde 1.45</td></tr>
+      <tr><td>Granada o empate</td><td>69%</td><td>1.46</td><td>—</td><td>—</td><td>medio · desde 1.50</td></tr>
+      <tr><td>Rango 1-3 goles</td><td>65%</td><td>1.53</td><td>—</td><td>—</td><td>medio · desde 1.55</td></tr>
+      <tr><td>Rango 2-4 goles</td><td>61%</td><td>1.63</td><td>—</td><td>—</td><td>medio-alto · desde 1.65</td></tr>
+      <tr><td>Las Palmas o empate</td><td>57%</td><td>1.75</td><td>—</td><td>—</td><td>medio-alto · desde 1.80</td></tr>
+      <tr><td>Ambos marcan: Sí</td><td>53%</td><td>1.87</td><td>—</td><td>—</td><td>medio-alto · desde 1.90</td></tr>
+      <tr><td>Granada o empate y menos de 3.5</td><td>50%</td><td>2.02</td><td>—</td><td>—</td><td>medio-alto · desde 2.05</td></tr>
+      <tr><td>Menos de 2.5 goles</td><td>51%</td><td>1.98</td><td>—</td><td>—</td><td>medio-alto · desde 2.00</td></tr>
+      <tr><td>Más de 2.5 goles</td><td>49%</td><td>2.02</td><td>—</td><td>—</td><td>medio-alto · desde 2.05</td></tr>
+      <tr><td>Ambos marcan: No</td><td>47%</td><td>2.15</td><td>—</td><td>—</td><td>alto · desde 2.20</td></tr>
+      <tr><td>Rango 2-3 goles</td><td>47%</td><td>2.14</td><td>—</td><td>—</td><td>alto · desde 2.15</td></tr>
+      <tr><td>BTTS sí y más de 2.5 goles</td><td>41%</td><td>2.43</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Granada 2 o más goles</td><td>43%</td><td>2.35</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Gana Granada</td><td>43%</td><td>2.33</td><td>—</td><td>—</td><td>alto · desde 2.40</td></tr>
+      <tr><td>Las Palmas o empate y menos de 3.5</td><td>42%</td><td>2.36</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Rango 3-4 goles</td><td>36%</td><td>2.74</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Las Palmas 2 o más goles</td><td>34%</td><td>2.96</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Gana Las Palmas</td><td>31%</td><td>3.20</td><td>—</td><td>—</td><td>alto · desde 3.30</td></tr>
+      <tr><td>Granada gana y menos de 3.5</td><td>30%</td><td>3.31</td><td>—</td><td>—</td><td>alto</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>27%</td><td>3.64</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Empate</td><td>26%</td><td>3.87</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Granada gana y más de 2.5</td><td>25%</td><td>3.97</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Granada gana sin encajar</td><td>23%</td><td>4.34</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Granada −1.5</td><td>21%</td><td>4.83</td><td>—</td><td>—</td><td>muy alto</td></tr>
+      <tr><td>Las Palmas −1.5</td><td>13%</td><td>7.73</td><td>—</td><td>—</td><td>muy alto</td></tr>
+    </table></div>
+    <p class="note">Ninguna cuota vista: las columnas "Cuota vista" y "Valor" están vacías porque ni tus capturas ni las búsquedas traen cuotas de este partido. Compara con tu casa de apuestas: si paga más que la cuota justa, hay valor.</p>
+  </section>
+
+  <section class="card" aria-labelledby="h-est">
+    <h2 id="h-est">Córneres, tarjetas y remates <small>probabilidades estimadas con tus promedios (sin cuotas)</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob. estimada</th><th>Cuota justa</th><th>Nota</th></tr>
+      <tr><td>Córneres más de 8.5</td><td>52%</td><td>1.92</td><td>Cruce ~8.8 córneres; córneres totales rinden cerca de la media de la liga</td></tr>
+      <tr><td>Córneres más de 9.5</td><td>39%</td><td>2.56</td><td>—</td></tr>
+      <tr><td>Córneres menos de 9.5</td><td>61%</td><td>1.64</td><td>—</td></tr>
+      <tr><td>Córneres más de 10.5</td><td>27%</td><td>3.70</td><td>—</td></tr>
+      <tr><td>Amarillas más de 3.5</td><td>71%</td><td>1.41</td><td>Promedios de 4.95 y 4.65; falta el árbitro</td></tr>
+      <tr><td>Amarillas más de 4.5</td><td>52%</td><td>1.92</td><td>—</td></tr>
+      <tr><td>Amarillas más de 5.5</td><td>35%</td><td>2.86</td><td>—</td></tr>
+      <tr><td>Remates a puerta más de 7.5</td><td>64%</td><td>1.56</td><td>Cruce ~8.7; remates son "no fiables" en mis pruebas</td></tr>
+      <tr><td>Remates a puerta más de 8.5</td><td>50%</td><td>2.00</td><td>—</td></tr>
+      <tr><td>Remates totales más de 24.5</td><td>50%</td><td>2.00</td><td>Cruce ~24.7</td></tr>
+      <tr><td>Remates totales más de 22.5</td><td>66%</td><td>1.52</td><td>—</td></tr>
+      <tr><td>Roja en el partido</td><td>~30%</td><td>3.30</td><td>0.20 y 0.15 por partido; sin árbitro</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-src">
+    <h2 id="h-src">Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad media-baja para apostar: datos de 20 partidos por equipo muy completos, pero sin ninguna cuota, sin árbitro y con posición no confirmada por dos fuentes. Úsalo para comparar con las cuotas de tu casa.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.granadacf.es/partidos/temporada-2026-2027-laliga-hypermotion-14-granada-cf-vs-ud-las-palmas-3448">Granada CF: ficha J14</a>
+      <a href="https://www.udlaspalmas.net/2026/11/15/horario-y-donde-ver-el-granada-ud-las-palmas-de-este-domingo/">UD Las Palmas: horario</a>
+      <a href="https://www.udlaspalmas.net/2026/11/15/previa-conquistar-granada-otro-gran-reto-para-la-nueva-union-deportiva/">UD Las Palmas: previa</a>
+      <a href="https://www.eldiario.es/canariasahora/Deportes/futbol/palmas-prueba-granada-cuarta-victoria-seguida-liga_1_13664931.html">El Diario: previa</a>
+    </div>
+  </section>
+</div>
+</body></html>
