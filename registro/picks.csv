@@ -455,70 +455,70 @@ fecha,partido,mercado,origen,riesgo_dado,prob_dada,cuota,resultado,nota
 2026-11-14,Jamaica-México (CNL cuartos ida),Córneres 1.er tiempo menos de 4,todas-s16,medio-alto,0.55,1.95,pendiente,~+7% estimado
 2026-11-14,Jamaica-México (CNL cuartos ida),Gana México,todas-s16,alto,0.43,,P,sin cuota vista | final 3-2; córneres 7; tarjetas None
 2026-11-14,Jamaica-México (CNL cuartos ida),Ambos marcan: Sí,todas-s16,medio-alto,0.52,,G,sin cuota vista | final 3-2; córneres 7; tarjetas None
-2026-11-15,Chipre-Montenegro (Nations C),Más de 2.5 goles,analista,medio-alto,0.51,2.0,pendiente,+2% · recomendada
-2026-11-15,Chipre-Montenegro (Nations C),Menos de 2.5 goles,todas-s16,alto,0.49,1.8,pendiente,-12%
-2026-11-15,Chipre-Montenegro (Nations C),Menos de 3.5 goles,todas-s16,medio,0.71,,pendiente,sin cuota vista
-2026-11-15,Chipre-Montenegro (Nations C),Chipre o Montenegro,todas-s16,medio,0.75,,pendiente,sin cuota vista
-2026-11-15,Chipre-Montenegro (Nations C),Chipre marca,todas-s16,medio,0.7,,pendiente,sin cuota vista
-2026-11-15,Chipre-Montenegro (Nations C),Montenegro marca,todas-s16,medio,0.77,,pendiente,paga <1.30
-2026-11-15,Chipre-Montenegro (Nations C),Ambos marcan: Sí,todas-s16,medio-alto,0.54,,pendiente,sin cuota vista
-2026-11-15,Chipre-Montenegro (Nations C),Gana Montenegro,todas-s16,alto,0.44,2.2,pendiente,-3% (cuota de otra previa)
-2026-11-15,Chipre-Montenegro (Nations C),Montenegro o empate,todas-s16,medio,0.69,,pendiente,sin cuota vista
-2026-11-15,Chipre-Montenegro (Nations C),Más de 1.5 goles,todas-s16,medio,0.75,,pendiente,sin cuota vista
-2026-11-15,Letonia-Armenia (Nations C),Más de 1.5 goles,analista,medio,0.7,1.4,pendiente,-2% · recomendada
-2026-11-15,Letonia-Armenia (Nations C),Menos de 2.5 goles,todas-s16,medio-alto,0.56,1.666,pendiente,-7%
-2026-11-15,Letonia-Armenia (Nations C),Más de 2.5 goles,todas-s16,alto,0.44,2.15,pendiente,-5%
-2026-11-15,Letonia-Armenia (Nations C),Armenia o empate,todas-s16,medio,0.71,,pendiente,sin cuota vista
-2026-11-15,Letonia-Armenia (Nations C),Armenia marca,todas-s16,medio,0.75,,pendiente,sin cuota vista
-2026-11-15,Letonia-Armenia (Nations C),Menos de 3.5 goles,todas-s16,medio,0.77,,pendiente,sin cuota vista
-2026-11-15,Letonia-Armenia (Nations C),Gana Armenia,todas-s16,alto,0.44,2.3,pendiente,~0% (cuota de previas)
-2026-11-15,Letonia-Armenia (Nations C),Letonia marca,todas-s16,medio,0.65,,pendiente,sin cuota vista
-2026-11-15,Letonia-Armenia (Nations C),Ambos marcan: Sí,todas-s16,alto,0.49,,pendiente,sin cuota vista
-2026-11-15,Letonia-Armenia (Nations C),Ambos marcan: No,todas-s16,medio-alto,0.51,,pendiente,sin cuota vista
-2026-11-15,Tenerife-Ceuta (Hypermotion),Menos de 3.5 goles,analista,medio,0.74,,pendiente,sin cuota vista · recomendada
-2026-11-15,Tenerife-Ceuta (Hypermotion),Tenerife o Ceuta,todas-s16,medio,0.74,,pendiente,sin cuota vista
-2026-11-15,Tenerife-Ceuta (Hypermotion),Ceuta marca,todas-s16,medio,0.73,,pendiente,sin cuota vista
-2026-11-15,Tenerife-Ceuta (Hypermotion),Tenerife marca,todas-s16,medio,0.72,,pendiente,sin cuota vista
-2026-11-15,Tenerife-Ceuta (Hypermotion),Ambos marcan: Sí,todas-s16,medio-alto,0.53,,pendiente,sin cuota vista
-2026-11-15,Tenerife-Ceuta (Hypermotion),Más de 2.5 goles,todas-s16,alto,0.48,1.95,pendiente,-6%
-2026-11-15,Tenerife-Ceuta (Hypermotion),Menos de 2.5 goles,todas-s16,medio-alto,0.52,1.85,pendiente,-4%
-2026-11-15,Tenerife-Ceuta (Hypermotion),Más de 1.5 goles,todas-s16,medio,0.73,1.285,pendiente,-6%
-2026-11-15,Tenerife-Ceuta (Hypermotion),Córneres más de 9,todas-s16,medio-alto,0.44,1.85,pendiente,~-6% (devuelve con 9)
-2026-11-15,Tenerife-Ceuta (Hypermotion),Córneres menos de 9,todas-s16,medio-alto,0.43,1.95,pendiente,~-3% (devuelve con 9)
-2026-11-15,Tenerife-Ceuta (Hypermotion),Gana Ceuta,todas-s16,alto,0.38,,pendiente,sin cuota vista
-2026-11-15,Tenerife-Ceuta (Hypermotion),Gana Tenerife,todas-s16,alto,0.36,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Granada marca,analista,medio,0.77,,pendiente,recomendada · sin cuotas del partido
-2026-11-15,Granada-Las Palmas (Hypermotion),Más de 1.5 goles,todas-s16,medio,0.74,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Granada o Las Palmas,todas-s16,medio,0.74,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Menos de 3.5 goles,todas-s16,medio,0.73,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Las Palmas marca,todas-s16,medio,0.7,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Granada o empate,todas-s16,medio,0.69,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Ambos marcan: Sí,todas-s16,medio-alto,0.53,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Más de 2.5 goles,todas-s16,medio-alto,0.49,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Menos de 2.5 goles,todas-s16,medio-alto,0.51,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Gana Granada,todas-s16,alto,0.43,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Gana Las Palmas,todas-s16,alto,0.31,,pendiente,sin cuota vista
-2026-11-15,Granada-Las Palmas (Hypermotion),Empate,todas-s16,muy alto,0.26,,pendiente,sin cuota vista
-2026-11-15,España-Inglaterra (Nations A),España o Inglaterra,analista,medio,0.72,,pendiente,sin cuota vista · recomendada
-2026-11-15,España-Inglaterra (Nations A),Más de 1.5 goles,todas-s16,medio,0.68,,pendiente,sin cuota vista
-2026-11-15,España-Inglaterra (Nations A),Menos de 3.5 goles,todas-s16,bajo,0.79,,pendiente,paga <1.30
-2026-11-15,España-Inglaterra (Nations A),Inglaterra +1.5,todas-s16,bajo,0.81,,pendiente,paga <1.30
-2026-11-15,España-Inglaterra (Nations A),Menos de 2.5 goles,todas-s16,medio-alto,0.58,,pendiente,sin cuota vista
-2026-11-15,España-Inglaterra (Nations A),Más de 2.5 goles,todas-s16,alto,0.42,,pendiente,sin cuota vista
-2026-11-15,España-Inglaterra (Nations A),España marca,todas-s16,medio,0.73,,pendiente,sin cuota vista
-2026-11-15,España-Inglaterra (Nations A),Inglaterra marca,todas-s16,medio,0.65,,pendiente,sin cuota vista
-2026-11-15,España-Inglaterra (Nations A),Gana España,todas-s16,alto,0.42,,pendiente,sin cuota vista
-2026-11-15,España-Inglaterra (Nations A),Gana Inglaterra,todas-s16,alto,0.3,,pendiente,sin cuota vista
-2026-11-15,España-Inglaterra (Nations A),Ambos marcan: Sí,todas-s16,alto,0.47,,pendiente,sin cuota vista
-2026-11-15,Francia-Turquía (Nations A),Ambos marcan: Sí,analista,medio,0.67,,pendiente,recomendada · sin cuota vista
-2026-11-15,Francia-Turquía (Nations A),Francia o Turquía,todas-s16,medio,0.78,,pendiente,paga <1.30 probable
-2026-11-15,Francia-Turquía (Nations A),Más de 2.5 goles,todas-s16,medio,0.67,1.333,pendiente,-11%
-2026-11-15,Francia-Turquía (Nations A),Menos de 2.5 goles,todas-s16,alto,0.33,3.4,pendiente,+13% · 0.1u
-2026-11-15,Francia-Turquía (Nations A),Turquía marca,todas-s16,medio,0.79,,pendiente,sin cuota vista
-2026-11-15,Francia-Turquía (Nations A),Francia marca,todas-s16,bajo,0.85,,pendiente,paga <1.30
-2026-11-15,Francia-Turquía (Nations A),Más de 1.5 goles,todas-s16,bajo,0.86,,pendiente,paga <1.30
-2026-11-15,Francia-Turquía (Nations A),Gana Francia,todas-s16,alto,0.46,,pendiente,sin cuota vista
-2026-11-15,Francia-Turquía (Nations A),Gana Turquía,todas-s16,alto,0.32,,pendiente,sin cuota vista
-2026-11-15,Francia-Turquía (Nations A),Córneres más de 9.5,todas-s16,medio-alto,0.52,1.833,pendiente,~-5%
-2026-11-15,Francia-Turquía (Nations A),Córneres menos de 9.5,todas-s16,alto,0.48,1.833,pendiente,~-12%
-2026-11-15,Francia-Turquía (Nations A),Turquía +1.5,todas-s16,medio,0.75,,pendiente,sin cuota vista
+2026-11-15,Chipre-Montenegro (Nations C),Más de 2.5 goles,analista,medio-alto,0.51,2.0,G,+2% · recomendada | final 1-4; córneres 9; tarjetas 6
+2026-11-15,Chipre-Montenegro (Nations C),Menos de 2.5 goles,todas-s16,alto,0.49,1.8,P,-12% | final 1-4; córneres 9; tarjetas 6
+2026-11-15,Chipre-Montenegro (Nations C),Menos de 3.5 goles,todas-s16,medio,0.71,,P,sin cuota vista | final 1-4; córneres 9; tarjetas 6
+2026-11-15,Chipre-Montenegro (Nations C),Chipre o Montenegro,todas-s16,medio,0.75,,G,sin cuota vista | final 1-4; córneres 9; tarjetas 6
+2026-11-15,Chipre-Montenegro (Nations C),Chipre marca,todas-s16,medio,0.7,,G,sin cuota vista | final 1-4; córneres 9; tarjetas 6
+2026-11-15,Chipre-Montenegro (Nations C),Montenegro marca,todas-s16,medio,0.77,,G,paga <1.30 | final 1-4; córneres 9; tarjetas 6
+2026-11-15,Chipre-Montenegro (Nations C),Ambos marcan: Sí,todas-s16,medio-alto,0.54,,G,sin cuota vista | final 1-4; córneres 9; tarjetas 6
+2026-11-15,Chipre-Montenegro (Nations C),Gana Montenegro,todas-s16,alto,0.44,2.2,G,-3% (cuota de otra previa) | final 1-4; córneres 9; tarjetas 6
+2026-11-15,Chipre-Montenegro (Nations C),Montenegro o empate,todas-s16,medio,0.69,,G,sin cuota vista | final 1-4; córneres 9; tarjetas 6
+2026-11-15,Chipre-Montenegro (Nations C),Más de 1.5 goles,todas-s16,medio,0.75,,G,sin cuota vista | final 1-4; córneres 9; tarjetas 6
+2026-11-15,Letonia-Armenia (Nations C),Más de 1.5 goles,analista,medio,0.7,1.4,P,-2% · recomendada | final 0-0; córneres 20; tarjetas 2
+2026-11-15,Letonia-Armenia (Nations C),Menos de 2.5 goles,todas-s16,medio-alto,0.56,1.666,G,-7% | final 0-0; córneres 20; tarjetas 2
+2026-11-15,Letonia-Armenia (Nations C),Más de 2.5 goles,todas-s16,alto,0.44,2.15,P,-5% | final 0-0; córneres 20; tarjetas 2
+2026-11-15,Letonia-Armenia (Nations C),Armenia o empate,todas-s16,medio,0.71,,G,sin cuota vista | final 0-0; córneres 20; tarjetas 2
+2026-11-15,Letonia-Armenia (Nations C),Armenia marca,todas-s16,medio,0.75,,P,sin cuota vista | final 0-0; córneres 20; tarjetas 2
+2026-11-15,Letonia-Armenia (Nations C),Menos de 3.5 goles,todas-s16,medio,0.77,,G,sin cuota vista | final 0-0; córneres 20; tarjetas 2
+2026-11-15,Letonia-Armenia (Nations C),Gana Armenia,todas-s16,alto,0.44,2.3,P,~0% (cuota de previas) | final 0-0; córneres 20; tarjetas 2
+2026-11-15,Letonia-Armenia (Nations C),Letonia marca,todas-s16,medio,0.65,,P,sin cuota vista | final 0-0; córneres 20; tarjetas 2
+2026-11-15,Letonia-Armenia (Nations C),Ambos marcan: Sí,todas-s16,alto,0.49,,P,sin cuota vista | final 0-0; córneres 20; tarjetas 2
+2026-11-15,Letonia-Armenia (Nations C),Ambos marcan: No,todas-s16,medio-alto,0.51,,G,sin cuota vista | final 0-0; córneres 20; tarjetas 2
+2026-11-15,Tenerife-Ceuta (Hypermotion),Menos de 3.5 goles,analista,medio,0.74,,G,sin cuota vista · recomendada | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Tenerife o Ceuta,todas-s16,medio,0.74,,G,sin cuota vista | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Ceuta marca,todas-s16,medio,0.73,,P,sin cuota vista | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Tenerife marca,todas-s16,medio,0.72,,G,sin cuota vista | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Ambos marcan: Sí,todas-s16,medio-alto,0.53,,P,sin cuota vista | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Más de 2.5 goles,todas-s16,alto,0.48,1.95,P,-6% | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Menos de 2.5 goles,todas-s16,medio-alto,0.52,1.85,G,-4% | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Más de 1.5 goles,todas-s16,medio,0.73,1.285,G,-6% | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Córneres más de 9,todas-s16,medio-alto,0.44,1.85,G,~-6% (devuelve con 9) | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Córneres menos de 9,todas-s16,medio-alto,0.43,1.95,P,~-3% (devuelve con 9) | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Gana Ceuta,todas-s16,alto,0.38,,P,sin cuota vista | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Tenerife-Ceuta (Hypermotion),Gana Tenerife,todas-s16,alto,0.36,,G,sin cuota vista | final 2-0; córneres 12; tarjetas 4
+2026-11-15,Granada-Las Palmas (Hypermotion),Granada marca,analista,medio,0.77,,G,recomendada · sin cuotas del partido | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Más de 1.5 goles,todas-s16,medio,0.74,,P,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Granada o Las Palmas,todas-s16,medio,0.74,,G,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Menos de 3.5 goles,todas-s16,medio,0.73,,G,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Las Palmas marca,todas-s16,medio,0.7,,P,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Granada o empate,todas-s16,medio,0.69,,G,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Ambos marcan: Sí,todas-s16,medio-alto,0.53,,P,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Más de 2.5 goles,todas-s16,medio-alto,0.49,,P,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Menos de 2.5 goles,todas-s16,medio-alto,0.51,,G,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Gana Granada,todas-s16,alto,0.43,,G,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Gana Las Palmas,todas-s16,alto,0.31,,P,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,Granada-Las Palmas (Hypermotion),Empate,todas-s16,muy alto,0.26,,P,sin cuota vista | final 1-0; córneres 9; tarjetas 6
+2026-11-15,España-Inglaterra (Nations A),España o Inglaterra,analista,medio,0.72,,G,sin cuota vista · recomendada | final 2-3; córneres 10; tarjetas 5
+2026-11-15,España-Inglaterra (Nations A),Más de 1.5 goles,todas-s16,medio,0.68,,G,sin cuota vista | final 2-3; córneres 10; tarjetas 5
+2026-11-15,España-Inglaterra (Nations A),Menos de 3.5 goles,todas-s16,bajo,0.79,,P,paga <1.30 | final 2-3; córneres 10; tarjetas 5
+2026-11-15,España-Inglaterra (Nations A),Inglaterra +1.5,todas-s16,bajo,0.81,,G,paga <1.30 | final 2-3; córneres 10; tarjetas 5
+2026-11-15,España-Inglaterra (Nations A),Menos de 2.5 goles,todas-s16,medio-alto,0.58,,P,sin cuota vista | final 2-3; córneres 10; tarjetas 5
+2026-11-15,España-Inglaterra (Nations A),Más de 2.5 goles,todas-s16,alto,0.42,,G,sin cuota vista | final 2-3; córneres 10; tarjetas 5
+2026-11-15,España-Inglaterra (Nations A),España marca,todas-s16,medio,0.73,,G,sin cuota vista | final 2-3; córneres 10; tarjetas 5
+2026-11-15,España-Inglaterra (Nations A),Inglaterra marca,todas-s16,medio,0.65,,G,sin cuota vista | final 2-3; córneres 10; tarjetas 5
+2026-11-15,España-Inglaterra (Nations A),Gana España,todas-s16,alto,0.42,,P,sin cuota vista | final 2-3; córneres 10; tarjetas 5
+2026-11-15,España-Inglaterra (Nations A),Gana Inglaterra,todas-s16,alto,0.3,,G,sin cuota vista | final 2-3; córneres 10; tarjetas 5
+2026-11-15,España-Inglaterra (Nations A),Ambos marcan: Sí,todas-s16,alto,0.47,,G,sin cuota vista | final 2-3; córneres 10; tarjetas 5
+2026-11-15,Francia-Turquía (Nations A),Ambos marcan: Sí,analista,medio,0.67,,G,recomendada · sin cuota vista | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Francia o Turquía,todas-s16,medio,0.78,,G,paga <1.30 probable | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Más de 2.5 goles,todas-s16,medio,0.67,1.333,G,-11% | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Menos de 2.5 goles,todas-s16,alto,0.33,3.4,P,+13% · 0.1u | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Turquía marca,todas-s16,medio,0.79,,G,sin cuota vista | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Francia marca,todas-s16,bajo,0.85,,G,paga <1.30 | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Más de 1.5 goles,todas-s16,bajo,0.86,,G,paga <1.30 | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Gana Francia,todas-s16,alto,0.46,,G,sin cuota vista | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Gana Turquía,todas-s16,alto,0.32,,P,sin cuota vista | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Córneres más de 9.5,todas-s16,medio-alto,0.52,1.833,G,~-5% | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Córneres menos de 9.5,todas-s16,alto,0.48,1.833,P,~-12% | final 2-1; córneres 13; tarjetas 3
+2026-11-15,Francia-Turquía (Nations A),Turquía +1.5,todas-s16,medio,0.75,,G,sin cuota vista | final 2-1; córneres 13; tarjetas 3
