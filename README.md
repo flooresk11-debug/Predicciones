@@ -80,3 +80,11 @@ combina de 2 en 2 en partidos distintos (como Villarreal 1.53 + Friburgo 1.61, g
   Resultado (mejora frente a usar la media de la liga): tarjetas +5.1%, corners +0.3%, tiros a puerta -0.4%,
   goles -2.5% (para goles se usa el mercado). Parámetros en `parametros_calibrados.json`.
 - `python3 simulador_real.py --liga E0 --validar` muestra si lo prometido se cumple por tramos de probabilidad.
+
+
+## v4: auditoría y corrección (16/11/2026)
+
+- `python3 auditoria.py`: calibración, mercados, cuotas, valor y ROI del registro; regenera `calibracion_registro.json`.
+- `python3 valor.py "Menos de 3.5 goles" 0.74 1.40`: probabilidad corregida, valor, cuota mínima y stake de referencia.
+- `registro/picks.csv` tiene tres columnas nuevas: `cuota_cierre`, `cuota_real`, `stake_u`.
+- Reglas completas en `METODO.md` §19-§21.

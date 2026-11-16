@@ -155,3 +155,33 @@ cualquier mercado (más de 0.5/1.5, menos de 3.5/4.5, doble oportunidad, equipo 
   forzar la cuota.
 - Honestidad con los números: 2 selecciones de 80% aciertan 64%; 3 de 80%, 51%. Cuantas más piernas, menos se acierta.
 - Stake máximo 0.5 u. Se anotan en `registro/picks.csv` como origen "combinada" con todas las cuotas.
+
+## 19. Auditoría del 16/11/2026 y método v4 (revisión de 523 picks, 424 resueltos, solo 149 con cuota vista)
+Hallazgos medidos con `python3 auditoria.py`:
+- **Las probabilidades que daba estaban infladas ~4 puntos** en todos los tramos (ganó 51% donde esperaba 55%, 70% donde esperaba 74%...). Las del 86% o más sí estaban bien.
+- **El "valor" que calculaba no era una señal**: con valor 0-5% el ROI fue −36%, con 5-10% −20%, con >10% −8% (n pequeño). El ROI global con cuota vista es **−14%**. No se ha demostrado ventaja sobre la casa.
+- **Mercados bien calibrados**: goles "más de", doble oportunidad, tarjetas, equipo marca. **Mal calibrados**: goles "menos de" (53% frente a 66% esperado), hándicap (37% frente a 52%), ganador y combinaciones (ROI −45%), rango de goles (n=5).
+- Las partes del registro sin cuota solo miden acierto, no dinero.
+
+**Reglas nuevas (v4)**, en vigor desde el 16/11/2026:
+1. **Probabilidad corregida**: toda probabilidad pasa por `valor.py` antes de hablar de valor. Corrige con el error medio medido por mercado (encogido hacia el error global si hay pocos datos). `auditoria.py` regenera `calibracion_registro.json` con cada actualización del registro.
+2. **"Valor" solo si**: valor corregido ≥ **+8%** (≥ +12% si la prob. < 40% o la cuota > 3), cuota ≥ 1.30 y prob. corregida ≥ 40%. Todo lo demás se informa como **"sin valor"**, aunque se siga entregando (§16).
+3. **Una recomendada por partido** solo si pasa la regla 2 con cuota vista. Si no hay cuota vista o no pasa, el informe dice **"recomendada por frecuencia, sin valor medido"** y la cuota se marca como "entra desde X" (X = cuota mínima de `valor.py`).
+4. **Sin cuota no hay "valor"**: nunca se afirma ventaja sobre una casa sin haber visto su cuota.
+5. **Mercados de la recomendada**: se prefieren doble oportunidad, goles "más de", equipo marca y tarjetas. Evitar como recomendada: "gana X" y combinaciones con ganador, hándicap, rango de goles y "menos de" (salvo con probabilidad corregida ≥ 70% y cuota vista).
+6. **Informe**: máximo **4 apuestas destacadas** por partido ("Las mejores"), de mercados que rinden; la tabla completa de §16 sigue como referencia pero encabezada con la nota "referencia, no recomendación".
+7. **Combinadas**: cada pata con cuota vista y valor corregido ≥ 0; si no, no hay combinada del día (§18).
+8. **Stake**: 0.25 u fijo hasta tener **300 apuestas con cuota vista y ROI > 0** (`auditoria.py`). `valor.py` da el stake (1/4 de Kelly, máximo 0.5 u) solo como referencia; no se sube por rachas.
+9. **Registro**: tres columnas nuevas: `cuota_cierre` (lo que pagaba justo antes del partido), `cuota_real` y `stake_u` (lo que de verdad apostó el usuario). Si el usuario apuesta, se anota su cuota y stake para medir el ROI real. La cuota de cierre mide el CLV: si lo recomendado paga sistemáticamente más que el cierre, hay ventaja real; si no, no.
+10. **Revisión semanal**: cada semana se ejecuta `python3 auditoria.py` y se muestran el cuadro de calibración, mercados, cuotas y valor. Con menos de 300 resueltas con cuota, cualquier ROI positivo se trata como ruido.
+
+## 20. Lecciones prácticas (11-15 nov 2026)
+- **Zona horaria**: el usuario está en **El Salvador (UTC-6)**. StatsHub muestra su hora. No usar hora de Colombia ni convertir a otra zona. Si una fuente da hora local (Canarias, Riga...), convertir a UTC-6.
+- **Cuotas mal rotuladas en StatsHub** (se ignoran): primer tiempo con la línea del partido, líneas de equipo con cuotas de un lado (1.0833 / 7.00), parejas asiáticas que suman 97% o menos de 100%, "paradas" de un solo portero, "Córneres 9" a 2.100 / 2.200.
+- **Tablas por partido sin cuotas** (capturas de la pestaña "Teams"): solo permiten probabilidades con datos y reparto estimado entre equipos; no dan valor. Pedir también las capturas de líneas bet365 (goles, córneres, tarjetas).
+- **Promedios inflados por rivales débiles** (España, Inglaterra, Francia, Turquía, Armenia): no usar el promedio de 20 partidos sin contrastar contra rivales de nivel similar.
+- **Partidos sin nada en juego** (última jornada) y equipos con muchas bajas: reducir la confianza.
+- **Un resultado no cambia el método**: 5 de 6 recomendadas el 15/11 y 2 de 6 el 13/11 son ruido; solo cuenta el acumulado medido con `auditoria.py`.
+
+## 21. Qué se puede prometer
+Ganar de forma sostenida a bet365 no está demostrado en este registro y es difícil: el margen de la casa es 4-8% y su modelo es mejor que el nuestro. Lo que sí hace el sistema: evitar apuestas malas, medir con honestidad y buscar, con muchos datos, algún mercado concreto donde pague de más. Con <300 apuestas con cuota, ninguna conclusión de rentabilidad es firme.

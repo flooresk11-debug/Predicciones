@@ -1,0 +1,55 @@
+{
+  "desviacion_global": -0.0369,
+  "n_resueltos": 424,
+  "n_con_cuota": 149,
+  "por_mercado": {
+    "goles más de": {
+      "n": 79,
+      "ajuste": 0.004
+    },
+    "goles menos de": {
+      "n": 62,
+      "ajuste": -0.0989
+    },
+    "equipo marca / sin encajar": {
+      "n": 54,
+      "ajuste": -0.046
+    },
+    "doble oportunidad": {
+      "n": 51,
+      "ajuste": 0.0352
+    },
+    "ganador / combinaciones": {
+      "n": 50,
+      "ajuste": -0.0491
+    },
+    "hándicap": {
+      "n": 41,
+      "ajuste": -0.1019
+    },
+    "ambos marcan": {
+      "n": 35,
+      "ajuste": -0.0487
+    },
+    "tarjetas": {
+      "n": 16,
+      "ajuste": 0.0213
+    },
+    "empate": {
+      "n": 15,
+      "ajuste": -0.0128
+    },
+    "córneres": {
+      "n": 14,
+      "ajuste": -0.0522
+    },
+    "rango de goles": {
+      "n": 5,
+      "ajuste": -0.0665
+    },
+    "otros": {
+      "n": 2,
+      "ajuste": -0.0224
+    }
+  }
+}
