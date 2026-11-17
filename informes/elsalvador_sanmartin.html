@@ -1,0 +1,204 @@
+<title>El Salvador–San Martín</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Concacaf Nations League · Repechaje · Vuelta</div>
+  <header class="hero">
+    <div class="team"><b>El Salvador</b><span>Local · gana 2-0 en el global (ida: San Martín 0-2, 13 nov)</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>San Martín</b><span>Necesita ganar por 3 o más para avanzar</span></div>
+  </header>
+  <div class="meta">Martes 17 nov 2026 · hora probable 19:00 (tu hora, deducida de Sofascore: 01:00 UTC del 18) · otras fuentes dan 17:00 y 20:00 sin zona: <b>confirma</b> · Estadio Cuscatlán (probable; una fuente dice Jorge "Mágico" González) · Árbitro: sin dato · Ida: San Martín 0-2 El Salvador (Gil y Cerritos)</div>
+
+  <section class="main-pick" aria-label="Pick recomendado" style="border-left-color:var(--warn)">
+    <div><div class="eyebrow" style="color:var(--warn)">Recomendada por frecuencia, sin valor medido · riesgo medio</div><h1>Menos de 3.5 goles</h1></div>
+    <div style="text-align:right"><div class="p" style="color:var(--warn)">81%</div><div class="meta">Cuota justa 1.24 · entra desde 1.45 (prob. corregida 75%) · no vi cuotas · 0.25 u</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>Sin cuotas, sin mercado</b><span>Tus capturas son gráficos de los últimos 20 partidos, sin líneas de bet365. Todo sale de tus datos con un reparto estimado entre equipos.</span></div>
+    <div class="card tile"><b>El Salvador marca poco</b><span>0.75 goles a favor y 1.45 en contra por partido; solo 4 de 20 partidos con 2 o más goles; xG a favor 0.85. Pero sus rivales son Jamaica, Panamá, Guatemala, Surinam...</span></div>
+    <div class="card tile"><b>San Martín infla sus números</b><span>2.8 goles por partido (xG 2.02), con goleadas a Bahamas (8-0), Anguila (8-0), Islas Vírgenes (5-0) y 6-0 a Bahamas. En su último partido ante El Salvador (13 nov) no marcó y tuvo 8 remates y 1 a puerta.</span></div>
+    <div class="card tile"><b>Global 2-0</b><span>San Martín necesita 3 goles de diferencia. Eso le obliga a atacar, lo que abre el partido, pero tiene 0 goles en su último partido contra El Salvador.</span></div>
+  </section>
+
+  <section class="card">
+    <h2>Tus capturas, traducidas <small>StatsHub · últimos 20 partidos · "a favor" / "en contra" / total</small></h2>
+    <div class="tw"><table>
+      <tr><th>Estadística</th><th>El Salvador</th><th>San Martín</th></tr>
+      <tr><td>Goles</td><td>0.75 a favor · 1.45 en contra · total 2.2 · más de 1.5 a favor en 20% (4/20)</td><td>2.8 · 1.2 · total 4.0 · más de 2.5 a favor en 50% (10/20)</td></tr>
+      <tr><td>Córneres</td><td>3.33 · 4.44 · total 7.78 · más de 3.5 a favor en 22% (4/18)</td><td>7.47 · 3.6 · total 11.07 · más de 7.5 a favor en 53% (8/15)</td></tr>
+      <tr><td>Tiros totales</td><td>9.5 · 11.11 · total 20.61 (7/18 sobre 9.5)</td><td>16.93 · 8.0 · total 24.93 (5/14 sobre 18.5)</td></tr>
+      <tr><td>Tiros a puerta</td><td>2.39 · 3.61 · total 6.0 (6/18 sobre 2.5)</td><td>6.36 · 3.36 · total 9.71 (5/14 sobre 6.5)</td></tr>
+      <tr><td>xG</td><td>0.85 · 1.10 · total 1.95 (7 partidos con dato)</td><td>2.02 · 1.06 · total 3.08 (10 partidos con dato)</td></tr>
+    </table></div>
+    <p class="note"><b>Goles de El Salvador (de más reciente a más antiguo):</b> 2 (San Martín), 1, 0, 0, 3, 0, 0, 1, 2, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 3. <b>De San Martín:</b> 0 (El Salvador), 6, 5, 0, 8, 3, 3, 0, 2, 3, 0, 4, 1, 0, 0, 4, 8, 2, 6, 1. Fíjate: en la ida del 13 nov, El Salvador marcó 2 y San Martín 0. En esos 20 partidos San Martín pasa de 2.5 goles en 50% y El Salvador de 1.5 goles en 20%.</p>
+  </section>
+
+  <section class="card">
+    <h2>Confirmación con otras fuentes</h2>
+    <div class="tw"><table>
+      <tr><th>Dato</th><th>Fuentes</th><th>Estado</th></tr>
+      <tr><td>Formato y ida</td><td>Vuelta del repechaje; ida San Martín 0-2 El Salvador el 13 nov (ESPN, VAVEL: goles de Brayan Gil y Mauricio Cerritos)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Fecha y hora</td><td>Goal y Onefootball: martes 17, 20:00 (zona sin precisar); YSScores 5:00 pm (su texto dice miércoles 18); Sofascore: 01:00 UTC del 18 = 19:00 en El Salvador</td><td class="w">Conflicto: confirma</td></tr>
+      <tr><td>Estadio</td><td>Cuscatlán (Sofascore, YSScores); Onefootball: Jorge "Mágico" González</td><td class="w">Probable</td></tr>
+      <tr><td>Tabla</td><td>Una página muestra una tabla que no cuadra con el 2-0 de la ida: no la uso</td><td class="w">Descartada</td></tr>
+      <tr><td>Bajas, árbitro, cuotas</td><td>No encontrados</td><td class="w">Sin dato</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card">
+    <h2>Resultado 1X2 <small>solo con tus datos y localía de El Salvador</small></h2>
+    <div class="odds">
+      <div><b style="color:var(--good)">52%</b><span>El Salvador · justa 1.91</span></div>
+      <div><b>27%</b><span>Empate · justa 3.73</span></div>
+      <div><b>21%</b><span>San Martín · justa 4.83</span></div>
+    </div>
+    <p class="meta" style="margin-top:8px">Goles esperados: ~1.45 El Salvador y ~0.80 San Martín. Es el dato más incierto: El Salvador mete poco pero concede mucho a rivales fuertes, y San Martín mete mucho a rivales débiles. No tengo en cuenta que El Salvador ya ganó 2-0 y puede jugar con cautela.</p>
+  </section>
+
+  <section class="card">
+    <h2>Las mejores</h2>
+    <div class="pick"><span class="risk m">Medio · recomendada por frecuencia</span><div><h3>Menos de 3.5 goles (desde 1.45)</h3><p>Falla con 4 goles o más (19%). El partido de ida fue de 2 goles y El Salvador casi no concede en casa a rivales de este nivel. Contra: San Martín promedia 4.0 goles en sus partidos y necesita atacar. Sin cuota vista. 0.25 u.</p></div><div class="pp"><b>81%</b><span>justa 1.24</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>El Salvador o empate (desde 1.35)</h3><p>San Martín necesita ganar por 3 en el global. Sin cuota vista.</p></div><div class="pp"><b>79%</b><span>justa 1.26</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>El Salvador marca (desde 1.40)</h3><p>Marcó en la ida, pero solo en 8 de sus 20 últimos partidos (0.75 goles por partido). Sin cuota vista: no lo pagues menos de 1.40.</p></div><div class="pp"><b>77%</b><span>justa 1.31</span></div></div>
+    <p class="note"><b>Pick fuerte:</b> ninguno. <b>Combinada del día:</b> ninguna. Evito «gana X», hándicap y rangos como recomendadas (reglas v4).</p>
+  </section>
+
+  <section class="card">
+    <h2>Todas las apuestas <small>referencia, no recomendación · "Prob. corregida" = ajuste de calibración v4</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Prob. corregida</th><th>Cuota justa</th><th>Cuota vista</th><th>Riesgo</th></tr>
+      <tr><td>El Salvador +1.5</td><td>94%</td><td>90%</td><td>1.07</td><td>—</td><td>bajo · entra desde 1.30</td></tr>
+      <tr><td>Menos de 4.5 goles</td><td>92%</td><td>88%</td><td>1.08</td><td>—</td><td>bajo · entra desde 1.30</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td>81%</td><td>75%</td><td>1.24</td><td>—</td><td>bajo · entra desde 1.44</td></tr>
+      <tr><td>El Salvador o empate</td><td>79%</td><td>80%</td><td>1.26</td><td>—</td><td>bajo · entra desde 1.34</td></tr>
+      <tr><td>El Salvador marca</td><td>77%</td><td>73%</td><td>1.31</td><td>—</td><td>medio · entra desde 1.48</td></tr>
+      <tr><td>San Martín +1.5</td><td>74%</td><td>66%</td><td>1.36</td><td>—</td><td>medio · entra desde 1.65</td></tr>
+      <tr><td>El Salvador o San Martín (sin empate)</td><td>73%</td><td>75%</td><td>1.37</td><td>—</td><td>medio · entra desde 1.45</td></tr>
+      <tr><td>Rango 1-3 goles</td><td>70%</td><td>65%</td><td>1.42</td><td>—</td><td>medio · entra desde 1.66</td></tr>
+      <tr><td>Más de 1.5 goles</td><td>66%</td><td>66%</td><td>1.52</td><td>—</td><td>medio · entra desde 1.64</td></tr>
+      <tr><td>Menos de 2.5 goles</td><td>61%</td><td>52%</td><td>1.64</td><td>—</td><td>medio-alto · entra desde 2.10</td></tr>
+      <tr><td>Rango 2-4 goles</td><td>58%</td><td>52%</td><td>1.73</td><td>—</td><td>medio-alto · entra desde 2.10</td></tr>
+      <tr><td>Ambos marcan: No</td><td>58%</td><td>53%</td><td>1.73</td><td>—</td><td>medio-alto · entra desde 2.03</td></tr>
+      <tr><td>San Martín marca</td><td>55%</td><td>50%</td><td>1.82</td><td>—</td><td>medio-alto · entra desde 2.14</td></tr>
+      <tr><td>Gana El Salvador</td><td>52%</td><td>48%</td><td>1.91</td><td>—</td><td>medio-alto · entra desde 2.27</td></tr>
+      <tr><td>San Martín o empate</td><td>48%</td><td>49%</td><td>2.10</td><td>—</td><td>alto · entra desde 2.19</td></tr>
+      <tr><td>Rango 2-3 goles</td><td>47%</td><td>40%</td><td>2.14</td><td>—</td><td>alto · entra desde 2.69</td></tr>
+      <tr><td>El Salvador 2 o más goles</td><td>43%</td><td>44%</td><td>2.35</td><td>—</td><td>alto · entra desde 2.44</td></tr>
+      <tr><td>Ambos marcan: Sí</td><td>42%</td><td>37%</td><td>2.37</td><td>—</td><td>alto · entra desde 2.89</td></tr>
+      <tr><td>Más de 2.5 goles</td><td>39%</td><td>39%</td><td>2.56</td><td>—</td><td>alto · entra desde 2.75</td></tr>
+      <tr><td>Empate</td><td>27%</td><td>26%</td><td>3.73</td><td>—</td><td>muy alto · entra desde 4.19</td></tr>
+      <tr><td>El Salvador −1.5</td><td>26%</td><td>18%</td><td>3.78</td><td>—</td><td>muy alto · entra desde 5.84</td></tr>
+      <tr><td>Gana San Martín</td><td>21%</td><td>18%</td><td>4.83</td><td>—</td><td>muy alto · entra desde 6.17</td></tr>
+      <tr><td>San Martín 2 o más goles</td><td>19%</td><td>20%</td><td>5.23</td><td>—</td><td>muy alto · entra desde 5.35</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>19%</td><td>19%</td><td>5.25</td><td>—</td><td>muy alto · entra desde 5.62</td></tr>
+      <tr><td>San Martín −1.5</td><td>6%</td><td>2%</td><td>15.77</td><td>—</td><td>muy alto · entra desde 46.96</td></tr>
+    </table></div>
+    <p class="note">Ninguna cuota vista: entra solo si tu casa paga al menos la de la columna «Riesgo». Córneres: cruce estimado ~9 (El Salvador 7.78 y San Martín 11.07 en sus partidos, con rivales distintos): no doy probabilidad por falta de línea.</p>
+  </section>
+
+  <section class="card">
+    <h2>Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad baja para apostar: sin cuotas, hora en conflicto, sin bajas ni árbitro; datos de San Martín contra rivales mucho más débiles que El Salvador. No hay datos de tarjetas ni faltas en tus capturas.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.espn.com/soccer/match/_/gameId/401929712">ESPN: ida</a>
+      <a href="https://www.vavel.com/en-us/soccer/2026/11/13/1279143-saint-martin-vs-el-salvador-live-latest-score-goals-and-concacaf-nations-league-updates.html">VAVEL: ida</a>
+      <a href="https://www.goal.com/en/news/live-stream-online-tv-where-to-watch-el-salvador-v-saint-martin/bltbb1c9800322d6ab0">Goal: hora</a>
+      <a href="https://www.sofascore.com/football/team/el-salvador/4825">Sofascore</a>
+      <a href="https://www.ysscores.com/en/match/6422186/El-Salvador-vs-Saint-Martin">YSScores</a>
+    </div>
+  </section>
+</div>
+</body></html>
