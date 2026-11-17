@@ -1,0 +1,205 @@
+<title>EE. UU.–Haití</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: matchday programme. Header band, then summary tiles, then picks, then evidence tables, then method. */
+:root{
+  --paper:#f5f3ee; --card:#ffffff; --ink:#1a1f2b; --mut:#5d6472; --line:#dcd8cf;
+  --copa:#b3123a; --navy:#1f3f8f; --good:#1c7a46; --warn:#a86a00; --bad:#b3123a; --soft:#efe9df;
+  --f-disp:'Saira Condensed','Arial Narrow',Arial,sans-serif; --f-body:'Source Sans 3',system-ui,sans-serif; --f-num:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#12151c; --card:#1a1f29; --ink:#eef0f4; --mut:#a3abba; --line:#2c3341;
+  --copa:#ff5f7e; --navy:#8fb0ff; --good:#4fd18a; --warn:#f2b24a; --bad:#ff5f7e; --soft:#222837; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.5;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+h1,h2,h3{font-family:var(--f-disp);text-transform:uppercase;margin:0;line-height:1.02;text-wrap:balance}
+.eyebrow{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--copa);font-size:15px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}
+header.hero{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;border-top:6px solid var(--copa);padding-top:16px}
+.team{display:flex;flex-direction:column;gap:2px;min-width:0}
+.team.r{text-align:right}
+.team b{font-family:var(--f-disp);font-size:clamp(28px,6vw,54px);text-transform:uppercase;line-height:1}
+.team span{color:var(--mut);font-size:14px}
+.vs{font-family:var(--f-disp);font-size:22px;color:var(--mut)}
+.meta{color:var(--mut);font-size:14px;text-transform:uppercase;letter-spacing:.05em}
+.main-pick{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline;justify-content:space-between;background:var(--soft);border-left:6px solid var(--good);border-radius:10px;padding:14px 18px}
+.main-pick h1{font-size:clamp(30px,6vw,48px)}
+.main-pick .p{font-family:var(--f-num);font-size:32px;color:var(--good)}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-disp);text-transform:uppercase;font-size:21px}
+.tile span{color:var(--mut);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+h2{font-size:28px;color:var(--navy);margin-bottom:10px}
+h2 small{font-family:var(--f-body);text-transform:none;font-size:14px;color:var(--mut);font-weight:400;margin-left:8px}
+.form{display:flex;flex-direction:column;gap:6px}
+.form div{display:grid;grid-template-columns:1fr auto 26px;gap:10px;align-items:center;padding:6px 10px;background:var(--soft);border-radius:8px;font-size:15px}
+.form .r{font-family:var(--f-num);font-weight:600}
+.chip{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:6px;font-family:var(--f-disp);font-weight:800;color:#fff;font-size:14px}
+.W{background:var(--good)}.D{background:var(--warn)}.L{background:var(--bad)}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.odds div{background:var(--soft);border-radius:10px;padding:10px;text-align:center}
+.odds b{display:block;font-family:var(--f-num);font-size:30px}
+.odds span{font-size:13px;color:var(--mut);text-transform:uppercase}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;display:flex;margin-top:12px}
+.bar i{display:block;height:100%}
+.scores{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.scores div{border:1px solid var(--line);border-radius:8px;text-align:center;padding:6px}
+.scores b{display:block;font-family:var(--f-num);font-size:22px}
+.scores span{font-size:12px;color:var(--mut)}
+.pick{display:grid;grid-template-columns:72px 1fr auto;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.pick:last-child{border-bottom:0}
+.risk{font-family:var(--f-disp);text-transform:uppercase;font-weight:800;font-size:14px;padding:4px 8px;border-radius:6px;text-align:center;color:#fff}
+.risk.b{background:var(--good)}.risk.m{background:var(--warn)}.risk.a{background:var(--bad)}.risk.x{background:var(--mut)}
+.pick h3{font-size:24px}
+.pick p{margin:4px 0 0;color:var(--mut);font-size:15.5px}
+.pick .pp{text-align:right;font-family:var(--f-num)}
+.pick .pp b{font-size:28px;display:block}
+.pick .pp span{font-size:13px;color:var(--mut)}
+ul.why{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+ul.why li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px}
+.ok{color:var(--good);font-weight:700}.no{color:var(--bad);font-weight:700}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:center}
+th{font-family:var(--f-disp);text-transform:uppercase;letter-spacing:.05em;font-size:14px;color:var(--navy);background:var(--soft);white-space:nowrap}
+td:first-child,th:first-child{text-align:left}
+td{font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+table.mk{min-width:0;table-layout:fixed}
+table.mk th:first-child,table.mk td:first-child{width:44%;white-space:normal}
+table.mk td,table.mk th{padding:8px 6px;font-size:14px}
+@media(max-width:480px){table.mk td,table.mk th{font-size:13px;padding:7px 4px}}
+.g{color:var(--good);font-weight:700}.w{color:var(--warn);font-weight:700}.bd{color:var(--bad);font-weight:700}.nd{color:var(--mut)}
+.note{border-left:4px solid var(--warn);background:var(--soft);padding:10px 14px;border-radius:6px;font-size:15px;margin-top:10px}
+.foot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.foot div{font-family:var(--f-disp);text-transform:uppercase;font-weight:700;font-size:18px}
+.foot span{display:block;font-family:var(--f-body);text-transform:none;font-weight:400;font-size:14px;color:var(--mut)}
+.src{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.src a{color:var(--navy)}
+a:focus-visible{outline:2px solid var(--copa);outline-offset:2px}
+@media(max-width:820px){.tiles,.foot{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.scores{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:480px){header.hero{grid-template-columns:1fr}.team.r{text-align:left}.vs{display:none}.pick{grid-template-columns:1fr}.pick .pp{text-align:left}.tiles,.foot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Concacaf Nations League · Cuartos de final · Vuelta</div>
+  <header class="hero">
+    <div class="team"><b>EE. UU.</b><span>Ganó 6-0 en la ida · local en la vuelta (Cincinnati)</span></div>
+    <div class="vs">vs</div>
+    <div class="team r"><b>Haití</b><span>Necesita ganar por 6 o más para avanzar</span></div>
+  </header>
+  <div class="meta">Martes 17 nov 2026 · hora: no encontrada · Cincinnati, Ohio · Árbitro: sin dato · Ida (14 nov, Miami): Haití 0-6 EE. UU. (Trusty, Pulisic x2, Hall, McKennie, Balogun) · Marcador global: EE. UU. 6-0</div>
+
+  <section class="main-pick" aria-label="Pick recomendado" style="border-left-color:var(--warn)">
+    <div><div class="eyebrow" style="color:var(--warn)">Recomendada por frecuencia, sin valor medido · riesgo medio</div><h1>EE. UU. o empate</h1></div>
+    <div style="text-align:right"><div class="p" style="color:var(--warn)">89%</div><div class="meta">Cuota justa 1.13 · casi seguro paga menos de 1.30 · no vi su cuota</div></div>
+  </section>
+
+  <section class="tiles" aria-label="Claves">
+    <div class="card tile"><b>La eliminatoria está decidida</b><span>EE. UU. gana 6-0 en el global. Haití necesita 6 goles de diferencia: casi imposible. EE. UU. puede rotar y bajar el ritmo; Haití no tiene nada que perder.</span></div>
+    <div class="card tile"><b>Cuidado con las cuotas de goles</b><span>bet365: "más de 2.5" a 1.200 y "menos" a 4.333 (otra pareja 1.200 / 4.400). Un mercado de unos 3.5 goles parece de antes de la ida o ignora la ventaja de 6: sin saber la hora de captura, las trato con prudencia.</span></div>
+    <div class="card tile"><b>La ida fue un caso extremo</b><span>El 6-0 tuvo xG de 3.54 para EE. UU. y 9 grandes ocasiones. Haití promedia 3.0 goles en sus partidos (incluye partidos de 6 y 5 goles) y EE. UU. 3.8.</span></div>
+    <div class="card tile"><b>Córneres alrededor de la línea</b><span>bet365 9.5: más 1.909, menos 1.800. EE. UU. 9.7 y Haití 9.3 por partido; en la ida hubo 7 y 7.</span></div>
+  </section>
+
+  <section class="card">
+    <h2>Tus capturas, traducidas <small>StatsHub · últimos 20 partidos</small></h2>
+    <div class="tw"><table>
+      <tr><th>Mercado</th><th>Línea y cuota bet365</th><th>EE. UU.</th><th>Haití</th></tr>
+      <tr><td>Goles: más de 2.5</td><td>Más/Menos 2.5: 1.200 / 4.333 · otra pareja 1.200 / 4.400</td><td>65% (13/20) · prom. 3.8</td><td>55% (11/20) · prom. 3.0</td></tr>
+      <tr><td>xG: más de 2</td><td>—</td><td>75% (15/20) · prom. 2.86</td><td>88% (15/17) · prom. 3.51</td></tr>
+      <tr><td>Córneres: más de 7.5</td><td>Totales 9.5: 1.909 / 1.800</td><td>70% · prom. 9.7</td><td>65% · prom. 9.3</td></tr>
+      <tr><td>Remates a puerta: más de 7.5</td><td>Sin cuotas</td><td>65% · prom. 8.9</td><td>75% · prom. 9.8</td></tr>
+      <tr><td>Grandes ocasiones: más de 3.5</td><td>Sin cuotas</td><td>65% · prom. 4.3</td><td>75% · prom. 4.8</td></tr>
+    </table></div>
+    <p class="note">Estos promedios incluyen partidos contra Canadá, México, Chile, Perú, Bélgica, Australia... y los de Haití contra rivales caribeños más flojos (Puerto Rico, Trinidad, Curazao...): no son comparables. Todos tus datos del partido de ida (14 nov) ya están dentro.</p>
+  </section>
+
+  <section class="card">
+    <h2>Confirmación con otras fuentes</h2>
+    <div class="tw"><table>
+      <tr><th>Dato</th><th>Fuentes</th><th>Estado</th></tr>
+      <tr><td>Resultado de la ida</td><td>Haití 0-6 EE. UU. (ESPN, Concacaf, US Soccer, NBC, Fox)</td><td class="g">Confirmado</td></tr>
+      <tr><td>Sede de la vuelta</td><td>Cincinnati (U.S. Soccer)</td><td class="w">Una fuente</td></tr>
+      <tr><td>Hora, árbitro, bajas, alineaciones</td><td>No encontrados</td><td class="w">Sin dato</td></tr>
+      <tr><td>Cuotas 1X2 y de hándicap</td><td>No encontradas</td><td class="w">Sin ver</td></tr>
+    </table></div>
+  </section>
+
+  <section class="card">
+    <h2>Resultado 1X2 <small>línea de goles (60%) y datos (40%); reparto estimado</small></h2>
+    <div class="odds">
+      <div><b style="color:var(--good)">73%</b><span>EE. UU. · justa 1.37</span></div>
+      <div><b>16%</b><span>Empate · justa 6.34</span></div>
+      <div><b>11%</b><span>Haití · justa 8.97</span></div>
+    </div>
+    <p class="meta" style="margin-top:8px">No tengo en cuenta la rotación: con 6 goles de ventaja, EE. UU. puede jugar con suplentes y bajar la probabilidad de ganar y de golear. Es el mayor riesgo de este informe.</p>
+  </section>
+
+  <section class="card">
+    <h2>Las mejores</h2>
+    <div class="pick"><span class="risk m">Medio · recomendada por frecuencia</span><div><h3>EE. UU. o empate</h3><p>Haití tendría que ganar. Casi seguro paga menos de 1.30. Solo si ves 1.30 o más; si no, no entra.</p></div><div class="pp"><b>89%</b><span>justa 1.13</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>EE. UU. marca (desde 1.30)</h3><p>Marcó en casi todos sus partidos. Sin cuota vista; con 6 goles de ventaja y rotación, baja un poco.</p></div><div class="pp"><b>92%</b><span>justa 1.09</span></div></div>
+    <div class="pick"><span class="risk m">Medio</span><div><h3>Córneres: más / menos de 9.5 (1.909 / 1.800)</h3><p>Sin ventaja: promedios de 9.7 y 9.3 sobre una línea de 9.5. Si hubiera que escoger, la media va justo en la línea. No recomiendo.</p></div><div class="pp"><b>~50%</b><span>justa ~2.00</span></div></div>
+    <p class="note"><b>Pick fuerte:</b> ninguno. <b>Combinada del día:</b> ninguna. <b>Más de 2.5 goles a 1.200:</b> paga menos de 1.30 y, aun así, su valor corregido es negativo (ver tabla): no entra.</p>
+  </section>
+
+  <section class="card">
+    <h2>Todas las apuestas <small>referencia, no recomendación · "Prob. corregida" = tras el ajuste v4 de calibración</small></h2>
+    <div class="tw"><table>
+      <tr><th>Apuesta</th><th>Prob.</th><th>Prob. corregida</th><th>Cuota justa</th><th>Cuota vista</th><th>Valor</th><th>Riesgo</th></tr>
+      <tr><td>EE. UU. marca</td><td>92%</td><td>90%</td><td>1.09</td><td>—</td><td>—</td><td>bajo · entra desde 1.30</td></tr>
+      <tr><td>EE. UU. o empate</td><td>89%</td><td>90%</td><td>1.13</td><td>—</td><td>—</td><td>bajo · entra desde 1.30</td></tr>
+      <tr><td>Más de 1.5 goles</td><td>86%</td><td>86%</td><td>1.16</td><td>—</td><td>—</td><td>bajo · entra desde 1.30</td></tr>
+      <tr><td>Gana EE. UU.</td><td>73%</td><td>69%</td><td>1.37</td><td>—</td><td>—</td><td>medio · entra desde 1.56</td></tr>
+      <tr><td>EE. UU. 2 o más goles</td><td>73%</td><td>74%</td><td>1.38</td><td>—</td><td>—</td><td>medio · entra desde 1.46</td></tr>
+      <tr><td>Menos de 4.5 goles</td><td>70%</td><td>62%</td><td>1.43</td><td>—</td><td>—</td><td>medio · entra desde 1.75</td></tr>
+      <tr><td>Más de 2.5 goles</td><td>68%</td><td>68%</td><td>1.47</td><td>1.200</td><td>−18%</td><td>medio · entra desde 1.58</td></tr>
+      <tr><td>Haití +2.5</td><td>68%</td><td>59%</td><td>1.47</td><td>—</td><td>—</td><td>medio · entra desde 1.83</td></tr>
+      <tr><td>Haití marca</td><td>61%</td><td>56%</td><td>1.65</td><td>—</td><td>—</td><td>medio-alto · entra desde 1.92</td></tr>
+      <tr><td>Ambos marcan: Sí</td><td>56%</td><td>51%</td><td>1.79</td><td>—</td><td>—</td><td>medio-alto · entra desde 2.11</td></tr>
+      <tr><td>Rango 2-4 goles</td><td>56%</td><td>49%</td><td>1.79</td><td>—</td><td>—</td><td>medio-alto · entra desde 2.19</td></tr>
+      <tr><td>EE. UU. gana y más de 2.5</td><td>56%</td><td>56%</td><td>1.79</td><td>—</td><td>—</td><td>medio-alto · entra desde 1.93</td></tr>
+      <tr><td>Menos de 3.5 goles</td><td>52%</td><td>42%</td><td>1.92</td><td>—</td><td>—</td><td>medio-alto · entra desde 2.56</td></tr>
+      <tr><td>EE. UU. −1.5</td><td>52%</td><td>42%</td><td>1.92</td><td>—</td><td>—</td><td>medio-alto · entra desde 2.58</td></tr>
+      <tr><td>Rango 3-5 goles</td><td>51%</td><td>45%</td><td>1.95</td><td>—</td><td>—</td><td>medio-alto · entra desde 2.42</td></tr>
+      <tr><td>EE. UU. 3 o más goles</td><td>49%</td><td>51%</td><td>2.04</td><td>—</td><td>—</td><td>alto · entra desde 2.13</td></tr>
+      <tr><td>Haití +1.5</td><td>48%</td><td>38%</td><td>2.09</td><td>—</td><td>—</td><td>alto · entra desde 2.86</td></tr>
+      <tr><td>Más de 3.5 goles</td><td>48%</td><td>48%</td><td>2.09</td><td>—</td><td>—</td><td>alto · entra desde 2.25</td></tr>
+      <tr><td>Ambos marcan: No</td><td>44%</td><td>39%</td><td>2.27</td><td>—</td><td>—</td><td>alto · entra desde 2.76</td></tr>
+      <tr><td>EE. UU. gana sin encajar</td><td>36%</td><td>32%</td><td>2.79</td><td>—</td><td>—</td><td>alto · entra desde 3.41</td></tr>
+      <tr><td>EE. UU. −2.5</td><td>32%</td><td>23%</td><td>3.12</td><td>—</td><td>—</td><td>muy alto · entra desde 4.68</td></tr>
+      <tr><td>Menos de 2.5 goles</td><td>32%</td><td>23%</td><td>3.14</td><td>4.333</td><td>+1%</td><td>muy alto · entra desde 4.64</td></tr>
+      <tr><td>Más de 4.5 goles</td><td>30%</td><td>30%</td><td>3.33</td><td>—</td><td>—</td><td>muy alto · entra desde 3.58</td></tr>
+      <tr><td>Haití o empate</td><td>27%</td><td>28%</td><td>3.72</td><td>—</td><td>—</td><td>muy alto · entra desde 3.82</td></tr>
+      <tr><td>Haití 2 o más goles</td><td>24%</td><td>26%</td><td>4.12</td><td>—</td><td>—</td><td>muy alto · entra desde 4.22</td></tr>
+      <tr><td>EE. UU. −3.5</td><td>17%</td><td>11%</td><td>5.82</td><td>—</td><td>—</td><td>muy alto · entra desde 9.47</td></tr>
+      <tr><td>Empate</td><td>16%</td><td>15%</td><td>6.34</td><td>—</td><td>—</td><td>muy alto · entra desde 7.15</td></tr>
+      <tr><td>Gana Haití</td><td>11%</td><td>9%</td><td>8.97</td><td>—</td><td>—</td><td>muy alto · entra desde 11.74</td></tr>
+    </table></div>
+    <p class="note">"—" = no vi la cuota. El valor usa la probabilidad corregida. Las probabilidades de hándicap y goleada dependen mucho de si EE. UU. rota.</p>
+  </section>
+
+  <section class="card">
+    <h2>Calidad de los datos y fuentes</h2>
+    <p class="note" style="margin-top:0">Calidad baja para apostar: sin hora, sin árbitro, sin bajas, sin cuotas 1X2; la mejor información es la ida (6-0). Una eliminatoria resuelta suele jugarse con rotaciones y a menor ritmo; mi modelo no lo ve.</p>
+    <div class="src" style="margin-top:12px">
+      <a href="https://www.concacaf.com/competitions/nations-league/news/usa-defeats-haiti-6-0-in-nations-league-quarterfinal-opener">Concacaf: ida</a>
+      <a href="https://www.espn.com/soccer/match/_/gameId/401929710/united-states-haiti">ESPN: ida</a>
+      <a href="https://www.ussoccer.com/stories/2026/11/usmnt-vs-haiti-match-recap-highlights-concacaf-nations-league-miami-florida">US Soccer: crónica</a>
+      <a href="https://www.nbcsports.com/soccer/live/haiti-vs-usmnt-live-updates-score-goals-highlights-stats-2026-november-14">NBC Sports</a>
+    </div>
+  </section>
+</div>
+</body></html>
